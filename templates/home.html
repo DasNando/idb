@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-<head>
-<title>WHAT UP BOIS</title>
-</head>
-<body>
+<html lang="en">
+	<head>
+		<title>Welcome to SWE-Readers!</title>
+		<meta charset="utf-8">
 
-<h1>Hello {{ user }}</h1>
-<p>My first template!<br>
-    <a href="{{ url_for('show_post', post_id=100) }}">Show a post!</a></p>
+		<!-- pulling Bootstrap from CDN -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-</body>
+		<!-- CSS Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css">
+
+	</head>
+	<body>
+		<header>
+			<div class="row">
+				<div class="col-sm-2">
+					<h4>SWE-Readers</h4>
+				</div>
+				<div class="col-sm-2">
+					<h4>Books</h4>
+				</div>
+				<div class="col-sm-2">
+					<h4>Authors</h4>
+				</div>
+				<div class="col-sm-2">
+					<h4>Publishers</h4>
+				</div>
+				<div class="col-sm-2">
+					<h4>Reviews</h4>
+				</div>
+				<div class="col-sm-2">
+					<h4>About</h4>
+				</div>
+<!-- 				<div class="col-sm-4">
+					<h4>insert search bar here</h4>
+				</div> -->
+			</div>
+		</header>
+	</body>
+	<footer>
+
+	</footer>
 </html>
