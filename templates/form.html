@@ -1,12 +1,12 @@
 <html>
   <head>
     <title>Submit a form</title>
-   <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
     <div id="container">
       <div class="pagetitle">
-        <h1>Submit a form</h1>
+        <h1>Submit a form - RE-DO</h1>
       </div>
       <div id="main">
         <form method="post" action="{{ url_for('submitted_form') }}">
