@@ -9,12 +9,12 @@ db = SQLAlchemy(app)
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html', user="WELCOME HOME!")
+    return render_template('home.html')
 
 
 @app.route('/profile/<username>')
 def profile(username):
-    return render_template('home.html', user=username)
+    return render_template('home.html')
 
 
 @app.route('/post/<int:post_id>')
