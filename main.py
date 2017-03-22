@@ -21,9 +21,11 @@ def profile(username):
 def show_post(post_id):
     return 'post id is: %d' % post_id
 
+
 @app.route('/form')
 def form():
     return render_template('form.html')
+
 
 @app.route('/submitted', methods=['POST'])
 def submitted_form():
