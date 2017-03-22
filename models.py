@@ -71,7 +71,7 @@ class Book(db.Model):
         self.author = author
 
         self.year = year
-        assert(year > 0 && year < 2018)
+        assert(year > 0 and year < 2018)
 
         self.edition = edition
         assert(edition > 0)
