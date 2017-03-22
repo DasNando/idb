@@ -61,13 +61,27 @@ class Book(db.Model):
 
     def __init__(self, title, publisher, genre, author, year, edition, ISBN, prices, reviews):
         self.title = title
+        assert(len(title) > 0)
+
         self.publisher = publisher
+
         self.genre = genre
+        assert(len(genre) > 0)
+
         self.author = author
+
         self.year = year
+        assert(year > 0 && year < 2018)
+
         self.edition = edition
+        assert(edition > 0)
+
         self.ISBN = ISBN
+        assert(len(ISBN) > 0)
+
         self.prices = prices
+        assert(prices > 0)
+
         self.reviews = reviews
 
 class Author(db.Model):
@@ -82,11 +96,22 @@ class Author(db.Model):
 
     def __init__(self, alive, name, birth_date, death_date, works, genre, publisher):
         self.alive = alive
+        assert(type(alive) == type(True))
+
         self.name = name
+        assert(len(name) > 0)
+
         self.birth_date = birth_date
+        assert(len(birth_date) > 0)
+
         self.death_date = death_date
+        assert(len(death_date) > 0)
+
         self.works = works
+
         self.genre = genre
+        assert(len(genre) > 0)
+
         self.publisher = publisher
 
 class Publisher(db.Model):
@@ -101,11 +126,22 @@ class Publisher(db.Model):
 
     def __init__(self, name, founding_date, headquarters, country, founders, books, authors):
         self.name = name
+        assert(len(name) > 0)
+
         self.founding_date = founding_date
+        assert(len(founding_date) > 0)
+
         self.headquarters = headquarters
+        assert(len(headquarters) > 0)
+
         self.country = country
+        assert(len(country) > 0)
+
         self.founders = founders
+        assert(len(founders) > 0)
+
         self.books = books
+
         self.authors = authors
 
 class Review(db.Model):
@@ -120,7 +156,15 @@ class Review(db.Model):
     def __init__(self, book, author, reviewer, rating, content, source):
         self.book = book
         self.author = author
+
         self.reviewer = reviewer
+        assert(len(reviewer) > 0)
+
         self.rating = rating
+        assert(rating > 0)
+
         self.content = content
+        assert(len(content) > 0)
+
         self.source = source
+        assert(len(source) > 0)
