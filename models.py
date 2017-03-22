@@ -14,6 +14,7 @@ Genre?
 """
 
 
+# For more examples, refer to http://flask-sqlalchemy.pocoo.org/2.1/models/
 # This is an example Model
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -26,6 +27,20 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r>' % self.username
+
+
+# Two more, related models.
+class Person(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50))
+    addresses = db.relationship('Address', backref='person',
+                                lazy='dynamic')
+
+
+class Address(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(50))
+    person_id = db.Column(db.Integer, db.ForeignKey('person.id'))
 
 
 #########################################################
