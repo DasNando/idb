@@ -1,0 +1,18 @@
+Title
+SWE-Readers - Laura Catano ....
+
+Introduction
+Our project is a database of books, publishers, authors, and book reviews to be built from data scraped from various available web APIs on this subject (Google Books, OpenLibrary, GoodReads). Our database is simply an alternative to those services and is intended for use by anyone who may find such a catalog of book related information to be useful, i.e libraries, students shopping for textbooks, bookstores, or people who would like to get book recommendations based on genres and authors they may like. 
+
+
+Design
+Our RESTful API (unimplemented as of now) will allow others to scrape our database for the information we have collected ....
+
+
+Tools
+Our site's front-end is made with HTML and Bootstrap. Right now, it's simply a splash page (with a carousel and tables of books), pages (containing grids corresponding to each of our four models), and a currently non-functioning search bar. We plan to use React/Javascript to improve the look and navigability of our site in later phases. We also plan to replace our dummy data, currently hard coded into the page, with real data from our database.
+
+Our site's back-end is made with Flask and Python. We have implemented four models: Book, Author, Publisher and Review. (Include image in idb.pdf here) Each containing relevant information and links to other models. This will allow users to search based on specific attributes and be linked to related books, publishers, authors or reviews from the pages they view. 
+
+
+Hosting ....
