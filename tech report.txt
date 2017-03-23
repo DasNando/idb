@@ -12,7 +12,27 @@ Our RESTful API (unimplemented as of now) will allow others to scrape our databa
 Tools
 Our site's front-end is made with HTML and Bootstrap. Right now, it's simply a splash page (with a carousel and tables of books), pages (containing grids corresponding to each of our four models), and a currently non-functioning search bar. We plan to use React/Javascript to improve the look and navigability of our site in later phases. We also plan to replace our dummy data, currently hard coded into the page, with real data from our database.
 
-Our site's back-end is made with Flask and Python. We have implemented four models: Book, Author, Publisher and Review. (Include image in idb.pdf here) Each containing relevant information and links to other models. This will allow users to search based on specific attributes and be linked to related books, publishers, authors or reviews from the pages they view. 
+Our site's back-end is made with Flask and Python. We have implemented four models: Book, Author, Publisher and Review. (Include image in idb.pdf here) Each containing relevant information and links to other models. This will allow users to search based on specific attributes and be linked to related books, publishers, authors or reviews from the pages they view.
+
+Our team communicates using Slack. Slack allows us to create group channels, each with a particular purpose, such as development or random chat. This allows free communication between teammates while maintaining structure, such that no thread ever goes off topic. Slack also allows us to use the Github integration plugin, which keeps team members up to date with commits and pushes made to the joint Github repository. This allows all team members to receive the same information and reduces confusion among group members.
+
+For this project's deployment testing, we are using TravisCI. TravisCI allows us to automate the running of unit tests on each push to the group Github repository. These tests allow the team to ensure that changes made are not unknowingly interfering with other sections of the project, minimizing the amount aof site-crashing bugs that make it to live. The unit tests will largely consist of tests on the output of queries to the database/API. As of now, there is little to run on Travis, but as the project develops, the amount of tests run by Travis should increase.
 
 
-Hosting ....
+Hosting
+Our website is hosted on Google Cloud Platform's App Engine. Google Cloud Platform allows us to maintain source code on Google's servers and sync with Github in order to streamline updates to the website. As of now, our App Engine only hosts a single machine which, using the Flask Python web framework, serves the html templates of the website and applies static files such as CSS files and images. Our website's error logs are also maintained by Google, and include logs of all requests made to the website, filterable by severity of the request(ie. No Error, Warning, Notice, etc.)
+
+Backend
+To serve our webpages, we are using the Flask Python web framework. Flask allows us to render HTML templates and use Python to apply logic to the rendering and change the website accordingly. As of now, the system we are using is used primarily to keep track of all static files, such as stylesheets and images, and apply them properly to the html pages. As the project develops, we'd like to reduce the number of page templates and increase the amount of media that we maintain. Currently, the Flask framework is not serving any static images, as they are being pulled from the web. Eventually, we would like to add some images such as a logo or a static carousel.
+
+Embedding-Media Services
+As of now, we have not used any media embedding services, but we plan on eventually embedding verbose links to reviews via GoodReads. This means including some small portion of a larger review or set of reviews and attaching them to each Book, Author, and Publisher. The implementation of this and which service we will use is yet to be determined. We are also considering using a dynamic embedding service to update our carousel according to changes in popularity, or simply to randomize the images posted.
+
+RESTful API
+At the moment, our API (located at http://docs.swereaders1.apiary.io/#) will allow you to filter the database by search terms such as book name, author name, publishing date, etc. It will also allow you to pull all information on a given specific book. Once the database is fully implemented, we will expand the API documentation to denote the JSON and other output which will be returned from queries to the API.
+
+Use Cases
+This API, given the integration with GoodReads' review API, this website is largely reader-oriented.
+-Someone enjoys books of a particular genre and and would like to find similar books
+-Someone finds the subjects covered by a famous publisher interesting and would like to see other books published by them.
+-A user finds they like a publisher and are curious where the publisher is located
