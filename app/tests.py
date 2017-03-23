@@ -1,5 +1,5 @@
+from app import models
 from main import app, db
-import models
 
 
 def test_book_model_1(self):
@@ -24,9 +24,9 @@ def test_book_model_2(self):
 
     with app.test_request_context():
         data1 = models.Book("title1", "publisher1", "genre1", "author1",
-                           1900, 3, 1.1, 2.00)
+                            1900, 3, 1.1, 2.00)
         data2 = models.Book("title2", "publisher2", "genre2", "author2",
-                           2017, 3, 1.1, 2.00)
+                            2017, 3, 1.1, 2.00)
 
         db.session.add(data1)
         db.session.commit()
