@@ -12,34 +12,34 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/profile/<username>')
-def profile(username):
-    return render_template('home.html')
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
-@app.route('/post/<int:post_id>')
-def show_post(post_id):
-    return 'post id is: %d' % post_id
+@app.route('/authors')
+def authors():
+    return render_template('authors.html')
 
 
-@app.route('/form')
-def form():
-    return render_template('form.html')
+@app.route('/books')
+def books():
+    return render_template('books.html')
 
 
-@app.route('/submitted', methods=['POST'])
-def submitted_form():
-    name = request.form['name']
-    email = request.form['email']
-    site = request.form['site_url']
-    comments = request.form['comments']
+@app.route('/publishers')
+def publishers():
+    return render_template('publishers.html')
 
-    return render_template(
-        'submitted_form.html',
-        name=name,
-        email=email,
-        site=site,
-        comments=comments)
+
+@app.route('/reviews')
+def reviews():
+    return render_template('reviews.html')
+
+
+@app.route('/search')
+def search():
+    return render_template('search.html')
 
 
 @app.errorhandler(500)
