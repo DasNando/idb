@@ -42,6 +42,28 @@ def test_book_model_2(self):
         db.session.delete(data2)
         db.session.commit()
 
+def test_book_model_3(self):
+    """Test querying the database by attribute using simple keywords"""
+
+    with app.test_request_context():
+        data1 = models.Book("title1", "publisher1", "genre1", "author1",
+                            1900, 3, 1.1, 2.00)
+        data2 = models.Book("title2", "publisher2", "genre2", "author2",
+                            2017, 3, 1.1, 2.00)
+
+        db.session.add(data1)
+        db.session.commit()
+        db.session.add(data2)
+        db.session.commit()
+
+        book = db.session.query(models.Book).filter_by(title="title1").first()
+        self.assertEqual(book.year, 1900)
+        self.assertEqual(book.genre, "genre1")
+
+        db.session.delete(data1)
+        db.session.commit()
+        db.session.delete(data2)
+        db.session.commit()
 
 def test_author_model_1(self):
     """Test querying the database by attribute using simple keywords"""
@@ -83,6 +105,24 @@ def test_author_model_2(self):
         db.session.commit()
         db.session.delete(data2)
         db.session.commit()
+
+def test_author_model_3(self):
+    """Test querying the database by attribute using simple keywords"""
+
+    with app.test_request_context():
+        data1 = models.Author(True, "name1", "birth_date1", "death_date1", "works1",
+                           "genre1")
+        data2 = models.Author(False, "Ernest Hemingway", "1899", "1961", "For Whom The Bell Tolls",
+                           "fiction")
+
+        db.session.add(data1)
+        db.session.commit()
+        db.session.add(data2)
+        db.session.commit()
+
+        author = db.session.query(models.Author).filter_by(name="Ernest Hemingway").first()
+        self.assertEqual(author.birth_date, "1899")
+        self.assertEqual(genre, "fiction")
 
 def test_publisher_model_1(self):
     """Test querying the database by attribute using simple keywords"""
@@ -165,7 +205,7 @@ def test_review_model_2(self):
         db.session.commit()
 
 # here for no reason yet, really
-def test_financial_org_dictionary_1(self):
+'''def test_financial_org_dictionary_1(self):
     """Test dictionary method of financial org class"""
 
     example1 = models.Book("id", "name", "summary", "city", "companies", "twitter",
@@ -175,4 +215,4 @@ def test_financial_org_dictionary_1(self):
     self.assertEqual(dict_rep['financial_org_id'], "id")
     self.assertEqual(dict_rep['name'], "name")
     self.assertEqual(dict_rep['summary'], "summary")
-    self.assertEqual(dict_rep['city'], "city")
+    self.assertEqual(dict_rep['city'], "city")'''
