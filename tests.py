@@ -124,6 +124,46 @@ def test_publisher_model_2(self):
         db.session.delete(data2)
         db.session.commit()
 
+def test_review_model_1(self):
+    """Test querying the database by attribute using simple keywords"""
+
+    with app.test_request_context():
+        data = models.Review("book", "author", "reviewer", 5.5,
+                           "content", "source")
+
+        db.session.add(data)
+        db.session.commit()
+
+        review = db.session.query(models.Review).filter_by(book="book").first()
+        self.assertEqual(review.book, "book")
+        self.assertEqual(review.rating, 5.5)
+
+        db.session.delete(data)
+        db.session.commit()
+
+def test_review_model_2(self):
+    """Test querying the database by attribute using simple keywords"""
+
+    with app.test_request_context():
+        data = models.Review("book", "author", "reviewer", 5.5,
+                           "content", "source")
+        data2 = models.Review("book2", "author2", "reviewer2", 6.6,
+                           "content2", "source2")
+
+        db.session.add(data)
+        db.session.commit()
+        db.session.add(data2)
+        db.session.commit()
+
+        review = db.session.query(models.Review).filter_by(book="book").first()
+        self.assertEqual(review.book, "book")
+        self.assertEqual(review.content, "content")
+
+        db.session.delete(data)
+        db.session.commit()
+        db.session.delete(data2)
+        db.session.commit()
+
 # here for no reason yet, really
 def test_financial_org_dictionary_1(self):
     """Test dictionary method of financial org class"""
