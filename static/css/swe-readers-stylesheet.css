@@ -26,8 +26,25 @@ footer small {
 	text-align: center;
 }
 
-#mycarousel {
-	
+#sortbtn {
+	background-color: #006400;
+	border-color: #009900;
+	width: 100%;
+}
+
+.carousel-inner img{
+	margin: auto;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	margin: auto;
+}
+
+.dropdown-menu {
+	width: 100%;
+	background-color: #fff5e5;
+	border: black;
 }
 
 #bookcoverimg {
