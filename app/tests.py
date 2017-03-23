@@ -122,7 +122,7 @@ def test_author_model_3(self):
 
         author = db.session.query(models.Author).filter_by(name="Ernest Hemingway").first()
         self.assertEqual(author.birth_date, "1899")
-        self.assertEqual(genre, "fiction")
+        self.assertEqual(author.genre, "fiction")
 
 def test_publisher_model_1(self):
     """Test querying the database by attribute using simple keywords"""
