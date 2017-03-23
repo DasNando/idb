@@ -1,0 +1,86 @@
+FORMAT: 1A
+HOST: http://SWE-Readers.me/
+
+# SWE-Readers
+Simple API for gathering information regarding Books, Authors, and Publishers
+# Group Books
+
+## Search Books [/books/{?searchterm}]
+<code>/books/searchterm={terms}</code><br>
+
+#### Parameters
+- <code>searchterm</code> *(string)* - term to filter database by book
+
+### GET Search Books [GET]
+
+
+## Specific Books [/book{?id}]
+<code>/books?id={book_id}</code><br>
+Get all information related to book **id**
+#### Parameters
+- <code>book_id</code> *(string)* - a book_id denoting a specific book
+
+
+### GET Specific Books [GET]
+
+
+# Group Authors
+
+## Search Authors [/authors/{?searchterm}]
+<code>/authors/searchterm={terms}</code><br>
+
+#### Parameters
+- <code>searchterm</code> *(string)* - term to filter database by author
+
+### GET Search Authors [GET]
+
+
+## Specific Author [/author{?id}]
+<code>/authors?id={author_id}</code><br>
+Get all information related to author **id**
+#### Parameters
+- <code>author_id</code> *(string)* - an author_id denoting a specific author
+
+
+### GET Specific Author [GET]
+
+
+# Group Publishers
+
+## Search Publishers [/publishers/{?searchterm}]
+<code>/publishers/searchterm={terms}</code><br>
+
+#### Parameters
+- <code>searchterm</code> *(string)* - term to filter database by publisher
+
+### GET Search Publishers [GET]
+
+
+## Specific Publisher [/publisher{?id}]
+<code>/publisher?id={publisher_id}</code><br>
+Get all information related to publisher **id**
+#### Parameters
+- <code>publisher_id</code> *(string)* - an publisher_id denoting a specific publisher
+
+### GET Specific Publisher [GET]
+
+
+# Group Reviews
+
+## Search Reviews [/reviews/{?searchterm}]
+<code>/reviews/searchterm={terms}</code><br>
+
+#### Parameters
+- <code>searchterm</code> *(string)* - term to filter database by review
+
+### GET Search Reviews [GET]
+
+
+## Specific Review [/review{?id}]
+<code>/review?id={review_id}</code><br>
+Get all information related to review **id**
+#### Parameters
+- <code>review_id</code> *(string)* - an review_id denoting a specific review
+
+
+### GET Specific Review [GET]
