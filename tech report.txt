@@ -1,5 +1,5 @@
 Title
-SWE-Readers - Laura Catano, Conner Newman, Dylan Droll...
+SWE-Readers - Laura Catano, Conner Newman, Dylan Droll, Fernando Mendoza
 
 Introduction
 Our project is a database of books, publishers, authors, and book reviews to be built from data scraped from various available web APIs on this subject (Google Books, OpenLibrary, GoodReads). Our database is simply an alternative to those services and is intended for use by anyone who may find such a catalog of book related information to be useful, i.e libraries, students shopping for textbooks, bookstores, or people who would like to get book recommendations based on genres and authors they may like. 
