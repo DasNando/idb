@@ -11,7 +11,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 		<!-- CSS Stylesheet -->
-		<link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
 
 	</head>
 	<body>
@@ -21,15 +21,15 @@
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 						<span class="glyphicon glyphicon-book white"></span>
 					</button>
-					<a class="navbar-brand" href="home.html">SWE-Readers</a>
+					<a class="navbar-brand" href="{{ url_for('home') }}">SWE-Readers</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li><a href="books.html">Books</a></li>
-						<li><a href="authors.html">Authors</a></li>
-						<li><a href="publishers.html">Publishers</a></li>
-						<li><a href="reviews.html">Reviews</a></li>
-						<li><a href="about.html">About</a></li>
+						<li><a href="{{ url_for('books') }}">Books</a></li>
+						<li><a href="{{ url_for('authors') }}">Authors</a></li>
+						<li><a href="{{ url_for('publishers') }}">Publishers</a></li>
+						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
+						<li><a href="{{ url_for('about') }}">About</a></li>
 					</ul>
 					<form class="navbar-form navbar-right" action="search.html">
 						<div class="input-group">
