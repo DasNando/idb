@@ -1,5 +1,5 @@
 Title
-SWE-Readers - Laura Catano ....
+SWE-Readers - Laura Catano, Conner Newman, Dylan Droll...
 
 Introduction
 Our project is a database of books, publishers, authors, and book reviews to be built from data scraped from various available web APIs on this subject (Google Books, OpenLibrary, GoodReads). Our database is simply an alternative to those services and is intended for use by anyone who may find such a catalog of book related information to be useful, i.e libraries, students shopping for textbooks, bookstores, or people who would like to get book recommendations based on genres and authors they may like. 
@@ -13,6 +13,48 @@ Tools
 Our site's front-end is made with HTML and Bootstrap. Right now, it's simply a splash page (with a carousel and tables of books), pages (containing grids corresponding to each of our four models), and a currently non-functioning search bar. We plan to use React/Javascript to improve the look and navigability of our site in later phases. We also plan to replace our dummy data, currently hard coded into the page, with real data from our database.
 
 Our site's back-end is made with Flask and Python. We have implemented four models: Book, Author, Publisher and Review. (Include image in idb.pdf here) Each containing relevant information and links to other models. This will allow users to search based on specific attributes and be linked to related books, publishers, authors or reviews from the pages they view.
+
+The models each have a number of sub-attributes as follows:
+
+Book:
+	-title
+	-publisher
+	-genre
+	-author
+	-edition
+	-ISBN
+	-price
+	-reviews
+
+Author:
+	-alive
+	-name
+	-date of birth
+	-date of death
+	-works
+
+Publisher:
+	-name
+	-founding date
+	-headquarters
+	-country
+	-founders
+	-books published
+	-authors published
+
+Review:
+	-name of reviewer
+	-rating
+	-content of review
+	-source of review
+	-book being reviewed
+	-author of book being reviewed
+
+Each model is supported by a SQLAlchemy table which holds all of that model's data. The table stores all of the data for that model with each column of the table representing one attribute of the model. Currently, the 'book' model has title as its primary key, while 'author', 'review', and 'publisher' each have the 'name' attribute as their primary key.
+
+Each model has links to other models. Each book is linked, via one-to-one linkings, with its author and its publisher, and with a one-to-many with reviews of that book. Each author has a one-to-many relationship with that author's books and a one-to-one relationship with that author's publisher. Publishers have a one-to-many relationship with authors and with books. Lastly, Reviews have one-to-one relationships with both authors and books.
+
+Each model is represented by a seperate class, all of which extend the db.Model class. Upon instantiation, each model's __init__ method checks, via the use of assert statements, that any string data members have been set to values with positive length, as well as ensuring that reviews and prices are given as non-negative numbers. This is done to ensure the validity of any new data members that are created.
 
 Our team communicates using Slack. Slack allows us to create group channels, each with a particular purpose, such as development or random chat. This allows free communication between teammates while maintaining structure, such that no thread ever goes off topic. Slack also allows us to use the Github integration plugin, which keeps team members up to date with commits and pushes made to the joint Github repository. This allows all team members to receive the same information and reduces confusion among group members.
 

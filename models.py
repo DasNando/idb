@@ -69,8 +69,7 @@ class Author(db.Model):
     name = db.Column(db.String(80), primary_key=True)
     birth_date = db.Column(db.String(80))  # subject to change
     death_date = db.Column(db.String(80))  # ^^^
-    works = db.relationship('Book', backref='author',
-                            lazy='dynamic')
+    works = db.relationship('Book', backref='author', lazy='dynamic')
     genre = db.Column(db.String(80))
     publisher = db.relationship('Publisher', uselist=False, backref='author', lazy='dynamic')
 
