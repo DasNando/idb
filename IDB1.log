@@ -1,0 +1,508 @@
+commit d0f96cbcfd6b35ac15295719b141ebf3185f11bd
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 20:39:39 2017 -0500
+
+    finalizing repo, updating structure. Git Log needed
+
+commit cfd81e9de1a52fa76a35a365242709428bb2ba5e
+Author: Laura Catano <lllaura@cs.utexas.edu>
+Date:   Thu Mar 23 20:30:42 2017 -0500
+
+    Done about page
+
+commit 44e43b4e1c1e6738d5f69ed0dd42319391191ac8
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 20:02:52 2017 -0500
+
+    finalizing tech report
+
+commit 1f5ee6905d32b3258aac67f517955f63626154e8
+Author: Laura Catano <lllaura@cs.utexas.edu>
+Date:   Thu Mar 23 20:01:22 2017 -0500
+
+    More about page stuff
+
+commit b16ed8c42a25faa81333cbcacf8f2d5ffe97d211
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 19:54:58 2017 -0500
+
+    uploading group pictures
+
+commit 0386cb623195e21c0fa79e0f824ba45942664e8d
+Merge: 91ed37c a88a7b5
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 19:53:20 2017 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit a88a7b5861ea1fe13b59f2b07770272c26fc767b
+Author: DasNando <fernandom@utexas.edu>
+Date:   Thu Mar 23 19:52:48 2017 -0500
+
+    Add files via upload
+
+commit 4731295b3349cec9e4b2d3f1718c1dcef4e38b97
+Merge: b3b4fa0 7e82689
+Author: Laura Catano <lllaura@cs.utexas.edu>
+Date:   Thu Mar 23 19:48:54 2017 -0500
+
+    Merge branch 'master' of https://github.com/DasNando/idb
+
+commit b3b4fa0741c6a86b37a1f46370462b4512e03115
+Author: Laura Catano <lllaura@cs.utexas.edu>
+Date:   Thu Mar 23 19:47:28 2017 -0500
+
+    About page and pics
+
+commit 91ed37ccf00271408d8045f794bc9ccf3ff68760
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 19:45:59 2017 -0500
+
+    Updating html to near-final status
+
+commit 7e82689f9d9fce898a5016c084c22382c66773bd
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Thu Mar 23 19:45:00 2017 -0500
+
+    updated tech report with information about models.
+
+commit 6d1060b7265cfdc3c54d1fd07ae67df02f005140
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 19:21:55 2017 -0500
+
+    Updating html to near-final status
+
+commit 671ac95b5753408ada83a9ba2cc9707262ca49e8
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 19:20:46 2017 -0500
+
+    Updating html to near-final status
+
+commit 12378f3d8e89527958bb94ea9b0066d934b33c5b
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 19:19:25 2017 -0500
+
+    Updating html to near-final status
+
+commit 8c59a7c00f058b363deeb6a661a38a42ffcca43b
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 19:10:09 2017 -0500
+
+    Updating html to near-final status
+
+commit cec5b216849f0a10421c6c41d0672837405839f1
+Author: Dylan Droll <dylan@cs.utexas.edu>
+Date:   Thu Mar 23 18:52:24 2017 -0500
+
+    just ABOUT done, hehehe
+
+commit c1c1cbe7de21e2334c308c7b312cb900c09378af
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 18:49:02 2017 -0500
+
+    updating again
+
+commit 84dbda8850eb885f9b130162702e1233ba2768db
+Merge: 3c4c94f ee3b275
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 18:47:27 2017 -0500
+
+    Merge branch 'master' of https://github.com/DasNando/idb
+
+commit 3c4c94f9755613573a798e5a8b6c7fc9aa860d7e
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 18:47:07 2017 -0500
+
+    restructuring project
+
+commit ee3b27599cd842f6d67b20313e46822a92187e95
+Merge: ca7ec05 df3c820
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Thu Mar 23 18:46:55 2017 -0500
+
+    Merge branch 'master' of https://github.com/DasNando/idb
+
+commit ca7ec051dbe2bc29a606aaff5e0a6c10eeba3d23
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Thu Mar 23 18:46:41 2017 -0500
+
+    added more unit tests
+
+commit df3c82000ee60ae40c41f951abe14cfafcf59b2e
+Merge: 6528241 ed2f6ae
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 18:45:52 2017 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 6528241f736ce80048b0f01688ddab2aaea82ca8
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 18:45:41 2017 -0500
+
+    restructuring project
+
+commit ed2f6ae7c637be248b974a46133b39e216b3c758
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Thu Mar 23 18:34:16 2017 -0500
+
+    About page stuff
+
+commit 7fb50e56922765b2b15553ef06df3c47ee6b8b73
+Merge: 6c3c4e9 61f73f6
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Thu Mar 23 17:45:47 2017 -0500
+
+    Merge branch 'master' of https://github.com/DasNando/idb
+
+commit 6c3c4e982a2f1734142c67806efa4f086b8f1c99
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Thu Mar 23 17:45:34 2017 -0500
+
+    technical report
+
+commit 61f73f6db53faff0b62bc32fed7158f3f878d98c
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 17:34:52 2017 -0500
+
+    restructuring project
+
+commit 41a053307cd4a035724728bafa02f3e8fbf42d1a
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 17:34:07 2017 -0500
+
+    fixing .travis.yml
+
+commit 6f3e9e68949d6db366de4be25e62091c24839a06
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 17:32:55 2017 -0500
+
+    fixing .travis.yml
+
+commit f61887447817151e416dfeb1b015b48074a14ac0
+Author: DasNando <fernandoe_mend@yahoo.com>
+Date:   Thu Mar 23 17:28:14 2017 -0500
+
+    Transferring API Description file from Apiary.io
+
+commit a3e1c7811ab734db663fbeae93d34bd04ce1e45c
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 17:12:57 2017 -0500
+
+    adding to gitignore
+
+commit a31395db4bd65e16523f5a9ee26e640ff3f8ea1d
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 17:04:21 2017 -0500
+
+    adding to gitignore
+
+commit 03d2b8c8e94c86721aa51255b5b6245fb2d9714e
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Thu Mar 23 16:50:56 2017 -0500
+
+    added more comments and fixed that one problem
+
+commit 404a32e8bdbe295545e4c6baa4a72f6feee2c543
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 15:18:00 2017 -0500
+
+    html testing
+
+commit bdec38a6a05840890e632b936f7616ab41577c01
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 15:16:25 2017 -0500
+
+    issue with models.py, can't generate docs
+
+commit 4ee0b241ecf6ce71df572eabc9984aec6fddfbef
+Merge: 3f9f650 d85cdf3
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 15:12:44 2017 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 3f9f650be990aeffe8695f6578448e36ef1d940a
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 15:12:28 2017 -0500
+
+    issue with models.py, can't generate docs
+
+commit d85cdf38b05c0b6be2bdcd24d0d69de0b30ffc32
+Author: Dylan Droll <dylan@cs.utexas.edu>
+Date:   Thu Mar 23 15:11:14 2017 -0500
+
+    Lots of template stuff...
+
+commit 126139e826a8bdb02d7aadd0ff8b33db69f42348
+Author: Dylan Droll <dylan@cs.utexas.edu>
+Date:   Thu Mar 23 12:38:11 2017 -0500
+
+    Lots of template stuff...
+
+commit 056dfaee7753a6da6545c3c86950e7fa828ef436
+Merge: 0e5dabe a8c2726
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 00:53:48 2017 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 0e5dabecf9d27fca04d95494d722429b2e1bbf67
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Thu Mar 23 00:53:25 2017 -0500
+
+    I swear to god if this was the issue I'm going to be so salty
+
+commit a8c27263e930c3170ee6a546186ca712598c1d9c
+Merge: 66406f2 467b22b
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Wed Mar 22 17:52:39 2017 -0500
+
+    Merge branch 'master' of https://github.com/DasNando/idb
+
+commit 66406f2679cfe3cc6bb96c917e68320354b59ae9
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Wed Mar 22 17:52:27 2017 -0500
+
+    added more tests to tests.py for review model
+
+commit 467b22baf59a9f8a173db9cc82db5cd708493dbe
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 17:10:19 2017 -0500
+
+    WILL IT BLEND?
+
+commit d15d49c919fe5e3189995871473934de3e65cba0
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 17:03:35 2017 -0500
+
+    WILL IT BLEND?
+
+commit d8821d32ca69bde92a67d383ec7aa5311ab6a505
+Merge: 1184a60 c4fe603
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Wed Mar 22 17:00:33 2017 -0500
+
+    Merge branch 'master' of https://github.com/DasNando/idb
+
+commit 1184a60ff8342f260b1b07b5dcef91f95f73ada6
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Wed Mar 22 16:59:49 2017 -0500
+
+    reupload w/ assertions
+
+commit c4fe603efcbf8ad66eac96f1c9191bfbf616fea7
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 16:58:40 2017 -0500
+
+    WILL IT BLEND?
+
+commit 21fb01fedf18c37e577c1ffbd316e8f5e263b45a
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 16:54:41 2017 -0500
+
+    Removing url_for
+
+commit 935514efbbae27da63b1ccf9c058d153dee933c9
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 16:47:46 2017 -0500
+
+    Banner time?
+
+commit ed1f7ca308cc52839100e2853cffa3b51fa7fe1b
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 16:23:03 2017 -0500
+
+    Banner time?
+
+commit f7428510f819a4e732eeb671346e724bc64037e8
+Merge: cc6e6ef b1486dd
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 16:17:54 2017 -0500
+
+    Merge remote-tracking branch 'origin/master'
+
+commit b1486dded70e69a267ee36752fc511dbee0f1d49
+Author: dylandrollut <dylan.droll@utexas.edu>
+Date:   Wed Mar 22 16:14:52 2017 -0500
+
+    first homepage PogChamp
+
+commit e09f81974b046ea7c96ad6ff96abf9a5bab82dfa
+Author: dylandrollut <dylan.droll@utexas.edu>
+Date:   Wed Mar 22 16:12:32 2017 -0500
+
+    Added swe-readers-stylesheet.css
+
+commit 2203cdaec4212cc7d5259a3cefdc9ddf750b6f25
+Merge: 456b09e e04bcb5
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Wed Mar 22 16:01:50 2017 -0500
+
+    Merge branch 'master' of https://github.com/DasNando/idb
+
+commit cc6e6ef718ad91ec4ce29019cce674038acfd664
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 16:01:07 2017 -0500
+
+    tests added
+
+commit 456b09ebed25df0f4878088b4f92fbd48a09cd33
+Author: Conner Newman <conner@cs.utexas.edu>
+Date:   Wed Mar 22 16:00:56 2017 -0500
+
+    finished models.py (i think)
+
+commit e04bcb570247c21c8897b268eecb84141438d0fe
+Author: Laura Catano <lllaura@cs.utexas.edu>
+Date:   Wed Mar 22 15:22:42 2017 -0500
+
+    UML doc
+
+commit a420dbdf16284a9d6363c2cc8a3bf4b61cb568b2
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 14:32:08 2017 -0500
+
+    Starting point for models.py
+
+commit 45a896b9f40ec2a5866c1a659a8c5cc8e9b5c0c1
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 08:56:40 2017 -0500
+
+    Starting point for models.py
+
+commit 7603319d05fcdad6230d70d972f1cb4597a89664
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 06:16:48 2017 -0500
+
+    Still need css working right
+
+commit 17dbbf4a0bcf0283f795fc32868b516afae46c1d
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 06:11:42 2017 -0500
+
+    Still need css working right
+
+commit 237e73eae6762f4e46c22774aa2a505e9b953663
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 06:07:16 2017 -0500
+
+    Still need css working right
+
+commit ac9ff4624fe460069decbc439c72bc3d89708e84
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 06:04:45 2017 -0500
+
+    Still need css working right
+
+commit fd5d815f0123f20f3780d88187ca434e3f7ed4ee
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 06:02:44 2017 -0500
+
+    Still need css working right
+
+commit 48b49e90312fef1ff01a41846c1600a2282326ef
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 04:55:56 2017 -0500
+
+    Testing different .yaml files to get static files served correctly
+
+commit 90229b3648703c7afa3d2fec7121f2a9b9cde78c
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 04:51:51 2017 -0500
+
+    Testing different .yaml files to get static files served correctly
+
+commit 5f8cf585c7267ec0944ebf17b013e48561c554df
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 04:48:33 2017 -0500
+
+    Testing different .yaml files to get static files served correctly
+
+commit 187f43ee7f8b1be78a96e7aaed14c7e15e30c901
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 04:47:48 2017 -0500
+
+    Testing different .yaml files to get static files served correctly
+
+commit 890b87116761a199c7c2cecf070e1f65e5453d9d
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 04:46:49 2017 -0500
+
+    >:^V
+
+commit c10ee3aa0a70cb9548ea512be00cdc16e84e033c
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 04:01:16 2017 -0500
+
+    >:^V
+
+commit 918c3fba218dcfc0c2c2fb2ccbf748abfd31de9a
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 03:33:47 2017 -0500
+
+    >:^V
+
+commit 408f48dea08a1156f12deed2c6327e52a627b677
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 02:37:17 2017 -0500
+
+    We're dumping the whole library into the repo, for science
+
+commit c7b9bdbe35403cfb5d8916f94b62a0f77986336d
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Wed Mar 22 01:11:56 2017 -0500
+
+    We're dumping the whole library into the repo, for science
+
+commit dcc04bc241dd9c6f772cdeadb66f4be022bafc4d
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Tue Mar 21 22:17:17 2017 -0500
+
+    porting to Python2.7 I GUESS
+
+commit b477d97edfb833017e6963c6b92dcda9785a6419
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Tue Mar 21 21:42:35 2017 -0500
+
+    changing app.yaml file
+
+commit 443fee4c9a0bf0fa3b3ca03c5b7d94134034283c
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Tue Mar 21 21:21:41 2017 -0500
+
+    testing upload to Google Cloud/SWE-readers.me
+
+commit 722ef8726531df62025760fdaeff06975560b8b5
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Mon Mar 20 17:54:10 2017 -0500
+
+    Basic serving and css/html templating. moving onto testing js
+
+commit fddb6c6e9fafc39e74f32f93cc0f0f2697b545c6
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Mon Mar 20 13:19:39 2017 -0500
+
+    Testing
+
+commit 78dd639f102a5deb76d04c3189ce75ce64c25194
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Mon Mar 20 03:45:49 2017 -0500
+
+    This is where the Flask experimenting is going. These are by no means vital.
+    Also, this is a test of the Travis and Slack integration.
+    After this initial push, it might be useful to create separate development branches.
+
+commit 45490f2861a3906f82b6083bf49fad1674291c04
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Sun Mar 12 03:45:33 2017 -0500
+
+    This is where the Flask experimenting is going. These are by no means vital.
+    Also, this is a test of the Travis and Slack integration.
+    After this initial push, it might be useful to create separate development branches.
+
+commit 36d5240dd8ad585d00775058a160b49687e53bdb
+Author: Fernando Mendoza <fernandom@utexas.edu>
+Date:   Sun Mar 12 03:44:01 2017 -0500
+
+    This is where the Flask experimenting is going. These are by no means vital.
+    Also, this is a test of the Travis and Slack integration.
