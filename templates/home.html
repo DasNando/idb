@@ -24,17 +24,17 @@
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 						<span class="glyphicon glyphicon-book white"></span>
 					</button>
-					<a class="navbar-brand" href="home.html">SWE-Readers</a>
+					<a class="navbar-brand" href="{{ url_for('home') }}">SWE-Readers</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li><a href="books.html">Books</a></li>
-						<li><a href="authors.html">Authors</a></li>
-						<li><a href="publishers.html">Publishers</a></li>
-						<li><a href="reviews.html">Reviews</a></li>
-						<li><a href="about.html">About</a></li>
+						<li><a href="{{ url_for('books') }}">Books</a></li>
+						<li><a href="{{ url_for('authors') }}">Authors</a></li>
+						<li><a href="{{ url_for('publishers') }}">Publishers</a></li>
+						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
+						<li><a href="{{ url_for('about') }}">About</a></li>
 					</ul>
-					<form class="navbar-form navbar-right" action="search.html">
+					<form class="navbar-form navbar-right" action="{{ url_for('search') }}">
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="Search">
 							<div class="input-group-btn">
@@ -68,19 +68,19 @@
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
 						<div class="item active">
-							<img src="https://images.gr-assets.com/books/1388341769l/32767.jpg" alt="Flower">
+							<img src="{{ url_for('static', filename='img/home/home-1.jpg') }}" alt="Flower">
 						</div>
 
 						<div class="item">
-							<img src="https://images.gr-assets.com/books/1440319389l/4981.jpg" alt="Flower">
+							<img src="{{ url_for('static', filename='img/home/home-2.jpg') }}" alt="Flower">
 						</div>
 					
 						<div class="item">
-							<img src="https://images.gr-assets.com/books/1408303130l/375802.jpg" alt="Flower">
+							<img src="{{ url_for('static', filename='img/home/home-3.jpg') }}" alt="Flower">
 						</div>
 
 						<div class="item">
-							<img src="https://images.gr-assets.com/books/1390173285l/1381.jpg" alt="Flower">
+							<img src="{{ url_for('static', filename='img/home/home-4.jpg') }}" alt="Flower">
 						</div>
 					</div>
 
@@ -99,7 +99,7 @@
 			<h4>To get started you can use the search bar below:</h4>
 		</div>
 		<div class="container">
-			<form action="search.html">
+			<form action="{{ url_for('search') }}">
 				<div class="input-group">
 					<input type="text" class="form-control" placeholder="Search Books, Authors, Publishers, and Reviews">
 					<div class="input-group-btn">
@@ -131,7 +131,7 @@
 							<tbody>
 								<tr>
 									<td>
-										<img class="img-responsive" id="frontpageimg" src="http://www.epicreads.com/uploads/blog/KingsCage_EpicReads.jpg">
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-king.jpg') }}">
 									</td>
 									<td>King's Cage</td>
 									<td>Victoria Aveyard</td>
@@ -139,7 +139,7 @@
 								</tr>
 								<tr>
 									<td>
-										<img class="img-responsive" id="frontpageimg" src="http://images.gr-assets.com/books/1465563623l/27883214.jpg">
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-caraval.jpg') }}">
 									</td>
 									<td>Caraval</td>
 									<td>Stephanie Garber</td>
@@ -147,7 +147,7 @@
 								</tr>
 								<tr>
 									<td>
-										<img class="img-responsive" id="frontpageimg" src="http://www.neilgaiman.com/works/images/NorseMythology_Hardback_1473940163.jpg">
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-norse.jpg') }}">
 									</td>
 									<td>Norse Mythology</td>
 									<td>Neil Gaiman</td>
@@ -172,7 +172,7 @@
 							<tbody>
 								<tr>
 									<td>
-										<img class="img-responsive" id="frontpageimg" src="https://upload.wikimedia.org/wikipedia/en/e/e4/Ender%27s_game_cover_ISBN_0312932081.jpg">
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-enders.jpg') }}">
 									</td>
 									<td>Ender's Game</td>
 									<td>Orson Scott Card</td>
@@ -180,7 +180,7 @@
 								</tr>
 								<tr>
 									<td>
-										<img class="img-responsive" id="frontpageimg" src="https://theraidersdigest.files.wordpress.com/2016/12/awc_journalism_slaughterhousefivecover.jpg">
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-slaughter.jpg') }}">
 									</td>
 									<td>Slaughterhouse Five</td>
 									<td>Kurt Vonnegut</td>
@@ -188,7 +188,7 @@
 								</tr>
 								<tr>
 									<td>
-										<img class="img-responsive" id="frontpageimg" src="https://d35fkdjhhgt99.cloudfront.net/static/use-media-items/12/11893/full-1400x2136/56702545/The-Great-Gatsby.jpeg?resolution=0">
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-gatsby.jpeg') }}">
 									</td>
 									<td>The Great Gatsby</td>
 									<td>F. Scott Fitzgerald</td>

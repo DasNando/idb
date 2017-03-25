@@ -24,17 +24,17 @@
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 						<span class="glyphicon glyphicon-book white"></span>
 					</button>
-					<a class="navbar-brand" href="home.html">SWE-Readers</a>
+					<a class="navbar-brand" href="{{ url_for('home') }}">SWE-Readers</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="books.html">Books</a></li>
-						<li><a href="authors.html">Authors</a></li>
-						<li><a href="publishers.html">Publishers</a></li>
-						<li><a href="reviews.html">Reviews</a></li>
-						<li><a href="about.html">About</a></li>
+						<li class="active"><a href="{{ url_for('books') }}">Books</a></li>
+						<li><a href="{{ url_for('authors') }}">Authors</a></li>
+						<li><a href="{{ url_for('publishers') }}">Publishers</a></li>
+						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
+						<li><a href="{{ url_for('about') }}">About</a></li>
 					</ul>
-					<form class="navbar-form navbar-right" action="search.html">
+					<form class="navbar-form navbar-right" action="{{ url_for('search') }}">
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="Search">
 							<div class="input-group-btn">
@@ -57,7 +57,7 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<div>
-						<form action="search.html">
+						<form action="{{ url_for('search') }}">
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="Filter Books">
 								<div class="input-group-btn">
@@ -92,7 +92,7 @@
 				<div class="col-sm-4">
 					<div class="card">
 						<div class="card-block">
-							<img class="card-img-top img-responsive" src="https://mrpersonanongrata.files.wordpress.com/2013/11/enders-game.jpg" alt="book cover" position="center">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/books/books-ender.jpg') }}" alt="book cover" position="center">
 							<h4 class="card-title"><u>Title:</u> Ender's Game</h4>
 							<p class="card-text"><u>Author:</u> Orson Scott Card</p>
 							<p class="card-text"><u>Published:</u> January 15, 1985</p>
@@ -108,7 +108,7 @@
 				<div class="col-sm-4">
 					<div class="card">
 						<div class="card-block">
-							<img class="card-img-top img-responsive" src="https://theraidersdigest.files.wordpress.com/2016/12/awc_journalism_slaughterhousefivecover.jpg" alt="book cover" position="center">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/books/books-slaughter.jpg') }}" alt="book cover" position="center">
 							<h4 class="card-title"><u>Title:</u> Slaughterhouse-Five</h4>
 							<p class="card-text"><u>Author:</u> Kurt Vonnegut</p>
 							<p class="card-text"><u>Published:</u> March 1969</p>
@@ -124,7 +124,7 @@
 				<div class="col-sm-4">
 					<div class="card">
 						<div class="card-block">
-							<img class="card-img-top img-responsive" src="https://d35fkdjhhgt99.cloudfront.net/static/use-media-items/12/11893/full-1400x2136/56702545/The-Great-Gatsby.jpeg?resolution=0" alt="book cover" position="center">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/books/books-gatsby.jpeg') }}" alt="book cover" position="center">
 							<h4 class="card-title"><u>Title:</u> The Great Gatsby</h4>
 							<p class="card-text"><u>Author:</u> F Scott Fitzgerald</p>
 							<p class="card-text"><u>Published:</u> 1925</p>

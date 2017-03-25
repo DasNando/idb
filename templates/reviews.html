@@ -24,17 +24,17 @@
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 						<span class="glyphicon glyphicon-book white"></span>
 					</button>
-					<a class="navbar-brand" href="home.html">SWE-Readers</a>
+					<a class="navbar-brand" href="{{ url_for('home') }}">SWE-Readers</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li><a href="books.html">Books</a></li>
-						<li><a href="authors.html">Authors</a></li>
-						<li><a href="publishers.html">Publishers</a></li>
-						<li class="active"><a href="reviews.html">Reviews</a></li>
-						<li><a href="about.html">About</a></li>
+						<li><a href="{{ url_for('books') }}">Books</a></li>
+						<li><a href="{{ url_for('authors') }}">Authors</a></li>
+						<li><a href="{{ url_for('publishers') }}">Publishers</a></li>
+						<li class="active"><a href="{{ url_for('reviews') }}">Reviews</a></li>
+						<li><a href="{{ url_for('about') }}">About</a></li>
 					</ul>
-					<form class="navbar-form navbar-right" action="search.html">
+					<form class="navbar-form navbar-right" action="{{ url_for('search') }}">
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="Search">
 							<div class="input-group-btn">
@@ -57,7 +57,7 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<div>
-						<form action="search.html">
+						<form action="{{ url_for('search') }}">
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="Filter Reviews">
 								<div class="input-group-btn">
@@ -89,7 +89,7 @@
 				<div class="col-sm-4">
 					<div class="card">
 						<div class="card-block">
-							<img class="card-img-top img-responsive" src="http://i.imgur.com/rwTmWZl.jpg" alt="reviewrprofilepic" position="center">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/publishers/reviews-static.jpg') }}" alt="reviewrprofilepic" position="center">
 							<h4 class="card-title"><strong>DefinitelyNotTrump says:</Strong></h4>
 							<p class="card-text"><u>Book:</u>The Constitution</p>
 							<p class="card-text"><u>Author:</u>Dead Presidents and others</p>
@@ -102,7 +102,7 @@
 				<div class="col-sm-4">
 					<div class="card">
 						<div class="card-block">
-							<img class="card-img-top img-responsive" src="http://i.imgur.com/rwTmWZl.jpg" alt="reviewrprofilepic" position="center">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/publishers/reviews-static.jpg') }}" alt="reviewrprofilepic" position="center">
 							<h4 class="card-title"><strong>DefinitelyNotTrump says:</strong></h4>
 							<p class="card-text"><u>Book:</u>The Constitution</p>
 							<p class="card-text"><u>Author:</u>Dead Presidents and others</p>
@@ -115,7 +115,7 @@
 				<div class="col-sm-4">
 					<div class="card">
 						<div class="card-block">
-							<img class="card-img-top img-responsive" src="http://i.imgur.com/rwTmWZl.jpg" alt="reviewrprofilepic" position="center">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/publishers/reviews-static.jpg') }}" alt="reviewrprofilepic" position="center">
 							<h4 class="card-title"><Strong>DefinitelyNotTrump says:</strong></h4>
 							<p class="card-text"><u>Book:</u>The Constitution</p>
 							<p class="card-text"><u>Author:</u>Dead Presidents and others</p>

@@ -7,7 +7,7 @@
 		<!-- pulling Bootstrap from CDN -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script `="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 		<!-- Web CSS Stylesheet -->
@@ -24,17 +24,17 @@
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 						<span class="glyphicon glyphicon-book white"></span>
 					</button>
-					<a class="navbar-brand" href="home.html">SWE-Readers</a>
+					<a class="navbar-brand" href="{{ url_for('home') }}">SWE-Readers</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li><a href="books.html">Books</a></li>
-						<li><a href="authors.html">Authors</a></li>
-						<li class="active"><a href="publishers.html">Publishers</a></li>
-						<li><a href="reviews.html">Reviews</a></li>
-						<li><a href="about.html">About</a></li>
+						<li><a href="{{ url_for('books') }}">Books</a></li>
+						<li><a href="{{ url_for('authors') }}">Authors</a></li>
+						<li class="active"><a href="{{ url_for('publishers') }}">Publishers</a></li>
+						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
+						<li><a href="{{ url_for('about') }}">About</a></li>
 					</ul>
-					<form class="navbar-form navbar-right" action="search.html">
+					<form class="navbar-form navbar-right" action="{{ url_for('search') }}">
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="Search">
 							<div class="input-group-btn">
@@ -57,7 +57,7 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<div>
-						<form action="search.html">
+						<form action="{{ url_for('search') }}">
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="Filter Publishers">
 								<div class="input-group-btn">
@@ -89,7 +89,7 @@
 				<div class="col-sm-4">
 					<div class="card">
 						<div class="card-block">
-							<img class="card-img-top img-responsive" src="https://s-media-cache-ak0.pinimg.com/originals/53/20/17/5320176c91e6a39801c8e7b99debce9f.jpg" alt="publisherslogo" position="center">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/publishers/publishers-static.jpg') }}" alt="publisherslogo" position="center">
 							<h4 class="card-title"><u>Name:</u>Starboy Publishing Co.</h4>
 							<p class="card-text"><u>Founded:</u>A long time ago</p>
 							<p class="card-text"><u>Founders:</u>Unicron</p>
@@ -103,7 +103,7 @@
 				<div class="col-sm-4">
 					<div class="card">
 						<div class="card-block">
-							<img class="card-img-top img-responsive" src="https://s-media-cache-ak0.pinimg.com/originals/53/20/17/5320176c91e6a39801c8e7b99debce9f.jpg" alt="publisherslogo" position="center">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/publishers/publishers-static.jpg') }}" alt="publisherslogo" position="center">
 							<h4 class="card-title"><u>Name:</u>Starboy Publishing Co.</h4>
 							<p class="card-text"><u>Founded:</u>A long time ago</p>
 							<p class="card-text"><u>Founders:</u>Unicron</p>
@@ -117,7 +117,7 @@
 				<div class="col-sm-4">
 					<div class="card">
 						<div class="card-block">
-							<img class="card-img-top img-responsive" src="https://s-media-cache-ak0.pinimg.com/originals/53/20/17/5320176c91e6a39801c8e7b99debce9f.jpg" alt="publisherslogo" position="center">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/publishers/publishers-static.jpg') }}" alt="publisherslogo" position="center">
 							<h4 class="card-title"><u>Name:</u>Starboy Publishing Co.</h4>
 							<p class="card-text"><u>Founded:</u>A long time ago</p>
 							<p class="card-text"><u>Founders:</u>Unicron</p>
