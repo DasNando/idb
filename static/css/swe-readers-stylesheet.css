@@ -17,19 +17,13 @@ footer small {
 }
 
 .card-block {
-	padding: 0em;
 	background-color: lightgray;
 }
 
-/*tags*/
-#centered {
-	text-align: center;
-}
-
-#sortbtn {
-	background-color: #006400;
-	border-color: #009900;
-	width: 100%;
+.card-block > p,
+.card-block > h4 {
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .carousel-inner img{
@@ -47,6 +41,17 @@ footer small {
 	border: black;
 }
 
+/*tags*/
+#centered {
+	text-align: center;
+}
+
+#sortbtn {
+	background-color: #006400;
+	border-color: #009900;
+	width: 100%;
+}
+
 #bookcoverimg {
 	padding: 1em;
 	width: 200px;
@@ -60,6 +65,24 @@ footer small {
 	min-width: 100px;
 	height: 150px;
 	min-height: 150px;
+}
+
+#cardbottom {
+	padding-bottom: 10px;
+}
+
+#techreport {
+	background-color: lightgray;
+}
+
+#techreport > h2 {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#techreport > h3, 
+#techreport > h4 {
+	text-decoration: underline;
 }
 
 /*everything that makes the navbar look good*/
