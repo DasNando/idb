@@ -155,3 +155,5 @@ class Review(db.Model):
 
         self.source = source
         assert len(source) > 0
+
+# db.create_all()

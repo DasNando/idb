@@ -3,6 +3,10 @@ from flask_sqlalchemy import SQLAlchemy
 import logging
 
 app = Flask(__name__)
+# dialect+driver://username:password@host:port/database
+# postgresql://scott:tiger@localhost/mydatabase
+app.config['SQLALCHEMY_DATABASE_URI'] = \
+    'postgresql://postgres:swereaders@35.184.110.238:5432/postgres'
 db = SQLAlchemy(app)
 
 
@@ -31,7 +35,6 @@ def books():
 def publishers():
     return render_template('publishers.html')
 
-
 @app.route('/reviews')
 def reviews():
     return render_template('reviews.html')
@@ -49,5 +52,5 @@ def server_error(e):
     return 'An internal error occurred.', 500
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 
