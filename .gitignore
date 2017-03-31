@@ -1,3 +1,4 @@
 # Left blank until we decide what needs to be in here
 .idea/
 *.pyc
+/client-secret.json
