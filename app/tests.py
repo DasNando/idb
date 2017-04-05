@@ -1,5 +1,5 @@
-from main import app, db
-from unittest import main, TestCase
+from unittest import main
+
 #
 # class TestModels(TestCase):
 #
