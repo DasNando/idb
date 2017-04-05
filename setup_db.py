@@ -10,6 +10,6 @@ def init_db():
 		test_data = json.load(test_json)
 
 	for item in test_data['items']:
-		book = Book(item['title'], item['publisher'], item['categories'][0], item['authors'][0], item['publisedDate'], 420, item['industryIdentifiers'][1], item['retailPrice']['amount'], "todo: review goes here")
+		book = Book(item['title'], item['categories'][0], item['publisedDate'], 420, item['industryIdentifiers'][1], item['retailPrice']['amount'])
 
 init_db()

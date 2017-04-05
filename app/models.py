@@ -23,28 +23,25 @@ class Book(db.Model):
     """Links to Author, Review, Publisher
        Book-Author and Book-Publisher are one-to-one relationships,
        Book-Review is one-to-many"""
-    title = db.Column(db.String(120), primary_key=True)
-    publisher = db.relationship('Publisher', uselist=False, backref='book', lazy='dynamic')
+    title = db.Column(db.String(120), primary_key=True)    
     genre = db.Column(db.String(120))
-    author = db.relationship('Author', uselist=False, backref='book', lazy='dynamic')
     year = db.Column(db.Integer)
     edition = db.Column(db.Integer)
     isbn = db.Column(db.String(80))
     prices = db.Column(db.Float)
+
+    author = db.relationship('Author', uselist=False, backref='book', lazy='dynamic')
+    publisher = db.relationship('Publisher', uselist=False, backref='book', lazy='dynamic')
     reviews = db.relationship('Review', backref='book', lazy='dynamic')
 
-    def __init__(self, title, publisher, genre, author, year, edition, isbn, prices, reviews):
+    def __init__(self, title, genre, year, edition, isbn, prices):
         """All string data members are asserted to be of len > 0, price is asserted to be > 0"""
 
         self.title = title
         assert len(title) > 0
 
-        self.publisher = publisher
-
         self.genre = genre
         assert len(genre) > 0
-
-        self.author = author
 
         self.year = year
         assert 0 < year < 2018
@@ -57,9 +54,7 @@ class Book(db.Model):
 
         self.prices = prices
         assert prices > 0
-
-        self.reviews = reviews
-
+        
 
 class Author(db.Model):
     """Links to Book, Publisher
