@@ -15,7 +15,7 @@ before_install:
   fi
 - tar -xzf credentials.tar.gz
 - mkdir -p lib
-- gcloud auth activate-service-account --key-file client-secret.json
+# - gcloud auth activate-service-account --key-file client-secret.json
 install:
 - gcloud config set project cs373-idb
 - gcloud -q components update gae-python
