@@ -299,10 +299,354 @@
      "searchInfo": {
       "textSnippet": "Richly informative and beautifully written, The Genius of Birds celebrates the triumphs of these surprising and fiercely intelligent creatures. From the Hardcover edition."
      }
-    }
-    
+    },
+    {
+     "kind": "books#volume",
+     "id": "Z2q_1A0nlvIC",
+     "etag": "n9FmENA1Jho",
+     "selfLink": "https://www.googleapis.com/books/v1/volumes/Z2q_1A0nlvIC",
+     "volumeInfo": {
+      "title": "I Know Why the Caged Bird Sings",
+      "authors": [
+       "Maya Angelou"
+      ],
+      "publisher": "Random House",
+      "publishedDate": "2010-07-21",
+      "description": "Sent by their mother to live with their devout, self-sufficient grandmother in a small Southern town, Maya and her brother, Bailey, endure the ache of abandonment and the prejudice of the local “powhitetrash.” At eight years old and back at her mother’s side in St. Louis, Maya is attacked by a man many times her age–and has to live with the consequences for a lifetime. Years later, in San Francisco, Maya learns about love for herself and the kindness of others, her own strong spirit, and the ideas of great authors (“I met and fell in love with William Shakespeare”) will allow her to be free instead of imprisoned. Poetic and powerful, I Know Why the Caged Bird Sings is a modern American classic that will touch hearts and change minds for as long as people read. From the Paperback edition.",
+      "industryIdentifiers": [
+       {
+        "type": "ISBN_13",
+        "identifier": "9780307477729"
+       },
+       {
+        "type": "ISBN_10",
+        "identifier": "030747772X"
+       }
+      ],
+      "readingModes": {
+       "text": true,
+       "image": false
+      },
+      "pageCount": 288,
+      "printType": "BOOK",
+      "categories": [
+       "Biography & Autobiography"
+      ],
+      "averageRating": 4.0,
+      "ratingsCount": 3307,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": true,
+      "contentVersion": "0.0.1.0.preview.2",
+      "imageLinks": {
+       "smallThumbnail": "http://books.google.com/books/content?id=Z2q_1A0nlvIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+       "thumbnail": "http://books.google.com/books/content?id=Z2q_1A0nlvIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=Z2q_1A0nlvIC&printsec=frontcover&dq=isbn:030747772X&hl=&cd=1&source=gbs_api",
+      "infoLink": "http://books.google.com/books?id=Z2q_1A0nlvIC&dq=isbn:030747772X&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/I_Know_Why_the_Caged_Bird_Sings.html?hl=&id=Z2q_1A0nlvIC"
+     },
+     "saleInfo": {
+      "country": "US",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+     },
+     "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+      "epub": {
+       "isAvailable": true,
+       "acsTokenLink": "http://books.google.com/books/download/I_Know_Why_the_Caged_Bird_Sings-sample-epub.acsm?id=Z2q_1A0nlvIC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      "pdf": {
+       "isAvailable": false
+      },
+      "webReaderLink": "http://books.google.com/books/reader?id=Z2q_1A0nlvIC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+     },
+     "searchInfo": {
+      "textSnippet": "Here is a book as joyous and painful, as mysterious and memorable, as childhood itself."
+     }
+    },
 
-    
+    {
+     "kind": "books#volume",
+     "id": "w8uYDAAAQBAJ",
+     "etag": "avp7ebtonCI",
+     "selfLink": "https://www.googleapis.com/books/v1/volumes/w8uYDAAAQBAJ",
+     "volumeInfo": {
+      "title": "The Colour out of Space",
+      "authors": [
+       "H. P. Lovecraft"
+      ],
+      "publisher": "Simon and Schuster",
+      "publishedDate": "2014-02-03",
+      "description": "H. P. Lovecraft was one of the greatest horror writers of all time. His seminal work appeared in the pages of legendary Weird Tales and has influenced countless writer of the macabre. This is one of those stories.",
+      "industryIdentifiers": [
+       {
+        "type": "ISBN_13",
+        "identifier": "9781609772703"
+       },
+       {
+        "type": "ISBN_10",
+        "identifier": "1609772709"
+       }
+      ],
+      "readingModes": {
+       "text": true,
+       "image": false
+      },
+      "pageCount": 30,
+      "printType": "BOOK",
+      "categories": [
+       "Fiction"
+      ],
+      "averageRating": 5.0,
+      "ratingsCount": 1,
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": false,
+      "contentVersion": "1.2.2.0.preview.2",
+      "panelizationSummary": {
+       "containsEpubBubbles": false,
+       "containsImageBubbles": false
+      },
+      "imageLinks": {
+       "smallThumbnail": "http://books.google.com/books/content?id=w8uYDAAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+       "thumbnail": "http://books.google.com/books/content?id=w8uYDAAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=w8uYDAAAQBAJ&dq=isbn:1609772709&hl=&cd=1&source=gbs_api",
+      "infoLink": "http://books.google.com/books?id=w8uYDAAAQBAJ&dq=isbn:1609772709&hl=&source=gbs_api",
+      "canonicalVolumeLink": "https://books.google.com/books/about/The_Colour_out_of_Space.html?hl=&id=w8uYDAAAQBAJ"
+     },
+     "saleInfo": {
+      "country": "US",
+      "saleability": "NOT_FOR_SALE",
+      "isEbook": false
+     },
+     "accessInfo": {
+      "country": "US",
+      "viewability": "NO_PAGES",
+      "embeddable": false,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+      "epub": {
+       "isAvailable": true
+      },
+      "pdf": {
+       "isAvailable": false
+      },
+      "webReaderLink": "http://books.google.com/books/reader?id=w8uYDAAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+      "accessViewStatus": "NONE",
+      "quoteSharingAllowed": false
+     },
+     "searchInfo": {
+      "textSnippet": "H. P. Lovecraft was one of the greatest horror writers of all time. His seminal work appeared in the pages of legendary Weird Tales and has influenced countless writer of the macabre. This is one of those stories."
+     }
+    },
+
+    {
+     "kind": "books#volume",
+     "id": "_kgIjl9LkScC",
+     "etag": "JQU6VQ/WkGk",
+     "selfLink": "https://www.googleapis.com/books/v1/volumes/_kgIjl9LkScC",
+     "volumeInfo": {
+      "title": "Make Space",
+      "subtitle": "How to Set the Stage for Creative Collaboration",
+      "authors": [
+       "Scott Doorley",
+       "Scott Witthoft",
+       "Hasso Plattner Institute of Design at Stanford University"
+      ],
+      "publisher": "John Wiley & Sons",
+      "publishedDate": "2011-12-30",
+      "description": "\"If you are determined to encourage creativity and provide a collaborative environment that will bring out the best in people, you will want this book by your side at all times.\" —Bill Moggridge, Director of the Smithsonian's Cooper-Hewitt National Design Museum \"Make Space is an articulate account about the importance of space; how we think about it, build it and thrive in it.\" —James P. Hackett, President and CEO, Steelcase An inspiring guidebook filled with ways to alter space to fuel creative work and foster collaboration. Based on the work at the Stanford University d.school and its Environments Collaborative Initiative, Make Space is a tool that shows how space can be intentionally manipulated to ignite creativity. Appropriate for designers charged with creating new spaces or anyone interested in revamping an existing space, this guide offers novel and non-obvious strategies for changing surroundings specifically to enhance the ways in which teams and individuals communicate, work, play--and innovate. Inside are: Tools--tips on how to build everything from furniture, to wall treatments, and rigging Situations--scenarios, and layouts for sparking creative activities Insights--bite-sized lessons designed to shortcut your learning curve Space Studies--candid stories with lessons on creating spaces for making, learning, imagining, and connecting Design Template--a framework for understanding, planning, and building collaborative environments Make Space is a new and dynamic resource for activating creativity, communication and innovation across institutions, corporations, teams, and schools alike. Filled with tips and instructions that can be approached from a wide variety of angles, Make Space is a ready resource for empowering anyone to take control of an environment.",
+      "industryIdentifiers": [
+       {
+        "type": "ISBN_13",
+        "identifier": "9781118172513"
+       },
+       {
+        "type": "ISBN_10",
+        "identifier": "1118172515"
+       }
+      ],
+      "readingModes": {
+       "text": false,
+       "image": true
+      },
+      "pageCount": 272,
+      "printType": "BOOK",
+      "categories": [
+       "Architecture"
+      ],
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": true,
+      "contentVersion": "0.7.0.0.preview.1",
+      "panelizationSummary": {
+       "containsEpubBubbles": false,
+       "containsImageBubbles": false
+      },
+      "imageLinks": {
+       "smallThumbnail": "http://books.google.com/books/content?id=_kgIjl9LkScC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+       "thumbnail": "http://books.google.com/books/content?id=_kgIjl9LkScC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=_kgIjl9LkScC&printsec=frontcover&dq=isbn:1118172515&hl=&cd=1&source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=_kgIjl9LkScC&source=gbs_api",
+      "canonicalVolumeLink": "https://market.android.com/details?id=book-_kgIjl9LkScC"
+     },
+     "saleInfo": {
+      "country": "US",
+      "saleability": "FOR_SALE",
+      "isEbook": true,
+      "listPrice": {
+       "amount": 32.99,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amount": 26.39,
+       "currencyCode": "USD"
+      },
+      "buyLink": "https://play.google.com/store/books/details?id=_kgIjl9LkScC&rdid=book-_kgIjl9LkScC&rdot=1&source=gbs_api",
+      "offers": [
+       {
+        "finskyOfferType": 1,
+        "listPrice": {
+         "amountInMicros": 3.299E7,
+         "currencyCode": "USD"
+        },
+        "retailPrice": {
+         "amountInMicros": 2.639E7,
+         "currencyCode": "USD"
+        },
+        "giftable": true
+       }
+      ]
+     },
+     "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED",
+      "epub": {
+       "isAvailable": false
+      },
+      "pdf": {
+       "isAvailable": true,
+       "acsTokenLink": "http://books.google.com/books/download/Make_Space-sample-pdf.acsm?id=_kgIjl9LkScC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      "webReaderLink": "http://books.google.com/books/reader?id=_kgIjl9LkScC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+     },
+     "searchInfo": {
+      "textSnippet": "&quot;If you are determined to encourage creativity and provide a collaborative environment that will bring out the best in people, you will want this book by your side at all times.&quot; —Bill Moggridge, Director of the Smithsonian&#39;s Cooper ..."
+     }
+    },
+
+    {
+     "kind": "books#volume",
+     "id": "tN3bAwAAQBAJ",
+     "etag": "2+OZ51Vjh0A",
+     "selfLink": "https://www.googleapis.com/books/v1/volumes/tN3bAwAAQBAJ",
+     "volumeInfo": {
+      "title": "The Poetics of Space",
+      "authors": [
+       "Gaston Bachelard"
+      ],
+      "publisher": "Penguin",
+      "publishedDate": "2014-12-30",
+      "description": "A beloved multidisciplinary treatise comes to Penguin Classics Since its initial publication in 1958, The Poetics of Space has been a muse to philosophers, architects, writers, psychologists, critics, and readers alike. The rare work of irresistibly inviting philosophy, Bachelard’s seminal work brims with quiet revelations and stirring, mysterious imagery. This lyrical journey takes as its premise the emergence of the poetic image and finds an ideal metaphor in the intimate spaces of our homes. Guiding us through a stream of meditations on poetry, art, and the blooming of consciousness itself, Bachelard examines the domestic places that shape and hold our dreams and memories. Houses and rooms; cellars and attics; drawers, chests, and wardrobes; nests and shells; nooks and corners: No space is too vast or too small to be filled by our thoughts and our reveries. In Bachelard’s enchanting spaces, “We are never real historians, but always near poets, and our emotion is perhaps nothing but an expression of a poetry that was lost.” This new edition features a foreword by Mark Z. Danielewski, whose bestselling novel House of Leaves drew inspiration from Bachelard’s writings, and an introduction by internationally renowned philosopher Richard Kearney who explains the book’s enduring importance and its role within Bachelard’s remarkable career. For more than sixty-five years, Penguin has been the leading publisher of classic literature in the English-speaking world. With more than 1,500 titles, Penguin Classics represents a global bookshelf of the best works throughout history and across genres and disciplines. Readers trust the series to provide authoritative texts enhanced by introductions and notes by distinguished scholars and contemporary authors, as well as up-to-date translations by award-winning translators. From the Trade Paperback edition.",
+      "industryIdentifiers": [
+       {
+        "type": "ISBN_13",
+        "identifier": "9780698170438"
+       },
+       {
+        "type": "ISBN_10",
+        "identifier": "0698170431"
+       }
+      ],
+      "readingModes": {
+       "text": true,
+       "image": false
+      },
+      "pageCount": 304,
+      "printType": "BOOK",
+      "categories": [
+       "Philosophy"
+      ],
+      "maturityRating": "NOT_MATURE",
+      "allowAnonLogging": true,
+      "contentVersion": "1.3.3.0.preview.2",
+      "panelizationSummary": {
+       "containsEpubBubbles": false,
+       "containsImageBubbles": false
+      },
+      "imageLinks": {
+       "smallThumbnail": "http://books.google.com/books/content?id=tN3bAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+       "thumbnail": "http://books.google.com/books/content?id=tN3bAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+      },
+      "language": "en",
+      "previewLink": "http://books.google.com/books?id=tN3bAwAAQBAJ&printsec=frontcover&dq=isbn:0698170431&hl=&cd=1&source=gbs_api",
+      "infoLink": "https://play.google.com/store/books/details?id=tN3bAwAAQBAJ&source=gbs_api",
+      "canonicalVolumeLink": "https://market.android.com/details?id=book-tN3bAwAAQBAJ"
+     },
+     "saleInfo": {
+      "country": "US",
+      "saleability": "FOR_SALE",
+      "isEbook": true,
+      "listPrice": {
+       "amount": 11.99,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amount": 11.99,
+       "currencyCode": "USD"
+      },
+      "buyLink": "https://play.google.com/store/books/details?id=tN3bAwAAQBAJ&rdid=book-tN3bAwAAQBAJ&rdot=1&source=gbs_api",
+      "offers": [
+       {
+        "finskyOfferType": 1,
+        "listPrice": {
+         "amountInMicros": 1.199E7,
+         "currencyCode": "USD"
+        },
+        "retailPrice": {
+         "amountInMicros": 1.199E7,
+         "currencyCode": "USD"
+        },
+        "giftable": true
+       }
+      ]
+     },
+     "accessInfo": {
+      "country": "US",
+      "viewability": "PARTIAL",
+      "embeddable": true,
+      "publicDomain": false,
+      "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+      "epub": {
+       "isAvailable": true,
+       "acsTokenLink": "http://books.google.com/books/download/The_Poetics_of_Space-sample-epub.acsm?id=tN3bAwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+      },
+      "pdf": {
+       "isAvailable": false
+      },
+      "webReaderLink": "http://books.google.com/books/reader?id=tN3bAwAAQBAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+      "accessViewStatus": "SAMPLE",
+      "quoteSharingAllowed": false
+     },
+     "searchInfo": {
+      "textSnippet": "In Bachelard’s enchanting spaces, “We are never real historians, but always near poets, and our emotion is perhaps nothing but an expression of a poetry that was lost.” This new edition features a foreword by Mark Z. Danielewski, ..."
+     }
+    }
 
   ]
 }

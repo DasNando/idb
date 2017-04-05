@@ -58,7 +58,7 @@ class Book(db.Model):
         assert len(isbn) > 0
 
         self.prices = prices
-        assert prices > 0
+        assert prices >= 0
 
 
 class Author(db.Model):
