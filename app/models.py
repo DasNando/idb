@@ -25,14 +25,19 @@ class Book(db.Model):
        Book-Review is one-to-many"""
     title = db.Column(db.String(120), primary_key=True)    
     genre = db.Column(db.String(120))
-    year = db.Column(db.Integer)
+    year = db.Column(db.String(80))
     edition = db.Column(db.Integer)
     isbn = db.Column(db.String(80))
     prices = db.Column(db.Float)
 
-    author = db.relationship('Author', uselist=False, backref='book', lazy='dynamic')
-    publisher = db.relationship('Publisher', uselist=False, backref='book', lazy='dynamic')
-    reviews = db.relationship('Review', backref='book', lazy='dynamic')
+    author_name = db.Column(db.String(80), db.ForeignKey("author.name"))
+    author = db.relationship('Author', uselist=False, backref='book')#, lazy='dynamic')
+
+    publisher_name = db.Column(db.String(80), db.ForeignKey("publisher.name"))
+    publisher = db.relationship('Publisher', uselist=False, backref='book')#, lazy='dynamic')
+    
+    reviewer_name = db.Column(db.String(80), db.ForeignKey("review.reviewer"))
+    reviews = db.relationship('Review', backref='book')#, lazy='dynamic')
 
     def __init__(self, title, genre, year, edition, isbn, prices):
         """All string data members are asserted to be of len > 0, price is asserted to be > 0"""
@@ -44,7 +49,7 @@ class Book(db.Model):
         assert len(genre) > 0
 
         self.year = year
-        assert 0 < year < 2018
+        assert len(year) > 0
 
         self.edition = edition
         assert edition > 0
@@ -54,7 +59,7 @@ class Book(db.Model):
 
         self.prices = prices
         assert prices > 0
-        
+
 
 class Author(db.Model):
     """Links to Book, Publisher
@@ -64,12 +69,14 @@ class Author(db.Model):
     name = db.Column(db.String(80), primary_key=True)
     birth_date = db.Column(db.String(80))  # subject to change
     death_date = db.Column(db.String(80))  # ^^^
-    works = db.relationship('Book', backref='author',
-                            lazy='dynamic')
     genre = db.Column(db.String(80))
-    publisher = db.relationship('Publisher', uselist=False, backref='author', lazy='dynamic')
 
-    def __init__(self, alive, name, birth_date, death_date, works, genre, publisher):
+    #books = db.Column()
+    #works = db.relationship('Book', backref='author', lazy='dynamic')
+    publisher_name = db.Column(db.String(80), db.ForeignKey("publisher.name"))
+    publisher = db.relationship('Publisher', uselist=False, backref='author')#, lazy='dynamic')
+
+    def __init__(self, alive, name, birth_date, death_date, genre):
         """All string members are asserted to be of len > 0"""
 
         self.alive = alive
@@ -83,12 +90,8 @@ class Author(db.Model):
         self.death_date = death_date
         assert len(death_date) > 0
 
-        self.works = works
-
         self.genre = genre
         assert len(genre) > 0
-
-        self.publisher = publisher
 
 
 class Publisher(db.Model):
@@ -99,10 +102,11 @@ class Publisher(db.Model):
     headquarters = db.Column(db.String(160))
     country = db.Column(db.String(120))
     founders = db.Column(db.String(160))
-    books = db.relationship('Book', backref='publisher', lazy='dynamic')
-    authors = db.relationship('Author', backref='publisher', lazy='dynamic')
 
-    def __init__(self, name, founding_date, headquarters, country, founders, books, authors):
+    #books = db.relationship('Book', backref='publisher', lazy='dynamic')
+    #authors = db.relationship('Author', backref='publisher', lazy='dynamic')
+
+    def __init__(self, name, founding_date, headquarters, country, founders):
         """All string members are asserted to be len > 0"""
 
         self.name = name
@@ -120,9 +124,6 @@ class Publisher(db.Model):
         self.founders = founders
         assert len(founders) > 0
 
-        self.books = books
-
-        self.authors = authors
 
 class Review(db.Model):
     """Links to Book, Author
@@ -131,13 +132,15 @@ class Review(db.Model):
     rating = db.Column(db.Float)
     content = db.Column(db.String(80))
     source = db.Column(db.String(80))
-    book = db.relationship('Book', uselist=False, backref='review', lazy='dynamic')
-    author = db.relationship('Author', uselist=False, backref='review', lazy='dynamic')
 
-    def __init__(self, book, author, reviewer, rating, content, source):
+    #book_name = db.Column(db.String(80), db.ForeignKey("book.title"))
+    #book = db.relationship('Book', uselist=False, backref='review', lazy='dynamic')
+    
+    author_name = db.Column(db.String(80), db.ForeignKey("author.name"))
+    author = db.relationship('Author', uselist=False, backref='review')#, lazy='dynamic')
+
+    def __init__(self, reviewer, rating, content, source):
         """All string members are asserted to be len > 0, rating is asserted to be > 0"""
-        self.book = book
-        self.author = author
 
         self.reviewer = reviewer
         assert len(reviewer) > 0
