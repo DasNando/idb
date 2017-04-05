@@ -30,8 +30,13 @@ class Book(db.Model):
     isbn = db.Column(db.String(80))
     prices = db.Column(db.Float)
 
+    author_name = db.Column(db.String(80), db.ForeignKey("author.name"))
     author = db.relationship('Author', uselist=False, backref='book', lazy='dynamic')
+
+    publisher_name = db.Column(db.String(80), db.ForeignKey("publisher.name"))
     publisher = db.relationship('Publisher', uselist=False, backref='book', lazy='dynamic')
+    
+    reviewer_name = db.Column(db.String(80), db.ForeignKey("review.name"))
     reviews = db.relationship('Review', backref='book', lazy='dynamic')
 
     def __init__(self, title, genre, year, edition, isbn, prices):
@@ -54,7 +59,7 @@ class Book(db.Model):
 
         self.prices = prices
         assert prices > 0
-        
+
 
 class Author(db.Model):
     """Links to Book, Publisher
