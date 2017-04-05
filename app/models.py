@@ -26,9 +26,9 @@ class Book(db.Model):
     title = db.Column(db.String(120), primary_key=True)    
     genre = db.Column(db.String(120))
     year = db.Column(db.String(80))
-    edition = db.Column(db.Integer)
     isbn = db.Column(db.String(80))
-    prices = db.Column(db.Float)
+    prices = db.Column(db.String(80))
+    pic = db.Column(db.String(120))
 
     author_name = db.Column(db.String(80), db.ForeignKey("author.name"))
     author = db.relationship('Author', uselist=False, backref='book')#, lazy='dynamic')
@@ -39,7 +39,7 @@ class Book(db.Model):
     reviewer_name = db.Column(db.String(80), db.ForeignKey("review.reviewer"))
     reviews = db.relationship('Review', backref='book')#, lazy='dynamic')
 
-    def __init__(self, title, genre, year, edition, isbn, prices):
+    def __init__(self, title, genre, year, isbn, prices, pic):
         """All string data members are asserted to be of len > 0, price is asserted to be > 0"""
 
         self.title = title
@@ -51,14 +51,14 @@ class Book(db.Model):
         self.year = year
         assert len(year) > 0
 
-        self.edition = edition
-        assert edition > 0
-
         self.isbn = isbn
         assert len(isbn) > 0
 
         self.prices = prices
-        assert prices >= 0
+        assert len(prices) > 0
+
+        self.pic = pic
+        assert len(pic) > 0
 
 
 class Author(db.Model):

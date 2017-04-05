@@ -6,6 +6,8 @@ def init_db():
 	db.drop_all()
 	db.create_all()
 
+	count = 0
+
 	with open("test3.json") as test_json:
 		test_data = json.load(test_json)
 
@@ -13,6 +15,8 @@ def init_db():
 		books_data = json.load(books_json)
 
 	for item in (books_data["books"] + test_data['items']):
+		
+		#finding book info
 		try:
 			title = item["volumeInfo"]['title']
 		except:
@@ -30,16 +34,38 @@ def init_db():
 		except:
 			isbn = 'error fetching isbn'
 		try:
-			price = item["saleInfo"]["retailPrice"]['amount']
+			price = str(item["saleInfo"]["retailPrice"]['amount'])
 		except:
-			price = 0
-		book = Book(title, genre, year, 420, isbn, price)
+			price = 'This title is not for sale.'
+		try:
+			pic = item["volumeInfo"]["imageLinks"]["thumbnail"]
+		except:
+			print('Error fetching image url')
+			pic = 'about:blank'
+		book = Book(title, genre, year, isbn, price, pic)
 		db.session.add(book)
 
+		count = count + 1
+
+		#finding author info
+		try:
+			name = item['volumeInfo']["authors"][0]
+		except:
+			name = 'error fetching author'
+		author = Author(True, name, "1/1/1901", "1/1/2001", genre)
+		q = db.session.query(Author).filter_by(name=name)
+		if not db.session.query(q.exists()).scalar():
+			db.session.add(author)
+			print('added author with name: ', name)
+		else:
+			print("couldn't add author with name: ", name)
+			print(db.session.query(q.exists()).scalar())
+
 	db.session.commit()
+	print("added ", count, ' books')
 
 init_db()
 
-print('~~~~~~~~~~~~~~~~~~~~~~')
+'''print('~~~~~~~~~~~~~~~~~~~~~~')
 print(db.session.query(Book).filter_by(title="Flowers for Algernon").first().title)
-print('!!!!!!!!!!!!!!!!!!!!!!')
+print('!!!!!!!!!!!!!!!!!!!!!!')'''
