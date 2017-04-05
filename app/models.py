@@ -1,4 +1,4 @@
-from app.db import db
+import db
 
 # pylint: disable = bad-whitespace
 # pylint: disable = invalid-name
@@ -18,26 +18,27 @@ Publisher
 Reviews
 """
 
+db1 = db.db
 
-class Book(db.Model):
+class Book(db1.Model):
     """Links to Author, Review, Publisher
        Book-Author and Book-Publisher are one-to-one relationships,
        Book-Review is one-to-many"""
-    title = db.Column(db.String(120), primary_key=True)    
-    genre = db.Column(db.String(120))
-    year = db.Column(db.String(80))
-    isbn = db.Column(db.String(80))
-    prices = db.Column(db.String(80))
-    pic = db.Column(db.String(120))
+    title = db1.Column(db1.String(120), primary_key=True)
+    genre = db1.Column(db1.String(120))
+    year = db1.Column(db1.String(80))
+    isbn = db1.Column(db1.String(80))
+    prices = db1.Column(db1.String(80))
+    pic = db1.Column(db1.String(120))
 
-    author_name = db.Column(db.String(80), db.ForeignKey("author.name"))
-    author = db.relationship('Author', uselist=False, backref='book')#, lazy='dynamic')
+    author_name = db1.Column(db1.String(80), db1.ForeignKey("author.name"))
+    author = db1.relationship('Author', uselist=False, backref='book')#, lazy='dynamic')
 
-    publisher_name = db.Column(db.String(80), db.ForeignKey("publisher.name"))
-    publisher = db.relationship('Publisher', uselist=False, backref='book')#, lazy='dynamic')
+    publisher_name = db1.Column(db1.String(80), db1.ForeignKey("publisher.name"))
+    publisher = db1.relationship('Publisher', uselist=False, backref='book')#, lazy='dynamic')
     
-    reviewer_name = db.Column(db.String(80), db.ForeignKey("review.reviewer"))
-    reviews = db.relationship('Review', backref='book')#, lazy='dynamic')
+    reviewer_name = db1.Column(db1.String(80), db1.ForeignKey("review.reviewer"))
+    reviews = db1.relationship('Review', backref='book')#, lazy='dynamic')
 
     def __init__(self, title, genre, year, isbn, prices, pic):
         """All string data members are asserted to be of len > 0, price is asserted to be > 0"""
@@ -59,20 +60,20 @@ class Book(db.Model):
         self.pic = pic
 
 
-class Author(db.Model):
+class Author(db1.Model):
     """Links to Book, Publisher
        Author-Book is a one-to-many relationship,
        Author-Publisher is one-to-one"""
-    alive = db.Column(db.Boolean)
-    name = db.Column(db.String(80), primary_key=True)
-    birth_date = db.Column(db.String(80))  # subject to change
-    death_date = db.Column(db.String(80))  # ^^^
-    genre = db.Column(db.String(80))
+    alive = db1.Column(db1.Boolean)
+    name = db1.Column(db1.String(80), primary_key=True)
+    birth_date = db1.Column(db1.String(80))  # subject to change
+    death_date = db1.Column(db1.String(80))  # ^^^
+    genre = db1.Column(db1.String(80))
 
-    #books = db.Column()
-    #works = db.relationship('Book', backref='author', lazy='dynamic')
-    publisher_name = db.Column(db.String(80), db.ForeignKey("publisher.name"))
-    publisher = db.relationship('Publisher', uselist=False, backref='author')#, lazy='dynamic')
+    #books = db1.Column()
+    #works = db1.relationship('Book', backref='author', lazy='dynamic')
+    publisher_name = db1.Column(db1.String(80), db1.ForeignKey("publisher.name"))
+    publisher = db1.relationship('Publisher', uselist=False, backref='author')#, lazy='dynamic')
 
     def __init__(self, alive, name, birth_date, death_date, genre):
         """All string members are asserted to be of len > 0"""
@@ -92,17 +93,17 @@ class Author(db.Model):
         assert len(genre) > 0
 
 
-class Publisher(db.Model):
+class Publisher(db1.Model):
     """Links to Author, Book
        Publisher-Book and Publisher-Author are one-to-many relationships"""
-    name = db.Column(db.String(80), primary_key=True)
-    founding_date = db.Column(db.String(80))
-    headquarters = db.Column(db.String(160))
-    country = db.Column(db.String(120))
-    founders = db.Column(db.String(160))
+    name = db1.Column(db1.String(80), primary_key=True)
+    founding_date = db1.Column(db1.String(80))
+    headquarters = db1.Column(db1.String(160))
+    country = db1.Column(db1.String(120))
+    founders = db1.Column(db1.String(160))
 
-    #books = db.relationship('Book', backref='publisher', lazy='dynamic')
-    #authors = db.relationship('Author', backref='publisher', lazy='dynamic')
+    #books = db1.relationship('Book', backref='publisher', lazy='dynamic')
+    #authors = db1.relationship('Author', backref='publisher', lazy='dynamic')
 
     def __init__(self, name, founding_date, headquarters, country, founders):
         """All string members are asserted to be len > 0"""
@@ -123,19 +124,19 @@ class Publisher(db.Model):
         assert len(founders) > 0
 
 
-class Review(db.Model):
+class Review(db1.Model):
     """Links to Book, Author
        Review-Book and Review-Author are one-to-one relationships"""
-    reviewer = db.Column(db.String(80), primary_key=True)
-    rating = db.Column(db.Float)
-    content = db.Column(db.String(80))
-    source = db.Column(db.String(80))
+    reviewer = db1.Column(db1.String(80), primary_key=True)
+    rating = db1.Column(db1.Float)
+    content = db1.Column(db1.String(80))
+    source = db1.Column(db1.String(80))
 
-    #book_name = db.Column(db.String(80), db.ForeignKey("book.title"))
-    #book = db.relationship('Book', uselist=False, backref='review', lazy='dynamic')
+    #book_name = db1.Column(db1.String(80), db1.ForeignKey("book.title"))
+    #book = db1.relationship('Book', uselist=False, backref='review', lazy='dynamic')
     
-    author_name = db.Column(db.String(80), db.ForeignKey("author.name"))
-    author = db.relationship('Author', uselist=False, backref='review')#, lazy='dynamic')
+    author_name = db1.Column(db1.String(80), db1.ForeignKey("author.name"))
+    author = db1.relationship('Author', uselist=False, backref='review')#, lazy='dynamic')
 
     def __init__(self, reviewer, rating, content, source):
         """All string members are asserted to be len > 0, rating is asserted to be > 0"""
@@ -152,5 +153,5 @@ class Review(db.Model):
         self.source = source
         assert len(source) > 0
 
-# db.create_all()
+# db1.create_all()
 # Session = sessionmaker(autoflush=False)
