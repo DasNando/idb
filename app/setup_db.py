@@ -1,6 +1,8 @@
-from main import db
-from models import Book, Author, Publisher, Review
 import json
+
+from main import db
+from models import Book
+
 
 def init_db():
 	db.drop_all()

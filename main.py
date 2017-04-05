@@ -1,56 +1,49 @@
-from flask import Flask, render_template
-from flask_sqlalchemy import SQLAlchemy
+from flask import render_template
 import logging
-
-app = Flask(__name__)
-# dialect+driver://username:password@host:port/database
-# postgresql://scott:tiger@localhost/mydatabase
-app.config['SQLALCHEMY_DATABASE_URI'] = \
-    'postgresql://postgres:swereaders@35.184.110.238:5432/postgres'
-db = SQLAlchemy(app)
+from app import db
 
 
-@app.route('/')
-@app.route('/home')
+@db.app.route('/')
+@db.app.route('/home')
 def home():
     return render_template('home.html')
 
 
-@app.route('/about')
+@db.app.route('/about')
 def about():
     return render_template('about.html')
 
 
-@app.route('/authors')
+@db.app.route('/authors')
 def authors():
     return render_template('authors.html')
 
 
-@app.route('/books')
+@db.app.route('/books')
 def books():
     return render_template('books.html')
 
 
-@app.route('/publishers')
+@db.app.route('/publishers')
 def publishers():
     return render_template('publishers.html')
 
-@app.route('/reviews')
+@db.app.route('/reviews')
 def reviews():
     return render_template('reviews.html')
 
 
-@app.route('/search')
+@db.app.route('/search')
 def search():
     return render_template('search.html')
 
 
-@app.errorhandler(500)
+@db.app.errorhandler(500)
 def server_error(e):
     # Log the error and stacktrace.
     logging.exception('An error occurred during a request.')
     return 'An internal error occurred.', 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    db.app.run(debug=True)
 
