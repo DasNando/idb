@@ -1,4 +1,4 @@
-from main import db
+from app.db import db
 
 # pylint: disable = bad-whitespace
 # pylint: disable = invalid-name
@@ -52,13 +52,11 @@ class Book(db.Model):
         assert len(year) > 0
 
         self.isbn = isbn
-        assert len(isbn) > 0
 
         self.prices = prices
         assert len(prices) > 0
 
         self.pic = pic
-        assert len(pic) > 0
 
 
 class Author(db.Model):
@@ -154,4 +152,5 @@ class Review(db.Model):
         self.source = source
         assert len(source) > 0
 
-#Session = sessionmaker(autoflush=False)
+# db.create_all()
+# Session = sessionmaker(autoflush=False)
