@@ -1,0 +1,49 @@
+{
+	"reviews": [
+		{
+			"isbn": " 0553279378 ",
+			"title": " I Know Why the Caged Bird Sings ",
+			"author": " Maya Angelou ",
+			"review": "       I must confess I've read precious little Angelou in my time, but I'll never forget the day she tipped me $20.<br /><br />It was some random gray day in Marquette, Michigan, must've been the winter of '00, and I was washing dishes as usual at the downtown Landmark Inn. Someone tapped me on the shoulder and sa...   ",
+			"reviewer": " Arthur Graham ",
+			"source": " https://www.goodreads.com/review/show/776888734 ",
+			"rating": " 0 ",
+		},
+		{
+			"isbn": " 0439358078 ",
+			"title": " Harry Potter and the Order of the Phoenix (Harry Potter, #5) ",
+			"author": " J.K. Rowling ",
+			"review": "       After the first read, this book is the worst one in the Harry Potter series. Characters are not as likeable as they are in the other books. However, I recently reread it (after reading book 6), and found it to be a very good read.    ",
+			"reviewer": " Otis Chandler ",
+			"source": " https://www.goodreads.com/review/show/22 ",
+			"rating": " 5 ",
+		},
+		{
+			"isbn": " None ",
+			"title": " I Know Why the Caged Bird Sings ",
+			"author": " Maya Angelou ",
+			"review": "       Maya Angelou was a poet and Nobel laureate who once gave an address at President Clinton's inauguration. Before she won her multitudes of awards and honors, Maya was raised in rural Stamps, Arkansas by her grandmother and uncle during the depression. First published in 1969 and now considered a m...   ",
+			"reviewer": " Brina ",
+			"source": " https://www.goodreads.com/review/show/1827306723 ",
+			"rating": " 5 ",
+		},
+		{
+			"isbn": " None ",
+			"title": " The Colour Out of Space ",
+			"author": " H.P. Lovecraft ",
+			"review": "       Awfully strange story about an awfully strange occurrence or maybe I should say an array of strange occurrences that transpire after an awfully strange object (maybe a meteorite) lands on a village farm...   ",
+			"reviewer": " Marts  (Thinker) ",
+			"source": " https://www.goodreads.com/review/show/375155603 ",
+			"rating": " 5 ",
+		},
+		{
+			"isbn": " None ",
+			"title": " The Colour Out of Space ",
+			"author": " H.P. Lovecraft ",
+			"review": "       <b>4.5</b><br />I loved <a href=\"http://www.hplovecraft.com/writings/texts/fiction/cs.aspx\" rel=\"nofollow\">this story</a>.<br />A surveyor comes to the valley near Arkham to check the land for the new reservoir. People in Arkham tell him that the place is evil. At first he thinks it is just plain old superstition. Nothing grows there. After he sees it though he 'marvelled no more at the frightened wh...   ",
+			"reviewer": " ᴥ Irena ᴥ ",
+			"source": " https://www.goodreads.com/review/show/1111947229 ",
+			"rating": " 4 ",
+		}
+	]
+}
