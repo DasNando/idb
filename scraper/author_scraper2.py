@@ -22,8 +22,9 @@ for a_id in author_ids:
 	image_url2 = image_url.replace('\n', '')
 
 	about = root.find('author').find('about').text
-	if about != None:
-		about = about.replace('\"', '')
+	if about != None :
+		about = about.replace('\"', '\\\"')
+		about = about.replace('\n', '')
 
 	works_count = root.find('author').find('works_count').text
 	gender = root.find('author').find('gender').text

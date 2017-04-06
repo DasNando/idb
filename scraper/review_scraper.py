@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 print("{")
 print("\t\"reviews\": [")
 
-review_ids = [776888734, 22, 1827306723, 375155603]
+review_ids = [776888734, 22, 1827306723, 375155603, 1111947229]
 length = len(review_ids)
 
 for re_id in review_ids:
@@ -22,7 +22,11 @@ for re_id in review_ids:
 	title = root.find('review').find('book').find('title').text
 
 	review = root.find('review').find('body').text
-	review_c =review.replace('\n', '')
+	
+	if review != None :
+		review = review.replace('\"', '\\\"')
+		review =review.replace('\n', '')
+
 	reviewer = root.find('review').find('user').find('display_name').text
 	source = root.find('review').find('url').text
 	rating = root.find('review').find('rating').text
@@ -33,7 +37,7 @@ for re_id in review_ids:
 	print("\t\t\t\"isbn\":", "\"" , isbn, "\"," )
 	print("\t\t\t\"title\":", "\"" , title, "\"," )
 	print("\t\t\t\"author\":", "\"" , author, "\"," )
-	print("\t\t\t\"review\":", "\"" ,review_c,  "\",")
+	print("\t\t\t\"review\":", "\"" ,review,  "\",")
 	print("\t\t\t\"reviewer\":", "\"", reviewer, "\",")
 	print("\t\t\t\"source\":", "\"", source, "\",")
 	print("\t\t\t\"rating\":", "\"" , rating, "\"," )
