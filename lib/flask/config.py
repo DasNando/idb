@@ -9,14 +9,13 @@
     :license: BSD, see LICENSE for more details.
 """
 
-import errno
 import os
 import types
+import errno
 
 from werkzeug.utils import import_string
-
-from . import json
 from ._compat import string_types, iteritems
+from . import json
 
 
 class ConfigAttribute(object):
@@ -127,7 +126,7 @@ class Config(dict):
         d = types.ModuleType('config')
         d.__file__ = filename
         try:
-            with open(filename) as config_file:
+            with open(filename, mode='rb') as config_file:
                 exec(compile(config_file.read(), filename, 'exec'), d.__dict__)
         except IOError as e:
             if silent and e.errno in (errno.ENOENT, errno.EISDIR):
