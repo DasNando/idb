@@ -78,7 +78,7 @@ doc/_static/down-pressed.png
 doc/_static/down.png
 doc/_static/file.png
 doc/_static/init.js
-doc/_static/jquery-1.11.1.js
+doc/_static/jquery-3.1.0.js
 doc/_static/jquery.js
 doc/_static/minus.png
 doc/_static/plus.png

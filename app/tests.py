@@ -1,5 +1,5 @@
 from unittest import main, TestCase
-from main import db, app
+from db import app, db
 from models import Book, Publisher, Author, Review
 
 
