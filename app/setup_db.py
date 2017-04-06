@@ -16,6 +16,9 @@ def init_db():
 	with open("../scraper/books.json") as books_json:
 		books_data = json.load(books_json)
 
+	with open("../scraper/reviews.json") as reviews_json:
+		review_data = json.load(reviews_json)
+
 	for item in (books_data["books"] + test_data['items']):
 		
 		#finding book info
@@ -62,11 +65,33 @@ def init_db():
 		else:
 			print("couldn't add author with name: ", name)
 
+		#publisher info
+		try:
+			name = item['volumeInfo']["publisher"]
+		except:
+			name = 'error fetching publisher'
+		publisher = Publisher(name, "founding date unknown", "New York", "USA", "founders unknown")
+		db.session.add(publisher)
+
+	for item in review_data:
+		try:
+			name = item[reviewer]
+		except:
+			name = 'unknown'
+		try:
+			rating = item[rating]
+		except:
+			rating = 'unknown'
+		try:
+			content = item[review]
+		except:
+			content = 'unknown'
+		try:
+			source = item[source]
+		except:
+			source = 'unknown'
+
 	db.session.commit()
 	print("added ", count, ' books')
 
 init_db()
-
-'''print('~~~~~~~~~~~~~~~~~~~~~~')
-print(db.session.query(Book).filter_by(title="Flowers for Algernon").first().title)
-print('!!!!!!!!!!!!!!!!!!!!!!')'''
