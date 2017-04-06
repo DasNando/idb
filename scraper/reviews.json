@@ -1,2 +1,12 @@
 {
 	"reviews": [
+		{
+			"isbn": 0439358078 ,
+			"author": " J.K. Rowling ",
+			"review": "       After the first read, this book is the worst one in the Harry Potter series. Characters are not as likeable as they are in the other books. However, I recently reread it (after reading book 6), and found it to be a very good read.    ",
+			"reviewer": " Otis Chandler ",
+			"source": " https://www.goodreads.com/review/show/22 ",
+			"rating": 5 ,
+		}
+	]
+}

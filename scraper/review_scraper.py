@@ -34,5 +34,4 @@ print("\t\t}")
 
 
 print("\t]")
-print("]")
-print("]")
+print("}")
