@@ -5,6 +5,7 @@ print("{")
 print("\t\"authors\": [")
 
 author_ids = [18541, 7113, 3503, 9494]
+length = len(author_ids)
 
 for a_id in author_ids:
 
@@ -21,8 +22,9 @@ for a_id in author_ids:
 	image_url2 = image_url.replace('\n', '')
 
 	about = root.find('author').find('about').text
-	if about != None:
-		about = about.replace('\"', '')
+	if about != None :
+		about = about.replace('\"', '\\\"')
+		about = about.replace('\n', '')
 
 	works_count = root.find('author').find('works_count').text
 	gender = root.find('author').find('gender').text
@@ -44,7 +46,12 @@ for a_id in author_ids:
 	print("\t\t\t\"hometown\":", "\"", hometown, "\",")
 	print("\t\t\t\"birthdate\":", "\"", birthdate, "\",")
 	print("\t\t\t\"deathdate\":", "\"", deathdate, "\",")
-	print("\t\t}")
+	
+	if length != 1 :
+		print("\t\t},")
+		length-= 1
+	else :
+		print("\t\t}")	
 
 
 
