@@ -5,6 +5,7 @@ print("{")
 print("\t\"authors\": [")
 
 author_ids = [18541, 7113, 3503, 9494]
+length = len(author_ids)
 
 for a_id in author_ids:
 
@@ -44,7 +45,12 @@ for a_id in author_ids:
 	print("\t\t\t\"hometown\":", "\"", hometown, "\",")
 	print("\t\t\t\"birthdate\":", "\"", birthdate, "\",")
 	print("\t\t\t\"deathdate\":", "\"", deathdate, "\",")
-	print("\t\t}")
+	
+	if length != 1 :
+		print("\t\t},")
+		length-= 1
+	else :
+		print("\t\t}")	
 
 
 
