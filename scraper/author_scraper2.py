@@ -20,8 +20,9 @@ for a_id in author_ids:
 	image_url = root.find('author').find('large_image_url').text
 	image_url2 = image_url.replace('\n', '')
 
-	about2 = root.find('author').find('about').text
-    #about2 = about.replace('\n', '')
+	about = root.find('author').find('about').text
+	if about != None:
+		about = about.replace('\"', '')
 
 	works_count = root.find('author').find('works_count').text
 	gender = root.find('author').find('gender').text
@@ -30,15 +31,14 @@ for a_id in author_ids:
 	#if type(birthdate) == 'NoneType':
 	#	birthdate = " "
 	deathdate = root.find('author').find('died_at').text
-	#if type(deathdate) == 'NoneType':
-	#	deathdate = " "
+
 
 
 
 	print("\t\t{")
 	print("\t\t\t\"name\":", "\"" , name, "\"," )
 	print("\t\t\t\"image_url\":", "\"" , image_url2, "\"," )
-	print("\t\t\t\"about\":", "\"" , about2,  "\",")
+	print("\t\t\t\"about\":", "\"" , about,  "\",")
 	print("\t\t\t\"works_count\":", works_count, ",")
 	print("\t\t\t\"gender\":", "\"", gender, "\",")
 	print("\t\t\t\"hometown\":", "\"", hometown, "\",")
