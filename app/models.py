@@ -59,7 +59,6 @@ class Book(db1.Model):
         assert len(prices) > 0
 
         self.pic = pic
-        assert len(pic) > 0
 
 
 class Author(db1.Model):
