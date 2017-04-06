@@ -38,7 +38,7 @@ class Book(db1.Model):
     publisher_name = db1.Column(db1.String(80), db1.ForeignKey("publisher.name"))
     publisher = db1.relationship('Publisher', uselist=False, backref='book')
     
-    reviewer_name = db1.Column(db1.String(80), db1.ForeignKey("review.reviewer"))
+    reviewer_name = db1.Column(db1.String(80), db1.ForeignKey("review.source"))
     reviews = db1.relationship('Review', backref='book')
 
     def __init__(self, title, genre, year, isbn, prices, pic):
@@ -66,21 +66,21 @@ class Author(db1.Model):
     """Links to Book, Publisher
        Author-Book is a one-to-many relationship,
        Author-Publisher is one-to-one"""
-    alive = db1.Column(db1.Boolean)
     name = db1.Column(db1.String(80), primary_key=True)
-    birth_date = db1.Column(db1.String(80))  # subject to change
-    death_date = db1.Column(db1.String(80))  # ^^^
-    genre = db1.Column(db1.String(80))
+    birth_date = db1.Column(db1.String(80))
+    death_date = db1.Column(db1.String(80))
+    pic = db1.Column(db1.String(120))
+    about = db1.Column(db1.Text)
+    num_works = db1.Column(db1.String(80))
+    #genre = db1.Column(db1.String(80))
 
     #books = db1.Column()
     #works = db1.relationship('Book', backref='author', lazy='dynamic')
     publisher_name = db1.Column(db1.String(80), db1.ForeignKey("publisher.name"))
     publisher = db1.relationship('Publisher', uselist=False, backref='author')#, lazy='dynamic')
 
-    def __init__(self, alive, name, birth_date, death_date, genre):
+    def __init__(self, name, birth_date, death_date, pic, about, num_works):
         """All string members are asserted to be of len > 0"""
-
-        self.alive = alive
 
         self.name = name
         assert len(name) > 0
@@ -91,8 +91,14 @@ class Author(db1.Model):
         self.death_date = death_date
         assert len(death_date) > 0
 
-        self.genre = genre
-        assert len(genre) > 0
+        self.pic = pic
+        assert len(pic) > 0
+
+        self.about = about
+        assert len(about) > 0
+
+        self.num_works = num_works
+        assert len(num_works) > 0
 
 
 class Publisher(db1.Model):
@@ -129,10 +135,10 @@ class Publisher(db1.Model):
 class Review(db1.Model):
     """Links to Book, Author
        Review-Book and Review-Author are one-to-one relationships"""
-    reviewer = db1.Column(db1.String(80), primary_key=True)
+    reviewer = db1.Column(db1.String(80))
     rating = db1.Column(db1.String(80))
-    content = db1.Column(db1.String(80))
-    source = db1.Column(db1.String(80))
+    content = db1.Column(db1.Text)
+    source = db1.Column(db1.String(80), primary_key=True)
 
     #book_name = db1.Column(db1.String(80), db1.ForeignKey("book.title"))
     #book = db1.relationship('Book', uselist=False, backref='review', lazy='dynamic')

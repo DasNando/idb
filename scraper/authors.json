@@ -8,8 +8,8 @@
 			"gender": " male ",
 			"hometown": " Cork ",
 			"birthdate": " None ",
-			"deathdate": " None ",
-		}
+			"deathdate": " None "
+		},
 		{
 			"name": " Anne Lamott ",
 			"image_url": " https://images.gr-assets.com/authors/1489601640p7/7113.jpg ",
@@ -18,8 +18,8 @@
 			"gender": " female ",
 			"hometown": " San Francisco, California ",
 			"birthdate": " None ",
-			"deathdate": " None ",
-		}
+			"deathdate": " None "
+		},
 		{
 			"name": " Maya Angelou ",
 			"image_url": " https://images.gr-assets.com/authors/1379017377p7/3503.jpg ",
@@ -28,17 +28,17 @@
 			"gender": " female ",
 			"hometown": " St. Louis, Missouri ",
 			"birthdate": " 1928/04/04 ",
-			"deathdate": " 2014/05/28 ",
-		}
+			"deathdate": " 2014/05/28 "
+		},
 		{
 			"name": " H.P. Lovecraft ",
 			"image_url": " https://images.gr-assets.com/authors/1299165714p7/9494.jpg ",
-			"about": " Howard Phillips Lovecraft, of Providence, Rhode Island, was an American author of horror, fantasy and science fiction.<br /><br />Lovecraft's major inspiration and invention was cosmic horror: life is incomprehensible to human minds and the universe is fundamentally alien. Those who genuinely reason, like his protagonists, gamble with sanity. Lovecraft has developed a cult following for his Cthulhu Mythos, a series of loosely interconnected fictions featuring a pantheon of human-nullifying entities, as well as the Necronomicon, a fictional grimoire of magical rites and forbidden lore. His works were deeply pessimistic and cynical, challenging the values of the Enlightenment, Romanticism and Christianity. Lovecraft's protagonists usually achieve the mirror-opposite of traditional gnosis and mysticism by momentarily glimpsing the horror of ultimate reality.<br /><br />Although Lovecraft's readership was limited during his life, his reputation has grown over the decades. He is now commonly regarded as one of the most influential horror writers of the 20th Century, exerting widespread and indirect influence, and frequently compared to Edgar Allan Poe.<br /><br />— <a href="http://en.wikipedia.org/wiki/H._P._Lovecraft" rel="nofollow">Wikipedia</a> ",
+			"about": " Howard Phillips Lovecraft, of Providence, Rhode Island, was an American author of horror, fantasy and science fiction.<br /><br />Lovecraft's major inspiration and invention was cosmic horror: life is incomprehensible to human minds and the universe is fundamentally alien. Those who genuinely reason, like his protagonists, gamble with sanity. Lovecraft has developed a cult following for his Cthulhu Mythos, a series of loosely interconnected fictions featuring a pantheon of human-nullifying entities, as well as the Necronomicon, a fictional grimoire of magical rites and forbidden lore. His works were deeply pessimistic and cynical, challenging the values of the Enlightenment, Romanticism and Christianity. Lovecraft's protagonists usually achieve the mirror-opposite of traditional gnosis and mysticism by momentarily glimpsing the horror of ultimate reality.<br /><br />Although Lovecraft's readership was limited during his life, his reputation has grown over the decades. He is now commonly regarded as one of the most influential horror writers of the 20th Century, exerting widespread and indirect influence, and frequently compared to Edgar Allan Poe.<br /><br />— <a href=\"http://en.wikipedia.org/wiki/H._P._Lovecraft\" rel=\"nofollow\">Wikipedia</a> ",
 			"works_count": 1680 ,
 			"gender": " male ",
 			"hometown": " Providence, Rhode Island ",
 			"birthdate": " 1890/08/20 ",
-			"deathdate": " 1937/03/15 ",
+			"deathdate": " 1937/03/15 "
 		}
 	]
 }
