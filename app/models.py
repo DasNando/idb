@@ -1,4 +1,4 @@
-from main import db
+from db import db
 
 # pylint: disable = bad-whitespace
 # pylint: disable = invalid-name
@@ -31,13 +31,13 @@ class Book(db.Model):
     pic = db.Column(db.String(120))
 
     author_name = db.Column(db.String(80), db.ForeignKey("author.name"))
-    author = db.relationship('Author', uselist=False, backref='book')#, lazy='dynamic')
+    author = db.relationship('Author', uselist=False, backref='book')
 
     publisher_name = db.Column(db.String(80), db.ForeignKey("publisher.name"))
-    publisher = db.relationship('Publisher', uselist=False, backref='book')#, lazy='dynamic')
+    publisher = db.relationship('Publisher', uselist=False, backref='book')
     
     reviewer_name = db.Column(db.String(80), db.ForeignKey("review.reviewer"))
-    reviews = db.relationship('Review', backref='book')#, lazy='dynamic')
+    reviews = db.relationship('Review', backref='book')
 
     def __init__(self, title, genre, year, isbn, prices, pic):
         """All string data members are asserted to be of len > 0, price is asserted to be > 0"""

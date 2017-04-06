@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[YCBYRWAFTg2cfUnmW8IWTg]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[Anne Lamott]]></query>
+    <results-start>1</results-start>
+    <results-end>20</results-end>
+    <total-results>55</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.14</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">841198</id>
+  <books_count type="integer">25</books_count>
+  <ratings_count type="integer">55151</ratings_count>
+  <text_reviews_count type="integer">5059</text_reviews_count>
+  <original_publication_year type="integer">1994</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.22</average_rating>
+  <best_book type="Book">
+    <id type="integer">12543</id>
+    <title>Bird by Bird: Some Instructions on Writing and Life</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1394996112m/12543.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1394996112s/12543.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">14837</id>
+  <books_count type="integer">12</books_count>
+  <ratings_count type="integer">36768</ratings_count>
+  <text_reviews_count type="integer">2160</text_reviews_count>
+  <original_publication_year type="integer">1999</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">19</original_publication_day>
+  <average_rating>4.15</average_rating>
+  <best_book type="Book">
+    <id type="integer">10890</id>
+    <title>Traveling Mercies: Some Thoughts on Faith</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1403182174m/10890.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1403182174s/10890.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">17459278</id>
+  <books_count type="integer">9</books_count>
+  <ratings_count type="integer">10577</ratings_count>
+  <text_reviews_count type="integer">898</text_reviews_count>
+  <original_publication_year type="integer">2012</original_publication_year>
+  <original_publication_month type="integer">3</original_publication_month>
+  <original_publication_day type="integer">20</original_publication_day>
+  <average_rating>3.60</average_rating>
+  <best_book type="Book">
+    <id type="integer">12475019</id>
+    <title>Some Assembly Required: A Journal of My Son's First Son</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1325716296m/12475019.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1325716296s/12475019.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">14828</id>
+  <books_count type="integer">15</books_count>
+  <ratings_count type="integer">18353</ratings_count>
+  <text_reviews_count type="integer">866</text_reviews_count>
+  <original_publication_year type="integer">2004</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.05</average_rating>
+  <best_book type="Book">
+    <id type="integer">12535</id>
+    <title>Plan B: Further Thoughts on Faith</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">901072</id>
+  <books_count type="integer">12</books_count>
+  <ratings_count type="integer">19682</ratings_count>
+  <text_reviews_count type="integer">1601</text_reviews_count>
+  <original_publication_year type="integer">1993</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.18</average_rating>
+  <best_book type="Book">
+    <id type="integer">12540</id>
+    <title>Operating Instructions: A Journal of My Son's First Year</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">21421044</id>
+  <books_count type="integer">17</books_count>
+  <ratings_count type="integer">12675</ratings_count>
+  <text_reviews_count type="integer">1773</text_reviews_count>
+  <original_publication_year type="integer">2012</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">13</original_publication_day>
+  <average_rating>3.97</average_rating>
+  <best_book type="Book">
+    <id type="integer">15737147</id>
+    <title>Help Thanks Wow: The Three Essential Prayers</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1348147479m/15737147.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1348147479s/15737147.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1057710</id>
+  <books_count type="integer">15</books_count>
+  <ratings_count type="integer">13331</ratings_count>
+  <text_reviews_count type="integer">1037</text_reviews_count>
+  <original_publication_year type="integer">2007</original_publication_year>
+  <original_publication_month type="integer">3</original_publication_month>
+  <original_publication_day type="integer">20</original_publication_day>
+  <average_rating>3.98</average_rating>
+  <best_book type="Book">
+    <id type="integer">12542</id>
+    <title>Grace (Eventually): Thoughts on Faith</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">25386951</id>
+  <books_count type="integer">11</books_count>
+  <ratings_count type="integer">6139</ratings_count>
+  <text_reviews_count type="integer">817</text_reviews_count>
+  <original_publication_year type="integer">2013</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer">29</original_publication_day>
+  <average_rating>3.87</average_rating>
+  <best_book type="Book">
+    <id type="integer">18079659</id>
+    <title>Stitches: A Handbook on Meaning, Hope, and Repair</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1374643873m/18079659.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1374643873s/18079659.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">41687212</id>
+  <books_count type="integer">7</books_count>
+  <ratings_count type="integer">6041</ratings_count>
+  <text_reviews_count type="integer">968</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>3.88</average_rating>
+  <best_book type="Book">
+    <id type="integer">22299380</id>
+    <title>Small Victories: Spotting Improbable Moments of Grace</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1410800117m/22299380.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1410800117s/22299380.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">3320883</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">8</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.88</average_rating>
+  <best_book type="Book">
+    <id type="integer">3284534</id>
+    <title>Anne Lamott Assortment</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">906539</id>
+  <books_count type="integer">15</books_count>
+  <ratings_count type="integer">6605</ratings_count>
+  <text_reviews_count type="integer">657</text_reviews_count>
+  <original_publication_year type="integer">2002</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">30</original_publication_day>
+  <average_rating>3.25</average_rating>
+  <best_book type="Book">
+    <id type="integer">91700</id>
+    <title>Blue Shoe</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1309202388m/91700.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1309202388s/91700.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">6905453</id>
+  <books_count type="integer">12</books_count>
+  <ratings_count type="integer">5689</ratings_count>
+  <text_reviews_count type="integer">1103</text_reviews_count>
+  <original_publication_year type="integer">2010</original_publication_year>
+  <original_publication_month type="integer">4</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>3.26</average_rating>
+  <best_book type="Book">
+    <id type="integer">6709616</id>
+    <title>Imperfect Birds</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">907023</id>
+  <books_count type="integer">11</books_count>
+  <ratings_count type="integer">4511</ratings_count>
+  <text_reviews_count type="integer">262</text_reviews_count>
+  <original_publication_year type="integer">1997</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.60</average_rating>
+  <best_book type="Book">
+    <id type="integer">531339</id>
+    <title>Crooked Little Heart</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">14829</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">3242</ratings_count>
+  <text_reviews_count type="integer">268</text_reviews_count>
+  <original_publication_year type="integer">1983</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer">30</original_publication_day>
+  <average_rating>3.66</average_rating>
+  <best_book type="Book">
+    <id type="integer">12536</id>
+    <title>Rosie</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">907022</id>
+  <books_count type="integer">4</books_count>
+  <ratings_count type="integer">1968</ratings_count>
+  <text_reviews_count type="integer">148</text_reviews_count>
+  <original_publication_year type="integer">1979</original_publication_year>
+  <original_publication_month type="integer">4</original_publication_month>
+  <original_publication_day type="integer">15</original_publication_day>
+  <average_rating>3.68</average_rating>
+  <best_book type="Book">
+    <id type="integer">49702</id>
+    <title>Hard Laughter</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">979353</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">1404</ratings_count>
+  <text_reviews_count type="integer">103</text_reviews_count>
+  <original_publication_year type="integer">1989</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.62</average_rating>
+  <best_book type="Book">
+    <id type="integer">12537</id>
+    <title>All New People</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1157942</id>
+  <books_count type="integer">9</books_count>
+  <ratings_count type="integer">1059</ratings_count>
+  <text_reviews_count type="integer">112</text_reviews_count>
+  <original_publication_year type="integer">1986</original_publication_year>
+  <original_publication_month type="integer">12</original_publication_month>
+  <original_publication_day type="integer">12</original_publication_day>
+  <average_rating>3.34</average_rating>
+  <best_book type="Book">
+    <id type="integer">165934</id>
+    <title>Joe Jones</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328753533m/165934.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328753533s/165934.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">52508</id>
+  <books_count type="integer">2</books_count>
+  <ratings_count type="integer">416</ratings_count>
+  <text_reviews_count type="integer">47</text_reviews_count>
+  <original_publication_year type="integer">1996</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.10</average_rating>
+  <best_book type="Book">
+    <id type="integer">53854</id>
+    <title>Word By Word</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">51686575</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">31082432</id>
+    <title>Anne Lamott Quotes: Anne Lamott, Quotes, Quotations, Famous Quotes</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">27315757</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">97</ratings_count>
+  <text_reviews_count type="integer">4</text_reviews_count>
+  <original_publication_year type="integer">2013</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer">9</original_publication_day>
+  <average_rating>4.09</average_rating>
+  <best_book type="Book">
+    <id type="integer">19268699</id>
+    <title>Help: The First Essential Prayer (Help, Thanks, Wow)</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+</GoodreadsResponse>

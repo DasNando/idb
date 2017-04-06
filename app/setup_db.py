@@ -1,7 +1,7 @@
 import json
 
-from main import db
-from models import Book
+from db import db
+from models import Book, Author, Review
 
 
 def init_db():
@@ -61,7 +61,6 @@ def init_db():
 			print('added author with name: ', name)
 		else:
 			print("couldn't add author with name: ", name)
-			print(db.session.query(q.exists()).scalar())
 
 	db.session.commit()
 	print("added ", count, ' books')
