@@ -1,7 +1,7 @@
 import json
 
 from db import db
-from models import Book, Author, Review
+from models import Book, Author, Review, Publisher
 
 
 def init_db():
@@ -90,6 +90,8 @@ def init_db():
 			source = item[source]
 		except:
 			source = 'unknown'
+		review = Review(reviewer, rating, content, source)
+		db.session.add(review)
 
 	db.session.commit()
 	print("added ", count, ' books')
