@@ -16,12 +16,21 @@ footer small {
 	color: #f2f2f2;
 }
 
+pre {
+	color: black;
+	border-color: lightgray;
+	background-color: lightgray;
+	line-height: 1;
+	white-space: nowrap;
+	overflow-x: scroll; 
+}
+
 .card-block {
 	background-color: lightgray;
 }
 
-.card-block > p,
-.card-block > h4 {
+.card-block > pre > p,
+.card-block > pre > h4 {
 	margin-left: 10px;
 	margin-right: 10px;
 }
@@ -53,11 +62,14 @@ footer small {
 }
 
 #bookcoverimg {
-	padding: 1em;
-	width: 200px;
+	/*padding: 1em;*/
+	/*width: 300px;*/
 	min-width: 200px;
-	height: 300px;
+	/*height: 450px;*/
 	min-height: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
 }
 
 #frontpageimg {
