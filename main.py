@@ -6,6 +6,7 @@ import logging
 import json
 import subprocess
 from app import db, models, tests
+from subprocess import PIPE, Popen
 
 db1 = db.db
 app = db.app
@@ -76,7 +77,6 @@ def run_tests():
     # data = '{"request": {"branch": "master"}}'
     # res = requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
 
-    from subprocess import PIPE, Popen
     proc = Popen(['make', 'test'], stdout=PIPE)
     return proc.communicate()[0].split()
 
