@@ -1,0 +1,745 @@
+{
+	"books": [
+{
+ "kind": "books#volumes",
+ "totalItems": 408,
+ "items": [
+  {
+   "kind": "books#volume",
+   "id": "ddzSELFsHD0C",
+   "etag": "fvdAnkBrCNs",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/ddzSELFsHD0C",
+   "volumeInfo": {
+    "title": "La rivoluzione dimenticata",
+    "subtitle": "il pensiero scientifico greco e la scienza moderna",
+    "authors": [
+     "Lucio Russo"
+    ],
+    "publisher": "Feltrinelli Editore",
+    "publishedDate": "2001",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "880781644X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9788807816444"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 487,
+    "printType": "BOOK",
+    "categories": [
+     "Science"
+    ],
+    "averageRating": 4.5,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=ddzSELFsHD0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=ddzSELFsHD0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "it",
+    "previewLink": "http://books.google.com/books?id=ddzSELFsHD0C&printsec=frontcover&dq=subject:technology&hl=&cd=1&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=ddzSELFsHD0C&dq=subject:technology&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/La_rivoluzione_dimenticata.html?hl=&id=ddzSELFsHD0C"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=ddzSELFsHD0C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "KnmIWtXTgPgC",
+   "etag": "S4ndVUy1Fd0",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/KnmIWtXTgPgC",
+   "volumeInfo": {
+    "title": "Science Quiz Book",
+    "authors": [
+     "Rajeev Garg"
+    ],
+    "publisher": "V&amp;S Publishers",
+    "publishedDate": "2011-04-01",
+    "description": "Basic aim of this book is to help school students of secondary or higher secondary schools (Xth or XIIth). The idea is to create their interests in science and to present difficult scientific topics in interesting and easy to understand manner. Generally students find scientific topics so hard that they soon loose their interests and avoid the subject. The same kind of difficulties they face in various competitions and interviews. With the help of this book they can enhance their knowledge and confidence. Every topic has been dealt with in such a way that even a lay reader could understand the subject through many short questions-answers. If you want to increase your knowledge and understanding of Science, you must read this book. You can also check your general knowledge about all the scientific topics. Filled with fascinating scientific information and facts, this book is highly beneficial for both students and general readers. And more, the answers to all of your general trivia challenges are there. Hundreds of questions on a variety of related topics, this book has Quiz Books/Puzzles/Brain Teaserszes on all the topics related to Science, that will both educate and entertain you. And lots of other knowledge and information -- things you knew, didn't know (and thought you knew but didn't ) You'll never have a dull moment with this extraordinary compendium of fascinating facts, interesting information, and tantalizing trivia. If you're even remotely interested in Quiz Books/Puzzles/Brain Teasers shows, this book will transport you to exhilarating heights. But you don't have to be a Quiz Books/Puzzles/Brain Teasers buff to take pleasure from it. If you are one that marvels at the remarkable world around us, then you are sure to enjoy going through the pages of this mind-bending eye-opener. This exciting trivia book is packed with enough Quiz Books/Puzzles/Brain Teaserszes, lists, and definitions to please even the most ardent trivia buff. Plus, there are many brief descriptions and details to give insight into how things work or a phenomena is explained. The fascinating world of science is revealed in different light before you. Read and enjoy it.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9789381384312"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "9381384312"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 204,
+    "printType": "BOOK",
+    "categories": [
+     "Games"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=KnmIWtXTgPgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=KnmIWtXTgPgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=KnmIWtXTgPgC&printsec=frontcover&dq=subject:technology&hl=&cd=2&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=KnmIWtXTgPgC&dq=subject:technology&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Science_Quiz_Book.html?hl=&id=KnmIWtXTgPgC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=KnmIWtXTgPgC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "8SA8KZyurk4C",
+   "etag": "9UfxQxuDOo8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/8SA8KZyurk4C",
+   "volumeInfo": {
+    "title": "Metodología de la investigación científica y técnológica",
+    "authors": [
+     "José Cegarra Sánchez"
+    ],
+    "publisher": "Ediciones Díaz de Santos",
+    "publishedDate": "2004-06",
+    "description": "Es evidente que actualmente una de las preocupaciones de los gobiernos y de las empresas es disponer de un potencial humano altamente cualificado, que les permita situar a sus países y empresas respectivamente en los puestos más avanzados de la ciencia y la tecnología. Para ello, es necesario, en ambos casos, la formación de los titulados correspondientes en I + D + I y el asignar los recursos necesarios para que dichos titulados puedan desarrollar eficazmente su función. El objetivo de este libro es el de suministrar la metodología que debe ser utilizada para la formación de los titulados en I + D + I, adaptándola en cada caso, a las peculiaridades del área en donde se debe investigar.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "8479786248"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9788479786243"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 376,
+    "printType": "BOOK",
+    "categories": [
+     "Language Arts & Disciplines"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 2,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.0.1.0.preview.1",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=8SA8KZyurk4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=8SA8KZyurk4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "es",
+    "previewLink": "http://books.google.com/books?id=8SA8KZyurk4C&printsec=frontcover&dq=subject:technology&hl=&cd=3&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=8SA8KZyurk4C&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-8SA8KZyurk4C"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 42.26,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 31.27,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=8SA8KZyurk4C&rdid=book-8SA8KZyurk4C&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 4.226E7,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 3.127E7,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/Metodolog%C3%ADa_de_la_investigaci%C3%B3n_cient-sample-pdf.acsm?id=8SA8KZyurk4C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=8SA8KZyurk4C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "1gQfUSQ0MJ0C",
+   "etag": "iq8vEdSO788",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/1gQfUSQ0MJ0C",
+   "volumeInfo": {
+    "title": "Technology in America",
+    "subtitle": "A History of Individuals and Ideas",
+    "authors": [
+     "Carroll W. Pursell"
+    ],
+    "publisher": "MIT Press",
+    "publishedDate": "1990",
+    "description": "Essays examine major American innovations in technology and the inventors who developed them, including Whitney, McCormick, Bell, Edison, Goddard, and Eastman",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0262660679"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780262660679"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 319,
+    "printType": "BOOK",
+    "categories": [
+     "Science"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=1gQfUSQ0MJ0C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=1gQfUSQ0MJ0C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "hu",
+    "previewLink": "http://books.google.com/books?id=1gQfUSQ0MJ0C&printsec=frontcover&dq=subject:technology&hl=&cd=4&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=1gQfUSQ0MJ0C&dq=subject:technology&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Technology_in_America.html?hl=&id=1gQfUSQ0MJ0C"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=1gQfUSQ0MJ0C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "wgFyUcsmreEC",
+   "etag": "nCIr45CvZLA",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/wgFyUcsmreEC",
+   "volumeInfo": {
+    "title": "Virtuality Check",
+    "subtitle": "Power Relations and Alternative Strategies in the Information Society",
+    "authors": [
+     "François Fortier"
+    ],
+    "publisher": "Verso",
+    "publishedDate": "2001",
+    "description": "Information and communications technologies (ICTs) and the new economy they herald are generally either glorified as unprecedented opportunities for post-industrial enfranchisement, or vilified as a mirage conjured up for their own ends by those who run the world. This book sets out to review the relationship between information technologies and society. It examines the development of ICTs, and explores the ways in which they are used to subjugate workers, manipulate consumers, and extend media monopolies and commercial control. Heavily steered as they are towards the interests of the state and corporate sectors Francois Fortier argues that ICTs currently do little more than polarize economic and political power in an anti-democratic fashion. Yet alternative forms and uses of ICTs do exist and have been promoted by progressive social sectors for nearly two decades. Concluding with a study of these initiatives, Fortier proposes a new political economy of ICTs, aimed at facilitating rather than obstructing democracy.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1859846289"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781859846285"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 145,
+    "printType": "BOOK",
+    "categories": [
+     "Political Science"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=wgFyUcsmreEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=wgFyUcsmreEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "hy",
+    "previewLink": "http://books.google.com/books?id=wgFyUcsmreEC&printsec=frontcover&dq=subject:technology&hl=&cd=5&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=wgFyUcsmreEC&dq=subject:technology&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Virtuality_Check.html?hl=&id=wgFyUcsmreEC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=wgFyUcsmreEC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "aeIUGq1EL24C",
+   "etag": "77RH928XjVY",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/aeIUGq1EL24C",
+   "volumeInfo": {
+    "title": "The Design of Future Things",
+    "authors": [
+     "Don Norman"
+    ],
+    "publisher": "Basic Books",
+    "publishedDate": "2009-05-12",
+    "description": "In The Design of Future Things, best-selling author Donald A. Norman presents a revealing examination of smart technology, from smooth-talking GPS units to cantankerous refrigerators. Exploring the links between design and human psychology, he offers a consumer-oriented theory of natural human-machine interaction that can be put into practice by the engineers and industrial designers of tomorrow's thinking machines. A fascinating look at the perils and promise of the intelligent objects of the future, The Design of Future Things is a must-read for anyone interested in the dawn of a new era in technology.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_13",
+      "identifier": "9780465013036"
+     },
+     {
+      "type": "ISBN_10",
+      "identifier": "0465013031"
+     }
+    ],
+    "readingModes": {
+     "text": true,
+     "image": false
+    },
+    "pageCount": 240,
+    "printType": "BOOK",
+    "categories": [
+     "Psychology"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": true,
+    "contentVersion": "0.9.9.0.preview.2",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=aeIUGq1EL24C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=aeIUGq1EL24C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=aeIUGq1EL24C&printsec=frontcover&dq=subject:technology&hl=&cd=6&source=gbs_api",
+    "infoLink": "https://play.google.com/store/books/details?id=aeIUGq1EL24C&source=gbs_api",
+    "canonicalVolumeLink": "https://market.android.com/details?id=book-aeIUGq1EL24C"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "FOR_SALE",
+    "isEbook": true,
+    "listPrice": {
+     "amount": 11.99,
+     "currencyCode": "USD"
+    },
+    "retailPrice": {
+     "amount": 11.99,
+     "currencyCode": "USD"
+    },
+    "buyLink": "https://play.google.com/store/books/details?id=aeIUGq1EL24C&rdid=book-aeIUGq1EL24C&rdot=1&source=gbs_api",
+    "offers": [
+     {
+      "finskyOfferType": 1,
+      "listPrice": {
+       "amountInMicros": 1.199E7,
+       "currencyCode": "USD"
+      },
+      "retailPrice": {
+       "amountInMicros": 1.199E7,
+       "currencyCode": "USD"
+      },
+      "giftable": true
+     }
+    ]
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": true,
+     "acsTokenLink": "http://books.google.com/books/download/The_Design_of_Future_Things-sample-epub.acsm?id=aeIUGq1EL24C&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=aeIUGq1EL24C&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "C5xIex5NK2AC",
+   "etag": "bhDlZz7R8PU",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/C5xIex5NK2AC",
+   "volumeInfo": {
+    "title": "Technology of Ancient Egypt",
+    "authors": [
+     "Leslie C. Kaplan"
+    ],
+    "publisher": "Rosen Classroom",
+    "publishedDate": "2004-01-01",
+    "description": "Describes ancient Egyptian technological knowledge and some of its resulting achievements, concentrating on those affecting everyday life.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "0823989348"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780823989348"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 24,
+    "printType": "BOOK",
+    "categories": [
+     "Juvenile Nonfiction"
+    ],
+    "averageRating": 4.0,
+    "ratingsCount": 1,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.1.1.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=C5xIex5NK2AC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=C5xIex5NK2AC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "pl",
+    "previewLink": "http://books.google.com/books?id=C5xIex5NK2AC&printsec=frontcover&dq=subject:technology&hl=&cd=7&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=C5xIex5NK2AC&dq=subject:technology&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Technology_of_Ancient_Egypt.html?hl=&id=C5xIex5NK2AC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=C5xIex5NK2AC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "Uex46HkyPacC",
+   "etag": "wyq1n3mGC20",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/Uex46HkyPacC",
+   "volumeInfo": {
+    "title": "Historia de la tecnología",
+    "authors": [
+     "T. K. Derry",
+     "Trevor Illtyd Williams"
+    ],
+    "publisher": "Siglo XXI de España Editores",
+    "publishedDate": "1990",
+    "description": "La importancia de los factores tecnológicos en el desarrollo de la sociedad no ha recibido suficiente atención historiográfica, en contraste con la importancia concedida tradicionalmente a la historia política y constitucional o, modernamente, a la historia social y económica. Por ello esta obra resulta singular, tanto en su propósito como en su planteamiento. Concebida inicialmente como una versión abreviada de una extensa Historia de la tecnología publicada por Clarendon Press (Oxford), su planteamiento varía sustancialmente respecto a aquella. Se ha intentado que la historia del desarrollo tecnológico aparezca estrechamente relacionada, en cada época, con su perspectiva histórica general. Cronológicamente el texto está dividido en tres partes: la primera (vol. 1) abarca hasta 1750 -comienzo de la revolución industrial en Inglaterra-, la segunda (vols. 2 y 3) hasta 1900 y la tercera (vols. 4 y 5) continúa la exposición hasta 1950. La decisión de detenerse en esta fecha se explica por la falta de perspectiva histórica sobre la repercusión de desarrollos tecnológicos posteriores, así como por la complejidad técnica de éstos. El propósito de la obra es ofrecer una visión sintética del desarrollo de las ramas de la tecnología que han cambiado el curso de la historia, sin omitir por ello los oficios elementales de menor repercusión social. Se ha pretendido que el resultado fuera aceptable tanto para el historiador y el tecnólogo como para el lector común.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "8432306134"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9788432306136"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 293,
+    "printType": "BOOK",
+    "categories": [
+     "History"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=Uex46HkyPacC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=Uex46HkyPacC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "es",
+    "previewLink": "http://books.google.com/books?id=Uex46HkyPacC&pg=PP1&dq=subject:technology&hl=&cd=8&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=Uex46HkyPacC&dq=subject:technology&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Historia_de_la_tecnolog%C3%ADa.html?hl=&id=Uex46HkyPacC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=Uex46HkyPacC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "PCrcintuzAgC",
+   "etag": "nUAe27YTZIU",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/PCrcintuzAgC",
+   "volumeInfo": {
+    "title": "Digital Signal Processing",
+    "subtitle": "A Practical Guide for Engineers and Scientists",
+    "authors": [
+     "Steven W. Smith"
+    ],
+    "publisher": "Newnes",
+    "publishedDate": "2003",
+    "description": "Designed for engineers and scientists in a wide variety of fields, this practical text aims to explain DSP techniques while avoiding the barriers of abstract theory and detailed mathematics, enabling readers to put the powerful tools of DSP to work in their research and designs.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "075067444X"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9780750674447"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "pageCount": 650,
+    "printType": "BOOK",
+    "categories": [
+     "Computers"
+    ],
+    "averageRating": 5.0,
+    "ratingsCount": 3,
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "1.2.0.0.preview.1",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=PCrcintuzAgC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=PCrcintuzAgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=PCrcintuzAgC&printsec=frontcover&dq=subject:technology&hl=&cd=9&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=PCrcintuzAgC&dq=subject:technology&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Digital_Signal_Processing.html?hl=&id=PCrcintuzAgC"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "PARTIAL",
+    "embeddable": true,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=PCrcintuzAgC&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "SAMPLE",
+    "quoteSharingAllowed": false
+   }
+  },
+  {
+   "kind": "books#volume",
+   "id": "wdX7RAAACAAJ",
+   "etag": "h3CODpsF3N8",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/wdX7RAAACAAJ",
+   "volumeInfo": {
+    "title": "Driving Technical Change",
+    "subtitle": "Why People on Your Team Don't Act on Good Ideas, and how to Convince Them They Should",
+    "authors": [
+     "Terrence Ryan"
+    ],
+    "publishedDate": "2010",
+    "description": "New technologies are popping up every day. Convincing co-workers to adopt them is the hard part. Adobe software evangelist Ryan breaks down the patterns and types of resistance technologists face in many organizations.",
+    "industryIdentifiers": [
+     {
+      "type": "ISBN_10",
+      "identifier": "1934356603"
+     },
+     {
+      "type": "ISBN_13",
+      "identifier": "9781934356609"
+     }
+    ],
+    "readingModes": {
+     "text": false,
+     "image": false
+    },
+    "pageCount": 136,
+    "printType": "BOOK",
+    "categories": [
+     "Computers"
+    ],
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "preview-1.0.0",
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=wdX7RAAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=wdX7RAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+    },
+    "language": "en",
+    "previewLink": "http://books.google.com/books?id=wdX7RAAACAAJ&dq=subject:technology&hl=&cd=10&source=gbs_api",
+    "infoLink": "http://books.google.com/books?id=wdX7RAAACAAJ&dq=subject:technology&hl=&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Driving_Technical_Change.html?hl=&id=wdX7RAAACAAJ"
+   },
+   "saleInfo": {
+    "country": "US",
+    "saleability": "NOT_FOR_SALE",
+    "isEbook": false
+   },
+   "accessInfo": {
+    "country": "US",
+    "viewability": "NO_PAGES",
+    "embeddable": false,
+    "publicDomain": false,
+    "textToSpeechPermission": "ALLOWED",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "webReaderLink": "http://books.google.com/books/reader?id=wdX7RAAACAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api",
+    "accessViewStatus": "NONE",
+    "quoteSharingAllowed": false
+   }
+  }
+ ]
+}
+
+	]
+}

@@ -10,11 +10,14 @@ def init_db():
 	db.drop_all()
 	db.create_all()
 
-	with open(path("test3.json")) as test_json:
-		test_data = json.load(test_json)
+	#with open(path("test3.json")) as test_json:
+	#	test_data = json.load(test_json)
 
 	with open(path("books.json")) as books_json:
 		books_data = json.load(books_json)
+
+	with open(path("book_test3.json")) as books3_json:
+		books3_data = json.load(books3_json)
 
 	with open(path("reviews.json")) as reviews_json:
 		review_data = json.load(reviews_json)
@@ -23,13 +26,15 @@ def init_db():
 		author_data = json.load(authors_json)
 
 	books = 0
-	for item in (books_data["books"] + test_data['items']):
-		
+	for item in (books_data["books"] + books3_data['books'])['items']:
+		#for item in search['items']:
 		#finding book info
 		try:
 			title = item["volumeInfo"]['title']
 		except:
-			title = 'error fetching title'
+			print('error fetching title for book# ', books)
+			continue
+			#title = 'error fetching title'
 		try:
 			genre = item["volumeInfo"]['categories'][0]
 		except:
@@ -52,9 +57,12 @@ def init_db():
 			print('Error fetching image url')
 			pic = 'about:blank'
 		book = Book(title, genre, year, isbn, price, pic)
-		db.session.add(book)
-
-		books = books + 1		
+		q = db.session.query(Book).filter_by(title=title)
+		if not db.session.query(q.exists()).scalar():
+			db.session.add(book)
+			books = books + 1
+		else:
+			print('Unable to add book with name: ', title)		
 
 		#publisher info
 		try:

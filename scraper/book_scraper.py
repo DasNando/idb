@@ -13,7 +13,7 @@ for i in isbn:
 
 	test = urllib.request.urlopen(str(url))
 	output = test.read().decode('utf-8')
-	if length != 1 :
+	if length > 1 :
 		print(str(output), end = ',\n')
 		length-=1
 	else :
