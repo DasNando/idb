@@ -26,55 +26,55 @@ def init_db():
 		author_data = json.load(authors_json)
 
 	books = 0
-	for item in (books_data["books"] + books3_data['books'])['items']:
-		#for item in search['items']:
-		#finding book info
-		try:
-			title = item["volumeInfo"]['title']
-		except:
-			print('error fetching title for book# ', books)
-			continue
-			#title = 'error fetching title'
-		try:
-			genre = item["volumeInfo"]['categories'][0]
-		except:
-			genre = 'error fetching genre'
-		try:
-			year = item["volumeInfo"]['publishedDate']
-		except:
-			year = 'error fetching year'
-		try:
-			isbn = item["volumeInfo"]['industryIdentifiers'][1]["identifier"]
-		except:
-			isbn = 'error fetching isbn'
-		try:
-			price = str(item["saleInfo"]["retailPrice"]['amount'])
-		except:
-			price = 'This title is not for sale.'
-		try:
-			pic = item["volumeInfo"]["imageLinks"]["thumbnail"]
-		except:
-			print('Error fetching image url')
-			pic = 'about:blank'
-		book = Book(title, genre, year, isbn, price, pic)
-		q = db.session.query(Book).filter_by(title=title)
-		if not db.session.query(q.exists()).scalar():
-			db.session.add(book)
-			books = books + 1
-		else:
-			print('Unable to add book with name: ', title)		
+	for search in (books_data["books"] + books3_data['books']):
+		for item in search['items']:
+			#finding book info
+			try:
+				title = item["volumeInfo"]['title']
+			except:
+				print('error fetching title for book# ', books)
+				continue
+				#title = 'error fetching title'
+			try:
+				genre = item["volumeInfo"]['categories'][0]
+			except:
+				genre = 'error fetching genre'
+			try:
+				year = item["volumeInfo"]['publishedDate']
+			except:
+				year = 'error fetching year'
+			try:
+				isbn = item["volumeInfo"]['industryIdentifiers'][1]["identifier"]
+			except:
+				isbn = 'error fetching isbn'
+			try:
+				price = str(item["saleInfo"]["retailPrice"]['amount'])
+			except:
+				price = 'This title is not for sale.'
+			try:
+				pic = item["volumeInfo"]["imageLinks"]["thumbnail"]
+			except:
+				print('Error fetching image url')
+				pic = 'about:blank'
+			book = Book(title, genre, year, isbn, price, pic)
+			q = db.session.query(Book).filter_by(title=title)
+			if not db.session.query(q.exists()).scalar():
+				db.session.add(book)
+				books = books + 1
+			else:
+				print('Unable to add book with name: ', title)		
 
-		#publisher info
-		try:
-			name = item['volumeInfo']["publisher"]
-		except:
-			name = 'error fetching publisher'
-		publisher = Publisher(name, "founding date unknown", "New York", "USA", "founders unknown")
-		q = db.session.query(Publisher).filter_by(name=name)
-		if not db.session.query(q.exists()).scalar():
-			db.session.add(publisher)
-		else:
-			print('Unable to add publisher with name: ', name)
+			#publisher info
+			try:
+				name = item['volumeInfo']["publisher"]
+			except:
+				name = 'error fetching publisher'
+			publisher = Publisher(name, "founding date unknown", "New York", "USA", "founders unknown")
+			q = db.session.query(Publisher).filter_by(name=name)
+			if not db.session.query(q.exists()).scalar():
+				db.session.add(publisher)
+			else:
+				print('Unable to add publisher with name: ', name)
 
 	#review initialization
 	reviews = 0
