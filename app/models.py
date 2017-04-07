@@ -42,10 +42,10 @@ class Book(db1.Model):
     title = db1.Column('title', db1.String(120))
     genre = db1.Column('genre', db1.String(120))
     year = db1.Column('year', db1.String(80))
-    isbn = db1.Column('isbn, 'db1.String(80))
+    isbn = db1.Column('isbn', db1.String(80))
     prices = db1.Column('prices', db1.String(80))
     pic = db1.Column('pic',db1.String(120))
-    pub_id = db1.Column('pub_id', db1.Integer, db1.ForeignKey('publisher.id'). nullable=False)
+    pub_id = db1.Column('pub_id', db1.Integer, db1.ForeignKey('publisher.id'), nullable=False)
 
     #Many to Many
     authors = db1.relationship('Author', secondary='book_author', backref='book')
@@ -163,8 +163,8 @@ class Review(db1.Model):
     rating = db1.Column('rating', db1.String(80))
     content = db1.Column('content', db1.Text)
     source = db1.Column('source', db1.String(80))
-    book_id = db1.Column('book_id', db1.Integer, db1.ForeignKey('book.id'). nullable=False)
-    author_id = db1.Column('author_id', db1.Integer, db1.ForeignKey('author.id'). nullable=False)
+    book_id = db1.Column('book_id', db1.Integer, db1.ForeignKey('book.id'), nullable=False)
+    author_id = db1.Column('author_id', db1.Integer, db1.ForeignKey('author.id'), nullable=False)
 
 
     def __init__(self, reviewer, rating, content, source):
