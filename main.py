@@ -3,6 +3,8 @@ from flask_restful import Api, Resource
 import logging
 import requests
 from app import db, models
+import requests_toolbelt.adapters.appengine
+requests_toolbelt.adapters.appengine.monkeypatch()
 
 db1 = db.db
 app = db.app
