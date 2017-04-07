@@ -51,6 +51,10 @@ pre {
 }
 
 /*tags*/
+#paginatecontainer {
+	text-align: center;
+}
+
 #centered {
 	text-align: center;
 }
