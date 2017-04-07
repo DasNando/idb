@@ -1,12 +1,8 @@
-import ast
-
-from flask import render_template, request, jsonify
+from flask import render_template, jsonify
 from flask_restful import Api, Resource
 import logging
-import json
-import subprocess
-from app import db, models, tests
-from subprocess import PIPE, Popen
+from app import db, models
+from subprocess import Popen
 
 db1 = db.db
 app = db.app
@@ -77,7 +73,7 @@ def run_tests():
     # data = '{"request": {"branch": "master"}}'
     # res = requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
 
-    proc = Popen(['make', 'test'], stdout=PIPE)
+    proc = Popen(['make', 'test'])
     return proc.communicate()[0].split()
 
     # tests_output = subprocess.check_output(['make', 'test'])
@@ -210,8 +206,8 @@ class QA_Publisher(Resource):
 api.add_resource(QA_Publisher, '/api/publishers/params&<string:params>')
 
 
-
 api.add_resource(Q_Publisher, '/api/publishers/name=<string:publisher_name>')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
