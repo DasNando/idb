@@ -27,4 +27,6 @@ check:
     echo "success";
 
 test:
-	python27 tests.py
+    rm tests.out
+	python tests.py >> tests.out
+	cat tests.out

@@ -4,7 +4,8 @@ from flask import render_template, request, jsonify
 from flask_restful import Api, Resource
 import logging
 import json
-from app import db, models
+import subprocess
+from app import db, models, tests
 
 db1 = db.db
 app = db.app
@@ -73,9 +74,17 @@ def run_tests():
     }
 
     data = '{"request": {"branch": "master"}}'
-    requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
+    res = requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
 
-    return render_template('search.html')
+    tests_output = subprocess.check_output(['make', 'test'])
+    print tests_output
+    # print res.text
+    # dict_from_server = res.json()
+    return 'testoutput: ' + tests_output
+
+    #return "server response: " + res.text + "dict_from_server: " + str(dict_from_server)
+
+    #return render_template('search.html')
 
 
 @app.errorhandler(500)
