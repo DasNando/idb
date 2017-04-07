@@ -40,10 +40,10 @@ for re_id in review_ids:
 	print("\t\t\t\"review\":", "\"" ,review,  "\",")
 	print("\t\t\t\"reviewer\":", "\"", reviewer, "\",")
 	print("\t\t\t\"source\":", "\"", source, "\",")
-	print("\t\t\t\"rating\":", "\"" , rating, "\"," )
+	print("\t\t\t\"rating\":", "\"" , rating, "\"" )
 	
 
-	if length != 1 :
+	if length > 1 :
 		print("\t\t},")
 		length-= 1
 	else :

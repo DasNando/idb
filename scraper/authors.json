@@ -8,7 +8,7 @@
 			"gender": " male ",
 			"hometown": " Cork ",
 			"birthdate": " None ",
-			"deathdate": " None ",
+			"deathdate": " None "
 		},
 		{
 			"name": " Anne Lamott ",
@@ -18,7 +18,7 @@
 			"gender": " female ",
 			"hometown": " San Francisco, California ",
 			"birthdate": " None ",
-			"deathdate": " None ",
+			"deathdate": " None "
 		},
 		{
 			"name": " Maya Angelou ",
@@ -28,7 +28,7 @@
 			"gender": " female ",
 			"hometown": " St. Louis, Missouri ",
 			"birthdate": " 1928/04/04 ",
-			"deathdate": " 2014/05/28 ",
+			"deathdate": " 2014/05/28 "
 		},
 		{
 			"name": " H.P. Lovecraft ",
@@ -38,7 +38,7 @@
 			"gender": " male ",
 			"hometown": " Providence, Rhode Island ",
 			"birthdate": " 1890/08/20 ",
-			"deathdate": " 1937/03/15 ",
+			"deathdate": " 1937/03/15 "
 		}
 	]
 }
