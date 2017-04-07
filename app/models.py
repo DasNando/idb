@@ -79,7 +79,7 @@ class Author(db1.Model):
 
     __tablename__ = 'author'
 
-    id = db.Column('id', db1.Integer, primary_key=True, autoincrement=True)   
+    id = db1.Column('id', db1.Integer, primary_key=True, autoincrement=True)
     name = db1.Column('name', db1.String(80), primary_key=True)
     birth_date = db1.Column('birth_date', db1.String(80))
     death_date = db1.Column('death_date', db1.String(80))
@@ -122,7 +122,7 @@ class Publisher(db1.Model):
 
     __tablename__ = 'publisher'
 
-    id = db.Column('id', db1.Integer, primary_key=True, autoincrement=True)
+    id = db1.Column('id', db1.Integer, primary_key=True, autoincrement=True)
     name = db1.Column('name', db1.String(80))
     founding_date = db1.Column('founding_date', db1.String(80))
     headquarters = db1.Column('headquarters', db1.String(160))
@@ -158,7 +158,7 @@ class Review(db1.Model):
 
     __tablename__ = 'review'   
     
-    id = db.Column('id', db1.Integer, primary_key=True, autoincrement=True)
+    id = db1.Column('id', db1.Integer, primary_key=True, autoincrement=True)
     reviewer = db1.Column('reviewer', db1.String(80))
     rating = db1.Column('rating', db1.String(80))
     content = db1.Column('content', db1.Text)
