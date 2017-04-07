@@ -1,9 +1,10 @@
 from flask import render_template, jsonify
-from flask_restful import Api, Resource
+# from flask_restful import Api, Resource
 import logging
 import requests
 from app import db, models
 import requests_toolbelt.adapters.appengine
+
 requests_toolbelt.adapters.appengine.monkeypatch()
 
 db1 = db.db
@@ -63,7 +64,6 @@ def search():
 # my token: wpV_1One91F2XNwmI6ukIg
 @app.route('/run_tests')
 def run_tests():
-
     headers = {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -81,46 +81,42 @@ def run_tests():
     # # dict_from_server = res.json()
     # return 'testoutput: ' + tests_output
 
-    #return "server response: " + res.text + "dict_from_server: " + str(dict_from_server)
+    # return "server response: " + res.text + "dict_from_server: " + str(dict_from_server)
 
-    #return render_template('search.html')
-
-
-@app.errorhandler(500)
-def server_error(e):
-    # Log the error and stacktrace.
-    logging.exception('An error occurred during a request.')
-    return 'An internal error occurred.', 500
+    # return render_template('search.html')
 
 
 #################### API SECTION
 
 
-api = Api(app)
+# api = Api(app)
 book = {"book_test": "book_name"}
 
 
 # get book with arbitrary filters
-class F_Book(Resource):
-    def get(self, lim=0):
-        if not lim:
-            lim = 100
-        b_dict_list = []
-        # p = db1.session.query(models.Book).limit(lim)
-        # print type(p)
+@app.route('/api/books/')
+@app.route('/api/books/<int:lim>')
+def get(lim=0):
+    if not lim:
+        lim = 100
+    b_dict_list = []
+    p = db1.session.query(models.Book).limit(lim)
+    print type(p)
 
-        for b in range(20): #p:
-            # b_dict_list.append(
-            #     {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
-            b_dict_list.append(
-                {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
-        return jsonify(b_dict_list)
+    for b in p:  # range(20): #p:
+        # b_dict_list.append(
+        # {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+        b_dict_list.append(
+            {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn",
+             "prices": "dummy_prices", "pic": "dummy_pic"})
+    return jsonify(b_dict_list)
 
 
-api.add_resource(F_Book, '/api/books/', '/api/books/<int:lim>')
+
+# api.add_resource(F_Book, '/api/books/', '/api/books/<int:lim>')
 
 # get one book
-class Q_Book(Resource):
+class Q_Book():
     def get(self, book_name):
         b_dict_list = []
 
@@ -132,11 +128,11 @@ class Q_Book(Resource):
         return jsonify(b_dict_list)
 
 
-api.add_resource(Q_Book, '/api/books/title=<string:book_name>')
+# api.add_resource(Q_Book, '/api/books/title=<string:book_name>')
 
 
 # get book with arbitrary filters
-class QA_Book(Resource):
+class QA_Book():
     def get(self, params):
         commands = params.split('&')
         b_dict_list = []
@@ -153,11 +149,11 @@ class QA_Book(Resource):
         return jsonify(b_dict_list)
 
 
-api.add_resource(QA_Book, '/api/books/params&<string:params>')
+# api.add_resource(QA_Book, '/api/books/params&<string:params>')
 
 
 # get one Author
-class Q_Author(Resource):
+class Q_Author():
     def get(self, author_name):
         a_dict_list = []
         author_name = " " + author_name + " "
@@ -169,11 +165,11 @@ class Q_Author(Resource):
         return jsonify(a_dict_list)
 
 
-api.add_resource(Q_Author, '/api/authors/name=<string:author_name>')
+# api.add_resource(Q_Author, '/api/authors/name=<string:author_name>')
 
 
 # get book with arbitrary filters
-class QA_Author(Resource):
+class QA_Author():
     def get(self, params):
         commands = params.split('&')
         a_dict_list = []
@@ -188,11 +184,13 @@ class QA_Author(Resource):
             a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
                                 "about": b.about, "num_works": b.num_works})
         return jsonify(a_dict_list)
-api.add_resource(QA_Author, '/api/authors/params&<string:params>')
+
+
+# api.add_resource(QA_Author, '/api/authors/params&<string:params>')
 
 
 # get one Publisher
-class Q_Publisher(Resource):
+class Q_Publisher():
     def get(self, publisher_name):
         p_dict_list = []
 
@@ -205,7 +203,7 @@ class Q_Publisher(Resource):
 
 
 # get book with arbitrary filters
-class QA_Publisher(Resource):
+class QA_Publisher():
     def get(self, params):
         commands = params.split('&')
         p_dict_list = []
@@ -221,10 +219,12 @@ class QA_Publisher(Resource):
                 {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
                  "founders": b.founders})
         return jsonify(p_dict_list)
-api.add_resource(QA_Publisher, '/api/publishers/params&<string:params>')
 
 
-api.add_resource(Q_Publisher, '/api/publishers/name=<string:publisher_name>')
+# api.add_resource(QA_Publisher, '/api/publishers/params&<string:params>')
+
+
+# api.add_resource(Q_Publisher, '/api/publishers/name=<string:publisher_name>')
 
 
 if __name__ == '__main__':
