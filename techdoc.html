@@ -58,14 +58,22 @@
 				</p>
 				<h4>Data Sources</h4>
 				<p>
+					To collect our data we used the GoogleBooks, GoodReads, and Wikipedia APIs. 
+					Some of these APIs return xml responses, some return json responses and some have strict
+					limits on how many requests can be made and how their data can be used but they are all
+					free to use. To scrape this data we begin with a list of keyswords to request from the APIs.
+					 These keywords can be ISBNs, IDs internal to the API, or names of publishers. 
+					 We store the responses in a .json array.
+				</p>
+				<p>
 					We used the Google Books API as the source for data about 
-					individual books, the GoodReads API to scrape data about authors
-					and book reviews and the Wikipedia API for data about publishers.
+					individual books, the GoodReads API as the source for data about authors
+					and book reviews and the Wikipedia API for general data about publishers.
 					We store the data from the responses in .json format in order to 
 					more easily be able to rebuild the cache when necessary. Responses
-					not in a .json format needed to be able to easily read data into the 
+					not in a .json format as is necessary to be able to very easily and painlessly read data into the 
 					database are parsed, have their salient data extracted, and are then converted 
-					into a .json format to be quickly and painlessly added to the database. 
+					into a .json format.
 				</p>
 			<h4>Models</h4>
 				<p>The models each have a number of sub-attributes as follows:</p>
@@ -109,37 +117,56 @@
 				<h4>Flask</h4>
 				<p>
 					Flask is a microframework for Python, using the Jinja2 and Werkzeug WSGI 
-					libraries. It allows us to map out routes from HTML templates to url addresses 
+					libraries. It allows us to map out routes from HTML templates to URL addresses 
 					within our site.
 				</p>
 				<h4>PostgreSQL</h4>
 				<p>
-					PostgresSQL is an open source object-relational database
+					PostgresSQL is an open source object-relational database system and server that we used to
+					host our database. It has a Python interface that allows us to freely manage our database.
 				</p>
 				<h4>Slack</h4>
 				<p> Our team communicates using Slack. Slack allows us to create group channels, each with a particular purpose, such as development or random chat. This allows free communication between teammates while maintaining structure, such that no thread ever goes off topic. Slack also allows us to use the Github integration plugin, which keeps team members up to date with commits and pushes made to the joint Github repository. This allows all team members to receive the same information and reduces confusion among group members.
 				</p>
 				<h4>Bootstrap</h4>
 				<p>
+					Bootstrap is a free, open source frontend web framework that provides us with HTML 
+					and CSS templates, like buttons, cards, and carousels to use in our site's design 
+					and navigation. 
 				</p>
-				<h4>Angular</h4>
+				<h4>AngularJS</h4>
 				<p>
+				 AngularJS is a JavaScript based, open source, frontend web framework specifically designed for working with single page applications. We used it to implement sorting, filtering and pagination on our site, and to bind relevant data to the pages served for a particular instance of a model.
 				</p>
 				<h4>HTML</h4>
 				<p>
+					HTML is a markup language for semantically specifying the structure and content of web pages.
+					 We use it to create static templates for each of our pages.
 				</p>
 				<h4>Github</h4>
+				<p>
 					Github is a remote repository service and versioning tool that allowed our
 					 group to keep the current version of our code neatly in one place during 
 					 development, making more efficient work management and code sharing possible. 
-				<p>
+				
 				</p>
 				<h4>Google Cloud Platform</h4>
 				<p>
-				</p>
+					Google Cloud Platform is a cloud computing service created by Google on which we hosted our website.
 				</p>
 				<h4>PyLint</h4>
 				<p>
+					PyLint is a linting tool for Python, based on the PEP 8 style. We used this 
+					tool to ensure that all our code is always sensible and well formed.
+				</p>
+				<h4>AutoPEP8</h4>
+				<p>
+					AutoPEP8 is a tool for automatically restructuring code to the PEP 8 style, we used it to 
+					maintain a consistent codebase.
+				</p>
+				<h4>Python</h4>
+				<p>
+					Python is an interpreted, high-level programming language. It supports imperative, procedural, object-oriented and functional programming styles. Python is the very core of our application, we use it to scrape date, build our models, and interface with the database.
 				</p>
 				<h4>yUML</h4>
 				<p>
@@ -151,11 +178,15 @@
 				<p>
 					BeautifulSoup is a python parsing library designed for quick and easy XML and 
 					HTML scraping. It provides a more intuitive wrapper over common python parsing 
-					libraries allowing cleaner and more elegant parsing code. We used this library to
-					 parse HTML returned from requests to the Wikipedia API.
+					libraries such as lxml and html5lib and allows us to create cleaner and more elegantly written
+					 parsing code. We used this library to parse HTML returned from requests to the 
+					 Wikipedia API.
 				</p>
 				<h4>Apiary</h4>
 				<p>
+					Apiary is an API integration cloud provided by Oracle, that provides a 
+					framework and tools for building and sharing APIs. We used it to setup our SWEreaders
+					 API
 				</p>
 				<h4>Travis CI</h4>
 				<p>
