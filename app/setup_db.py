@@ -25,6 +25,9 @@ def init_db():
 	with open(path("authors.json")) as authors_json:
 		author_data = json.load(authors_json)
 
+	with open(path('authors3.json')) as authors3_json:
+		author3_data = json.load(authors3_json, strict=False)
+
 	books = 0
 	for search in (books_data["books"] + books3_data['books']):
 		for item in search['items']:
@@ -101,7 +104,7 @@ def init_db():
 		db.session.add(review)
 
 	authors = 0
-	for item in author_data['authors']:
+	for item in author3_data['authors']:
 		try:
 			name = item["name"]
 			print('found author: ', name)
