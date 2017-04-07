@@ -14,10 +14,10 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
 		
 		<!-- Our Angular Scripts -->
-		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
 
 		<!-- Angular Plugin(s) -->
-		<script type="text/javascript" src="dirPagination.js"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
 
 		<!-- Web CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
@@ -102,15 +102,17 @@
 					<div class="col-sm-6 col-md-4">
 						<div class="card">
 							<div class="card-block">
+								{% raw %}
 								<img id="bookcoverimg" class="card-img-top img-responsive" src="{{book.coverart[0]}}" alt="book cover" position="center">
-								<pre><h4 class="card-title"><u>Title:</u> {{book.title}}</h4>
-								<p class="card-text"><u>Author:</u> {{book.author}}</p>
-								<p class="card-text"><u>Published:</u> {{book.published}}</p>
-								<p class="card-text"><u>Rating:</u> {{book.rating}}</p>
-								<p class="card-text"><u>Publisher:</u> {{book.publisher}}</p>
-								<p class="card-text"><u>Genre:</u> {{book.genre}}</p>
-								<p class="card-text"><u>ISBN:</u> {{book.isbn}}</p>
-								<p class="card-text"><u>Prices:</u> {{book.prices}}</p>
+								{% endraw %}
+								<pre><h4 class="card-title"><u>Title:</u>{% raw %} {{book.title}} {% endraw %}</h4>
+								<p class="card-text"><u>Author:</u> {% raw %}{{book.author}}{% endraw %}</p>
+								<p class="card-text"><u>Published:</u>{% raw %} {{book.published}}{% endraw %}</p>
+								<p class="card-text"><u>Rating:</u> {% raw %}{{book.rating}}{% endraw %}</p>
+								<p class="card-text"><u>Publisher:</u>{% raw %} {{book.publisher}}{% endraw %}</p>
+								<p class="card-text"><u>Genre:</u> {% raw %}{{book.genre}}{% endraw %}</p>
+								<p class="card-text"><u>ISBN:</u> {% raw %}{{book.isbn}}{% endraw %}</p>
+								<p class="card-text"><u>Prices:</u> {% raw %}{{book.prices}}{% endraw %}</p>
 							</pre></div>
 						</div>
 					</div>
