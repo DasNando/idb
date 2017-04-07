@@ -88,7 +88,7 @@ class Author(db1.Model):
     num_works = db1.Column('num_works', db1.String(80))
 
     #Many to Many
-    publishers = db1.relationship('Author', secondary='pub_author', backref='publisher')
+    publishers = db1.relationship('Publisher', secondary='pub_author', backref='author')
     
     #One to many
     reviews = db1.relationship('Review', backref ='author', lazy='dynamic')
