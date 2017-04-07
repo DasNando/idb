@@ -1,10 +1,8 @@
-import ast
-
-from flask import render_template, request, jsonify
+from flask import render_template, jsonify
 from flask_restful import Api, Resource
 import logging
-import json
 from app import db, models
+from subprocess import Popen
 
 db1 = db.db
 app = db.app
@@ -63,19 +61,30 @@ def search():
 # my token: wpV_1One91F2XNwmI6ukIg
 @app.route('/run_tests')
 def run_tests():
-    import requests
+    # import requests
+    #
+    # headers = {
+    #     'Content-Type': 'application/json',
+    #     'Accept': 'application/json',
+    #     'Travis-API-Version': '3',
+    #     'Authorization': 'token wpV_1One91F2XNwmI6ukIg',
+    # }
+    #
+    # data = '{"request": {"branch": "master"}}'
+    # res = requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
 
-    headers = {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Travis-API-Version': '3',
-        'Authorization': 'token wpV_1One91F2XNwmI6ukIg',
-    }
+    proc = Popen(['make', 'test'])
+    return proc.communicate()[0].split()
 
-    data = '{"request": {"branch": "master"}}'
-    requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
+    # tests_output = subprocess.check_output(['make', 'test'])
+    # print tests_output
+    # # print res.text
+    # # dict_from_server = res.json()
+    # return 'testoutput: ' + tests_output
 
-    return render_template('search.html')
+    #return "server response: " + res.text + "dict_from_server: " + str(dict_from_server)
+
+    #return render_template('search.html')
 
 
 @app.errorhandler(500)
@@ -197,8 +206,8 @@ class QA_Publisher(Resource):
 api.add_resource(QA_Publisher, '/api/publishers/params&<string:params>')
 
 
-
 api.add_resource(Q_Publisher, '/api/publishers/name=<string:publisher_name>')
+
 
 if __name__ == '__main__':
     app.run(debug=True)

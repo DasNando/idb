@@ -219,5 +219,5 @@ class TestModels(TestCase):
     self.assertEqual(dict_rep['city'], "city")'''
 
 
-if __name__ == "__main__":  # pragma: no cover
-    main()
+if __name__=='__main__':
+     main(exit=False)
