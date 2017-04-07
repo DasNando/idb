@@ -106,14 +106,14 @@ class F_Book(Resource):
         if not lim:
             lim = 100
         b_dict_list = []
-        # p = db1.session.query(models.Book).limit(lim)
-        # print type(p)
+        p = db1.session.query(models.Book).limit(lim)
+        print type(p)
 
-        for b in range(20): #p:
-            # b_dict_list.append(
-            #     {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+        for b in p:#range(20): #p:
             b_dict_list.append(
-                {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
+                {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+            #b_dict_list.append(
+            #    {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
         return jsonify(b_dict_list)
 
 
