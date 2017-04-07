@@ -2,7 +2,6 @@ from flask import render_template, jsonify
 from flask_restful import Api, Resource
 import logging
 from app import db, models
-from subprocess import Popen
 
 db1 = db.db
 app = db.app
@@ -61,6 +60,7 @@ def search():
 # my token: wpV_1One91F2XNwmI6ukIg
 @app.route('/run_tests')
 def run_tests():
+    return "blank-aroni"
     # import requests
     #
     # headers = {
@@ -72,9 +72,6 @@ def run_tests():
     #
     # data = '{"request": {"branch": "master"}}'
     # res = requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
-
-    proc = Popen(['make', 'test'])
-    return proc.communicate()[0].split()
 
     # tests_output = subprocess.check_output(['make', 'test'])
     # print tests_output
