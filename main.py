@@ -1,6 +1,9 @@
-from flask import render_template, request
+import ast
+
+from flask import render_template, request, jsonify
 from flask_restful import Api, Resource
 import logging
+import json
 from app import db, models
 
 db1 = db.db
@@ -25,7 +28,21 @@ def authors():
 
 @app.route('/books')
 def books():
-    return render_template('books.html')
+    # books = db1.session.query(models.Book).filter_by(genre="Fiction").all()
+    # b_dict_list = []
+    # i = 0
+    # for b in books:
+    #     print "loop"
+    #     b_dict_list.append({"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+    #     print b_dict_list[i]
+    #     print len(b_dict_list)
+    #     i += 1
+    #     if i >= 30:
+    #         break
+    # books = b_dict_list
+    # print type(books)
+    # print books
+    return render_template('books.html')  # , book_pics=iter(books), item=None)
 
 
 @app.route('/publishers')
@@ -56,7 +73,6 @@ def run_tests():
     }
 
     data = '{"request": {"branch": "master"}}'
-
     requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
 
     return render_template('search.html')
@@ -76,16 +92,113 @@ api = Api(app)
 book = {"book_test": "book_name"}
 
 
-class Q_Books(Resource):
-    def get(self, book_id):
-        return book
+# get one book
+class Q_Book(Resource):
+    def get(self, book_name):
+        b_dict_list = []
 
-    def put(self, book_id):
-        book = {book_id: book_id}
-        return book
+        book = db1.session.query(models.Book).filter_by(title=book_name).all()
+        for b in book:
+            b_dict_list.append(
+                {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+        # print book.title
+        return jsonify(b_dict_list)
 
-api.add_resource(Q_Books, '/<string:book_id>')
 
+api.add_resource(Q_Book, '/api/books/title=<string:book_name>')
+
+
+# get book with arbitrary filters
+class QA_Book(Resource):
+    def get(self, params):
+        commands = params.split('&')
+        b_dict_list = []
+        p = db1.session.query(models.Book)
+        print type(p)
+
+        for item in commands:
+            col, fil = item.split('=')
+            if col in models.Book.__table__.columns.keys():
+                p = p.filter(getattr(models.Book, col).like(fil))
+        for b in p:
+            b_dict_list.append(
+                {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+        return jsonify(b_dict_list)
+
+
+api.add_resource(QA_Book, '/api/books/params&<string:params>')
+
+
+# get one Author
+class Q_Author(Resource):
+    def get(self, author_name):
+        a_dict_list = []
+        author_name = " " + author_name + " "
+
+        author = db1.session.query(models.Author).filter_by(name=author_name).all()
+        for b in author:
+            a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
+                                "about": b.about, "num_works": b.num_works})
+        return jsonify(a_dict_list)
+
+
+api.add_resource(Q_Author, '/api/authors/name=<string:author_name>')
+
+
+# get book with arbitrary filters
+class QA_Author(Resource):
+    def get(self, params):
+        commands = params.split('&')
+        a_dict_list = []
+        p = db1.session.query(models.Author)
+        print type(p)
+
+        for item in commands:
+            col, fil = item.split('=')
+            if col in models.Author.__table__.columns.keys():
+                p = p.filter(getattr(models.Author, col).like(fil))
+        for b in p:
+            a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
+                                "about": b.about, "num_works": b.num_works})
+        return jsonify(a_dict_list)
+api.add_resource(QA_Author, '/api/authors/params&<string:params>')
+
+
+# get one Publisher
+class Q_Publisher(Resource):
+    def get(self, publisher_name):
+        p_dict_list = []
+
+        publisher = db1.session.query(models.Publisher).filter_by(name=publisher_name).all()
+        for b in publisher:
+            p_dict_list.append(
+                {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
+                 "founders": b.founders})
+        return jsonify(p_dict_list)
+
+
+# get book with arbitrary filters
+class QA_Publisher(Resource):
+    def get(self, params):
+        commands = params.split('&')
+        p_dict_list = []
+        p = db1.session.query(models.Publisher)
+        print type(p)
+
+        for item in commands:
+            col, fil = item.split('=')
+            if col in models.Publisher.__table__.columns.keys():
+                p = p.filter(getattr(models.Publisher, col).like(fil))
+        for b in p:
+            p_dict_list.append(
+                {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
+                 "founders": b.founders})
+        return jsonify(p_dict_list)
+api.add_resource(QA_Publisher, '/api/publishers/params&<string:params>')
+
+
+
+api.add_resource(Q_Publisher, '/api/publishers/name=<string:publisher_name>')
 
 if __name__ == '__main__':
     app.run(debug=True)
