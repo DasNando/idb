@@ -76,11 +76,15 @@ def run_tests():
     # data = '{"request": {"branch": "master"}}'
     # res = requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
 
-    tests_output = subprocess.check_output(['make', 'test'])
-    print tests_output
-    # print res.text
-    # dict_from_server = res.json()
-    return 'testoutput: ' + tests_output
+    from subprocess import PIPE, Popen
+    proc = Popen(['make', 'test'], stdout=PIPE)
+    return proc.communicate()[0].split()
+
+    # tests_output = subprocess.check_output(['make', 'test'])
+    # print tests_output
+    # # print res.text
+    # # dict_from_server = res.json()
+    # return 'testoutput: ' + tests_output
 
     #return "server response: " + res.text + "dict_from_server: " + str(dict_from_server)
 
