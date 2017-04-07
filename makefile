@@ -28,5 +28,11 @@ check:
 
 test:
     rm tests.out
-	python tests.py >> tests.out
+    -coverage run    --branch app/tests.py >  tests.out 2>&1
+	-coverage report -m                      >> tests.out
 	cat tests.out
+
+-$(PYLINT) TestCollatz.py
+	-$(COVERAGE) run    --branch TestCollatz.py >  TestCollatz.tmp 2>&1
+	-$(COVERAGE) report -m                      >> TestCollatz.tmp
+	cat TestCollatz.tmp

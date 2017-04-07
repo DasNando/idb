@@ -11,7 +11,7 @@ install:
 # Install the Python dependencies
 - pip install -r requirements.txt
 script:
-- python app/tests.py
+- make test
 # [START travis_deploy]
 deploy:
     provider: gae
