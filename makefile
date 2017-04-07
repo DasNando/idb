@@ -29,7 +29,7 @@ check:
 test:
     rm tests.out
     -coverage run    --branch app/tests.py >  tests.out 2>&1
-	-coverage report -m                      >> tests.out
+    -coverage report -m                      >> tests.out
 	cat tests.out
 
 -$(PYLINT) TestCollatz.py
