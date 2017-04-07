@@ -28,7 +28,93 @@ def init_db():
 	with open(path('authors3.json')) as authors3_json:
 		author3_data = json.load(authors3_json, strict=False)
 
+	with open(path('publishers2.json')) as publishers_json:
+		publisher_data = json.load(publishers_json, strict=False)
+
+	authors = 0
+	for item in author3_data['authors']:
+		try:
+			name = item["name"].strip()
+			print('found author: ', name)
+		except:
+			#name = 'Something has gone horribly wrong and we were, sadly, unable to fetch the name for this author.'
+			print('failed to find author')
+			continue
+		try:
+			image = item["image_url"]
+		except:
+			image = "about:blank"
+		try:
+			about = item["about"]
+		except:
+			about = ''
+		try:
+			num_works = str(item["works_count"])
+		except:
+			num_works = '0'
+		try:
+			birthday = item["birthdate"]
+		except:
+			birthday = ''
+		try:
+			deathday = item['deathdate']
+		except:
+			deathday = ''
+
+		author = Author(name, birthday, deathday, image, about, num_works)
+		q = db.session.query(Author).filter_by(name=name)
+		if not db.session.query(q.exists()).scalar():
+			db.session.add(author)
+			authors = authors + 1
+			print('added author with name: ', name)
+		else:
+			print("couldn't add author with name: ", name)
+
+	publishers = 0
+	#publisher info
+	for item in publisher_data['publishers']:
+		try:
+			name = str(item['name']).strip()
+			if len(name) == 0:
+				continue
+		except:
+			continue
+		try:
+			about = item['about']
+			if len(about) == 0:
+				about = 'unknown'
+		except:
+			about = ' '
+		try:
+			founded = item['founding_date'].strip()
+			if len(founded) == 0:
+				founded = 'unknown'
+		except:
+			founded = 'unknown'
+		try:
+			country = item['country'].strip()
+			if len(country) == 0:
+				country = 'unknown'
+		except:
+			country = 'unknown'
+		try:
+			hq = item['hq'].strip()
+			if len(hq) == 0:
+				hq = 'unknown'
+		except:
+			hq = 'unknown'
+
+		print('creating publisher with hq: "', hq, '"')
+		publisher = Publisher(name, about, founded, country, hq)
+		q = db.session.query(Publisher).filter_by(name=name)
+		if not db.session.query(q.exists()).scalar():
+			db.session.add(publisher)
+			publishers += 1
+		else:
+			print('Unable to add publisher with name: ', name)
+
 	books = 0
+	#pubs = set()
 	for search in (books_data["books"] + books3_data['books']):
 		for item in search['items']:
 			#finding book info
@@ -59,6 +145,7 @@ def init_db():
 			except:
 				print('Error fetching image url')
 				pic = 'about:blank'
+
 			book = Book(title, genre, year, isbn, price, pic)
 			q = db.session.query(Book).filter_by(title=title)
 			if not db.session.query(q.exists()).scalar():
@@ -67,17 +154,7 @@ def init_db():
 			else:
 				print('Unable to add book with name: ', title)		
 
-			#publisher info
-			try:
-				name = item['volumeInfo']["publisher"]
-			except:
-				name = 'error fetching publisher'
-			publisher = Publisher(name, "founding date unknown", "New York", "USA", "founders unknown")
-			q = db.session.query(Publisher).filter_by(name=name)
-			if not db.session.query(q.exists()).scalar():
-				db.session.add(publisher)
-			else:
-				print('Unable to add publisher with name: ', name)
+		#open('../scraper/pub_names.txt', 'w').write(str(list(pubs)))
 
 	#review initialization
 	reviews = 0
@@ -103,47 +180,10 @@ def init_db():
 		review = Review(name, rating, content, source)
 		db.session.add(review)
 
-	authors = 0
-	for item in author3_data['authors']:
-		try:
-			name = item["name"]
-			print('found author: ', name)
-		except:
-			name = 'Something has gone horribly wrong and we were, sadly, unable to fetch the name for this author.'
-			print('failed to find author')
-		try:
-			image = item["image_url"]
-		except:
-			image = "about:blank"
-		try:
-			about = item["about"]
-		except:
-			about = ''
-		try:
-			num_works = str(item["works_count"])
-		except:
-			num_works = '0'
-		try:
-			birthday = item["birthdate"]
-		except:
-			birthday = ''
-		try:
-			deathday = item['deathdate']
-		except:
-			deathday = ''
-
-		author = Author(name, birthday, deathday, pic, about, num_works)
-		q = db.session.query(Author).filter_by(name=name)
-		if not db.session.query(q.exists()).scalar():
-			db.session.add(author)
-			authors = authors + 1
-			print('added author with name: ', name)
-		else:
-			print("couldn't add author with name: ", name)
-
 	db.session.commit()
 	print("added ", books, ' books')
 	print('added ', authors, ' authors')
 	print('added ', reviews, ' reviews')
+	print('added ', publishers, ' publishers')
 
 init_db()

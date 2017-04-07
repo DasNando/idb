@@ -105,31 +105,31 @@ class Publisher(db1.Model):
     """Links to Author, Book
        Publisher-Book and Publisher-Author are one-to-many relationships"""
     name = db1.Column(db1.String(80), primary_key=True)
-    founding_date = db1.Column(db1.String(80))
-    headquarters = db1.Column(db1.String(160))
-    country = db1.Column(db1.String(120))
-    founders = db1.Column(db1.String(160))
+    about = db1.Column(db1.Text)
+    headquarters = db1.Column(db1.String(80))
+    country = db1.Column(db1.String(80))
+    founded = db1.Column(db1.String(80))
 
     # books = db1.relationship('Book', backref='publisher', lazy='dynamic')
     # authors = db1.relationship('Author', backref='publisher', lazy='dynamic')
 
-    def __init__(self, name, founding_date, headquarters, country, founders):
+    def __init__(self, name, about, date, country, hq):
         """All string members are asserted to be len > 0"""
 
         self.name = name
-        assert len(name) > 0
+        assert len(self.name) > 0
 
-        self.founding_date = founding_date
-        assert len(founding_date) > 0
+        self.about = about
+        assert len(self.about) > 0
 
-        self.headquarters = headquarters
-        assert len(headquarters) > 0
+        self.headquarters = hq
+        assert len(self.headquarters) > 0
 
         self.country = country
-        assert len(country) > 0
+        assert len(self.country) > 0
 
-        self.founders = founders
-        assert len(founders) > 0
+        self.founded = date
+        assert len(self.founded) > 0
 
 
 class Review(db1.Model):
