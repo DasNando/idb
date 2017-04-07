@@ -1,6 +1,7 @@
 from flask import render_template, jsonify
 from flask_restful import Api, Resource
 import logging
+import requests
 from app import db, models
 
 db1 = db.db
@@ -60,19 +61,18 @@ def search():
 # my token: wpV_1One91F2XNwmI6ukIg
 @app.route('/run_tests')
 def run_tests():
-    return "blank-aroni"
-    # import requests
-    #
-    # headers = {
-    #     'Content-Type': 'application/json',
-    #     'Accept': 'application/json',
-    #     'Travis-API-Version': '3',
-    #     'Authorization': 'token wpV_1One91F2XNwmI6ukIg',
-    # }
-    #
-    # data = '{"request": {"branch": "master"}}'
-    # res = requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
 
+    headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Travis-API-Version': '3',
+        'Authorization': 'token wpV_1One91F2XNwmI6ukIg',
+    }
+
+    data = '{"request": {"branch": "master"}}'
+    requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
+
+    return "<a href=\"https://travis-ci.org/DasNando/idb\">See Results</a>"
     # tests_output = subprocess.check_output(['make', 'test'])
     # print tests_output
     # # print res.text
