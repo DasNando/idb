@@ -64,17 +64,17 @@ def search():
 # my token: wpV_1One91F2XNwmI6ukIg
 @app.route('/run_tests')
 def run_tests():
-    import requests
-
-    headers = {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Travis-API-Version': '3',
-        'Authorization': 'token wpV_1One91F2XNwmI6ukIg',
-    }
-
-    data = '{"request": {"branch": "master"}}'
-    res = requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
+    # import requests
+    #
+    # headers = {
+    #     'Content-Type': 'application/json',
+    #     'Accept': 'application/json',
+    #     'Travis-API-Version': '3',
+    #     'Authorization': 'token wpV_1One91F2XNwmI6ukIg',
+    # }
+    #
+    # data = '{"request": {"branch": "master"}}'
+    # res = requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
 
     tests_output = subprocess.check_output(['make', 'test'])
     print tests_output
