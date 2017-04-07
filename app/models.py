@@ -20,26 +20,37 @@ Reviews
 
 db1 = db.db
 
+book_author = db1.Table('book_author',
+                        db1.Column('book_id', db1.Integer, db1.ForeignKey('author_id')),
+                        db1.Column('author_id', db1.Integer, db1.ForeignKey('book_id')), 
+                        db1.PrimaryKeyConstraint('book_id', 'author_id'))
+
+pub_author = db1.Table('pub_author',
+                        db1.Column('pub_id', db1.Integer, db1.ForeignKey('author_id')),
+                        db1.Column('author_id', db1.Integer, db1.ForeignKey('pub_id')), 
+                        db1.PrimaryKeyConstraint('pub_id', 'author_id'))
+
 class Book(db1.Model):
     """Links to Author, Review, Publisher
-       Book-Author and Book-Publisher are one-to-one relationships,
-       Book-Review is one-to-many"""
+       Book-Publisher is a one-to-many relationship,
+       Book-Review is one-to-many
+       Book-Author is many-to-many"""
 
-    title = db1.Column(db1.String(120), primary_key=True)
-    genre = db1.Column(db1.String(120))
-    year = db1.Column(db1.String(80))
-    isbn = db1.Column(db1.String(80))
-    prices = db1.Column(db1.String(80))
-    pic = db1.Column(db1.String(120))
+    __tablename__ = 'book'
 
-    author_name = db1.Column(db1.String(80), db1.ForeignKey("author.name"))
-    author = db1.relationship('Author', uselist=False, backref='book')
+    id = db1.Column('id', db1.Integer, primary_key=True, autoincrement=True)
+    title = db1.Column('title', db1.String(120))
+    genre = db1.Column('genre', db1.String(120))
+    year = db1.Column('year', db1.String(80))
+    isbn = db1.Column('isbn, 'db1.String(80))
+    prices = db1.Column('prices', db1.String(80))
+    pic = db1.Column('pic',db1.String(120))
+    pub_id = db1.Column('pub_id', db1.Integer, db1.ForeignKey('publisher.id'). nullable=False)
 
-    publisher_name = db1.Column(db1.String(80), db1.ForeignKey("publisher.name"))
-    publisher = db1.relationship('Publisher', uselist=False, backref='book')
-    
-    reviewer_name = db1.Column(db1.String(80), db1.ForeignKey("review.source"))
-    reviews = db1.relationship('Review', backref='book')
+    #Many to Many
+    authors = db1.relationship('Author', secondary='book_author', backref='book')
+    #one to Many
+    reviews = db1.relationship('Review', backref ='book', lazy='dynamic')
 
     def __init__(self, title, genre, year, isbn, prices, pic):
         """All string data members are asserted to be of len > 0, price is asserted to be > 0"""
@@ -63,20 +74,24 @@ class Book(db1.Model):
 
 class Author(db1.Model):
     """Links to Book, Publisher
-       Author-Book is a one-to-many relationship,
-       Author-Publisher is one-to-one"""
-    name = db1.Column(db1.String(80), primary_key=True)
-    birth_date = db1.Column(db1.String(80))
-    death_date = db1.Column(db1.String(80))
-    pic = db1.Column(db1.String(120))
-    about = db1.Column(db1.Text)
-    num_works = db1.Column(db1.String(80))
-    #genre = db1.Column(db1.String(80))
+       Author-Book is a many-to-many relationship,
+       Author-Publisher is many-to-many"""
 
-    #books = db1.Column()
-    #works = db1.relationship('Book', backref='author', lazy='dynamic')
-    publisher_name = db1.Column(db1.String(80), db1.ForeignKey("publisher.name"))
-    publisher = db1.relationship('Publisher', uselist=False, backref='author')#, lazy='dynamic')
+    __tablename__ = 'author'
+
+    id = db.Column('id', db1.Integer, primary_key=True, autoincrement=True)   
+    name = db1.Column('name', db1.String(80), primary_key=True)
+    birth_date = db1.Column('birth_date', db1.String(80))
+    death_date = db1.Column('death_date', db1.String(80))
+    pic = db1.Column('pic', db1.String(120))
+    about = db1.Column('about', db1.Text)
+    num_works = db1.Column('num_works', db1.String(80))
+
+    #Many to Many
+    publishers = db1.relationship('Author', secondary='pub_author', backref='publisher')
+    
+    #One to many
+    reviews = db1.relationship('Review', backref ='author', lazy='dynamic')
 
     def __init__(self, name, birth_date, death_date, pic, about, num_works):
         """All string members are asserted to be of len > 0"""
@@ -102,15 +117,21 @@ class Author(db1.Model):
 
 class Publisher(db1.Model):
     """Links to Author, Book
-       Publisher-Book and Publisher-Author are one-to-many relationships"""
-    name = db1.Column(db1.String(80), primary_key=True)
-    founding_date = db1.Column(db1.String(80))
-    headquarters = db1.Column(db1.String(160))
-    country = db1.Column(db1.String(120))
-    founders = db1.Column(db1.String(160))
+       Publisher-Book is a many-to-one relationship
+       Publisher-Author is many-to-many"""
 
-    #books = db1.relationship('Book', backref='publisher', lazy='dynamic')
-    #authors = db1.relationship('Author', backref='publisher', lazy='dynamic')
+    __tablename__ = 'publisher'
+
+    id = db.Column('id', db1.Integer, primary_key=True, autoincrement=True)
+    name = db1.Column('name', db1.String(80))
+    founding_date = db1.Column('founding_date', db1.String(80))
+    headquarters = db1.Column('headquarters', db1.String(160))
+    country = db1.Column('country', db1.String(120))
+    founders = db1.Column('founders', db1.String(160))
+
+
+    #Many to one
+    books = db1.relationship('Books', backref ='publisher', lazy='dynamic')
 
     def __init__(self, name, founding_date, headquarters, country, founders):
         """All string members are asserted to be len > 0"""
@@ -133,17 +154,18 @@ class Publisher(db1.Model):
 
 class Review(db1.Model):
     """Links to Book, Author
-       Review-Book and Review-Author are one-to-one relationships"""
-    reviewer = db1.Column(db1.String(80))
-    rating = db1.Column(db1.String(80))
-    content = db1.Column(db1.Text)
-    source = db1.Column(db1.String(80), primary_key=True)
+       Review-Book and Review-Author are one-to-many relationships"""
 
-    #book_name = db1.Column(db1.String(80), db1.ForeignKey("book.title"))
-    #book = db1.relationship('Book', uselist=False, backref='review', lazy='dynamic')
+    __tablename__ = 'review'   
     
-    author_name = db1.Column(db1.String(80), db1.ForeignKey("author.name"))
-    author = db1.relationship('Author', uselist=False, backref='review')#, lazy='dynamic')
+    id = db.Column('id', db1.Integer, primary_key=True, autoincrement=True)
+    reviewer = db1.Column('reviewer', db1.String(80))
+    rating = db1.Column('rating', db1.String(80))
+    content = db1.Column('content', db1.Text)
+    source = db1.Column('source', db1.String(80))
+    book_id = db1.Column('book_id', db1.Integer, db1.ForeignKey('book.id'). nullable=False)
+    author_id = db1.Column('author_id', db1.Integer, db1.ForeignKey('author.id'). nullable=False)
+
 
     def __init__(self, reviewer, rating, content, source):
         """All string members are asserted to be len > 0, rating is asserted to be >= 0"""
@@ -159,6 +181,3 @@ class Review(db1.Model):
 
         self.source = source
         assert len(source) > 0
-
-# db1.create_all()
-# Session = sessionmaker(autoflush=False)
