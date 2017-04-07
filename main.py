@@ -110,10 +110,10 @@ class F_Book(Resource):
         print type(p)
 
         for b in p:#range(20): #p:
-            b_dict_list.append(
-                {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
             #b_dict_list.append(
-            #    {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
+                #{"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+            b_dict_list.append(
+                {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
         return jsonify(b_dict_list)
 
 
