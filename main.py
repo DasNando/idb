@@ -99,20 +99,29 @@ book = {"book_test": "book_name"}
 
 
 # get book with arbitrary filters
-
+@app.route('/api/book')
+@app.route('/api/book/<int:lim>')
 def get_book1(lim=0):
     if not lim:
         lim = 10
-    b_dict_list = []
-    p = db1.query(models.Book).limit(lim)
-    print type(p)
+    result = []
+    for item in models.Book.query.all():
+        b_json = dict()
+        b_json['title'] = item.title
+        b_json['genre'] = item.genre
+        result.append(b_json)
+    return jsonify(result)
 
-    for b in p:
-         b_dict_list.append(
-             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
-        #b_dict_list.append(
-        #    {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
-    return jsonify(b_dict_list)
+    # b_dict_list = []
+    # p = db1.query(models.Book).limit(lim)
+    # print type(p)
+    #
+    # for b in p:
+    #      b_dict_list.append(
+    #          {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+    #     #b_dict_list.append(
+    #     #    {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
+    # return jsonify(b_dict_list)
 
 # get one book
 def get_book2(self, book_name):
