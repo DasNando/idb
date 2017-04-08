@@ -2,6 +2,7 @@ from flask import render_template, jsonify
 from flask_restful import Api, Resource
 import logging
 import requests
+import json
 from app import db, models
 import requests_toolbelt.adapters.appengine
 requests_toolbelt.adapters.appengine.monkeypatch()
@@ -104,17 +105,17 @@ book = {"book_test": "book_name"}
 class F_Book(Resource):
     def get(self, lim=0):
         if not lim:
-            lim = 100
+            lim = 10
         b_dict_list = []
-        # p = db1.session.query(models.Book).limit(lim)
-        # print type(p)
+        p = db1.query(models.Book).limit(lim)
+        print type(p)
 
-        for b in range(10): #p:
-            # b_dict_list.append(
-            #     {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
-            b_dict_list.append(
-                {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
-        return jsonify("{list: " + str(b_dict_list) + '}')
+        for b in p:
+             b_dict_list.append(
+                 {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+            #b_dict_list.append(
+            #    {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
+        return jsonify(b_dict_list)
 
 
 api.add_resource(F_Book, '/api/books/', '/api/books/<int:lim>')
