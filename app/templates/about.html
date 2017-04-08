@@ -66,8 +66,8 @@
 							<p class="card-text">
 								Responsibilites: Backend, Webmaster
 							</p>
-							<p class="card-text">Commits: 45</p>
-							<p class="card-text">Issues: 0</p>
+							<p class="card-text">Commits: 90</p>
+							<p class="card-text">Issues: 7</p>
 							<p id ="cardbottom" class="card-text">Unit Tests:6</p>
 						</div>
 					</div>
@@ -87,8 +87,8 @@
 							<p class="card-text">
 								Responsibilites: GUI, Web Design
 							</p>
-							<p class="card-text">Commits: 32</p>
-							<p class="card-text">Issues: 0</p>
+							<p class="card-text">Commits: 64</p>
+							<p class="card-text">Issues: 10</p>
 							<p id ="cardbottom" class="card-text">Unit Tests:0</p>
 						</div>
 					</div>
@@ -100,15 +100,14 @@
 							<h4 class="card-title">Laura Catano</h4>
 							<p class="card-text">
 								Bio: I'm a third year CS student. I play 
-								Overwatch and like working with 3d computer 
+								Overwatch and like designing 3D computer 
 								graphics
 							</p>
 							<p class="card-text">
-								Responsibilites: Made this about page, uml 
-								doc, worked on the technical report.
+								Responsibilites: Maintains about page, Data Scraping/Parsing.
 							</p>
-							<p class="card-text">Commits: 3</p>
-							<p class="card-text">Issues: 2</p>
+							<p class="card-text">Commits: 25</p>
+							<p class="card-text">Issues: 4</p>
 							<p id ="cardbottom" class="card-text">Unit Tests:0</p>
 						</div>
 					</div>
@@ -128,8 +127,8 @@
 								Title: Project Manager and Senior Database Administrator
 								Responsibilites: API scraping, SQLAlchemy database populating
 							</p>
-							<p class="card-text">Commits: 10</p>
-							<p class="card-text">Issues: 15</p>
+							<p class="card-text">Commits: 37</p>
+							<p class="card-text">Issues: 11</p>
 							<p id ="cardbottom" class="card-text">Unit Tests:4</p>
 						</div>
 					</div>
@@ -140,8 +139,8 @@
 			<div class="row">
 				<div class="col-md-6">
 					<h2>Stats</h2>
-					<p>Total Commits: 80</p>
-					<p>Total Issues: 15</p>
+					<p>Total Commits: 225</p>
+					<p>Total Issues: 30</p>
 					<p>Total Unit Tests: 10</p>
 					<p>Apiary URL: <a href="http://docs.swereaders1.apiary.io">http://docs.swereaders1.apiary.io</a></p>
 					<p>Github Issue Tracker: <a href="https://github.com/DasNando/idb/issues">https://github.com/DasNando/idb/issues</a></p>
@@ -159,122 +158,296 @@
 			</div>
 		</div>
 		<br>
-		<div id="techreport" class="container">
+	<div id="techreport" class="container">
+			<h3>CS373 Project 4 - IDB2</h3>
 			<h2>Technical Report</h2>
 			<h3>Introduction</h3>
-			<p>
-				Our project is a database of books, publishers, authors, and 
-				book reviews to be built from data scraped from various 
-				available web APIs on this subject (Google Books, OpenLibrary, 
-				GoodReads). Our database is simply an alternative to those 
-				services and is intended for use by anyone who may find such a 
-				catalog of book related information to be useful, i.e 
-				libraries, students shopping for textbooks, bookstores, or 
-				people who would like to get book recommendations based on 
-				genres and authors they may like.
-			</p>
+				<p>
+					While the world may have moved into a new digital era, the printed word has been and continues 
+					to be a relevant and readily accessible source of information and entertainment. 
+					Our project is a database of books, publishers, authors, and 
+					book reviews to be built from data scraped from various 
+					available web APIs on this subject (Google Books, 
+					GoodReads, Wikipedia). Our goal is simply to provide an alternative to 
+					services like GoodReads, and to make the world's extensive collection of literature even more accessible.
+				</p>
+				<p>
+					We aim to provide the means by which users may browse books, authors, publishers, and reviews
+					and filter or sort them as desired. Some specific use cases: If you need to find affordable textbooks,
+					 you can sort books by price. If you want to discover new authors in a genre you like, you can filter authors by genres 
+					 they have written in. If you would like to find publishers in your country you can do that too. Our site is intended for use by anyone who may find such a catalog of book related information to be useful, i.e libraries, students shopping for textbooks, bookstores, or 
+					people who would like to get book recommendations based on genres and authors they may like.
+
+				</p>
 			<h3>Design</h3>
-			<h4>RESTful API</h4>
-			<p>
-				Our RESTful API (unimplemented as of now) will allow others to 
-				scrape our database for the information we have collected. At 
-				the moment, our API will allow you to filter the database by 
-				search terms such as book name, author name, publishing date, 
-				etc. It will also allow you to pull all information on a given 
-				specific book. Once the database is fully implemented, we will 
-				expand the API documentation to denote the JSON and other 
-				output which will be returned from queries to the API.
-			</p>
+				<h4>RESTful API</h4>
+				<p>
+					Our RESTful API allows others to scrape our database for the 
+					information we have collected. Our API will allow users to filter the database by 
+					search terms such as book name, author name, publishing date, 
+					etc. It will also allow you to pull all information on a given 
+					specific book. 
+				</p>
+				<h4>Frontend</h4>
+				<p> Our site's front-end is made with HTML and Bootstrap. Right 
+					now, it's simply a splash page (with a carousel and tables 
+					of books), pages (containing grids corresponding to each of 
+					our four models), and a currently non-functioning search bar.
+					We plan to use Angular/Javascript to improve the look and 
+					navigability of our site in later phases. 
+				</p>
+				<h4>Backend</h4>
+				<p>
+					To serve our webpages, we are using the Flask Python web 
+					framework. Flask allows us to render HTML templates and use 
+					Python to apply logic to the rendering and change the website
+					accordingly. As of now, the system we are using is used 
+					primarily to keep track of all static files, such as 
+					stylesheets and images, and apply them properly to the 
+					html pages. As the project develops, we'd like to reduce 
+					the number of page templates and increase the amount of media 
+					that we maintain. Currently, the Flask framework is not 
+					serving any static images, as they are being pulled from 
+					the web. Eventually, we would like to add some images such 
+					as a logo or a static carousel.
+				</p>
+				<h4>Media Embedding Services</h4>
+				<p> As of now, we have not used any media embedding services, 
+					but we plan on eventually embedding verbose links to reviews 
+					via GoodReads. This means including some small portion of a 
+					larger review or set of reviews and attaching them to each 
+					Book, Author, and Publisher. The implementation of this and 
+					which service we will use is yet to be determined. We are 
+					also considering using a dynamic embedding service to update 
+					our carousel according to changes in popularity, or simply 
+					to randomize the images posted.
+				</p>
+				<h4>Database</h4>
+				<h5>Attributes</h5>
+				<p>
+					For this part of the project, we needed to implement the database that was set up for phase 1. Previously, we had just had a skeleton for a database, but without anything filling it. In actually implementing the database and populating it with the data scraped from our API sources, we discovered a number of challenges. Some of the attributes from our models turned out to be difficult or otherwise problematic to implement. For the version of the database implemented in this version of the project, we decided to change the following attributes:
+
+				</p>
+				<p>Book:</p>
+				<p>
+					-The attribute 'year' was changed from a column Integers to a  column of Strings
+					-The attribute 'edition' was removed entirely
+					-The attribute 'prices' was changed from a column of Floats to a column of Strings
+					-A new attribute called 'pic' was added, storing a string representing the url of an image for the book
+				</p>
+                <p>Author:</p>
+				<p>
+					-The attribute 'alive' was removed entirely
+					-The attribute 'works' was removed entirely
+					-The attribute 'genre' was removed entirely
+					-A new attribute called 'pic' was added, which stores a string representing the url of an image for the author
+					-A new attribute called 'about' was added, of type 'Text', which stores a short bio paragraph for the author
+					-A new attribute called 'num_works' was added, storing as a string the number of published works by that author
+				</p>
+				   <p>Publisher:</p>
+				<p>
+					-The attribute 'founders' was removed entirely
+					-A new attribute called 'about' was added, of type 'Text', which stores a short bio paragraph for the publisher
+				</p>
+				   <p>Review:</p>
+				<p>
+					-The attribute 'rating' was changed from a column of Floats to a column of Strings
+				</p>
+				<h5>Changes</h5>
+				<p>
+					These changes were implemented as we began to write and test our scripts for API scraping and database populating. On of the significant changes to notice is that, whereas our database had been previously set up to store a mixture of String and Number data types, it now stores only text representations of data. This approach yields a number of advantages over storing raw number types in a database. First, it allows differentiation between existent and non-existent data values. For instance, one of the problems that we ran into in attempting to populate the database with information on our books was that, while the Google Books API returned a JSON payload containing pricing information on most of the books, for some of the books in our search this data was mysteriously absent. Further investigation showed that this was due to the fact that, while some books were listed as “For Sale”, others were not, and thus lacked a “retailPrice” attribute in their JSON representation. If we still wanted to store this ‘prices’ attribute as a float type, this would pose a problem. We could store it as a price of ‘0’, but that would be confusing and not particularly helpful or descriptive to the end user looking at out data. On the other hand, storing this data as strings allows us to handle this potential problem. Our code is now able to check whether a given book has an associated price. If a book does have a price, then the book entry is simply created using the string representation of that price, but if the book does not have an associated price, then a book entry is created where the ‘prices’ attribute stores the string 'This title is not for sale.' This implementation allows us to store the prices of books but also to provide useful information to the end user in a convenient manner without additional work. On the back end, the pricing information can be generated once and stored in statically in the database. On the front end, the web page needs only to load the string value stored in the ‘prices’ field and display it, and no additional dynamic work is required on page load. 
+					Additionally, there were a number of fields which were removed and replaced with other information. This was done if and when we discovered that the APIs which we used to source our data did not contain the data that we had originally hoped to use.
+				</p>
+
+
+
+				<h4>Data Sources</h4>
+				<p>
+					To collect our data we used the GoogleBooks, GoodReads, and Wikipedia APIs. 
+					Some of these APIs return xml responses, some return json responses and some have strict
+					limits on how many requests can be made and how their data can be used but they are all
+					free to use. To scrape this data we begin with a list of keyswords to request from the APIs.
+					 These keywords can be ISBNs, IDs internal to the API, or names of publishers. 
+					 We store the responses in a .json array.
+				</p>
+
+				<p>
+					Our data were scraped programmatically, using a number of python scripts. To scrape our data, we started first with a script which used the Google Books API to get information on a number of books. To do this, our script simply had the following logic:
+				</p>
+
+				<code>
+					...
+				subjects = ['technology', 'sports', 'literature', 'poetry', 'romance', 'mystery', 'science+fiction']
+				for i in subjects:
+				url = "https://www.googleapis.com/books/v1/volumes?q=subject:"+ str(i) + "&maxResults=40&langRestrict=en&key=AIzaSyBIbqz2Qb-Afi-v1iXP3QRdM8wQmQMdFG4"
+				</code>
+
+				<p>
+					This loop, thus, took a list of seven different book subjects, and for each subject, got a list of 40 different books. Having stored these 280 data points in a JSON file, we could use this information to scrape information about these books’ authors and publishers. To generate the information on authors and publishers, our code iterated over the JSON file for the books, grabbed the Author and Publisher attributes from each entry, and compiled a list of author names and a list of publisher names. From these lists, we scraped the Goodreads API as such:
+				</p>
+
+				<code>
+				author_names = ['Christina Dodd', 'Simone Murray',  'Dante Alighieri',  
+
+		      for author in author_names:
+			   url1 = 'https://www.goodreads.com/api/author_url/' + urllib.parse.quote(author, safe='') + '?key=YCBYRWAFTg2cfUnmW8IWTg'
+			    </code>
+			    <p>
+					to generate a JSON formatted description of our authors, and:
+				</p>
+
+				<code>
+				
+				pubs = ["Harper Collins", "Simon & Schuster", "Random House", …
+
+				for i in pubs:
+					url = "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=revisions&titles=" + urllib.parse.quote(i, safe='') + "&redirects=1&rvprop=content&rvparse=1" </code>
+				<p>
+					to generate a JSON formatted description of our publishers.
+					After this is completed, our scripts have generated three seperate JSON files, one each for the models Books, Authors, and Publishers. This implementation also conveniently means that we will automatically have information on authors and publishers that are related to the book data that we source (i.e. this setup gets information on a book x and then automatically also generates information for x’s author and publisher.
+				</p>
+				<p>
+					We used the Google Books API as the source for data about 
+					individual books, the GoodReads API as the source for data about authors
+					and book reviews and the Wikipedia API for general data about publishers.
+					We store the data from the responses in .json format in order to 
+					more easily be able to rebuild the cache when necessary. Responses
+					not in a .json format as is necessary to be able to very easily and painlessly read data into the 
+					database are parsed, have their salient data extracted, and are then converted 
+					into a .json format.
+				</p>
+				<p>
+					Having scraped these data, we need a script to add them to the database. This was accomplished using a single script (setup_db.py). This script starts by first loading all of the JSON files for the models. Then, for each model, the script iterates over the JSON data for that model’s file, generating one instance of the relative model per JSON entry. This script takes special care to make sure that for every element it attempts to retrieve from the JSON, a valid dictionary entry exists for that key. This is important because it is entirely possible for some models that the API call could have returned a JSON payload which was only partially complete. For instance, if the script is unable to determine a genre for a given book, it assigns the string 'error fetching genre' to that model’s instance for the ‘genre’ attribute. Having successfully created a Model instance, the script then queries the database to guarantee that the database does not already contain a conflicting entry (i.e. no two entries can contain the same primary key, so the script cannot add two books with the same title), and if not, adds the model instance to the database.
+				</p>
 			<h4>Models</h4>
-			<p>The models each have a number of sub-attributes as follows:</p>
-			<img class="img-responsive" src="{{ url_for('static', filename='img/about/IDB.png') }}" alt="uml diagram">
-			<p>
-				Each model is supported by a SQLAlchemy table which holds 
-				all of that model's data. The table stores all of the data 
-				for that model with each column of the table representing 
-				one attribute of the model. Currently, the 'book' model 
-				has title as its primary key, while 'author', 'review', 
-				and 'publisher' each have the 'name' attribute as their 
-				primary key.
-			</p>
-			<p>
-				Each model has links to other models. Each book is linked, 
-				via one-to-one linkings, with its author and its publisher, 
-				and with a one-to-many with reviews of that book. Each author 
-				has a one-to-many relationship with that author's books and a 
-				one-to-one relationship with that author's publisher. 
-				Publishers have a one-to-many relationship with authors and 
-				with books. Lastly, Reviews have one-to-one relationships 
-				with both authors and books.
-			</p>
-			<p>
-				Each model is represented by a seperate class, all of which 
-				extend the db.Model class. Upon instantiation, each model's 
-				__init__ method checks, via the use of assert statements, 
-				that any string data members have been set to values with 
-				positive length, as well as ensuring that reviews and prices 
-				are given as non-negative numbers. This is done to ensure the 
-				validity of any new data members that are created.
-			</p>
-			<h4>Backend</h4>
-			<p>
-				To serve our webpages, we are using the Flask Python web 
-				framework. Flask allows us to render HTML templates and use 
-				Python to apply logic to the rendering and change the website
-				accordingly. As of now, the system we are using is used 
-				primarily to keep track of all static files, such as 
-				stylesheets and images, and apply them properly to the 
-				html pages. As the project develops, we'd like to reduce 
-				the number of page templates and increase the amount of media 
-				that we maintain. Currently, the Flask framework is not 
-				serving any static images, as they are being pulled from 
-				the web. Eventually, we would like to add some images such 
-				as a logo or a static carousel.
-			</p>
-			<h4>Media Embedding Services</h4>
-			<p>As of now, we have not used any media embedding services, 
-				but we plan on eventually embedding verbose links to reviews 
-				via GoodReads. This means including some small portion of a 
-				larger review or set of reviews and attaching them to each 
-				Book, Author, and Publisher. The implementation of this and 
-				which service we will use is yet to be determined. We are 
-				also considering using a dynamic embedding service to update 
-				our carousel according to changes in popularity, or simply 
-				to randomize the images posted.
-			</p>
-			<p>Flask</p>
+				<p>The models each have a number of sub-attributes as follows:</p>
+				<img class="img-responsive" src="{{ url_for('static', filename='img/about/IDB2.png') }}" alt="uml diagram">
+				<p>
+					Each model is supported by a SQLAlchemy table which holds 
+					all of that model's data. The table stores all of the data 
+					for that model with each column of the table representing 
+					one attribute of the model. Currently, the 'book' model 
+					has title as its primary key, while 'author', 'review', 
+					and 'publisher' each have the 'name' attribute as their 
+					primary key.
+				</p>
+				<p>
+					Each model has links to other models. Each book is linked, 
+					via one-to-one linkings, with its author and its publisher, 
+					and with a one-to-many with reviews of that book. Each author 
+					has a one-to-many relationship with that author's books and a 
+					one-to-one relationship with that author's publisher. 
+					Publishers have a one-to-many relationship with authors and 
+					with books. Lastly, Reviews have one-to-one relationships 
+					with both authors and books.
+				</p>
+				<p>
+					Each model is represented by a separate class, all of which 
+					extend the db.Model class. Upon instantiation, each model's 
+					__init__ method checks, via the use of assert statements, 
+					that any string data members have been set to values with 
+					positive length, as well as ensuring that reviews and prices 
+					are given as non-negative numbers. This is done to ensure the 
+					validity of any new data members that are created.
+				</p>
 			<h3>Tools</h3>
-			<p>Our site's front-end is made with HTML and Bootstrap. Right 
-				now, it's simply a splash page (with a carousel and tables 
-				of books), pages (containing grids corresponding to each of 
-				our four models), and a currently non-functioning search bar.
-				We plan to use React/Javascript to improve the look and 
-				navigability of our site in later phases. We also plan to 
-				replace our dummy data, currently hard coded into the page, 
-				with real data from our database.
-			</p>
-			<p>
-				Our site's back-end is made with Flask and Python. We have 
-				implemented four models: Book, Author, Publisher and Review. 
-				(Include image in idb.pdf here) Each containing relevant 
-				information and links to other models. This will allow users 
-				to search based on specific attributes and be linked to related 
-				books, publishers, authors or reviews from the pages they view.
-			</p>
-			<p>Our team communicates using Slack. Slack allows us to create group channels, each with a particular purpose, such as development or random chat. This allows free communication between teammates while maintaining structure, such that no thread ever goes off topic. Slack also allows us to use the Github integration plugin, which keeps team members up to date with commits and pushes made to the joint Github repository. This allows all team members to receive the same information and reduces confusion among group members.</p>
-			<p>For this project's deployment testing, we are using TravisCI. TravisCI allows us to automate the running of unit tests on each push to the group Github repository. These tests allow the team to ensure that changes made are not unknowingly interfering with other sections of the project, minimizing the amount aof site-crashing bugs that make it to live. The unit tests will largely consist of tests on the output of queries to the database/API. As of now, there is little to run on Travis, but as the project develops, the amount of tests run by Travis should increase.</p>
+				<h4>SQLALchemy</h4>
+				<p>
+					SQLAlchemy is a Python Flask extension and object relational mapper 
+					that provides us with a toolkit for more easily working with SQL databases. 
+					It is used to create models, columns, and tables, and input our scraped 
+					data into our database. 
+				</p>
+				<h4>Flask</h4>
+				<p>
+					Flask is a microframework for Python, using the Jinja2 and Werkzeug WSGI 
+					libraries. It allows us to map out routes from HTML templates to URL addresses 
+					within our site.
+				</p>
+				<h4>PostgreSQL</h4>
+				<p>
+					PostgresSQL is an open source object-relational database system and server that we used to
+					host our database. It has a Python interface that allows us to freely manage our database.
+				</p>
+				<h4>Slack</h4>
+				<p> Our team communicates using Slack. Slack allows us to create group channels, each with a particular purpose, such as development or random chat. This allows free communication between teammates while maintaining structure, such that no thread ever goes off topic. Slack also allows us to use the Github integration plugin, which keeps team members up to date with commits and pushes made to the joint Github repository. This allows all team members to receive the same information and reduces confusion among group members.
+				</p>
+				<h4>Bootstrap</h4>
+				<p>
+					Bootstrap is a free, open source frontend web framework that provides us with HTML 
+					and CSS templates, like buttons, cards, and carousels to use in our site's design 
+					and navigation. 
+				</p>
+				<h4>AngularJS</h4>
+				<p>
+				 AngularJS is a JavaScript based, open source, frontend web framework specifically designed for working with single page applications. We used it to implement sorting, filtering and pagination on our site, and to bind relevant data to the pages served for a particular instance of a model.
+				</p>
+				<h4>HTML</h4>
+				<p>
+					HTML is a markup language for semantically specifying the structure and content of web pages.
+					 We use it to create static templates for each of our pages.
+				</p>
+				<h4>Github</h4>
+				<p>
+					Github is a remote repository service and versioning tool that allowed our
+					 group to keep the current version of our code neatly in one place during 
+					 development, making more efficient work management and code sharing possible. 
+				
+				</p>
+				<h4>Google Cloud Platform</h4>
+				<p>
+					Google Cloud Platform is a cloud computing service created by Google on which we hosted our website.
+				</p>
+				<h4>PyLint</h4>
+				<p>
+					PyLint is a linting tool for Python, based on the PEP 8 style. We used this 
+					tool to ensure that all our code is always sensible and well formed.
+				</p>
+				<h4>AutoPEP8</h4>
+				<p>
+					AutoPEP8 is a tool for automatically restructuring code to the PEP 8 style, we used it to 
+					maintain a consistent codebase.
+				</p>
+				<h4>Python</h4>
+				<p>
+					Python is an interpreted, high-level programming language. It supports imperative, procedural, object-oriented and functional programming styles. Python is the very core of our application, we use it to scrape date, build our models, and interface with the database.
+				</p>
+				<h4>yUML</h4>
+				<p>
+					yUML is an online tool for creating UML diagrams, by specifing models,
+					 attributes and their relationships in a text file. This let our group 
+					 quickly make diagrams without needing to learn any new technologies in the process.
+				</p>
+				<h4>BeautifulSoup</h4>
+				<p>
+					BeautifulSoup is a python parsing library designed for quick and easy XML and 
+					HTML scraping. It provides a more intuitive wrapper over common python parsing 
+					libraries such as lxml and html5lib and allows us to create cleaner and more elegantly written
+					 parsing code. We used this library to parse HTML returned from requests to the 
+					 Wikipedia API.
+				</p>
+				<h4>Apiary</h4>
+				<p>
+					Apiary is an API integration cloud provided by Oracle, that provides a 
+					framework and tools for building and sharing APIs. We used it to setup our SWEreaders
+					 API
+				</p>
+				<h4>Travis CI</h4>
+				<p>
+					For this project's deployment testing, we are using TravisCI. TravisCI allows us to automate the running of unit tests on each push to the group Github repository. These tests allow the team to ensure that changes made are not unknowingly interfering with other sections of the project, minimizing the amount aof site-crashing bugs that make it to live. The unit tests will largely consist of tests on the output of queries to the database/API. As of now, there is little to run on Travis, but as the project develops, the amount of tests run by Travis should increase.
+				</p>
 			<h3>Hosting</h3>
-			<p>Our website is hosted on Google Cloud Platform's App Engine. 
-				Google Cloud Platform allows us to maintain source code on 
-				Google's servers and sync with Github in order to streamline 
-				updates to the website. As of now, our App Engine only hosts 
-				a single machine which, using the Flask Python web framework, 
-				serves the html templates of the website and applies static 
-				files such as CSS files and images. Our website's error logs 
-				are also maintained by Google, and include logs of all requests 
-				made to the website, filterable by severity of the request
-				(ie. No Error, Warning, Notice, etc.)
-			</p>
+				<p>Our website is hosted on Google Cloud Platform's App Engine. 
+					Google Cloud Platform allows us to maintain source code on 
+					Google's servers and sync with Github in order to streamline 
+					updates to the website. As of now, our App Engine only hosts 
+					a single machine which, using the Flask Python web framework, 
+					serves the html templates of the website and applies static 
+					files such as CSS files and images. Our website's error logs 
+					are also maintained by Google, and include logs of all requests 
+					made to the website, filterable by severity of the request
+					(ie. No Error, Warning, Notice, etc.)
+				</p>
 		</div>
 		<br>
 	</body>
