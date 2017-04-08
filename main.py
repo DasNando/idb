@@ -109,12 +109,12 @@ class F_Book(Resource):
         # p = db1.session.query(models.Book).limit(lim)
         # print type(p)
 
-        for b in range(1): #p:
+        for b in range(10): #p:
             # b_dict_list.append(
             #     {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
             b_dict_list.append(
                 {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
-        return jsonify({"list: ", b_dict_list})
+        return jsonify("{list: " + str(b_dict_list) + '}')
 
 
 api.add_resource(F_Book, '/api/books/', '/api/books/<int:lim>')
