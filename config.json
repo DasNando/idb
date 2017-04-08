@@ -1,0 +1,6 @@
+{
+    "DEBUG": true,
+    "CSRF_ENABLED": true,
+    "SQLALCHEMY_DATABASE_URI": "postgresql://postgres:swereaders@35.184.110.238:5432/postgres",
+    "SQLALCHEMY_TRACK_MODIFICATIONS": false
+}
