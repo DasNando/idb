@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="sweReaders" lang="en">
 	<head>
 		<title>Publishers - SWE-Readers</title>
 		<meta charset="utf-8">
@@ -10,14 +10,23 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+		<!-- Angular CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+		
+		<!-- Our Angular Scripts -->
+		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
+
+		<!-- Angular Plugin(s) -->
+		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
+
 		<!-- Web CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
 		
 		<!-- Local CSS Stylesheet -->
 		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
-
+		
 	</head>
-	<body>
+	<body ng-controller="PublisherController">
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -57,9 +66,9 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<div>
-						<form action="{{ url_for('search') }}">
+						<form>
 							<div class="input-group">
-								<input type="text" class="form-control" placeholder="Filter Publishers">
+								<input type="text" ng-model="searchPublishers" class="form-control" placeholder="Filter Publishers">
 								<div class="input-group-btn">
 									<button class="btn btn-default" type="submit">
 										<i class="glyphicon glyphicon-search"></i>
@@ -74,10 +83,10 @@
 						<button id="sortbtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort by
 						<span class="caret"></span></button>
 						<ul class="dropdown-menu">
-							<li><a href="#">Name</a></li>
-							<li><a href="#">Date Founded</a></li>
-							<li><a href="#">Country of Origin</a></li>
-							<li><a href="#">Headquarters</a></li>
+							<li><a href="" ng-click="sort('name')">Name</a></li>
+							<li><a href="" ng-click="sort('headquarters')">Headquarters</a></li>
+							<li><a href="" ng-click="sort('country')">Country</a></li>
+							<li><a href="" ng-click="sort('founded')">Founded</a></li>
 						</ul>
 					</div>
 				</div>
@@ -86,48 +95,30 @@
 		<br>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4">
-					<div class="card">
-						<div class="card-block">
-							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/publishers/publishers-static.jpg') }}" alt="publisherslogo" position="center">
-							<h4 class="card-title"><u>Name:</u>Starboy Publishing Co.</h4>
-							<p class="card-text"><u>Founded:</u>A long time ago</p>
-							<p class="card-text"><u>Founders:</u>Unicron</p>
-							<p class="card-text"><u>Country of Origin:</u>A galaxy far, far away</p>
-							<p class="card-text"><u>Headquarters:</u>Planet Pluto</p>
-							<p class="card-text"><u>Books:</u> Star-Wars: The Pre-Prequels</p>
-							<p id ="cardbottom" class="card-text"><u>Authors:</u> Jar Jar Abrams</p>
+				<div dir-paginate="publisher in publisherlist|orderBy:sortKey:reverse|filter:searchPublishers|itemsPerPage:6">
+					<div class="col-sm-6 col-md-4">
+						<div class="card">
+							<div class="card-block">
+								{% raw %}
+								<img class="card-img-top img-responsive" src="{{publisher.pic}}" alt="pic of publisher" position="center">
+								{% endraw %}
+								<pre><h4 class="card-title"><u>Name:</u>{% raw %} {{publisher.name}} {% endraw %}</h4>
+								<p class="card-text"><u>About:</u> {% raw %} {{publisher.about}} {% endraw %}</p>
+								<p class="card-text"><u>HQ:</u> {% raw %} {{publisher.headquarters}} {% endraw %}</p>
+								<p class="card-text"><u>Country:</u> {% raw %} {{publisher.country}} {% endraw %}</p>
+								<p class="card-text"><u>Works:</u> {% raw %} {{publisher.works}} {% endraw %}</p>
+							</pre></div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-4">
-					<div class="card">
-						<div class="card-block">
-							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/publishers/publishers-static.jpg') }}" alt="publisherslogo" position="center">
-							<h4 class="card-title"><u>Name:</u>Starboy Publishing Co.</h4>
-							<p class="card-text"><u>Founded:</u>A long time ago</p>
-							<p class="card-text"><u>Founders:</u>Unicron</p>
-							<p class="card-text"><u>Country of Origin:</u>A galaxy far, far away</p>
-							<p class="card-text"><u>Headquarters:</u>Planet Pluto</p>
-							<p class="card-text"><u>Books:</u> Star-Wars: The Pre-Prequels</p>
-							<p id ="cardbottom" class="card-text"><u>Authors:</u> Jar Jar Abrams</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="card">
-						<div class="card-block">
-							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/publishers/publishers-static.jpg') }}" alt="publisherslogo" position="center">
-							<h4 class="card-title"><u>Name:</u>Starboy Publishing Co.</h4>
-							<p class="card-text"><u>Founded:</u>A long time ago</p>
-							<p class="card-text"><u>Founders:</u>Unicron</p>
-							<p class="card-text"><u>Country of Origin:</u>A galaxy far, far away</p>
-							<p class="card-text"><u>Headquarters:</u>Planet Pluto</p>
-							<p class="card-text"><u>Books:</u> Star-Wars: The Pre-Prequels</p>
-							<p id ="cardbottom" class="card-text"><u>Authors:</u> Jar Jar Abrams</p>
-						</div>
-					</div>
-				</div>
+			</div>
+			<div id="paginatecontainer">
+				<dir-pagination-controls
+					max-size="7"
+					direction-links="true"
+					boundary-links="true"
+					on-page-change="pageChangeHandler(newPageNumber)">
+				</dir-pagination-controls> 
 			</div>
 		</div>
 	</body>

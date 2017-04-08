@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="sweReaders" lang="en">
 	<head>
 		<title>Reviews - SWE-Readers</title>
 		<meta charset="utf-8">
@@ -10,6 +10,15 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+		<!-- Angular CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+		
+		<!-- Our Angular Scripts -->
+		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
+
+		<!-- Angular Plugin(s) -->
+		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
+
 		<!-- Web CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
 		
@@ -17,7 +26,7 @@
 		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
 		
 	</head>
-	<body>
+	<body ng-controller="ReviewController">
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -57,9 +66,9 @@
 			<div class="row">
 				<div class="col-sm-8">
 					<div>
-						<form action="{{ url_for('search') }}">
+						<form>
 							<div class="input-group">
-								<input type="text" class="form-control" placeholder="Filter Reviews">
+								<input type="text" ng-model="searchReviews" class="form-control" placeholder="Filter Reviews">
 								<div class="input-group-btn">
 									<button class="btn btn-default" type="submit">
 										<i class="glyphicon glyphicon-search"></i>
@@ -74,10 +83,9 @@
 						<button id="sortbtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort by
 						<span class="caret"></span></button>
 						<ul class="dropdown-menu">
-							<li><a href="#">Reviewer</a></li>
-							<li><a href="#">Book</a></li>
-							<li><a href="#">Author</a></li>
-							<li><a href="#">Rating</a></li>
+							<li><a href="" ng-click="sort('reviewer')">Reviewer</a></li>
+							<li><a href="" ng-click="sort('rating')">Rating</a></li>
+							<li><a href="" ng-click="sort('book')">Book</a></li>
 						</ul>
 					</div>
 				</div>
@@ -86,45 +94,30 @@
 		<br>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4">
-					<div class="card">
-						<div class="card-block">
-							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/reviews/reviews-static.jpg') }}" alt="reviewrprofilepic" position="center">
-							<h4 class="card-title"><strong>DefinitelyNotTrump says:</Strong></h4>
-							<p class="card-text"><u>Book:</u>The Constitution</p>
-							<p class="card-text"><u>Author:</u>Dead Presidents and others</p>
-							<p class="card-text"><u>Review Summary:</u>This book is fake news. Sad!</p>
-							<p class="card-text"><u>Rating:</u>0/5</p>
-							<p id ="cardbottom" class="card-text"><u>Source:</u> whitehouse.gov</p>
+				<div dir-paginate="review in reviewlist|orderBy:sortKey:reverse|filter:searchReviews|itemsPerPage:6">
+					<div class="col-sm-6 col-md-4">
+						<div class="card">
+							<div class="card-block">
+								{% raw %}
+								<img class="card-img-top img-responsive" src="{{review.pic}}" alt="pic of review" position="center">
+								{% endraw %}
+								<pre><h4 class="card-title"><u>Reviewer:</u>{% raw %} {{review.reviewr}} {% endraw %}</h4>
+								<p class="card-text"><u>Rating:</u> {% raw %} {{review.rating}} {% endraw %}</p>
+								<p class="card-text"><u>Content:</u> {% raw %} {{review.content}} {% endraw %}</p>
+								<p class="card-text"><u>Source:</u> {% raw %} {{review.source}} {% endraw %}</p>
+								<p class="card-text"><u>Book:</u> {% raw %} {{review.book}} {% endraw %}</p>
+							</pre></div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-4">
-					<div class="card">
-						<div class="card-block">
-							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/reviews/reviews-static.jpg') }}" alt="reviewrprofilepic" position="center">
-							<h4 class="card-title"><strong>DefinitelyNotTrump says:</strong></h4>
-							<p class="card-text"><u>Book:</u>The Constitution</p>
-							<p class="card-text"><u>Author:</u>Dead Presidents and others</p>
-							<p class="card-text"><u>Review Summary:</u>This book is fake news. Sad!</p>
-							<p class="card-text"><u>Rating:</u>0/5</p>
-							<p id ="cardbottom" class="card-text"><u>Source:</u> whitehouse.gov</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-4">
-					<div class="card">
-						<div class="card-block">
-							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/reviews/reviews-static.jpg') }}" alt="reviewrprofilepic" position="center">
-							<h4 class="card-title"><Strong>DefinitelyNotTrump says:</strong></h4>
-							<p class="card-text"><u>Book:</u>The Constitution</p>
-							<p class="card-text"><u>Author:</u>Dead Presidents and others</p>
-							<p class="card-text"><u>Review Summary:</u>This book is fake news. Sad!</p>
-							<p class="card-text"><u>Rating:</u>0/5</p>
-							<p id ="cardbottom" class="card-text"><u>Source:</u> whitehouse.gov</p>
-						</div>
-					</div>
-				</div>
+			</div>
+			<div id="paginatecontainer">
+				<dir-pagination-controls
+					max-size="7"
+					direction-links="true"
+					boundary-links="true"
+					on-page-change="pageChangeHandler(newPageNumber)">
+				</dir-pagination-controls> 
 			</div>
 		</div>
 	</body>
