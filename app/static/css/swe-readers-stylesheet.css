@@ -51,6 +51,14 @@ pre {
 }
 
 /*tags*/
+#techreportpre {
+	color: black;
+	border-color: lightgray;
+	background-color: white;
+	line-height: 1;
+	overflow: auto;
+}
+
 #paginatecontainer {
 	text-align: center;
 }
