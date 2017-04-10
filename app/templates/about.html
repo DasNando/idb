@@ -275,33 +275,32 @@
 					Our data were scraped programmatically, using a number of python scripts. To scrape our data, we started first with a script which used the Google Books API to get information on a number of books. To do this, our script simply had the following logic:
 				</p>
 
-				<code>
-					...
-				subjects = ['technology', 'sports', 'literature', 'poetry', 'romance', 'mystery', 'science+fiction']
-				for i in subjects:
-				url = "https://www.googleapis.com/books/v1/volumes?q=subject:"+ str(i) + "&maxResults=40&langRestrict=en&key=AIzaSyBIbqz2Qb-Afi-v1iXP3QRdM8wQmQMdFG4"
-				</code>
+				<pre id="techreportpre"><code><!--... -->
+subjects = ['technology', 'sports', 'literature', 'poetry', 'romance', 'mystery', 'science+fiction']
+for i in subjects:
+	url = "https://www.googleapis.com/books/v1/volumes?q=subject:"+ str(i) + "&maxResults=40&langRestrict=en&key=AIzaSyBIbqz2Qb-Afi-v1iXP3QRdM8wQmQMdFG4"
+				</code></pre>
 
 				<p>
 					This loop, thus, took a list of seven different book subjects, and for each subject, got a list of 40 different books. Having stored these 280 data points in a JSON file, we could use this information to scrape information about these books’ authors and publishers. To generate the information on authors and publishers, our code iterated over the JSON file for the books, grabbed the Author and Publisher attributes from each entry, and compiled a list of author names and a list of publisher names. From these lists, we scraped the Goodreads API as such:
 				</p>
 
-				<code>
-				author_names = ['Christina Dodd', 'Simone Murray',  'Dante Alighieri',  
+				<pre id="techreportpre"><code>
+author_names = ['Christina Dodd', 'Simone Murray',  'Dante Alighieri',  
 
-		      for author in author_names:
-			   url1 = 'https://www.goodreads.com/api/author_url/' + urllib.parse.quote(author, safe='') + '?key=YCBYRWAFTg2cfUnmW8IWTg'
-			    </code>
+for author in author_names:
+	url1 = 'https://www.goodreads.com/api/author_url/' + urllib.parse.quote(author, safe='') + '?key=YCBYRWAFTg2cfUnmW8IWTg'
+			    </code></pre>
 			    <p>
 					to generate a JSON formatted description of our authors, and:
 				</p>
 
-				<code>
-				
-				pubs = ["Harper Collins", "Simon & Schuster", "Random House", …
+				<pre id="techreportpre"><code>
+pubs = ["Harper Collins", "Simon & Schuster", "Random House", …
 
-				for i in pubs:
-					url = "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=revisions&titles=" + urllib.parse.quote(i, safe='') + "&redirects=1&rvprop=content&rvparse=1" </code>
+for i in pubs:
+	url = "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=revisions&titles=" + urllib.parse.quote(i, safe='') + "&redirects=1&rvprop=content&rvparse=1" 
+				</code></pre>
 				<p>
 					to generate a JSON formatted description of our publishers.
 					After this is completed, our scripts have generated three seperate JSON files, one each for the models Books, Authors, and Publishers. This implementation also conveniently means that we will automatically have information on authors and publishers that are related to the book data that we source (i.e. this setup gets information on a book x and then automatically also generates information for x’s author and publisher.
