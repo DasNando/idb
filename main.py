@@ -1,13 +1,64 @@
-from flask import render_template, jsonify
+from flask import render_template, jsonify, request
 import logging
 import requests
 import json
+import datetime
+import socket
+import sqlalchemy
 from app import db, models
 import requests_toolbelt.adapters.appengine
 requests_toolbelt.adapters.appengine.monkeypatch()
 
 db1 = db.db
 app = db.app
+
+
+def is_ipv6(addr):
+    """Checks if a given address is an IPv6 address."""
+    try:
+        socket.inet_pton(socket.AF_INET6, addr)
+        return True
+    except socket.error:
+        return False
+
+class Visit(db.Model):
+    id = db1.Column(db1.Integer, primary_key=True)
+    timestamp = db1.Column(db1.DateTime())
+    user_ip = db1.Column(db1.String(46))
+
+    def __init__(self, timestamp, user_ip):
+        self.timestamp = timestamp
+        self.user_ip = user_ip
+
+
+@app.route('/db_test')
+def index():
+    user_ip = request.remote_addr
+
+    # Keep only the first two octets of the IP address.
+    if is_ipv6(user_ip):
+        user_ip = ':'.join(user_ip.split(':')[:2])
+    else:
+        user_ip = '.'.join(user_ip.split('.')[:2])
+
+    visit = Visit(
+        user_ip=user_ip,
+        timestamp=datetime.datetime.utcnow()
+    )
+
+    db1.session.add(visit)
+    db1.session.commit()
+
+    visits = Visit.query.order_by(sqlalchemy.desc(Visit.timestamp)).limit(10)
+
+    results = [
+        'Time: {} Addr: {}'.format(x.timestamp, x.user_ip)
+        for x in visits]
+
+    output = 'Last 10 visits:\n{}'.format('\n'.join(results))
+
+    return output, 200, {'Content-Type': 'text/plain; charset=utf-8'}
+
 
 
 @app.route('/')

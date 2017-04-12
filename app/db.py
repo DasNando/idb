@@ -5,4 +5,5 @@ app = Flask(__name__)
 # dialect+driver://username:password@host:port/database
 # postgresql://scott:tiger@localhost/mydatabase
 app.config.from_json(os.getcwd() + "/config.json")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['SQLALCHEMY_DATABASE_URI']
 db = SQLAlchemy(app)
