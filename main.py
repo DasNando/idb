@@ -193,7 +193,7 @@ def get_book3(self, params):
     commands = params.split('&')
     b_dict_list = []
     p = db1.query(models.Book)
-    print type(p)
+    # print type(p)
 
     for item in commands:
         col, fil = item.split('=')
@@ -223,7 +223,7 @@ def get2(self, params):
     commands = params.split('&')
     a_dict_list = []
     p = db1.query(models.Author)
-    print type(p)
+    # print type(p)
 
     for item in commands:
         col, fil = item.split('=')
@@ -252,7 +252,7 @@ def get1(self, params):
     commands = params.split('&')
     p_dict_list = []
     p = db1.query(models.Publisher)
-    print type(p)
+    # print type(p)
 
     for item in commands:
         col, fil = item.split('=')
