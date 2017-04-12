@@ -21,7 +21,7 @@ def is_ipv6(addr):
     except socket.error:
         return False
 
-class Visit(db.Model):
+class Visit(db1.Model):
     id = db1.Column(db1.Integer, primary_key=True)
     timestamp = db1.Column(db1.DateTime())
     user_ip = db1.Column(db1.String(46))
