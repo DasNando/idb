@@ -6,6 +6,15 @@ libraries:
 - name: ssl
   version: latest
 
+env_variables:
+    # Replace user, password, database, and instance connection name with the values obtained
+    # when configuring your Cloud SQL instance.
+    SQLALCHEMY_DATABASE_URI: >-
+      postgresql+psycopg2://postgres:swe-readers@/idb?host=/cloudsql/cs373-idb:us-central1:idb
+
+beta_settings:
+    cloud_sql_instances: cs373-idb:us-central1:idb
+
 handlers:
 - url: /app/static
   static_dir: static
