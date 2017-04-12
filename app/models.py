@@ -1,4 +1,4 @@
-from db import db
+from .db import db
 
 # pylint: disable = bad-whitespace
 # pylint: disable = invalid-name
@@ -19,7 +19,6 @@ Reviews
 """
 
 db1 = db.db
-
 
 class Book(db1.Model):
     """Links to Author, Review, Publisher
