@@ -33,6 +33,7 @@ class Visit(db1.Model):
 
 @app.route('/db_test')
 def index():
+    db1.create_all()
     user_ip = request.remote_addr
 
     # Keep only the first two octets of the IP address.
@@ -266,5 +267,4 @@ def get1(self, params):
 
 
 if __name__ == '__main__':
-    db1.create_all()
     app.run(host='127.0.0.1', port=8080, debug=True)
