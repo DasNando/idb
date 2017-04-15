@@ -7,6 +7,7 @@ import socket
 import sqlalchemy
 from app import db, models, setup_db
 import requests_toolbelt.adapters.appengine
+
 requests_toolbelt.adapters.appengine.monkeypatch()
 
 db1 = db.db
@@ -20,6 +21,7 @@ def is_ipv6(addr):
         return True
     except socket.error:
         return False
+
 
 class Visit(db1.Model):
     id = db1.Column(db1.Integer, primary_key=True)
@@ -60,7 +62,6 @@ def index():
     output = 'Last 10 visits:\n{}'.format('\n'.join(results))
 
     return output, 200, {'Content-Type': 'text/plain; charset=utf-8'}
-
 
 
 @app.route('/')
@@ -116,7 +117,6 @@ def search():
 # my token: wpV_1One91F2XNwmI6ukIg
 @app.route('/run_tests')
 def run_tests():
-
     headers = {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -134,9 +134,9 @@ def run_tests():
     # # dict_from_server = res.json()
     # return 'testoutput: ' + tests_output
 
-    #return "server response: " + res.text + "dict_from_server: " + str(dict_from_server)
+    # return "server response: " + res.text + "dict_from_server: " + str(dict_from_server)
 
-    #return render_template('search.html')
+    # return render_template('search.html')
 
 
 @app.errorhandler(500)
@@ -152,8 +152,8 @@ book = {"book_test": "book_name"}
 
 
 # get book with arbitrary filters
-@app.route('/api/books/')
-@app.route('/api/books/<int:lim>')
+@app.route('/api/books_test/')
+@app.route('/api/books_test/<int:lim>')
 def get_book1(lim=0):
     if not lim:
         lim = 10
@@ -176,6 +176,7 @@ def get_book1(lim=0):
     #     #    {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
     # return jsonify(b_dict_list)
 
+
 # get one book
 @app.route('/api/books/<string:book_name>')
 def get_book2(self, book_name):
@@ -189,10 +190,8 @@ def get_book2(self, book_name):
     return jsonify(b_dict_list)
 
 
-
-
 # get book with arbitrary filters
-@app.route('/api/books/params&<params>')
+@app.route('/api/books/params&<string:params>')
 def get_book3(self, params):
     commands = params.split('&')
     b_dict_list = []
@@ -209,7 +208,6 @@ def get_book3(self, params):
     return jsonify(b_dict_list)
 
 
-
 # get one Author
 @app.route('/api/authors/<string:author_name>')
 def get1(self, author_name):
@@ -224,7 +222,7 @@ def get1(self, author_name):
 
 
 # get book with arbitrary filters
-@app.route('/api/authors/params&<params>')
+@app.route('/api/authors/params&<string:params>')
 def get2(self, params):
     commands = params.split('&')
     a_dict_list = []
@@ -242,7 +240,7 @@ def get2(self, params):
 
 
 # get one Publisher
-@app.route('/api/publichers/<string:publisher_name>')
+@app.route('/api/publishers/<string:publisher_name>')
 def get3(self, publisher_name):
     p_dict_list = []
 
@@ -255,22 +253,22 @@ def get3(self, publisher_name):
 
 
 # get book with arbitrary filters
-@app.route('/api/publishers/params&<params>')
-def get1(self, params):
-    commands = params.split('&')
-    p_dict_list = []
-    p = db1.query(models.Publisher)
-    # print type(p)
-
-    for item in commands:
-        col, fil = item.split('=')
-        if col in models.Publisher.__table__.columns.keys():
-            p = p.filter(getattr(models.Publisher, col).like(fil))
-    for b in p:
-        p_dict_list.append(
-            {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
-             "founders": b.founders})
-    return jsonify(p_dict_list)
+# @app.route('/api/publishers/params&<string:params>')
+# def get1(self, params):
+#     commands = params.split('&')
+#     p_dict_list = []
+#     p = db1.query(models.Publisher)
+#     # print type(p)
+#
+#     for item in commands:
+#         col, fil = item.split('=')
+#         if col in models.Publisher.__table__.columns.keys():
+#             p = p.filter(getattr(models.Publisher, col).like(fil))
+#     for b in p:
+#         p_dict_list.append(
+#             {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
+#              "founders": b.founders})
+#     return jsonify(p_dict_list)
 
 
 if __name__ == '__main__':
