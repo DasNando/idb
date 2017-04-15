@@ -1,10 +1,12 @@
 import json
 import logging
 import os
+import codecs
 
 from .db import db, app
 from .models import Book, Author, Review, Publisher
 
+reader = codecs.getreader("utf-8")
 
 def path(f):
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
@@ -22,7 +24,7 @@ def init_db():
     #	test_data = json.load(test_json)
 
     with app.open_resource('data/books.json') as books_json:
-        books_data = json.load(books_json)
+        books_data = json.load(reader(books_json))
 
     with open(path("book_test3.json")) as books3_json:
         books3_data = json.load(books3_json)
