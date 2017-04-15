@@ -1,4 +1,5 @@
 import json
+import logging
 
 from .db import db
 from .models import Book, Author, Review, Publisher
@@ -9,6 +10,7 @@ def path(f):
 
 
 def init_db():
+    logging.warning("We're in init_db")
     db.drop_all()
     db.create_all()
 
@@ -183,7 +185,7 @@ def init_db():
         db.session.add(review)
 
     db.session.commit()
-    print("added ", books, ' books')
-    print('added ', authors, ' authors')
-    print('added ', reviews, ' reviews')
-    print('added ', publishers, ' publishers')
+    logging.warning("added ", books, ' books')
+    logging.warning('added ', authors, ' authors')
+    logging.warning('added ', reviews, ' reviews')
+    logging.warning('added ', publishers, ' publishers')
