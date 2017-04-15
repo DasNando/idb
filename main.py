@@ -179,7 +179,7 @@ def get_book1(lim=0):
 
 # get one book
 @app.route('/api/books/<string:book_name>')
-def get_book2(self, book_name):
+def get_book2(book_name):
     b_dict_list = []
 
     book = db1.query(models.Book).filter_by(title=book_name).all()
@@ -192,7 +192,7 @@ def get_book2(self, book_name):
 
 # get book with arbitrary filters
 @app.route('/api/books/params&<string:params>')
-def get_book3(self, params):
+def get_book3(params):
     commands = params.split('&')
     b_dict_list = []
     p = db1.query(models.Book)
@@ -210,7 +210,7 @@ def get_book3(self, params):
 
 # get one Author
 @app.route('/api/authors/<string:author_name>')
-def get1(self, author_name):
+def get1(author_name):
     a_dict_list = []
     author_name = " " + author_name + " "
 
@@ -223,7 +223,7 @@ def get1(self, author_name):
 
 # get book with arbitrary filters
 @app.route('/api/authors/params&<string:params>')
-def get2(self, params):
+def get2(params):
     commands = params.split('&')
     a_dict_list = []
     p = db1.query(models.Author)
@@ -241,7 +241,7 @@ def get2(self, params):
 
 # get one Publisher
 @app.route('/api/publishers/<string:publisher_name>')
-def get3(self, publisher_name):
+def get3(publisher_name):
     p_dict_list = []
 
     publisher = db1.query(models.Publisher).filter_by(name=publisher_name).all()
@@ -254,7 +254,7 @@ def get3(self, publisher_name):
 
 # get book with arbitrary filters
 # @app.route('/api/publishers/params&<string:params>')
-# def get1(self, params):
+# def get1(params):
 #     commands = params.split('&')
 #     p_dict_list = []
 #     p = db1.query(models.Publisher)
