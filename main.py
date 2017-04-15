@@ -182,11 +182,11 @@ def get_book1(lim=0):
 def get_book2(book_name):
     b_dict_list = []
 
-    book = db1.query(models.Book).filter_by(title=book_name).all()
+    book = models.Book.query.filter_by(title=book_name).all()
     for b in book:
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
-    # print book.title
+    # print book.title models.Book.query.limit(lim).all()
     return jsonify(b_dict_list)
 
 
@@ -195,7 +195,7 @@ def get_book2(book_name):
 def get_book3(params):
     commands = params.split('&')
     b_dict_list = []
-    p = db1.query(models.Book)
+    p = models.Book.query()
     # print type(p)
 
     for item in commands:
