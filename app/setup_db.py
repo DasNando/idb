@@ -26,20 +26,20 @@ def init_db():
     with app.open_resource('data/books.json') as books_json:
         books_data = json.load(reader(books_json))
 
-    with open(path("book_test3.json")) as books3_json:
-        books3_data = json.load(books3_json)
+    with app.open_resource("data/book_test3.json") as books3_json:
+        books3_data = json.load(reader(books3_json))
 
-    with open(path("reviews.json")) as reviews_json:
-        review_data = json.load(reviews_json)
+    with app.open_resource("data/reviews.json") as reviews_json:
+        review_data = json.load(reader(reviews_json))
 
-    with open(path("authors.json")) as authors_json:
-        author_data = json.load(authors_json)
+    with app.open_resource("data/authors.json") as authors_json:
+        author_data = json.load(reader(authors_json))
 
-    with open(path('authors3.json')) as authors3_json:
-        author3_data = json.load(authors3_json, strict=False)
+    with app.open_resource('data/authors3.json') as authors3_json:
+        author3_data = json.load(reader(authors3_json), strict=False)
 
-    with open(path('publishers2.json')) as publishers_json:
-        publisher_data = json.load(publishers_json, strict=False)
+    with app.open_resource('data/publishers2.json') as publishers_json:
+        publisher_data = json.load(reader(publishers_json), strict=False)
 
     authors = 0
     for item in author3_data['authors']:
