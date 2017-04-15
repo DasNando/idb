@@ -152,13 +152,13 @@ book = {"book_test": "book_name"}
 
 
 # get book with arbitrary filters
-@app.route('/api/book')
-@app.route('/api/book/<int:lim>')
+@app.route('/api/books/')
+@app.route('/api/books/<int:lim>')
 def get_book1(lim=0):
     if not lim:
         lim = 10
     result = []
-    for item in models.Book.query.all():
+    for item in models.Book.query.limit(lim).all():
         b_json = dict()
         b_json['title'] = item.title
         b_json['genre'] = item.genre
@@ -177,6 +177,7 @@ def get_book1(lim=0):
     # return jsonify(b_dict_list)
 
 # get one book
+@app.route('/api/books/<string:book_name>')
 def get_book2(self, book_name):
     b_dict_list = []
 
@@ -191,6 +192,7 @@ def get_book2(self, book_name):
 
 
 # get book with arbitrary filters
+@app.route('/api/books/params&<params>')
 def get_book3(self, params):
     commands = params.split('&')
     b_dict_list = []
@@ -209,6 +211,7 @@ def get_book3(self, params):
 
 
 # get one Author
+@app.route('/api/authors/<string:author_name>')
 def get1(self, author_name):
     a_dict_list = []
     author_name = " " + author_name + " "
@@ -221,6 +224,7 @@ def get1(self, author_name):
 
 
 # get book with arbitrary filters
+@app.route('/api/authors/params&<params>')
 def get2(self, params):
     commands = params.split('&')
     a_dict_list = []
@@ -238,6 +242,7 @@ def get2(self, params):
 
 
 # get one Publisher
+@app.route('/api/publichers/<string:publisher_name>')
 def get3(self, publisher_name):
     p_dict_list = []
 
@@ -250,6 +255,7 @@ def get3(self, publisher_name):
 
 
 # get book with arbitrary filters
+@app.route('/api/publishers/params&<params>')
 def get1(self, params):
     commands = params.split('&')
     p_dict_list = []
