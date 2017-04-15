@@ -5,7 +5,7 @@ import json
 import datetime
 import socket
 import sqlalchemy
-from app import db, models
+from app import db, models, setup_db
 import requests_toolbelt.adapters.appengine
 requests_toolbelt.adapters.appengine.monkeypatch()
 
@@ -267,4 +267,6 @@ def get1(self, params):
 
 
 if __name__ == '__main__':
+    models.build_all()
+    setup_db.init_db()
     app.run(host='127.0.0.1', port=8080, debug=True)
