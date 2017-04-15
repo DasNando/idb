@@ -1,16 +1,20 @@
 import json
 import logging
+import os
 
 from .db import db
 from .models import Book, Author, Review, Publisher
 
 
 def path(f):
-    return "../scraper/" + f
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, '/scraper', f)
+    return json_url
 
 
 def init_db():
     logging.warning("We're in init_db")
+
     db.drop_all()
     db.create_all()
 
