@@ -195,7 +195,7 @@ def get_book2(book_name):
 def get_book3(params):
     commands = params.split('&')
     b_dict_list = []
-    p = models.Book.query.all()
+    p = models.Book.query
     # print type(p)
 
     for item in commands:
