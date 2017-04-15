@@ -2,7 +2,7 @@ import json
 import logging
 import os
 
-from .db import db
+from .db import db, app
 from .models import Book, Author, Review, Publisher
 
 
@@ -21,7 +21,7 @@ def init_db():
     # with open(path("test3.json")) as test_json:
     #	test_data = json.load(test_json)
 
-    with open(path("books.json")) as books_json:
+    with app.open_resource(path("books.json")) as books_json:
         books_data = json.load(books_json)
 
     with open(path("book_test3.json")) as books3_json:
