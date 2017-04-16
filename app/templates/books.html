@@ -15,9 +15,11 @@
 		
 		<!-- Our Angular Scripts -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
+		<!-- <script type="text/javascript" src="app.js"></script> -->
 
 		<!-- Angular Plugin(s) -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
+		<!-- <script type="text/javascript" src="dirPagination.js"></script> -->
 
 		<!-- Web CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
@@ -27,7 +29,8 @@
 		
 	</head>
 	<body ng-controller="BookController">
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse"></nav>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -89,7 +92,6 @@
 							<li><a href="" ng-click="sort('rating')">Rating</a></li>
 							<li><a href="" ng-click="sort('publisher')">Publisher</a></li>
 							<li><a href="" ng-click="sort('genre')">Genre</a></li>
-							<li><a href="" ng-click="sort('price')">Price</a></li>
 						</ul>
 					</div>
 				</div>
@@ -98,21 +100,19 @@
 		<br>
 		<div class="container">
 			<div class="row">
-				<div dir-paginate="book in booklist|orderBy:sortKey:reverse|filter:searchBooks|itemsPerPage:6">
+				<div dir-paginate="book in booklist|orderBy:sortKey:reverse|filter:searchFilter|itemsPerPage:12">
 					<div class="col-sm-6 col-md-4">
 						<div class="card">
 							<div class="card-block">
-								{% raw %}
-								<img id="bookcoverimg" class="card-img-top img-responsive" src="{{book.coverart[0]}}" alt="book cover" position="center">
-								{% endraw %}
-								<pre><h4 class="card-title"><u>Title:</u>{% raw %} {{book.title}} {% endraw %}</h4>
-								<p class="card-text"><u>Author:</u> {% raw %}{{book.author}}{% endraw %}</p>
-								<p class="card-text"><u>Published:</u>{% raw %} {{book.published}}{% endraw %}</p>
-								<p class="card-text"><u>Rating:</u> {% raw %}{{book.rating}}{% endraw %}</p>
-								<p class="card-text"><u>Publisher:</u>{% raw %} {{book.publisher}}{% endraw %}</p>
-								<p class="card-text"><u>Genre:</u> {% raw %}{{book.genre}}{% endraw %}</p>
-								<p class="card-text"><u>ISBN:</u> {% raw %}{{book.isbn}}{% endraw %}</p>
-								<p class="card-text"><u>Prices:</u> {% raw %}{{book.prices}}{% endraw %}</p>
+								<!--{% raw %}-->
+								<img id="bookcoverimg" class="card-img-top img-responsive" src="{{book.pic}}" alt="book cover" position="center">
+								<!--{% endraw %}-->
+								<pre><h4 class="card-title"><u>Title:</u><!--{% raw %}--> {{book.title}} <!--{% endraw %}--></h4>
+								<p class="card-text"><u>Author:</u> <!--{% raw %}-->{{book.author}}<!--{% endraw %}--></p>
+								<p class="card-text"><u>Published:</u><!--{% raw %}--> {{book.year}}<!--{% endraw %}--></p>
+								<p class="card-text"><u>Rating:</u> <!--{% raw %}-->{{book.rating}}<!--{% endraw %}--></p>
+								<p class="card-text"><u>Publisher:</u><!--{% raw %}--> {{book.publisher}}<!--{% endraw %}--></p>
+								<p class="card-text"><u>Genre:</u> <!--{% raw %}-->{{book.genre}}<!--{% endraw %}--></p>
 							</pre></div>
 						</div>
 					</div>
