@@ -178,7 +178,7 @@ def get_book1(lim=0):
 
 
 # get one book
-@app.route('/api/books/<string:book_name>')
+@app.route('/api/books/title=<string:book_name>')
 def get_book2(book_name):
     b_dict_list = []
 
@@ -187,12 +187,12 @@ def get_book2(book_name):
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
     # print book.title models.Book.query.limit(lim).all()
-    return jsonify(*b_dict_list)
+    return jsonify(b_dict_list)
 
 
 # get all books
 @app.route('/api/books/all/')
-def get_book3():
+def get_book0():
     b_dict_list = []
 
     book = models.Book.query.all()
@@ -200,7 +200,7 @@ def get_book3():
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
     # print book.title models.Book.query.limit(lim).all()
-    return jsonify(*b_dict_list)
+    return jsonify(b_dict_list)
 
 
 # get book with arbitrary filters
@@ -218,11 +218,11 @@ def get_book3(params):
     for b in p:
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
-    return jsonify(*b_dict_list)
+    return jsonify(b_dict_list)
 
 
 # get one Author
-@app.route('/api/authors/<string:author_name>')
+@app.route('/api/authors/name=<string:author_name>')
 def get1(author_name):
     a_dict_list = []
     author_name = " " + author_name + " "
@@ -254,7 +254,7 @@ def get2(params):
 
 
 # get one Publisher
-@app.route('/api/publishers/<string:publisher_name>')
+@app.route('/api/publishers/name=<string:publisher_name>')
 def get3(publisher_name):
     p_dict_list = []
 
@@ -268,22 +268,22 @@ def get3(publisher_name):
 
 
 # get book with arbitrary filters
-# @app.route('/api/publishers/params&<string:params>')
-# def get1(params):
-#     commands = params.split('&')
-#     p_dict_list = []
-#     p = db1.query(models.Publisher)
-#     # print type(p)
-#
-#     for item in commands:
-#         col, fil = item.split('=')
-#         if col in models.Publisher.__table__.columns.keys():
-#             p = p.filter(getattr(models.Publisher, col).like(fil))
-#     for b in p:
-#         p_dict_list.append(
-#             {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
-#              "founders": b.founders})
-#     return jsonify(p_dict_list)
+@app.route('/api/publishers/params&<string:params>')
+def get5(params):
+    commands = params.split('&')
+    p_dict_list = []
+    p = models.Publisher.query
+    # print type(p)
+
+    for item in commands:
+        col, fil = item.split('=')
+        if col in models.Publisher.__table__.columns.keys():
+            p = p.filter(getattr(models.Publisher, col).like(fil))
+    for b in p:
+        p_dict_list.append(
+            {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
+             "founders": b.founders})
+    return jsonify(p_dict_list)
 
 
 if __name__ == '__main__':
