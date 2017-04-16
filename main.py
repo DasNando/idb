@@ -1,13 +1,67 @@
-from flask import render_template, jsonify
+from flask import render_template, jsonify, request
 import logging
 import requests
 import json
-from app import db, models
+import datetime
+import socket
+import sqlalchemy
+from app import db, models, setup_db
 import requests_toolbelt.adapters.appengine
+
 requests_toolbelt.adapters.appengine.monkeypatch()
 
 db1 = db.db
 app = db.app
+
+
+def is_ipv6(addr):
+    """Checks if a given address is an IPv6 address."""
+    try:
+        socket.inet_pton(socket.AF_INET6, addr)
+        return True
+    except socket.error:
+        return False
+
+
+class Visit(db1.Model):
+    id = db1.Column(db1.Integer, primary_key=True)
+    timestamp = db1.Column(db1.DateTime())
+    user_ip = db1.Column(db1.String(46))
+
+    def __init__(self, timestamp, user_ip):
+        self.timestamp = timestamp
+        self.user_ip = user_ip
+
+
+# @app.route('/db_test')
+# def index():
+#     db1.create_all()
+#     #setup_db.init_db()
+#     user_ip = request.remote_addr
+#
+#     # Keep only the first two octets of the IP address.
+#     if is_ipv6(user_ip):
+#         user_ip = ':'.join(user_ip.split(':')[:2])
+#     else:
+#         user_ip = '.'.join(user_ip.split('.')[:2])
+#
+#     visit = Visit(
+#         user_ip=user_ip,
+#         timestamp=datetime.datetime.utcnow()
+#     )
+#
+#     db1.session.add(visit)
+#     db1.session.commit()
+#
+#     visits = Visit.query.order_by(sqlalchemy.desc(Visit.timestamp)).limit(10)
+#
+#     results = [
+#         'Time: {} Addr: {}'.format(x.timestamp, x.user_ip)
+#         for x in visits]
+#
+#     output = 'Last 10 visits:\n{}'.format('\n'.join(results))
+#
+#     return output, 200, {'Content-Type': 'text/plain; charset=utf-8'}
 
 
 @app.route('/')
@@ -63,7 +117,6 @@ def search():
 # my token: wpV_1One91F2XNwmI6ukIg
 @app.route('/run_tests')
 def run_tests():
-
     headers = {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -81,9 +134,9 @@ def run_tests():
     # # dict_from_server = res.json()
     # return 'testoutput: ' + tests_output
 
-    #return "server response: " + res.text + "dict_from_server: " + str(dict_from_server)
+    # return "server response: " + res.text + "dict_from_server: " + str(dict_from_server)
 
-    #return render_template('search.html')
+    # return render_template('search.html')
 
 
 @app.errorhandler(500)
@@ -99,13 +152,13 @@ book = {"book_test": "book_name"}
 
 
 # get book with arbitrary filters
-@app.route('/api/book')
-@app.route('/api/book/<int:lim>')
+@app.route('/api/books_test/')
+@app.route('/api/books_test/<int:lim>')
 def get_book1(lim=0):
     if not lim:
         lim = 10
     result = []
-    for item in models.Book.query.all():
+    for item in models.Book.query.limit(lim).all():
         b_json = dict()
         b_json['title'] = item.title
         b_json['genre'] = item.genre
@@ -123,26 +176,40 @@ def get_book1(lim=0):
     #     #    {"title": "dummy_title", "genre": "dummy_genre", "year": "dummy_year", "isbn": "dummy_isbn", "prices": "dummy_prices", "pic": "dummy_pic"})
     # return jsonify(b_dict_list)
 
+
 # get one book
-def get_book2(self, book_name):
+@app.route('/api/books/<string:book_name>')
+def get_book2(book_name):
     b_dict_list = []
 
-    book = db1.query(models.Book).filter_by(title=book_name).all()
+    book = models.Book.query.filter_by(title=book_name).all()
     for b in book:
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
-    # print book.title
-    return jsonify(b_dict_list)
+    # print book.title models.Book.query.limit(lim).all()
+    return jsonify(*b_dict_list)
 
 
+# get all books
+@app.route('/api/books/all/')
+def get_book3():
+    b_dict_list = []
+
+    book = models.Book.query.all()
+    for b in book:
+        b_dict_list.append(
+            {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+    # print book.title models.Book.query.limit(lim).all()
+    return jsonify(*b_dict_list)
 
 
 # get book with arbitrary filters
-def get_book3(self, params):
+@app.route('/api/books/params&<string:params>')
+def get_book3(params):
     commands = params.split('&')
     b_dict_list = []
-    p = db1.query(models.Book)
-    print type(p)
+    p = models.Book.query
+    # print type(p)
 
     for item in commands:
         col, fil = item.split('=')
@@ -151,16 +218,17 @@ def get_book3(self, params):
     for b in p:
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
-    return jsonify(b_dict_list)
-
+    return jsonify(*b_dict_list)
 
 
 # get one Author
-def get1(self, author_name):
+@app.route('/api/authors/<string:author_name>')
+def get1(author_name):
     a_dict_list = []
     author_name = " " + author_name + " "
 
-    author = db1.query(models.Author).filter_by(name=author_name).all()
+    author = models.Author.query.filter_by(name=author_name).all()
+    # book = models.Book.query.filter_by(title=book_name).all()
     for b in author:
         a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
                             "about": b.about, "num_works": b.num_works})
@@ -168,11 +236,12 @@ def get1(self, author_name):
 
 
 # get book with arbitrary filters
-def get2(self, params):
+@app.route('/api/authors/params&<string:params>')
+def get2(params):
     commands = params.split('&')
     a_dict_list = []
-    p = db1.query(models.Author)
-    print type(p)
+    p = models.Author.query
+    # print type(p)
 
     for item in commands:
         col, fil = item.split('=')
@@ -185,10 +254,12 @@ def get2(self, params):
 
 
 # get one Publisher
-def get3(self, publisher_name):
+@app.route('/api/publishers/<string:publisher_name>')
+def get3(publisher_name):
     p_dict_list = []
 
-    publisher = db1.query(models.Publisher).filter_by(name=publisher_name).all()
+    publisher = models.Publisher.query.filter_by(name=publisher_name).all()
+    # book = models.Book.query.filter_by(title=book_name).all()
     for b in publisher:
         p_dict_list.append(
             {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
@@ -197,22 +268,23 @@ def get3(self, publisher_name):
 
 
 # get book with arbitrary filters
-def get1(self, params):
-    commands = params.split('&')
-    p_dict_list = []
-    p = db1.query(models.Publisher)
-    print type(p)
-
-    for item in commands:
-        col, fil = item.split('=')
-        if col in models.Publisher.__table__.columns.keys():
-            p = p.filter(getattr(models.Publisher, col).like(fil))
-    for b in p:
-        p_dict_list.append(
-            {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
-             "founders": b.founders})
-    return jsonify(p_dict_list)
+# @app.route('/api/publishers/params&<string:params>')
+# def get1(params):
+#     commands = params.split('&')
+#     p_dict_list = []
+#     p = db1.query(models.Publisher)
+#     # print type(p)
+#
+#     for item in commands:
+#         col, fil = item.split('=')
+#         if col in models.Publisher.__table__.columns.keys():
+#             p = p.filter(getattr(models.Publisher, col).like(fil))
+#     for b in p:
+#         p_dict_list.append(
+#             {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
+#              "founders": b.founders})
+#     return jsonify(p_dict_list)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='127.0.0.1', port=8080, debug=True)

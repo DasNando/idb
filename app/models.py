@@ -1,4 +1,4 @@
-import db
+from .db import db
 
 # pylint: disable = bad-whitespace
 # pylint: disable = invalid-name
@@ -18,8 +18,7 @@ Publisher
 Reviews
 """
 
-db1 = db.db
-
+db1 = db
 
 class Book(db1.Model):
     """Links to Author, Review, Publisher
@@ -161,5 +160,8 @@ class Review(db1.Model):
         self.source = source
         assert len(source) > 0
 
-# db1.create_all()
+
+def build_all():
+    db1.create_all()
+
 # Session = sessionmaker(autoflush=False)
