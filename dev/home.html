@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>SWE-Readers</title>
+		<meta charset="utf-8">
+
+		<!-- pulling Bootstrap from CDN -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<!-- Web CSS Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
+		
+		<!-- Local CSS Stylesheet -->
+		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
+		
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="glyphicon glyphicon-book white"></span>
+					</button>
+					<a class="navbar-brand" href="{{ url_for('home') }}">SWE-Readers</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="{{ url_for('books') }}">Books</a></li>
+						<li><a href="{{ url_for('authors') }}">Authors</a></li>
+						<li><a href="{{ url_for('publishers') }}">Publishers</a></li>
+						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
+						<li><a href="{{ url_for('about') }}">About</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" action="{{ url_for('search') }}">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search">
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<h1>Welcome to SWE-Readers!</h1>
+			<h4>SWE-Readers is an online database that contains information on 
+				countless books, authors, and publishers. We also supply 
+				user-generated reviews via <a href="https://www.goodreads.com/">GoodReads</a>.
+			</h4>
+
+			<div class="container">
+				<br>
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+						<div class="item active">
+							<img src="{{ url_for('static', filename='img/home/home-1.jpg') }}" alt="Flower">
+						</div>
+
+						<div class="item">
+							<img src="{{ url_for('static', filename='img/home/home-2.jpg') }}" alt="Flower">
+						</div>
+					
+						<div class="item">
+							<img src="{{ url_for('static', filename='img/home/home-3.jpg') }}" alt="Flower">
+						</div>
+
+						<div class="item">
+							<img src="{{ url_for('static', filename='img/home/home-4.jpg') }}" alt="Flower">
+						</div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			</div>
+
+			<h4>To get started you can use the search bar below:</h4>
+		</div>
+		<div class="container">
+			<form action="{{ url_for('search') }}">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search Books, Authors, Publishers, and Reviews">
+					<div class="input-group-btn">
+						<button class="btn btn-default" type="submit">
+							<i class="glyphicon glyphicon-search"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="container">
+			<h4 id="centered"><strong>-OR-<strong></h4>
+			<h4>Browse by:</h4>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h4 id="centered"><u>Recently Published</u></h4>
+					<div class="table-responsive">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Title</th>
+									<th>Author</th>
+									<th>Date Published</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-king.jpg') }}">
+									</td>
+									<td>King's Cage</td>
+									<td>Victoria Aveyard</td>
+									<td>March 2017</td>
+								</tr>
+								<tr>
+									<td>
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-caraval.jpg') }}">
+									</td>
+									<td>Caraval</td>
+									<td>Stephanie Garber</td>
+									<td>March 2017</td>
+								</tr>
+								<tr>
+									<td>
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-norse.jpg') }}">
+									</td>
+									<td>Norse Mythology</td>
+									<td>Neil Gaiman</td>
+									<td>March 2017</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h4 id="centered"><u>Highest Rated</u></h4>
+					<div class="table-responsive">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th></th>
+									<th>Title</th>
+									<th>Author</th>
+									<th>Rating</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-enders.jpg') }}">
+									</td>
+									<td>Ender's Game</td>
+									<td>Orson Scott Card</td>
+									<td>4.9/5</td>
+								</tr>
+								<tr>
+									<td>
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-slaughter.jpg') }}">
+									</td>
+									<td>Slaughterhouse Five</td>
+									<td>Kurt Vonnegut</td>
+									<td>4.8/5</td>
+								</tr>
+								<tr>
+									<td>
+										<img class="img-responsive" id="frontpageimg" src="{{ url_for('static', filename='img/home/home-gatsby.jpeg') }}">
+									</td>
+									<td>The Great Gatsby</td>
+									<td>F. Scott Fitzgerald</td>
+									<td>4.8/5</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<h6><small>A UTCS Student Project. CS373 Software Engineering, Project Group 15.</small></h6>
+	</footer>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html ng-app="sweReaders" lang="en">
+	<head>
+		<title>Reviews - SWE-Readers</title>
+		<meta charset="utf-8">
+
+		<!-- pulling Bootstrap from CDN -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<!-- Angular CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+		
+		<!-- Our Angular Scripts -->
+		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
+
+		<!-- Angular Plugin(s) -->
+		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
+
+		<!-- Web CSS Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
+		
+		<!-- Local CSS Stylesheet -->
+		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
+		
+	</head>
+	<body ng-controller="ReviewController">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="glyphicon glyphicon-book white"></span>
+					</button>
+					<a class="navbar-brand" href="{{ url_for('home') }}">SWE-Readers</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="{{ url_for('books') }}">Books</a></li>
+						<li><a href="{{ url_for('authors') }}">Authors</a></li>
+						<li><a href="{{ url_for('publishers') }}">Publishers</a></li>
+						<li class="active"><a href="{{ url_for('reviews') }}">Reviews</a></li>
+						<li><a href="{{ url_for('about') }}">About</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" action="{{ url_for('search') }}">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search">
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<h1>Browsing Reviews</h1>
+			<h4>
+				This page contains a complete list of all the reviews in our entire database.
+			</h4>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<div>
+						<form>
+							<div class="input-group">
+								<input type="text" ng-model="searchReviews" class="form-control" placeholder="Filter Reviews">
+								<div class="input-group-btn">
+									<button class="btn btn-default" type="submit">
+										<i class="glyphicon glyphicon-search"></i>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="dropdown">
+						<button id="sortbtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort by
+						<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li><a href="" ng-click="sort('reviewer')">Reviewer</a></li>
+							<li><a href="" ng-click="sort('rating')">Rating</a></li>
+							<li><a href="" ng-click="sort('book')">Book</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div dir-paginate="review in reviewlist|orderBy:sortKey:reverse|filter:searchReviews|itemsPerPage:6">
+					<div class="col-sm-6 col-md-4">
+						<div class="card">
+							<div class="card-block">
+								{% raw %}
+								<img class="card-img-top img-responsive" src="{{review.pic}}" alt="pic of review" position="center">
+								{% endraw %}
+								<pre><h4 class="card-title"><u>Reviewer:</u>{% raw %} {{review.reviewr}} {% endraw %}</h4>
+								<p class="card-text"><u>Rating:</u> {% raw %} {{review.rating}} {% endraw %}</p>
+								<p class="card-text"><u>Content:</u> {% raw %} {{review.content}} {% endraw %}</p>
+								<p class="card-text"><u>Source:</u> {% raw %} {{review.source}} {% endraw %}</p>
+								<p class="card-text"><u>Book:</u> {% raw %} {{review.book}} {% endraw %}</p>
+							</pre></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="paginatecontainer">
+				<dir-pagination-controls
+					max-size="7"
+					direction-links="true"
+					boundary-links="true"
+					on-page-change="pageChangeHandler(newPageNumber)">
+				</dir-pagination-controls> 
+			</div>
+		</div>
+	</body>
+	<footer>
+		<h6><small>A UTCS Student Project. CS373 Software Engineering, Project Group 15.</small></h6>
+	</footer>
+</html>
