@@ -214,7 +214,8 @@ def get1(author_name):
     a_dict_list = []
     author_name = " " + author_name + " "
 
-    author = db1.query(models.Author).filter_by(name=author_name).all()
+    author = models.Author.query.filter_by(name=author_name).all()
+    # book = models.Book.query.filter_by(title=book_name).all()
     for b in author:
         a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
                             "about": b.about, "num_works": b.num_works})
@@ -226,7 +227,7 @@ def get1(author_name):
 def get2(params):
     commands = params.split('&')
     a_dict_list = []
-    p = db1.query(models.Author)
+    p = models.Author.query
     # print type(p)
 
     for item in commands:
@@ -244,7 +245,8 @@ def get2(params):
 def get3(publisher_name):
     p_dict_list = []
 
-    publisher = db1.query(models.Publisher).filter_by(name=publisher_name).all()
+    publisher = models.Publisher.query.filter_by(name=publisher_name).all()
+    # book = models.Book.query.filter_by(title=book_name).all()
     for b in publisher:
         p_dict_list.append(
             {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
