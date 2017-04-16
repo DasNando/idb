@@ -269,7 +269,7 @@ def get3(publisher_name):
 
 # get book with arbitrary filters
 @app.route('/api/publishers/params&<string:params>')
-def get1(params):
+def get5(params):
     commands = params.split('&')
     p_dict_list = []
     p = models.Publisher.query
