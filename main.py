@@ -187,7 +187,20 @@ def get_book2(book_name):
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
     # print book.title models.Book.query.limit(lim).all()
-    return jsonify(b_dict_list)
+    return jsonify(*b_dict_list)
+
+
+# get all books
+@app.route('/api/books/all/')
+def get_book3():
+    b_dict_list = []
+
+    book = models.Book.query.all()
+    for b in book:
+        b_dict_list.append(
+            {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+    # print book.title models.Book.query.limit(lim).all()
+    return jsonify(*b_dict_list)
 
 
 # get book with arbitrary filters
@@ -205,7 +218,7 @@ def get_book3(params):
     for b in p:
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
-    return jsonify(b_dict_list)
+    return jsonify(*b_dict_list)
 
 
 # get one Author
