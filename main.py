@@ -192,7 +192,7 @@ def get_book2(book_name):
 
 # get all books
 @app.route('/api/books/all/')
-def get_book3():
+def get_book0():
     b_dict_list = []
 
     book = models.Book.query.all()
