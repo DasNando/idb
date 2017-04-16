@@ -6,7 +6,7 @@ app.controller('BookController', function($scope, $http){
 	$scope.reverse = false;
 	$scope.searchBooks = '';
 
-	var myUrl = 'http://cs373-idb.appspot.com/api/books/params&genre=Science';
+	var myUrl = 'https://cs373-idb.appspot.com/api/books/params&genre=Fiction';
 
 	$scope.booklist = [];
 
