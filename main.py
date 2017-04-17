@@ -214,21 +214,34 @@ def get_book3(params):
 
     for item in commands:
         col, fil = item.split('=')
+        fil = "%" + fil + "%"
         if col in models.Book.__table__.columns.keys():
-            p = p.filter(getattr(models.Book, col).like(fil))
+            p = p.filter(getattr(models.Book, col).ilike(fil))
     for b in p:
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
     return jsonify(b_dict_list)
 
 
+# get all authors
+@app.route('/api/authors/all/')
+def get_auth0():
+    a_dict_list = []
+
+    author = models.Author.query.all()
+    for b in author:
+        a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
+                            "about": b.about, "num_works": b.num_works})
+    return jsonify(a_dict_list)
+
+
 # get one Author
 @app.route('/api/authors/name=<string:author_name>')
 def get1(author_name):
     a_dict_list = []
-    author_name = " " + author_name + " "
+    author_name = "%" + author_name + "%"
 
-    author = models.Author.query.filter_by(name=author_name).all()
+    author = models.Author.query.filter(models.Author.name.ilike(author_name)).all()
     # book = models.Book.query.filter_by(title=book_name).all()
     for b in author:
         a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
@@ -236,7 +249,7 @@ def get1(author_name):
     return jsonify(a_dict_list)
 
 
-# get book with arbitrary filters
+# get author with arbitrary filters
 @app.route('/api/authors/params&<string:params>')
 def get2(params):
     commands = params.split('&')
@@ -246,6 +259,7 @@ def get2(params):
 
     for item in commands:
         col, fil = item.split('=')
+        fil = "%" + fil + "%"
         if col in models.Author.__table__.columns.keys():
             p = p.filter(getattr(models.Author, col).like(fil))
     for b in p:
@@ -254,12 +268,26 @@ def get2(params):
     return jsonify(a_dict_list)
 
 
+# get all Publishers
+@app.route('/api/publishers/all/')
+def get_pub0():
+    p_dict_list = []
+
+    publisher = models.Publisher.query.all()
+    for b in publisher:
+        p_dict_list.append(
+            {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
+             "founders": b.founders})
+    return jsonify(p_dict_list)
+
+
 # get one Publisher
 @app.route('/api/publishers/name=<string:publisher_name>')
 def get3(publisher_name):
     p_dict_list = []
+    publisher_name = "%" + publisher_name + "%"
 
-    publisher = models.Publisher.query.filter_by(name=publisher_name).all()
+    publisher = models.Publisher.query.filter(models.Publisher.name.ilike(publisher_name)).all()
     # book = models.Book.query.filter_by(title=book_name).all()
     for b in publisher:
         p_dict_list.append(
@@ -278,8 +306,9 @@ def get5(params):
 
     for item in commands:
         col, fil = item.split('=')
+        fil = "%" + fil + "%"
         if col in models.Publisher.__table__.columns.keys():
-            p = p.filter(getattr(models.Publisher, col).like(fil))
+            p = p.filter(getattr(models.Publisher, col).ilike(fil))
     for b in p:
         p_dict_list.append(
             {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
