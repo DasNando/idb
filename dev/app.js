@@ -10,7 +10,6 @@ app.controller('BookController', function($scope, $http){
 
 	$scope.booklist = [];
 
-	// DID NESTOR'S SUGGESTION WORK???
 	$http.get(myUrl).success(function(data) {
 		var myjson = data/*JSON.parse(data)*/;
 		$scope.booklist = myjson;

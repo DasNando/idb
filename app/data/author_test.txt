@@ -1,0 +1,131 @@
+{"batchcomplete":"","query":{"pages":{"75154":{"pageid":75154,"ns":0,"title":"Anne Lamott","revisions":[{"contentformat":"text/x-wiki","contentmodel":"wikitext","*":"{{Infobox writer <!-- for more information see [[:Template:Infobox writer/doc]] -->
+| name = Anne Lamott
+| image = Anne-Lamott-2013-San-Francisco.jpg
+| birth_date = {{birth date and age|1954|4|10}}
+| birth_place = [[San Francisco, California]], United States
+| death_date = 
+| death_place = 
+| occupation = Novelist, non-fiction writer, essayist, memoirist
+| nationality = American
+| period=
+| genre= [[Drama]], [[humor]], [[literary fiction]]
+| subject=
+| movement=
+| notableworks = 
+| spouse=
+| children = 1 son
+| relatives=
+| influences= 
+| first =
+| last =
+| authorlink =
+| title =
+| publisher =
+| year =
+| isbn =
+}}
+
+'''Anne Lamott''' (born April 10, 1954) is an American novelist and non-fiction writer.
+
+She is also a [[Progressivism in the United States|progressive]] political activist, public speaker, and writing teacher. Based in the [[San Francisco Bay Area]], her nonfiction works are largely autobiographical. Marked by their self-deprecating humor and openness, Lamott's writings cover such subjects as [[alcoholism]], [[Single parent|single-motherhood]], [[Clinical depression|depression]], and [[Christianity]].<ref>{{cite_journal |url=http://www.salon.com/mwt/feature/2006/05/22/lamott_fight_son/ |last=Lamott |first=Anne |journal=Salon |title=My son, the stranger |accessdate=2008-03-08| archiveurl= https://web.archive.org/web/20080513034405/http://www.salon.com/mwt/feature/2006/05/22/lamott_fight_son/| archivedate=May 13, 2008<!--DASHBot-->| deadurl= no}}</ref>
+
+==Life and career==
+Lamott was born in [[San Francisco]], and is a graduate of [[Drew School]]. She was a student at [[Goucher College]] for two years where she wrote for the newspaper.<ref>{{cite web|last1=Flanagan|first1=Mark|title=Anne Lamott|url=http://contemporarylit.about.com/od/authorprofiles/p/Anne-Lamott-biography.htm|website=About Entertainment|accessdate=4 November 2014}}</ref> Her father, Kenneth Lamott, was also a writer. Her first published novel ''Hard Laughter'' was written for him after his diagnosis of brain cancer. She has one son, Sam, who was born in August 1989 and a grandson, Jax, born in July 2009.<ref name=\"CNN\">{{cite news|url=http://www.cnn.com/2012/04/06/living/anne-lamott-boomer/index.html|last=Hetter|first=Katia|date=6 April 2012|title=Anne Lamott's directions for grandparents: 'Some Assembly Required'|publisher=[[CNN]]|accessdate=6 April 2012}}</ref>
+
+In 1994 Lamott was living in [[San Rafael, California]].<ref>[https://www.nytimes.com/1994/12/01/garden/at-home-with-anne-lamott-laughter-death-lollipops.html?pagewanted=all AT HOME WITH - Anne Lamott - Laughter, Death, Lollipops - NYTimes.com] Retrieved 2016-12-17.</ref>
+
+Lamott's life was documented in [[Freida Lee Mock]]'s 1999 documentary ''Bird by Bird with Annie: A Film Portrait of Writer Anne Lamott''.<ref>{{cite video |people = Freida Lee Mock (Director) |date = 1999-08-01 |title = Bird by Bird with Annie |url = http://www.imdb.com/title/tt0202259/ |medium = Documentary |publisher  = Vanguard International Cinema}}</ref> Because of the documentary and her following on Facebook and other online networks, she is often called the \"People's Author\".<ref name=\"PBSSmiley\">{{cite news|url=http://www.pbs.org/kcet/tavissmiley/archive/201004/20100414.html|last=Smiley|first=Tavis|date=14 April 2010|title=Interview with Anne Lamott|publisher=PBS|accessdate=14 April 2010| archiveurl= https://web.archive.org/web/20100416170741/http://www.pbs.org/kcet/tavissmiley/archive/201004/20100414.html| archivedate= 16 April 2010 <!--DASHBot-->| deadurl= no}}</ref>
+
+Lamott has described why she writes: <blockquote>I try to write the books I would love to come upon, that are honest, concerned with real lives, human hearts, spiritual transformation, families, secrets, wonder, craziness\u2014and that can make me laugh. When I am reading a book like this, I feel rich and profoundly relieved to be in the presence of someone who will share the truth with me, and throw the lights on a little, and I try to write these kinds of books. Books, for me, are medicine.<ref>{{cite_web |url=http://religion.beloblog.com/archives/2008/02/quote_of_the_day_60.html |work=Religion Blog |publisher=Dallas Morning News |date=2008-02-10 |title=Quote of the Day}}</ref></blockquote> 
+Lamott is cited as a writer who captures well the style of narrative nonfiction called [[Literary particularism|particularism]], coined by Howard Freeman.<ref name=prweb>Rice, Priscilla. [http://www.prweb.com/releases/San_Francisco/recording-studio/prweb9140334.htm New York Times Bestseller Anne Lamott and Son Sam Record New Novel at Live Oak Studio in Berkeley]. PR News. January 26, 2012.</ref>
+
+==Awards and honors==
+Lamott was awarded a Guggenheim Fellowship in 1985.<ref>{{Cite web|title=Anne Lamott - Fellow - 1985 - Fiction |work=John Simon Guggenheim Memorial Foundation |accessdate=2015-04-22 |url=http://www.gf.org/fellows/8354-anne-lamott |deadurl=yes |archiveurl=https://web.archive.org/web/20130603224349/http://www.gf.org/fellows/8354-anne-lamott |archivedate=June 3, 2013 }}</ref> She was inducted into the California Hall of Fame in 2010.<ref>{{cite web|last1=Tagg|first1=Mariel|title=2010 CA Hall of Fame, red carpet induction ceremony|url=http://sacramentopress.com/2010/12/08/2010-ca-hall-of-fame-red-carpet-induction-ceremony/|website=Sacramento Press|accessdate=4 November 2014}}</ref>
+
+==Bibliography==
+
+===Novels===
+*{{cite book
+  | title =Hard Laughter
+  | publisher =Viking Press
+  | year = 1980
+  | isbn=0-670-36140-2 }}
+*{{cite book
+  | title =Rosie
+  | publisher =Viking Press
+  | year = 1983
+  | isbn=0-670-60828-9 }}
+*{{cite book
+  | title =Joe Jones
+  | publisher =North Point Press
+  | year = 1985
+  | isbn=0-86547-209-2 }}
+*{{cite book
+  | title =All New People
+  | publisher =North Point Press
+  | year = 1989
+  | isbn=0-86547-394-3 }}
+*{{cite book
+  | title =Crooked Little Heart
+  | publisher =Pantheon Books
+  | year = 1997
+  | isbn=0-679-43521-2 }}
+*{{cite book
+  | title =Blue Shoe
+  | publisher =Riverhead Books
+  | year = 2002
+  | isbn=1-57322-226-7 }}
+*{{cite book
+  | title =Imperfect Birds
+  | publisher =Riverhead Books
+  | year = 2010
+  | isbn=1-59448-751-0 }}
+
+===Non-fiction===
+*{{cite book  | title = Operating Instructions: A Journal of My Son's First Year | publisher =  Pantheon Books | year = 1993 | isbn = 978-0-679-42091-0}}
+*{{cite book  | title = Bird by Bird: Some Instructions on Writing and Life  | publisher = Pantheon Books | year = 1994 | isbn = 978-0-679-43520-4}}
+*{{cite book | title = Traveling Mercies: Some Thoughts on Faith | publisher = Pantheon Books | year = 1999 | isbn = 978-0-679-44240-0}}
+*{{cite book | title = Plan B: Further Thoughts on Faith | publisher = Riverhead Books | year = 2005 | isbn = 978-1-57322-299-0}}
+*{{cite book | title = Grace (Eventually): Thoughts on Faith | publisher = Riverhead Books | year = 2007 | isbn = 978-1-59448-942-6}}
+*{{cite book | title = Some Assembly Required: A Journal of My Son's First Son | publisher = Riverhead Books | year = 2012 | isbn = 978-1-59448-841-2}} (with Sam Lamott)
+*{{cite book | title = Help, Thanks, Wow: The Three Essential Prayers | publisher = Riverhead Books | year =  2012 | isbn = 978-1-59463-129-0}}
+*{{cite book | title = Stitches: A Handbook on Meaning, Hope and Repair | publisher = Riverhead Books | year = 2013 | isbn = 978-1-59463-258-7}}
+*{{cite book | title =Small Victories: Spotting Improbable Moments of Grace  | publisher =  Riverhead Books | year = 2014 | isbn = 978-1-59448-629-6}}
+
+==References==
+{{Reflist}}
+
+==Further reading==
+*Bochynski, Pegge. (2010)  \"Anne Lamott\" in ''American Writers: A Collection of Literary Biographies, Supplement XX, Mary Antin to Phillis Wheatley.'' Ed. Jay Parini. Detroit: Charles Scribner's Sons p131-146.
+*{{cite journal |author=Bouris, Karen |authorlink= |authormask= |date=Jan\u2013Feb 2013 |title=Anne Lamott : life as a black-belt codependent |department=Interview |journal=Spirituality & Health |volume=15 |issue=6 |pages=48\u201353 |url=http://spiritualityhealth.com/articles/anne-lamott-life-black-belt-codependent |<!--accessdate=2016-04-30-->}}
+*[[Jane Vandenburgh|Vandenburgh, Jane]]. (2010) ''Architecture of the Novel: A Writer's Handbook''. Anne Lamott (Foreword). Berkeley, CA: Counterpoint ISBN 1582435979
+
+==External links==
+{{wikiquote}}
+{{Library resources box|by=yes|viaf=100941893}}
+*{{worldcat id|id=lccn-n80-41446}}
+*{{facebook|AnneLamott}}
+*[http://dir.salon.com/topics/anne_lamott/ ''Salon.com'': articles by Anne Lamott]
+*[http://www.barclayagency.com/lamott.html Profile \u2013 Steven Barclay Agency]
+*[http://writetv.okstate.edu/bestofWOL.html ''Write TV'' Public Television Interview (2004)]
+*[http://minnesota.publicradio.org/display/web/2007/04/11/midmorning2/ Minnesota Public Radio Interview (2007)]
+*[https://web.archive.org/web/20120224123658/http://www.victorialautman.com/interviews/anne-lamott.shtml Interview for ''Writers on the Record'' (2007)]
+*[http://www.goodreads.com/author/show/7113.Anne_Lamott/ ''Goodreads.com'': Author profile: Anne Lamott]
+
+{{DEFAULTSORT:Lamott, Anne}}
+[[Category:1954 births]]
+[[Category:Living people]]
+[[Category:20th-century American novelists]]
+[[Category:21st-century American novelists]]
+[[Category:American Christian pacifists]]
+[[Category:American memoirists]]
+[[Category:American women novelists]]
+[[Category:People from San Rafael, California]]
+[[Category:Writers from San Francisco]]
+<!--(Source: http://www.people.com/people/archive/article/0,,20138588,00.html)-->
+[[Category:Guggenheim Fellows]]
+[[Category:American spiritual writers]]
+[[Category:Women memoirists]]
+[[Category:20th-century women writers]]
+[[Category:21st-century women writers]]
+[[Category:Activists from California]]"}]}}}}

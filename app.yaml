@@ -1,10 +1,19 @@
-runtime: python27
-api_version: 1
-threadsafe: true
+runtime: python
+env: flex
+entrypoint: gunicorn -b :$PORT main:app
 
-libraries:
-- name: ssl
-  version: latest
+runtime_config:
+  python_version: 3
+
+env_variables:
+    # Replace user, password, database, and instance connection name with the values obtained
+    # when configuring your Cloud SQL instance.
+    # mysql+pymysql://USER:PASSWORD@/DATABASE?unix_socket=/cloudsql/INSTANCE_CONNECTION_NAME
+    SQLALCHEMY_DATABASE_URI: >-
+      postgresql+psycopg2://postgres:swe-readers@/postgres?host=/cloudsql/cs373-idb:us-central1:idb
+
+beta_settings:
+    cloud_sql_instances: cs373-idb:us-central1:idb
 
 handlers:
 - url: /app/static

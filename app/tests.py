@@ -1,15 +1,15 @@
 from unittest import main, TestCase
-from db import app, db
-from models import Book, Publisher, Author, Review
+from .db import app, db
+from .models import Book, Publisher, Author, Review
 
 
 class TestModels(TestCase):
     def test_book_model_1(self):
-         #def __init__(self, title, genre, year, edition, isbn, prices):
+         #def __init__(self, title, genre, year, isbn, prices, pic):
         """Test querying the database by attribute using simple keywords"""
 
         with app.test_request_context():
-            data = Book("title", "genre", "publisher", "year", "ISBN", "$1", "pic")
+            data = Book("title", "genre", "year", "ISBN", "$1", "pic")
 
             db.session.add(data)
             db.session.commit()
@@ -25,9 +25,9 @@ class TestModels(TestCase):
         """Test querying the database by attribute using simple keywords"""
     
         with app.test_request_context():
-            data1 = Book("title1", "genre1", "publisher1", "year1", "isbn1",
+            data1 = Book("title1", "genre1", "year1", "isbn1",
                          "$1.00", "pic.jpg")
-            data2 = Book("title2", "genre2", "publisher2", "year2", "isbn2",
+            data2 = Book("title2", "genre2", "year2", "isbn2",
                          "$2.00", "pic2.jpg")
     
             db.session.add(data1)
@@ -37,7 +37,6 @@ class TestModels(TestCase):
     
             book = db.session.query(Book).filter_by(year="year2").first()
             self.assertEqual(book.author, "author2")
-            self.assertEqual(book.publisher, "publisher2")
     
             db.session.delete(data1)
             db.session.commit()
@@ -48,9 +47,9 @@ class TestModels(TestCase):
         """Test querying the database by attribute using simple keywords"""
     
         with app.test_request_context():
-            data1 = Book("title1", "genre1", "publisher1", "year1", "isbn1",
+            data1 = Book("title1", "genre1", "year1", "isbn1",
                          "$1.00", "pic.jpg")
-            data2 = Book("title2", "genre2", "publisher2", "year2", "isbn2",
+            data2 = Book("title2", "genre2", "year2", "isbn2",
                          "$2.00", "pic2.jpg")
     
             db.session.add(data1)
@@ -91,7 +90,7 @@ class TestModels(TestCase):
             data1 = Author("name1", "birth_date1", "death_date1", "pic1",
                            "about1", "1")
             data2 = Author("name2", "birth_date2", "death_date2", "pic2",
-                           "about1", "2")
+                           "about2", "2")
     
             db.session.add(data1)
             db.session.commit()

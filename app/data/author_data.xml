@@ -1,0 +1,3119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[YCBYRWAFTg2cfUnmW8IWTg]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[Anne Lamott]]></query>
+    <results-start>1</results-start>
+    <results-end>20</results-end>
+    <total-results>55</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.13</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">841198</id>
+  <books_count type="integer">25</books_count>
+  <ratings_count type="integer">55151</ratings_count>
+  <text_reviews_count type="integer">5059</text_reviews_count>
+  <original_publication_year type="integer">1994</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.22</average_rating>
+  <best_book type="Book">
+    <id type="integer">12543</id>
+    <title>Bird by Bird: Some Instructions on Writing and Life</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1394996112m/12543.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1394996112s/12543.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">14837</id>
+  <books_count type="integer">12</books_count>
+  <ratings_count type="integer">36768</ratings_count>
+  <text_reviews_count type="integer">2160</text_reviews_count>
+  <original_publication_year type="integer">1999</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">19</original_publication_day>
+  <average_rating>4.15</average_rating>
+  <best_book type="Book">
+    <id type="integer">10890</id>
+    <title>Traveling Mercies: Some Thoughts on Faith</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1403182174m/10890.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1403182174s/10890.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">17459278</id>
+  <books_count type="integer">9</books_count>
+  <ratings_count type="integer">10577</ratings_count>
+  <text_reviews_count type="integer">898</text_reviews_count>
+  <original_publication_year type="integer">2012</original_publication_year>
+  <original_publication_month type="integer">3</original_publication_month>
+  <original_publication_day type="integer">20</original_publication_day>
+  <average_rating>3.60</average_rating>
+  <best_book type="Book">
+    <id type="integer">12475019</id>
+    <title>Some Assembly Required: A Journal of My Son's First Son</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1325716296m/12475019.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1325716296s/12475019.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">14828</id>
+  <books_count type="integer">15</books_count>
+  <ratings_count type="integer">18353</ratings_count>
+  <text_reviews_count type="integer">866</text_reviews_count>
+  <original_publication_year type="integer">2004</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.05</average_rating>
+  <best_book type="Book">
+    <id type="integer">12535</id>
+    <title>Plan B: Further Thoughts on Faith</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">901072</id>
+  <books_count type="integer">12</books_count>
+  <ratings_count type="integer">19683</ratings_count>
+  <text_reviews_count type="integer">1602</text_reviews_count>
+  <original_publication_year type="integer">1993</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.18</average_rating>
+  <best_book type="Book">
+    <id type="integer">12540</id>
+    <title>Operating Instructions: A Journal of My Son's First Year</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">21421044</id>
+  <books_count type="integer">17</books_count>
+  <ratings_count type="integer">12675</ratings_count>
+  <text_reviews_count type="integer">1773</text_reviews_count>
+  <original_publication_year type="integer">2012</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">13</original_publication_day>
+  <average_rating>3.97</average_rating>
+  <best_book type="Book">
+    <id type="integer">15737147</id>
+    <title>Help Thanks Wow: The Three Essential Prayers</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1348147479m/15737147.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1348147479s/15737147.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1057710</id>
+  <books_count type="integer">15</books_count>
+  <ratings_count type="integer">13331</ratings_count>
+  <text_reviews_count type="integer">1037</text_reviews_count>
+  <original_publication_year type="integer">2007</original_publication_year>
+  <original_publication_month type="integer">3</original_publication_month>
+  <original_publication_day type="integer">20</original_publication_day>
+  <average_rating>3.98</average_rating>
+  <best_book type="Book">
+    <id type="integer">12542</id>
+    <title>Grace (Eventually): Thoughts on Faith</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">25386951</id>
+  <books_count type="integer">11</books_count>
+  <ratings_count type="integer">6139</ratings_count>
+  <text_reviews_count type="integer">817</text_reviews_count>
+  <original_publication_year type="integer">2013</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer">29</original_publication_day>
+  <average_rating>3.87</average_rating>
+  <best_book type="Book">
+    <id type="integer">18079659</id>
+    <title>Stitches: A Handbook on Meaning, Hope, and Repair</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1374643873m/18079659.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1374643873s/18079659.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">41687212</id>
+  <books_count type="integer">7</books_count>
+  <ratings_count type="integer">6041</ratings_count>
+  <text_reviews_count type="integer">968</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>3.88</average_rating>
+  <best_book type="Book">
+    <id type="integer">22299380</id>
+    <title>Small Victories: Spotting Improbable Moments of Grace</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1410800117m/22299380.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1410800117s/22299380.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">3320883</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">8</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.88</average_rating>
+  <best_book type="Book">
+    <id type="integer">3284534</id>
+    <title>Anne Lamott Assortment</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">906539</id>
+  <books_count type="integer">15</books_count>
+  <ratings_count type="integer">6605</ratings_count>
+  <text_reviews_count type="integer">657</text_reviews_count>
+  <original_publication_year type="integer">2002</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">30</original_publication_day>
+  <average_rating>3.25</average_rating>
+  <best_book type="Book">
+    <id type="integer">91700</id>
+    <title>Blue Shoe</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1309202388m/91700.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1309202388s/91700.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">6905453</id>
+  <books_count type="integer">12</books_count>
+  <ratings_count type="integer">5689</ratings_count>
+  <text_reviews_count type="integer">1103</text_reviews_count>
+  <original_publication_year type="integer">2010</original_publication_year>
+  <original_publication_month type="integer">4</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>3.26</average_rating>
+  <best_book type="Book">
+    <id type="integer">6709616</id>
+    <title>Imperfect Birds</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">907023</id>
+  <books_count type="integer">11</books_count>
+  <ratings_count type="integer">4511</ratings_count>
+  <text_reviews_count type="integer">262</text_reviews_count>
+  <original_publication_year type="integer">1997</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.60</average_rating>
+  <best_book type="Book">
+    <id type="integer">531339</id>
+    <title>Crooked Little Heart</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">14829</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">3242</ratings_count>
+  <text_reviews_count type="integer">268</text_reviews_count>
+  <original_publication_year type="integer">1983</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer">30</original_publication_day>
+  <average_rating>3.66</average_rating>
+  <best_book type="Book">
+    <id type="integer">12536</id>
+    <title>Rosie</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">907022</id>
+  <books_count type="integer">4</books_count>
+  <ratings_count type="integer">1968</ratings_count>
+  <text_reviews_count type="integer">148</text_reviews_count>
+  <original_publication_year type="integer">1979</original_publication_year>
+  <original_publication_month type="integer">4</original_publication_month>
+  <original_publication_day type="integer">15</original_publication_day>
+  <average_rating>3.68</average_rating>
+  <best_book type="Book">
+    <id type="integer">49702</id>
+    <title>Hard Laughter</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">979353</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">1404</ratings_count>
+  <text_reviews_count type="integer">103</text_reviews_count>
+  <original_publication_year type="integer">1989</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.62</average_rating>
+  <best_book type="Book">
+    <id type="integer">12537</id>
+    <title>All New People</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1157942</id>
+  <books_count type="integer">9</books_count>
+  <ratings_count type="integer">1059</ratings_count>
+  <text_reviews_count type="integer">112</text_reviews_count>
+  <original_publication_year type="integer">1986</original_publication_year>
+  <original_publication_month type="integer">12</original_publication_month>
+  <original_publication_day type="integer">12</original_publication_day>
+  <average_rating>3.34</average_rating>
+  <best_book type="Book">
+    <id type="integer">165934</id>
+    <title>Joe Jones</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328753533m/165934.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328753533s/165934.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">52508</id>
+  <books_count type="integer">2</books_count>
+  <ratings_count type="integer">416</ratings_count>
+  <text_reviews_count type="integer">47</text_reviews_count>
+  <original_publication_year type="integer">1996</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.10</average_rating>
+  <best_book type="Book">
+    <id type="integer">53854</id>
+    <title>Word By Word</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">51686575</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">31082432</id>
+    <title>Anne Lamott Quotes: Anne Lamott, Quotes, Quotations, Famous Quotes</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">27315757</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">97</ratings_count>
+  <text_reviews_count type="integer">4</text_reviews_count>
+  <original_publication_year type="integer">2013</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer">9</original_publication_day>
+  <average_rating>4.09</average_rating>
+  <best_book type="Book">
+    <id type="integer">19268699</id>
+    <title>Help: The First Essential Prayer (Help, Thanks, Wow)</title>
+    <author>
+      <id type="integer">7113</id>
+      <name>Anne Lamott</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[YCBYRWAFTg2cfUnmW8IWTg]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[Thornton W Burgess]]></query>
+    <results-start>1</results-start>
+    <results-end>20</results-end>
+    <total-results>260</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.14</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">2126640</id>
+  <books_count type="integer">5</books_count>
+  <ratings_count type="integer">19</ratings_count>
+  <text_reviews_count type="integer">1</text_reviews_count>
+  <original_publication_year type="integer">1959</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.47</average_rating>
+  <best_book type="Book">
+    <id type="integer">2121203</id>
+    <title>Thornton W. Burgess Bedtime Stories</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">16950140</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">3</ratings_count>
+  <text_reviews_count type="integer">1</text_reviews_count>
+  <original_publication_year type="integer">2011</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">3</original_publication_day>
+  <average_rating>4.67</average_rating>
+  <best_book type="Book">
+    <id type="integer">11986457</id>
+    <title>Works of Thornton W. Burgess  </title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1697007</id>
+  <books_count type="integer">2</books_count>
+  <ratings_count type="integer">4</ratings_count>
+  <text_reviews_count type="integer">1</text_reviews_count>
+  <original_publication_year type="integer">1998</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.50</average_rating>
+  <best_book type="Book">
+    <id type="integer">1699985</id>
+    <title>My Grandfather, Thornton W. Burgess</title>
+    <author>
+      <id type="integer">782832</id>
+      <name>Frances B. Meigs</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">4710841</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">1</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2007</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer">11</original_publication_day>
+  <average_rating>5.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">13084026</id>
+    <title>Short Works of Thornton W. Burgess</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2563874</id>
+  <books_count type="integer">54</books_count>
+  <ratings_count type="integer">987</ratings_count>
+  <text_reviews_count type="integer">37</text_reviews_count>
+  <original_publication_year type="integer">1919</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.29</average_rating>
+  <best_book type="Book">
+    <id type="integer">8801</id>
+    <title>The Burgess Bird Book for Children</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">23422092</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">9</ratings_count>
+  <text_reviews_count type="integer">6</text_reviews_count>
+  <original_publication_year type="integer">2013</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">28</original_publication_day>
+  <average_rating>4.67</average_rating>
+  <best_book type="Book">
+    <id type="integer">17072005</id>
+    <title>Nature's Ambassador: The Legacy of Thornton W. Burgess</title>
+    <author>
+      <id type="integer">6831237</id>
+      <name>Christie Palmer Lowrance</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1407110956m/17072005.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1407110956s/17072005.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2563830</id>
+  <books_count type="integer">51</books_count>
+  <ratings_count type="integer">418</ratings_count>
+  <text_reviews_count type="integer">20</text_reviews_count>
+  <original_publication_year type="integer">1920</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.33</average_rating>
+  <best_book type="Book">
+    <id type="integer">8804</id>
+    <title>The Burgess Animal Book for Children</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1416873221m/8804.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1416873221s/8804.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2918008</id>
+  <books_count type="integer">48</books_count>
+  <ratings_count type="integer">836</ratings_count>
+  <text_reviews_count type="integer">64</text_reviews_count>
+  <original_publication_year type="integer">1917</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.12</average_rating>
+  <best_book type="Book">
+    <id type="integer">825750</id>
+    <title>Old Mother West Wind</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1382758739m/825750.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1382758739s/825750.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1790581</id>
+  <books_count type="integer">29</books_count>
+  <ratings_count type="integer">773</ratings_count>
+  <text_reviews_count type="integer">21</text_reviews_count>
+  <original_publication_year type="integer">1914</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.03</average_rating>
+  <best_book type="Book">
+    <id type="integer">753035</id>
+    <title>The Adventures of Peter Cottontail</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1415677956m/753035.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1415677956s/753035.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">39040743</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">2</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2012</original_publication_year>
+  <original_publication_month type="integer">2</original_publication_month>
+  <original_publication_day type="integer">19</original_publication_day>
+  <average_rating>4.50</average_rating>
+  <best_book type="Book">
+    <id type="integer">20559477</id>
+    <title>The Wishing Stone Stories by Thornton W. Burgess (Illustrated)</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2297250</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">3</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">1979</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>5.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">2290963</id>
+    <title>Thornton W. Burgess, a descriptive book bibliography</title>
+    <author>
+      <id type="integer">1031452</id>
+      <name>Wayne W. Wright</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">739124</id>
+  <books_count type="integer">62</books_count>
+  <ratings_count type="integer">490</ratings_count>
+  <text_reviews_count type="integer">34</text_reviews_count>
+  <original_publication_year type="integer">1913</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.07</average_rating>
+  <best_book type="Book">
+    <id type="integer">752997</id>
+    <title>The Adventures of Reddy Fox</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1415677973m/752997.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1415677973s/752997.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1697017</id>
+  <books_count type="integer">2</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">4755091</id>
+    <title>The Cape Cod story of Thornton W. Burgess</title>
+    <author>
+      <id type="integer">782834</id>
+      <name>Russell A. Lovell</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">43583255</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">2</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">2</original_publication_day>
+  <average_rating>4.50</average_rating>
+  <best_book type="Book">
+    <id type="integer">23981289</id>
+    <title>Thornton W. Burgess Collection of Children's Book Series</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">739150</id>
+  <books_count type="integer">38</books_count>
+  <ratings_count type="integer">320</ratings_count>
+  <text_reviews_count type="integer">17</text_reviews_count>
+  <original_publication_year type="integer">1915</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.04</average_rating>
+  <best_book type="Book">
+    <id type="integer">753024</id>
+    <title>The Adventures of Chatterer the Red Squirrel</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1416873304m/753024.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1416873304s/753024.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">702612</id>
+  <books_count type="integer">55</books_count>
+  <ratings_count type="integer">308</ratings_count>
+  <text_reviews_count type="integer">28</text_reviews_count>
+  <original_publication_year type="integer">1916</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.10</average_rating>
+  <best_book type="Book">
+    <id type="integer">716361</id>
+    <title>The Adventures of Buster Bear</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328868375m/716361.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328868375s/716361.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2126641</id>
+  <books_count type="integer">41</books_count>
+  <ratings_count type="integer">308</ratings_count>
+  <text_reviews_count type="integer">15</text_reviews_count>
+  <original_publication_year type="integer">1915</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.10</average_rating>
+  <best_book type="Book">
+    <id type="integer">518618</id>
+    <title>The Adventures of Danny Meadow Mouse</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328868376m/518618.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328868376s/518618.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">739035</id>
+  <books_count type="integer">36</books_count>
+  <ratings_count type="integer">305</ratings_count>
+  <text_reviews_count type="integer">13</text_reviews_count>
+  <original_publication_year type="integer">1916</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">752907</id>
+    <title>The Adventures of Old Mr. Toad</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328866942m/752907.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328866942s/752907.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1027514</id>
+  <books_count type="integer">38</books_count>
+  <ratings_count type="integer">235</ratings_count>
+  <text_reviews_count type="integer">12</text_reviews_count>
+  <original_publication_year type="integer">1915</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.09</average_rating>
+  <best_book type="Book">
+    <id type="integer">8806</id>
+    <title>The Adventures of Grandfather Frog</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1415677917m/8806.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1415677917s/8806.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1595975</id>
+  <books_count type="integer">44</books_count>
+  <ratings_count type="integer">251</ratings_count>
+  <text_reviews_count type="integer">20</text_reviews_count>
+  <original_publication_year type="integer">1918</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.13</average_rating>
+  <best_book type="Book">
+    <id type="integer">8808</id>
+    <title>The Adventures of Jimmy Skunk</title>
+    <author>
+      <id type="integer">5732</id>
+      <name>Thornton W. Burgess</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328867208m/8808.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328867208s/8808.jpg</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[YCBYRWAFTg2cfUnmW8IWTg]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[Jennifer Ackerman]]></query>
+    <results-start>1</results-start>
+    <results-end>20</results-end>
+    <total-results>31</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.49</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">45835780</id>
+  <books_count type="integer">10</books_count>
+  <ratings_count type="integer">1134</ratings_count>
+  <text_reviews_count type="integer">226</text_reviews_count>
+  <original_publication_year type="integer">2016</original_publication_year>
+  <original_publication_month type="integer">4</original_publication_month>
+  <original_publication_day type="integer">12</original_publication_day>
+  <average_rating>4.01</average_rating>
+  <best_book type="Book">
+    <id type="integer">25938481</id>
+    <title>The Genius of Birds</title>
+    <author>
+      <id type="integer">161774</id>
+      <name>Jennifer Ackerman</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1445790452m/25938481.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1445790452s/25938481.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1100039</id>
+  <books_count type="integer">15</books_count>
+  <ratings_count type="integer">732</ratings_count>
+  <text_reviews_count type="integer">163</text_reviews_count>
+  <original_publication_year type="integer">2007</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>3.58</average_rating>
+  <best_book type="Book">
+    <id type="integer">1113049</id>
+    <title>Sex Sleep Eat Drink Dream: A Day in the Life of Your Body</title>
+    <author>
+      <id type="integer">161774</id>
+      <name>Jennifer Ackerman</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">10868875</id>
+  <books_count type="integer">14</books_count>
+  <ratings_count type="integer">243</ratings_count>
+  <text_reviews_count type="integer">73</text_reviews_count>
+  <original_publication_year type="integer">2010</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">2</original_publication_day>
+  <average_rating>3.51</average_rating>
+  <best_book type="Book">
+    <id type="integer">7824024</id>
+    <title>Ah-Choo!: The Uncommon Life of Your Common Cold</title>
+    <author>
+      <id type="integer">161774</id>
+      <name>Jennifer Ackerman</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1344269738m/7824024.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1344269738s/7824024.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1432271</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">55</ratings_count>
+  <text_reviews_count type="integer">5</text_reviews_count>
+  <original_publication_year type="integer">2001</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>3.82</average_rating>
+  <best_book type="Book">
+    <id type="integer">1441653</id>
+    <title>Chance in the House of Fate: A Natural History of Heredity</title>
+    <author>
+      <id type="integer">161774</id>
+      <name>Jennifer Ackerman</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">269280</id>
+  <books_count type="integer">2</books_count>
+  <ratings_count type="integer">38</ratings_count>
+  <text_reviews_count type="integer">10</text_reviews_count>
+  <original_publication_year type="integer">1995</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>3.63</average_rating>
+  <best_book type="Book">
+    <id type="integer">277655</id>
+    <title>Notes from the Shore</title>
+    <author>
+      <id type="integer">161774</id>
+      <name>Jennifer Ackerman</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">25500838</id>
+  <books_count type="integer">3</books_count>
+  <ratings_count type="integer">53</ratings_count>
+  <text_reviews_count type="integer">6</text_reviews_count>
+  <original_publication_year type="integer">2013</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">21</original_publication_day>
+  <average_rating>3.87</average_rating>
+  <best_book type="Book">
+    <id type="integer">17350869</id>
+    <title>Scrivener Absolute Beginner's Guide (Absolute Beginner's Guides (Que))</title>
+    <author>
+      <id type="integer">548692</id>
+      <name>Jennifer Ackerman Kettell</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1393218019m/17350869.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1393218019s/17350869.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">55362332</id>
+  <books_count type="integer">2</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2016</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">34308236</id>
+    <title>El ingenio de los pájaros</title>
+    <author>
+      <id type="integer">161774</id>
+      <name>Jennifer Ackerman</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1487111394m/34308236.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1487111394s/34308236.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">40164617</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">5</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">30</original_publication_day>
+  <average_rating>4.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">20818706</id>
+    <title>My Kindle Fire HDX (My...)</title>
+    <author>
+      <id type="integer">548692</id>
+      <name>Jennifer Ackerman Kettell</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">26660793</id>
+  <books_count type="integer">3</books_count>
+  <ratings_count type="integer">5</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2013</original_publication_year>
+  <original_publication_month type="integer">12</original_publication_month>
+  <original_publication_day type="integer">20</original_publication_day>
+  <average_rating>4.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">18763028</id>
+    <title>My Kindle Fire Hdx</title>
+    <author>
+      <id type="integer">548692</id>
+      <name>Jennifer Ackerman Kettell</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1390174779m/18763028.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1390174779s/18763028.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">20531773</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">14878042</id>
+    <title>The Longest Thread</title>
+    <author>
+      <id type="integer">161774</id>
+      <name>Jennifer Ackerman</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">54505073</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">1</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">33647154</id>
+    <title>からだの一日：あなたの24時間を医学・科学で輪切りにする</title>
+    <author>
+      <id type="integer">161774</id>
+      <name>Jennifer Ackerman</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1483169105m/33647154.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1483169105s/33647154.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1100028</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">2</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2003</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer">3</original_publication_day>
+  <average_rating>5.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">1113038</id>
+    <title>Microsoft Office 2003</title>
+    <author>
+      <id type="integer">5629149</id>
+      <name>Jennifer Ackerman Kettel</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1100032</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">8</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">1998</original_publication_year>
+  <original_publication_month type="integer">3</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>3.62</average_rating>
+  <best_book type="Book">
+    <id type="integer">1113042</id>
+    <title>Curious Naturalist (National Geographic)</title>
+    <author>
+      <id type="integer">548698</id>
+      <name>Jennifer L. Ackerman</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1100040</id>
+  <books_count type="integer">2</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2001</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">1113050</id>
+    <title>Dreamweaver 4: The Complete Reference</title>
+    <author>
+      <id type="integer">548692</id>
+      <name>Jennifer Ackerman Kettell</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">20803332</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2002</original_publication_year>
+  <original_publication_month type="integer">5</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">15148174</id>
+    <title>FrontPage 2002</title>
+    <author>
+      <id type="integer">548692</id>
+      <name>Jennifer Ackerman Kettell</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1100030</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2003</original_publication_year>
+  <original_publication_month type="integer">12</original_publication_month>
+  <original_publication_day type="integer">22</original_publication_day>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">1113040</id>
+    <title>Absolute Beginner's Guide to Microsoft Office FrontPage 2003</title>
+    <author>
+      <id type="integer">548692</id>
+      <name>Jennifer Ackerman Kettell</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1372045197m/1113040.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1372045197s/1113040.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">41635585</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2003</original_publication_year>
+  <original_publication_month type="integer">12</original_publication_month>
+  <original_publication_day type="integer">12</original_publication_day>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">22258794</id>
+    <title>Absolute Beginner's Guide to Microsoft Office FrontPage 2003</title>
+    <author>
+      <id type="integer">548692</id>
+      <name>Jennifer Ackerman Kettell</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">26289955</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">0</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2013</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating type="float">0.0</average_rating>
+  <best_book type="Book">
+    <id type="integer">18560101</id>
+    <title>Microsoft Office 2008 for Mac Bible</title>
+    <author>
+      <id type="integer">548692</id>
+      <name>Jennifer Ackerman Kettell</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1410774628m/18560101.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1410774628s/18560101.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1573559</id>
+  <books_count type="integer">5</books_count>
+  <ratings_count type="integer">24</ratings_count>
+  <text_reviews_count type="integer">6</text_reviews_count>
+  <original_publication_year type="integer">1991</original_publication_year>
+  <original_publication_month type="integer">3</original_publication_month>
+  <original_publication_day type="integer">30</original_publication_day>
+  <average_rating>3.83</average_rating>
+  <best_book type="Book">
+    <id type="integer">3201431</id>
+    <title>The Leaves in October</title>
+    <author>
+      <id type="integer">131819</id>
+      <name>Karen Ackerman</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">19052340</id>
+  <books_count type="integer">8</books_count>
+  <ratings_count type="integer">151</ratings_count>
+  <text_reviews_count type="integer">7</text_reviews_count>
+  <original_publication_year type="integer">2011</original_publication_year>
+  <original_publication_month type="integer">12</original_publication_month>
+  <original_publication_day type="integer">28</original_publication_day>
+  <average_rating>3.57</average_rating>
+  <best_book type="Book">
+    <id type="integer">16270504</id>
+    <title>My Kindle Fire HD</title>
+    <author>
+      <id type="integer">167347</id>
+      <name>Jim Cheshire</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1372040665m/16270504.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1372040665s/16270504.jpg</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[YCBYRWAFTg2cfUnmW8IWTg]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[Maya Angelou]]></query>
+    <results-start>1</results-start>
+    <results-end>20</results-end>
+    <total-results>274</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.28</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">1413589</id>
+  <books_count type="integer">101</books_count>
+  <ratings_count type="integer">271264</ratings_count>
+  <text_reviews_count type="integer">6246</text_reviews_count>
+  <original_publication_year type="integer">1969</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.18</average_rating>
+  <best_book type="Book">
+    <id type="integer">13214</id>
+    <title>I Know Why the Caged Bird Sings</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1327957927m/13214.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1327957927s/13214.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2775653</id>
+  <books_count type="integer">33</books_count>
+  <ratings_count type="integer">16435</ratings_count>
+  <text_reviews_count type="integer">389</text_reviews_count>
+  <original_publication_year type="integer">1981</original_publication_year>
+  <original_publication_month type="integer">4</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.18</average_rating>
+  <best_book type="Book">
+    <id type="integer">5160</id>
+    <title>The Heart of a Woman</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1417404078m/5160.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1417404078s/5160.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">15373</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">1027</ratings_count>
+  <text_reviews_count type="integer">56</text_reviews_count>
+  <original_publication_year type="integer">1995</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">21</original_publication_day>
+  <average_rating>4.62</average_rating>
+  <best_book type="Book">
+    <id type="integer">13206</id>
+    <title>The Collected Autobiographies of Maya Angelou</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">21521583</id>
+  <books_count type="integer">16</books_count>
+  <ratings_count type="integer">10148</ratings_count>
+  <text_reviews_count type="integer">1263</text_reviews_count>
+  <original_publication_year type="integer">2013</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.12</average_rating>
+  <best_book type="Book">
+    <id type="integer">15798797</id>
+    <title>Mom &amp; Me &amp; Mom</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1344371038m/15798797.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1344371038s/15798797.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">4062985</id>
+  <books_count type="integer">25</books_count>
+  <ratings_count type="integer">10684</ratings_count>
+  <text_reviews_count type="integer">1263</text_reviews_count>
+  <original_publication_year type="integer">2008</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.07</average_rating>
+  <best_book type="Book">
+    <id type="integer">4016515</id>
+    <title>Letter to My Daughter</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1320448534m/4016515.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1320448534s/4016515.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">208700</id>
+  <books_count type="integer">27</books_count>
+  <ratings_count type="integer">8041</ratings_count>
+  <text_reviews_count type="integer">286</text_reviews_count>
+  <original_publication_year type="integer">1974</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.25</average_rating>
+  <best_book type="Book">
+    <id type="integer">130200</id>
+    <title>Gather Together in My Name</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">12285</id>
+  <books_count type="integer">10</books_count>
+  <ratings_count type="integer">6795</ratings_count>
+  <text_reviews_count type="integer">200</text_reviews_count>
+  <original_publication_year type="integer">1986</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.40</average_rating>
+  <best_book type="Book">
+    <id type="integer">9444</id>
+    <title>The Complete Collected Poems</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1371924014m/9444.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1371924014s/9444.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">741834</id>
+  <books_count type="integer">22</books_count>
+  <ratings_count type="integer">6951</ratings_count>
+  <text_reviews_count type="integer">324</text_reviews_count>
+  <original_publication_year type="integer">1993</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.26</average_rating>
+  <best_book type="Book">
+    <id type="integer">13210</id>
+    <title>Wouldn't Take Nothing for My Journey Now</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">42243722</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">321</ratings_count>
+  <text_reviews_count type="integer">47</text_reviews_count>
+  <original_publication_year type="integer">2015</original_publication_year>
+  <original_publication_month type="integer">3</original_publication_month>
+  <original_publication_day type="integer">31</original_publication_day>
+  <average_rating>4.40</average_rating>
+  <best_book type="Book">
+    <id type="integer">22716470</id>
+    <title>Maya Angelou: The Complete Poetry</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1410765161m/22716470.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1410765161s/22716470.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">395437</id>
+  <books_count type="integer">21</books_count>
+  <ratings_count type="integer">4936</ratings_count>
+  <text_reviews_count type="integer">167</text_reviews_count>
+  <original_publication_year type="integer">1976</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.21</average_rating>
+  <best_book type="Book">
+    <id type="integer">130957</id>
+    <title>Singin' and Swingin' and Gettin' Merry Like Christmas (Maya Angelou's Autobiography, #3)</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">17925699</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">163</ratings_count>
+  <text_reviews_count type="integer">6</text_reviews_count>
+  <original_publication_year type="integer">1993</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.54</average_rating>
+  <best_book type="Book">
+    <id type="integer">12779391</id>
+    <title>The Poetry of Maya Angelou</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1327856703m/12779391.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1327856703s/12779391.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">524742</id>
+  <books_count type="integer">22</books_count>
+  <ratings_count type="integer">4150</ratings_count>
+  <text_reviews_count type="integer">183</text_reviews_count>
+  <original_publication_year type="integer">1986</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.23</average_rating>
+  <best_book type="Book">
+    <id type="integer">13220</id>
+    <title>All God's Children Need Traveling Shoes</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">15383</id>
+  <books_count type="integer">3</books_count>
+  <ratings_count type="integer">25</ratings_count>
+  <text_reviews_count type="integer">2</text_reviews_count>
+  <original_publication_year type="integer">1999</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.36</average_rating>
+  <best_book type="Book">
+    <id type="integer">457567</id>
+    <title>Maya Angelou</title>
+    <author>
+      <id type="integer">8246</id>
+      <name>L. Patricia Kite</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">15379</id>
+  <books_count type="integer">7</books_count>
+  <ratings_count type="integer">3637</ratings_count>
+  <text_reviews_count type="integer">170</text_reviews_count>
+  <original_publication_year type="integer">1995</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">17</original_publication_day>
+  <average_rating>4.55</average_rating>
+  <best_book type="Book">
+    <id type="integer">13208</id>
+    <title>Phenomenal Woman: Four Poems Celebrating Women</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1403166978m/13208.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1403166978s/13208.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">50623</id>
+  <books_count type="integer">8</books_count>
+  <ratings_count type="integer">3150</ratings_count>
+  <text_reviews_count type="integer">130</text_reviews_count>
+  <original_publication_year type="integer">1986</original_publication_year>
+  <original_publication_month type="integer">2</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.33</average_rating>
+  <best_book type="Book">
+    <id type="integer">51881</id>
+    <title>Poems</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1459463862m/51881.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1459463862s/51881.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1283800</id>
+  <books_count type="integer">17</books_count>
+  <ratings_count type="integer">2826</ratings_count>
+  <text_reviews_count type="integer">186</text_reviews_count>
+  <original_publication_year type="integer">1978</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.41</average_rating>
+  <best_book type="Book">
+    <id type="integer">13211</id>
+    <title>And Still I Rise</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1378159824m/13211.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1378159824s/13211.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1413590</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">96</ratings_count>
+  <text_reviews_count type="integer">7</text_reviews_count>
+  <original_publication_year type="integer">1979</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.40</average_rating>
+  <best_book type="Book">
+    <id type="integer">1423156</id>
+    <title>Maya Angelou (Boxed Set)</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1429571395m/1423156.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1429571395s/1423156.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">42917726</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">17</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer">10</original_publication_day>
+  <average_rating>4.35</average_rating>
+  <best_book type="Book">
+    <id type="integer">23362236</id>
+    <title>The Wit and Wisdom of Maya Angelou: Maya Angelou Quotes</title>
+    <author>
+      <id type="integer">107109</id>
+      <name>Peter Jennings</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1030866</id>
+  <books_count type="integer">24</books_count>
+  <ratings_count type="integer">1543</ratings_count>
+  <text_reviews_count type="integer">122</text_reviews_count>
+  <original_publication_year type="integer">2002</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.15</average_rating>
+  <best_book type="Book">
+    <id type="integer">13218</id>
+    <title>A Song Flung Up To Heaven</title>
+    <author>
+      <id type="integer">3503</id>
+      <name>Maya Angelou</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">269963</id>
+  <books_count type="integer">10</books_count>
+  <ratings_count type="integer">96</ratings_count>
+  <text_reviews_count type="integer">32</text_reviews_count>
+  <original_publication_year type="integer">2008</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.90</average_rating>
+  <best_book type="Book">
+    <id type="integer">278344</id>
+    <title>Maya Angelou: A Glorious Celebration</title>
+    <author>
+      <id type="integer">162134</id>
+      <name>Marcia Ann Gillespie</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[YCBYRWAFTg2cfUnmW8IWTg]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[HP Lovecraft]]></query>
+    <results-start>1</results-start>
+    <results-end>20</results-end>
+    <total-results>1975</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.15</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">16807494</id>
+  <books_count type="integer">19</books_count>
+  <ratings_count type="integer">10279</ratings_count>
+  <text_reviews_count type="integer">227</text_reviews_count>
+  <original_publication_year type="integer" nil="true"/>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.33</average_rating>
+  <best_book type="Book">
+    <id type="integer">11851522</id>
+    <title>The Complete Works of H.P. Lovecraft</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1327886768m/11851522.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1327886768s/11851522.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">12926020</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">5124</ratings_count>
+  <text_reviews_count type="integer">114</text_reviews_count>
+  <original_publication_year type="integer">2008</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">16</original_publication_day>
+  <average_rating>4.35</average_rating>
+  <best_book type="Book">
+    <id type="integer">8320840</id>
+    <title>H.P. Lovecraft:  The Complete Fiction</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1356128434m/8320840.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1356128434s/8320840.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">18161591</id>
+  <books_count type="integer">3</books_count>
+  <ratings_count type="integer">4640</ratings_count>
+  <text_reviews_count type="integer">174</text_reviews_count>
+  <original_publication_year type="integer">1935</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.20</average_rating>
+  <best_book type="Book">
+    <id type="integer">36314</id>
+    <title>Tales of H.P. Lovecraft</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">36222</id>
+  <books_count type="integer">11</books_count>
+  <ratings_count type="integer">8351</ratings_count>
+  <text_reviews_count type="integer">76</text_reviews_count>
+  <original_publication_year type="integer">1996</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.31</average_rating>
+  <best_book type="Book">
+    <id type="integer">36317</id>
+    <title>The Transition of H. P. Lovecraft: The Road to Madness</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1376845792m/36317.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1376845792s/36317.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1813320</id>
+  <books_count type="integer">8</books_count>
+  <ratings_count type="integer">25602</ratings_count>
+  <text_reviews_count type="integer">511</text_reviews_count>
+  <original_publication_year type="integer">1963</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.31</average_rating>
+  <best_book type="Book">
+    <id type="integer">36315</id>
+    <title>The Best of H.P. Lovecraft: Bloodcurdling Tales of Horror and the Macabre</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1333214256m/36315.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1333214256s/36315.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">39963947</id>
+  <books_count type="integer">3</books_count>
+  <ratings_count type="integer">909</ratings_count>
+  <text_reviews_count type="integer">65</text_reviews_count>
+  <original_publication_year type="integer">2014</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer">13</original_publication_day>
+  <average_rating>4.41</average_rating>
+  <best_book type="Book">
+    <id type="integer">20665577</id>
+    <title>The New Annotated H.P. Lovecraft</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1407109052m/20665577.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1407109052s/20665577.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">27097092</id>
+  <books_count type="integer">9</books_count>
+  <ratings_count type="integer">419</ratings_count>
+  <text_reviews_count type="integer">33</text_reviews_count>
+  <original_publication_year type="integer">2016</original_publication_year>
+  <original_publication_month type="integer">7</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.40</average_rating>
+  <best_book type="Book">
+    <id type="integer">21416536</id>
+    <title>The Complete Fiction of H.P. Lovecraft</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1483287934m/21416536.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1483287934s/21416536.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">66700</id>
+  <books_count type="integer">5</books_count>
+  <ratings_count type="integer">1366</ratings_count>
+  <text_reviews_count type="integer">55</text_reviews_count>
+  <original_publication_year type="integer">1997</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.39</average_rating>
+  <best_book type="Book">
+    <id type="integer">68833</id>
+    <title>The Annotated H.P. Lovecraft</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1320489490m/68833.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1320489490s/68833.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">6750943</id>
+  <books_count type="integer">18</books_count>
+  <ratings_count type="integer">26217</ratings_count>
+  <text_reviews_count type="integer">795</text_reviews_count>
+  <original_publication_year type="integer">1938</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.26</average_rating>
+  <best_book type="Book">
+    <id type="integer">160149</id>
+    <title>The Call of Cthulhu and Other Weird Stories</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1320618937m/160149.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1320618937s/160149.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">6787873</id>
+  <books_count type="integer">4</books_count>
+  <ratings_count type="integer">920</ratings_count>
+  <text_reviews_count type="integer">39</text_reviews_count>
+  <original_publication_year type="integer">2009</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">19</original_publication_day>
+  <average_rating>4.29</average_rating>
+  <best_book type="Book">
+    <id type="integer">6594144</id>
+    <title>The Definitive H.P. Lovecraft</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">46233673</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">123</ratings_count>
+  <text_reviews_count type="integer">30</text_reviews_count>
+  <original_publication_year type="integer">2015</original_publication_year>
+  <original_publication_month type="integer">12</original_publication_month>
+  <original_publication_day type="integer">11</original_publication_day>
+  <average_rating>3.76</average_rating>
+  <best_book type="Book">
+    <id type="integer">26241281</id>
+    <title>The Gods of HP Lovecraft</title>
+    <author>
+      <id type="integer">4150064</id>
+      <name>Aaron J. French</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1441590394m/26241281.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1441590394s/26241281.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">33559</id>
+  <books_count type="integer">8</books_count>
+  <ratings_count type="integer">19365</ratings_count>
+  <text_reviews_count type="integer">462</text_reviews_count>
+  <original_publication_year type="integer">1931</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.25</average_rating>
+  <best_book type="Book">
+    <id type="integer">32769</id>
+    <title>At the Mountains of Madness and Other Tales of Terror</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1226634493m/32769.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1226634493s/32769.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">25692046</id>
+  <books_count type="integer">173</books_count>
+  <ratings_count type="integer">20437</ratings_count>
+  <text_reviews_count type="integer">953</text_reviews_count>
+  <original_publication_year type="integer">1928</original_publication_year>
+  <original_publication_month type="integer">2</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.05</average_rating>
+  <best_book type="Book">
+    <id type="integer">15730101</id>
+    <title>The Call of Cthulhu</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1377787655m/15730101.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1377787655s/15730101.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1423392</id>
+  <books_count type="integer">3</books_count>
+  <ratings_count type="integer">666</ratings_count>
+  <text_reviews_count type="integer">15</text_reviews_count>
+  <original_publication_year type="integer">1999</original_publication_year>
+  <original_publication_month type="integer">8</original_publication_month>
+  <original_publication_day type="integer">10</original_publication_day>
+  <average_rating>4.47</average_rating>
+  <best_book type="Book">
+    <id type="integer">68837</id>
+    <title>More Annotated H.P. Lovecraft</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">17342821</id>
+  <books_count type="integer">238</books_count>
+  <ratings_count type="integer">18809</ratings_count>
+  <text_reviews_count type="integer">1390</text_reviews_count>
+  <original_publication_year type="integer">1936</original_publication_year>
+  <original_publication_month type="integer">2</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.93</average_rating>
+  <best_book type="Book">
+    <id type="integer">32767</id>
+    <title>At the Mountains of Madness</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">124248</id>
+  <books_count type="integer">4</books_count>
+  <ratings_count type="integer">721</ratings_count>
+  <text_reviews_count type="integer">22</text_reviews_count>
+  <original_publication_year type="integer">1993</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.35</average_rating>
+  <best_book type="Book">
+    <id type="integer">129008</id>
+    <title>H.P. Lovecraft's Book of Horror</title>
+    <author>
+      <id type="integer">6943</id>
+      <name>Stephen Jones</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1271883276m/129008.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1271883276s/129008.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">296292</id>
+  <books_count type="integer">13</books_count>
+  <ratings_count type="integer">505</ratings_count>
+  <text_reviews_count type="integer">29</text_reviews_count>
+  <original_publication_year type="integer">1975</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.79</average_rating>
+  <best_book type="Book">
+    <id type="integer">305286</id>
+    <title>H.P. Lovecraft: A Biography</title>
+    <author>
+      <id type="integer">3305</id>
+      <name>L. Sprague de Camp</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1324548</id>
+  <books_count type="integer">43</books_count>
+  <ratings_count type="integer">9034</ratings_count>
+  <text_reviews_count type="integer">389</text_reviews_count>
+  <original_publication_year type="integer">1930</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.29</average_rating>
+  <best_book type="Book">
+    <id type="integer">1335019</id>
+    <title>Necronomicon: The Best Weird Tales</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1264059645m/1335019.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1264059645s/1335019.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">36226</id>
+  <books_count type="integer">19</books_count>
+  <ratings_count type="integer">5131</ratings_count>
+  <text_reviews_count type="integer">132</text_reviews_count>
+  <original_publication_year type="integer">1995</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">11</original_publication_day>
+  <average_rating>4.27</average_rating>
+  <best_book type="Book">
+    <id type="integer">36321</id>
+    <title>The Dream Cycle of H.P. Lovecraft: Dreams of Terror and Death</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1354069561m/36321.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1354069561s/36321.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">42342057</id>
+  <books_count type="integer">12</books_count>
+  <ratings_count type="integer">346</ratings_count>
+  <text_reviews_count type="integer">36</text_reviews_count>
+  <original_publication_year type="integer">2010</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.01</average_rating>
+  <best_book type="Book">
+    <id type="integer">1702271</id>
+    <title>The Best of H.P. Lovecraft</title>
+    <author>
+      <id type="integer">9494</id>
+      <name>H.P. Lovecraft</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[YCBYRWAFTg2cfUnmW8IWTg]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[Scott Doorley]]></query>
+    <results-start>1</results-start>
+    <results-end>2</results-end>
+    <total-results>2</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.03</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">27976074</id>
+  <books_count type="integer">2</books_count>
+  <ratings_count type="integer">4</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2011</original_publication_year>
+  <original_publication_month type="integer">12</original_publication_month>
+  <original_publication_day type="integer">30</original_publication_day>
+  <average_rating>3.50</average_rating>
+  <best_book type="Book">
+    <id type="integer">20070681</id>
+    <title>Make Space: How to Set the Stage for Creative Collaboration</title>
+    <author>
+      <id type="integer">5435330</id>
+      <name>Scott Doorley</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">18617893</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">293</ratings_count>
+  <text_reviews_count type="integer">32</text_reviews_count>
+  <original_publication_year type="integer">2011</original_publication_year>
+  <original_publication_month type="integer">12</original_publication_month>
+  <original_publication_day type="integer">30</original_publication_day>
+  <average_rating>4.12</average_rating>
+  <best_book type="Book">
+    <id type="integer">13387168</id>
+    <title>Make Space: How to Set the Stage for Creative Collaboration</title>
+    <author>
+      <id type="integer">66365</id>
+      <name>David Kelley</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[YCBYRWAFTg2cfUnmW8IWTg]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[Gaston Bachelard]]></query>
+    <results-start>1</results-start>
+    <results-end>20</results-end>
+    <total-results>106</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.15</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">2353571</id>
+  <books_count type="integer">36</books_count>
+  <ratings_count type="integer">6128</ratings_count>
+  <text_reviews_count type="integer">271</text_reviews_count>
+  <original_publication_year type="integer">1957</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.17</average_rating>
+  <best_book type="Book">
+    <id type="integer">13269</id>
+    <title>The Poetics of Space</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">987124</id>
+  <books_count type="integer">14</books_count>
+  <ratings_count type="integer">348</ratings_count>
+  <text_reviews_count type="integer">21</text_reviews_count>
+  <original_publication_year type="integer">1960</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.27</average_rating>
+  <best_book type="Book">
+    <id type="integer">297267</id>
+    <title>The Poetics of Reverie</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2125391</id>
+  <books_count type="integer">25</books_count>
+  <ratings_count type="integer">398</ratings_count>
+  <text_reviews_count type="integer">20</text_reviews_count>
+  <original_publication_year type="integer">1937</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.97</average_rating>
+  <best_book type="Book">
+    <id type="integer">297266</id>
+    <title>The Psychoanalysis of Fire</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2353572</id>
+  <books_count type="integer">13</books_count>
+  <ratings_count type="integer">259</ratings_count>
+  <text_reviews_count type="integer">16</text_reviews_count>
+  <original_publication_year type="integer">1942</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.26</average_rating>
+  <best_book type="Book">
+    <id type="integer">141912</id>
+    <title>Water and Dreams: An Essay on the Imagination of Matter (The Bachelard Translations)</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">425912</id>
+  <books_count type="integer">3</books_count>
+  <ratings_count type="integer">2</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">1982</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>2.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">437011</id>
+    <title>Gaston Bachelard</title>
+    <author>
+      <id type="integer">58905</id>
+      <name>Roch Charles Smith</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2125389</id>
+  <books_count type="integer">9</books_count>
+  <ratings_count type="integer">120</ratings_count>
+  <text_reviews_count type="integer">6</text_reviews_count>
+  <original_publication_year type="integer">1943</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.31</average_rating>
+  <best_book type="Book">
+    <id type="integer">297265</id>
+    <title>Air and Dreams: An Essay on the Imagination of Movement (Bachelard Translation Series)</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1854967</id>
+  <books_count type="integer">18</books_count>
+  <ratings_count type="integer">132</ratings_count>
+  <text_reviews_count type="integer">14</text_reviews_count>
+  <original_publication_year type="integer">1961</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.90</average_rating>
+  <best_book type="Book">
+    <id type="integer">437010</id>
+    <title>The Flame of a Candle</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1356092314m/437010.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1356092314s/437010.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2426466</id>
+  <books_count type="integer">15</books_count>
+  <ratings_count type="integer">81</ratings_count>
+  <text_reviews_count type="integer">6</text_reviews_count>
+  <original_publication_year type="integer">1948</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.01</average_rating>
+  <best_book type="Book">
+    <id type="integer">254278</id>
+    <title>Formation of the Scientific Mind</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328839154m/254278.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328839154s/254278.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2768257</id>
+  <books_count type="integer">8</books_count>
+  <ratings_count type="integer">48</ratings_count>
+  <text_reviews_count type="integer">8</text_reviews_count>
+  <original_publication_year type="integer">1992</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.67</average_rating>
+  <best_book type="Book">
+    <id type="integer">7026074</id>
+    <title>جدلية الزمن</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">288413</id>
+  <books_count type="integer">2</books_count>
+  <ratings_count type="integer">65</ratings_count>
+  <text_reviews_count type="integer">5</text_reviews_count>
+  <original_publication_year type="integer">1988</original_publication_year>
+  <original_publication_month type="integer">2</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.38</average_rating>
+  <best_book type="Book">
+    <id type="integer">297264</id>
+    <title>On Poetic Imagination and Reverie</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">216517</id>
+  <books_count type="integer">7</books_count>
+  <ratings_count type="integer">5</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2001</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">223565</id>
+    <title>Gaston Bachelard: Critic of Science and the Imagination</title>
+    <author>
+      <id type="integer">5659440</id>
+      <name>Cristina Chimisso</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">3172445</id>
+  <books_count type="integer">7</books_count>
+  <ratings_count type="integer">61</ratings_count>
+  <text_reviews_count type="integer">7</text_reviews_count>
+  <original_publication_year type="integer">1931</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.85</average_rating>
+  <best_book type="Book">
+    <id type="integer">13554769</id>
+    <title>حدس اللحظة</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1332294219m/13554769.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1332294219s/13554769.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">246415</id>
+  <books_count type="integer">7</books_count>
+  <ratings_count type="integer">41</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">1948</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.37</average_rating>
+  <best_book type="Book">
+    <id type="integer">254279</id>
+    <title>Earth and Reveries of Will: An Essay on the Imagination of Matter (The Bachelard Translations)</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1401916568m/254279.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1401916568s/254279.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">3172454</id>
+  <books_count type="integer">12</books_count>
+  <ratings_count type="integer">38</ratings_count>
+  <text_reviews_count type="integer">6</text_reviews_count>
+  <original_publication_year type="integer">1940</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.79</average_rating>
+  <best_book type="Book">
+    <id type="integer">17909533</id>
+    <title>فلسفة الرفض</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1368326338m/17909533.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1368326338s/17909533.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">27395541</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">1</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">1970</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>5.00</average_rating>
+  <best_book type="Book">
+    <id type="integer">3292221</id>
+    <title>Gaston Bachelard: Etudes</title>
+    <author>
+      <id type="integer">7331375</id>
+      <name>G Canguilhem</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1404484889m/3292221.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1404484889s/3292221.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2125403</id>
+  <books_count type="integer">15</books_count>
+  <ratings_count type="integer">42</ratings_count>
+  <text_reviews_count type="integer">4</text_reviews_count>
+  <original_publication_year type="integer">1934</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.86</average_rating>
+  <best_book type="Book">
+    <id type="integer">2346860</id>
+    <title>The New Scientific Spirit</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">288417</id>
+  <books_count type="integer">10</books_count>
+  <ratings_count type="integer">27</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">1978</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.30</average_rating>
+  <best_book type="Book">
+    <id type="integer">297268</id>
+    <title>The Right to Dream (Bachelard Translation Series)</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">288412</id>
+  <books_count type="integer">5</books_count>
+  <ratings_count type="integer">18</ratings_count>
+  <text_reviews_count type="integer">1</text_reviews_count>
+  <original_publication_year type="integer">1988</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.11</average_rating>
+  <best_book type="Book">
+    <id type="integer">297263</id>
+    <title>Fragments of a Poetics of Fire (The Bachelard Translations)</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1775827</id>
+  <books_count type="integer">4</books_count>
+  <ratings_count type="integer">38</ratings_count>
+  <text_reviews_count type="integer">1</text_reviews_count>
+  <original_publication_year type="integer">1985</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>3.89</average_rating>
+  <best_book type="Book">
+    <id type="integer">1777153</id>
+    <title>Lautréamont</title>
+    <author>
+      <id type="integer">8276</id>
+      <name>Gaston Bachelard</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">6409024</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">2</ratings_count>
+  <text_reviews_count type="integer">0</text_reviews_count>
+  <original_publication_year type="integer">2001</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>3.50</average_rating>
+  <best_book type="Book">
+    <id type="integer">6226442</id>
+    <title>L'Epistemologie Historique de Gaston Bachelard</title>
+    <author>
+      <id type="integer">185456</id>
+      <name>Dominique Lecourt</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1395621059m/6226442.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1395621059s/6226442.jpg</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+
+  <Request>
+    <authentication>true</authentication>
+      <key><![CDATA[YCBYRWAFTg2cfUnmW8IWTg]]></key>
+    <method><![CDATA[search_search]]></method>
+  </Request>
+  <search>
+  <query><![CDATA[Daniel Keyes]]></query>
+    <results-start>1</results-start>
+    <results-end>20</results-end>
+    <total-results>295</total-results>
+    <source>Goodreads</source>
+    <query-time-seconds>0.16</query-time-seconds>
+    <results>
+        <work>
+  <id type="integer">3337594</id>
+  <books_count type="integer">156</books_count>
+  <ratings_count type="integer">320975</ratings_count>
+  <text_reviews_count type="integer">10668</text_reviews_count>
+  <original_publication_year type="integer">1958</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.06</average_rating>
+  <best_book type="Book">
+    <id type="integer">18373</id>
+    <title>Flowers for Algernon</title>
+    <author>
+      <id type="integer">11072</id>
+      <name>Daniel Keyes</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1367141311m/18373.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1367141311s/18373.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2946399</id>
+  <books_count type="integer">48</books_count>
+  <ratings_count type="integer">7609</ratings_count>
+  <text_reviews_count type="integer">586</text_reviews_count>
+  <original_publication_year type="integer">1981</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.21</average_rating>
+  <best_book type="Book">
+    <id type="integer">1391817</id>
+    <title>The Minds of Billy Milligan</title>
+    <author>
+      <id type="integer">11072</id>
+      <name>Daniel Keyes</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1360229756m/1391817.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1360229756s/1391817.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">168227</id>
+  <books_count type="integer">14</books_count>
+  <ratings_count type="integer">573</ratings_count>
+  <text_reviews_count type="integer">26</text_reviews_count>
+  <original_publication_year type="integer">1980</original_publication_year>
+  <original_publication_month type="integer">9</original_publication_month>
+  <original_publication_day type="integer">22</original_publication_day>
+  <average_rating>4.08</average_rating>
+  <best_book type="Book">
+    <id type="integer">174160</id>
+    <title>The Fifth Sally</title>
+    <author>
+      <id type="integer">11072</id>
+      <name>Daniel Keyes</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1343278083m/174160.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1343278083s/174160.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">153313</id>
+  <books_count type="integer">930</books_count>
+  <ratings_count type="integer">1942594</ratings_count>
+  <text_reviews_count type="integer">42555</text_reviews_count>
+  <original_publication_year type="integer">1949</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">8</original_publication_day>
+  <average_rating>4.13</average_rating>
+  <best_book type="Book">
+    <id type="integer">1781723</id>
+    <title>1984 (Key Notes)</title>
+    <author>
+      <id type="integer">3706</id>
+      <name>George Orwell</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2650212</id>
+  <books_count type="integer">8</books_count>
+  <ratings_count type="integer">254</ratings_count>
+  <text_reviews_count type="integer">27</text_reviews_count>
+  <original_publication_year type="integer">2000</original_publication_year>
+  <original_publication_month type="integer">12</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.03</average_rating>
+  <best_book type="Book">
+    <id type="integer">123166</id>
+    <title>Algernon, Charlie, and I: A Writer's Journey</title>
+    <author>
+      <id type="integer">11072</id>
+      <name>Daniel Keyes</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328874829m/123166.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328874829s/123166.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2469236</id>
+  <books_count type="integer">7</books_count>
+  <ratings_count type="integer">133</ratings_count>
+  <text_reviews_count type="integer">20</text_reviews_count>
+  <original_publication_year type="integer">1986</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.23</average_rating>
+  <best_book type="Book">
+    <id type="integer">1617781</id>
+    <title>Claudia: Kisah Nyata Gadis Cantik, Kegilaan, dan Pembunuhan</title>
+    <author>
+      <id type="integer">11072</id>
+      <name>Daniel Keyes</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1312129420m/1617781.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1312129420s/1617781.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">50550270</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">523</ratings_count>
+  <text_reviews_count type="integer">105</text_reviews_count>
+  <original_publication_year type="integer">1959</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.42</average_rating>
+  <best_book type="Book">
+    <id type="integer">20657024</id>
+    <title>Flowers for Algernon</title>
+    <author>
+      <id type="integer">11072</id>
+      <name>Daniel Keyes</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1391103077m/20657024.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1391103077s/20657024.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">168226</id>
+  <books_count type="integer">9</books_count>
+  <ratings_count type="integer">103</ratings_count>
+  <text_reviews_count type="integer">10</text_reviews_count>
+  <original_publication_year type="integer">1971</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.39</average_rating>
+  <best_book type="Book">
+    <id type="integer">174159</id>
+    <title>The Touch</title>
+    <author>
+      <id type="integer">11072</id>
+      <name>Daniel Keyes</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">6775527</id>
+  <books_count type="integer">5</books_count>
+  <ratings_count type="integer">126</ratings_count>
+  <text_reviews_count type="integer">19</text_reviews_count>
+  <original_publication_year type="integer">2009</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.06</average_rating>
+  <best_book type="Book">
+    <id type="integer">6582077</id>
+    <title>The Asylum Prophecies</title>
+    <author>
+      <id type="integer">11072</id>
+      <name>Daniel Keyes</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1251862</id>
+  <books_count type="integer">5</books_count>
+  <ratings_count type="integer">566</ratings_count>
+  <text_reviews_count type="integer">31</text_reviews_count>
+  <original_publication_year type="integer">1988</original_publication_year>
+  <original_publication_month type="integer">6</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.03</average_rating>
+  <best_book type="Book">
+    <id type="integer">1262998</id>
+    <title>Emerald Eyes  (The Continuing Time, #1)</title>
+    <author>
+      <id type="integer">196482</id>
+      <name>Daniel Keys Moran</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1287679437m/1262998.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1287679437s/1262998.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1416</id>
+  <books_count type="integer">5</books_count>
+  <ratings_count type="integer">560</ratings_count>
+  <text_reviews_count type="integer">39</text_reviews_count>
+  <original_publication_year type="integer">1989</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.53</average_rating>
+  <best_book type="Book">
+    <id type="integer">403016</id>
+    <title>The Long Run: A Tale of the Continuing Time  (The Continuing Time, #2)</title>
+    <author>
+      <id type="integer">196482</id>
+      <name>Daniel Keys Moran</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">885558</id>
+  <books_count type="integer">6</books_count>
+  <ratings_count type="integer">105</ratings_count>
+  <text_reviews_count type="integer">8</text_reviews_count>
+  <original_publication_year type="integer">1970</original_publication_year>
+  <original_publication_month type="integer">11</original_publication_month>
+  <original_publication_day type="integer">30</original_publication_day>
+  <average_rating>3.85</average_rating>
+  <best_book type="Book">
+    <id type="integer">900375</id>
+    <title>Daniel: The Key to Prophetic Revelation</title>
+    <author>
+      <id type="integer">52018</id>
+      <name>John F. Walvoord</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328855158m/900375.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328855158s/900375.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1251863</id>
+  <books_count type="integer">4</books_count>
+  <ratings_count type="integer">440</ratings_count>
+  <text_reviews_count type="integer">21</text_reviews_count>
+  <original_publication_year type="integer">1993</original_publication_year>
+  <original_publication_month type="integer">10</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.30</average_rating>
+  <best_book type="Book">
+    <id type="integer">1262999</id>
+    <title>The Last Dancer  (The Continuing Time, #3)</title>
+    <author>
+      <id type="integer">196482</id>
+      <name>Daniel Keys Moran</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1328314040m/1262999.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1328314040s/1262999.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">1335445</id>
+  <books_count type="integer">1544</books_count>
+  <ratings_count type="integer">173512</ratings_count>
+  <text_reviews_count type="integer">5111</text_reviews_count>
+  <original_publication_year type="integer">1513</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.77</average_rating>
+  <best_book type="Book">
+    <id type="integer">23255096</id>
+    <title>The Prince</title>
+    <author>
+      <id type="integer">16201</id>
+      <name>Niccolò Machiavelli</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">18538952</id>
+  <books_count type="integer">1</books_count>
+  <ratings_count type="integer">66</ratings_count>
+  <text_reviews_count type="integer">4</text_reviews_count>
+  <original_publication_year type="integer">2007</original_publication_year>
+  <original_publication_month type="integer">1</original_publication_month>
+  <original_publication_day type="integer">1</original_publication_day>
+  <average_rating>4.55</average_rating>
+  <best_book type="Book">
+    <id type="integer">13331247</id>
+    <title>ყვავილები ელჯერნონისთვის / ცელი / არენა</title>
+    <author>
+      <id type="integer">11072</id>
+      <name>Daniel Keyes</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1325104388m/13331247.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1325104388s/13331247.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">41797643</id>
+  <books_count type="integer">4</books_count>
+  <ratings_count type="integer">37</ratings_count>
+  <text_reviews_count type="integer">2</text_reviews_count>
+  <original_publication_year type="integer">1994</original_publication_year>
+  <original_publication_month type="integer">7</original_publication_month>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.30</average_rating>
+  <best_book type="Book">
+    <id type="integer">6582078</id>
+    <title>比利戰爭 / Bi li zhan zheng</title>
+    <author>
+      <id type="integer">11072</id>
+      <name>Daniel Keyes</name>
+    </author>
+    <image_url>https://images.gr-assets.com/books/1401548291m/6582078.jpg</image_url>
+    <small_image_url>https://images.gr-assets.com/books/1401548291s/6582078.jpg</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">2080738</id>
+  <books_count type="integer">793</books_count>
+  <ratings_count type="integer">182081</ratings_count>
+  <text_reviews_count type="integer">2559</text_reviews_count>
+  <original_publication_year type="integer">1598</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.06</average_rating>
+  <best_book type="Book">
+    <id type="integer">2399457</id>
+    <title>Much Ado About Nothing: York Notes for KS3 Shakespeare (York Notes Key Stage 3)</title>
+    <author>
+      <id type="integer">947</id>
+      <name>William Shakespeare</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">392422</id>
+  <books_count type="integer">4</books_count>
+  <ratings_count type="integer">222</ratings_count>
+  <text_reviews_count type="integer">5</text_reviews_count>
+  <original_publication_year type="integer">1988</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>4.05</average_rating>
+  <best_book type="Book">
+    <id type="integer">403036</id>
+    <title>The Armageddon Blues</title>
+    <author>
+      <id type="integer">196482</id>
+      <name>Daniel Keys Moran</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">15818199</id>
+  <books_count type="integer">2</books_count>
+  <ratings_count type="integer">232</ratings_count>
+  <text_reviews_count type="integer">25</text_reviews_count>
+  <original_publication_year type="integer">2011</original_publication_year>
+  <original_publication_month type="integer">3</original_publication_month>
+  <original_publication_day type="integer">28</original_publication_day>
+  <average_rating>4.44</average_rating>
+  <best_book type="Book">
+    <id type="integer">10902136</id>
+    <title>The A.I. War: The Big Boost  (The Continuing Time, #4)</title>
+    <author>
+      <id type="integer">196482</id>
+      <name>Daniel Keys Moran</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+        <work>
+  <id type="integer">3267921</id>
+  <books_count type="integer">831</books_count>
+  <ratings_count type="integer">125601</ratings_count>
+  <text_reviews_count type="integer">2495</text_reviews_count>
+  <original_publication_year type="integer">1601</original_publication_year>
+  <original_publication_month type="integer" nil="true"/>
+  <original_publication_day type="integer" nil="true"/>
+  <average_rating>3.97</average_rating>
+  <best_book type="Book">
+    <id type="integer">28348347</id>
+    <title>William Shakespeare's Twelfth Night (Illustrated)</title>
+    <author>
+      <id type="integer">947</id>
+      <name>William Shakespeare</name>
+    </author>
+    <image_url>https://s.gr-assets.com/assets/nophoto/book/111x148-bcc042a9c91a29c1d680899eff700a03.png</image_url>
+    <small_image_url>https://s.gr-assets.com/assets/nophoto/book/50x75-a91bf249278a81aabab721ef782c4a74.png</small_image_url>
+  </best_book>
+</work>
+
+    </results>
+</search>
+
+</GoodreadsResponse>
