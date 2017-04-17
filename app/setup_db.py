@@ -114,7 +114,6 @@ def init_db():
 			print('Unable to add publisher with name: ', name)
 
 	books = 0
-	#pubs = set()
 	for search in (books_data["books"] + books3_data['books']):
 		for item in search['items']:
 			#finding book info
@@ -123,9 +122,8 @@ def init_db():
 			except:
 				print('error fetching title for book# ', books)
 				continue
-				#title = 'error fetching title'
 			try:
-				genre = item["volumeInfo"]['categories'][0]
+				genre = item["volumeInfo"]['categories'][0].strip().title()
 			except:
 				genre = 'error fetching genre'
 			try:
@@ -144,9 +142,23 @@ def init_db():
 				pic = item["volumeInfo"]["imageLinks"]["thumbnail"]
 			except:
 				print('Error fetching image url')
-				pic = 'about:blank'
+				pic = 'No image availible.'
+			try:
+				rating = str(item['volumeInfo']['averageRating'])
+			except:
+				rating = 'No ratings for this title.'
+			try:
+				author = item['volumeInfo']['authors'][0]
+			except:
+				print("shit i couldnt find the author for the book:", title)
+				author = 'unknown'
+			try:
+				pub = item['volumeInfo']['publisher']
+			except:
+				pub = 'unknown'
 
-			book = Book(title, genre, year, isbn, price, pic)
+
+			book = Book(title, genre, year, isbn, price, pic, rating, author, pub)
 			q = db.session.query(Book).filter_by(title=title)
 			if not db.session.query(q.exists()).scalar():
 				db.session.add(book)
@@ -154,21 +166,20 @@ def init_db():
 			else:
 				print('Unable to add book with name: ', title)		
 
-		#open('../scraper/pub_names.txt', 'w').write(str(list(pubs)))
 
 	#review initialization
 	reviews = 0
 	for item in review_data['reviews']:
 		try:
-			name = item['reviewer']
+			name = item['reviewer'].strip().title()
 		except:
 			name = 'unknown reviewer'
 		try:
-			rating = item['rating']
+			rating = str(item['rating']).strip()
 		except:
-			rating = 'unknown rating'
+			rating = 'no rating'
 		try:
-			content = item['review']
+			content = item['review'].strip()
 		except:
 			content = 'no content'
 		try:

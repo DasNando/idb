@@ -32,6 +32,7 @@ class Book(db1.Model):
     isbn = db1.Column(db1.String(80))
     prices = db1.Column(db1.String(80))
     pic = db1.Column(db1.String(120))
+    rating = db1.Column(db1.String(10))
 
     author_name = db1.Column(db1.String(80), db1.ForeignKey("author.name"))
     author = db1.relationship('Author', uselist=False, backref='book')
@@ -42,8 +43,8 @@ class Book(db1.Model):
     reviewer_name = db1.Column(db1.String(80), db1.ForeignKey("review.source"))
     reviews = db1.relationship('Review', backref='book')
 
-    def __init__(self, title, genre, year, isbn, prices, pic):
-        """All string data members are asserted to be of len > 0, price is asserted to be > 0"""
+    def __init__(self, title, genre, year, isbn, prices, pic, rating, auth, pub):
+        """All string data members are asserted to be of len > 0"""
 
         self.title = title
         assert len(title) > 0
@@ -55,11 +56,25 @@ class Book(db1.Model):
         assert len(year) > 0
 
         self.isbn = isbn
+        assert len(isbn) > 0
 
         self.prices = prices
         assert len(prices) > 0
 
         self.pic = pic
+        assert len(pic) > 0
+
+        self.author_name = auth
+        assert len(auth) > 0
+
+        self.publisher_name = pub
+        assert len(pub) > 0
+
+        self.reviewer_name = reviewer
+        assert len(reviewer) > 0
+
+        self.rating = rating
+        assert len(rating) > 0
 
 
 class Author(db1.Model):
@@ -144,7 +159,7 @@ class Review(db1.Model):
     # book = db1.relationship('Book', uselist=False, backref='review', lazy='dynamic')
 
     author_name = db1.Column(db1.String(80), db1.ForeignKey("author.name"))
-    author = db1.relationship('Author', uselist=False, backref='review')  # , lazy='dynamic')
+    author = db1.relationship('Author', uselist=False, backref='review')
 
     def __init__(self, reviewer, rating, content, source):
         """All string members are asserted to be len > 0, rating is asserted to be >= 0"""
