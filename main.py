@@ -177,12 +177,12 @@ def get_book1(lim=0):
     # return jsonify(b_dict_list)
 
 
-# get one book
-@app.route('/api/books/title=<string:book_name>')
-def get_book2(book_name):
+# get all books
+@app.route('/api/books/all/')
+def get_book0():
     b_dict_list = []
 
-    book = models.Book.query.filter_by(title=book_name).all()
+    book = models.Book.query.all()
     for b in book:
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
@@ -190,12 +190,13 @@ def get_book2(book_name):
     return jsonify(b_dict_list)
 
 
-# get all books
-@app.route('/api/books/all/')
-def get_book0():
+# get one book
+@app.route('/api/books/title=<string:book_name>')
+def get_book2(book_name):
     b_dict_list = []
 
-    book = models.Book.query.all()
+    book_name = "%" + book_name + "%"
+    book = models.Book.query.filter(models.Book.title.ilike(book_name)).all()
     for b in book:
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
