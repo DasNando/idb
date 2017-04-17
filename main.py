@@ -276,8 +276,8 @@ def get_pub0():
     publisher = models.Publisher.query.all()
     for b in publisher:
         p_dict_list.append(
-            {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
-             "founders": b.founders})
+            {"name": b.name, "founding_date": b.founded, "headquarters": b.headquarters, "country": b.country,
+             "about": b.about})
     return jsonify(p_dict_list)
 
 
@@ -291,8 +291,8 @@ def get3(publisher_name):
     # book = models.Book.query.filter_by(title=book_name).all()
     for b in publisher:
         p_dict_list.append(
-            {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
-             "founders": b.founders})
+            {"name": b.name, "founding_date": b.founded, "headquarters": b.headquarters, "country": b.country,
+             "about": b.about})
     return jsonify(p_dict_list)
 
 
@@ -311,8 +311,8 @@ def get5(params):
             p = p.filter(getattr(models.Publisher, col).ilike(fil))
     for b in p:
         p_dict_list.append(
-            {"name": b.name, "founding_date": b.founding_date, "headquarters": b.headquarters, "country": b.country,
-             "founders": b.founders})
+            {"name": b.name, "founding_date": b.founded, "headquarters": b.headquarters, "country": b.country,
+             "about": b.about})
     return jsonify(p_dict_list)
 
 
