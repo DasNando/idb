@@ -196,5 +196,3 @@ def init_db():
 	print('added ', authors, ' authors')
 	print('added ', reviews, ' reviews')
 	print('added ', publishers, ' publishers')
-
-init_db()

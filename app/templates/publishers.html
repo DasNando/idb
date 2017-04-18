@@ -15,9 +15,11 @@
 		
 		<!-- Our Angular Scripts -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
+		<!-- <script type="text/javascript" src="app.js"></script> -->
 
 		<!-- Angular Plugin(s) -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
+		<!-- <script type="text/javascript" src="dirPagination.js"></script> -->
 
 		<!-- Web CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
@@ -27,7 +29,8 @@
 		
 	</head>
 	<body ng-controller="PublisherController">
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse"></nav>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -84,18 +87,26 @@
 						<span class="caret"></span></button>
 						<ul class="dropdown-menu">
 							<li><a href="" ng-click="sort('name')">Name</a></li>
-							<li><a href="" ng-click="sort('headquarters')">Headquarters</a></li>
 							<li><a href="" ng-click="sort('country')">Country</a></li>
-							<li><a href="" ng-click="sort('founded')">Founded</a></li>
+							<li><a href="" ng-click="sort('headquarters')">Headquarters</a></li>
+							<li><a href="" ng-click="sort('founding_date')">Founded</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 		<br>
+		<div id="paginatecontainer">
+			<dir-pagination-controls
+				max-size="7"
+				direction-links="true"
+				boundary-links="true"
+				on-page-change="pageChangeHandler(newPageNumber)">
+			</dir-pagination-controls> 
+		</div>
 		<div class="container">
 			<div class="row">
-				<div dir-paginate="publisher in publisherlist|orderBy:sortKey:reverse|filter:searchPublishers|itemsPerPage:6">
+				<div dir-paginate="publisher in publisherlist|orderBy:sortKey:reverse|filter:searchFilter|itemsPerPage:12">
 					<div class="col-sm-6 col-md-4">
 						<div class="card">
 							<div class="card-block">
@@ -103,10 +114,9 @@
 								<img class="card-img-top img-responsive" src="{{publisher.pic}}" alt="pic of publisher" position="center">
 								{% endraw %}
 								<pre><h4 class="card-title"><u>Name:</u>{% raw %} {{publisher.name}} {% endraw %}</h4>
-								<p class="card-text"><u>About:</u> {% raw %} {{publisher.about}} {% endraw %}</p>
-								<p class="card-text"><u>HQ:</u> {% raw %} {{publisher.headquarters}} {% endraw %}</p>
 								<p class="card-text"><u>Country:</u> {% raw %} {{publisher.country}} {% endraw %}</p>
-								<p class="card-text"><u>Works:</u> {% raw %} {{publisher.works}} {% endraw %}</p>
+								<p class="card-text"><u>HQ:</u> {% raw %} {{publisher.headquarters}} {% endraw %}</p>
+								<p class="card-text"><u>Founded on:</u> {% raw %} {{publisher.founding_date}} {% endraw %}</p>
 							</pre></div>
 						</div>
 					</div>

@@ -18,7 +18,8 @@
 	
 	</head>
 	<body>
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse"></nav>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -146,14 +147,15 @@
 					<p>Github Issue Tracker: <a href="https://github.com/DasNando/idb/issues">https://github.com/DasNando/idb/issues</a></p>
 					<p>Github Repo: <a href="https://github.com/DasNando/idb">https://github.com/DasNando/idb</a></p>
 				</div>
-				<div class="col-sm-6 col-md-3">
+				<div class="col-sm-8 col-md-3">
 					<h2>Data Sources</h2>
 					<p><a href="https://openlibrary.org/developers/api">OpenLibrary</a></p>
 					<p><a href="http://www.goodreads.com/api">Goodreads</a></p>
 					<p><a href="https://developers.google.com/books/docs/v1/using">Google Books</a></p>
 				</div>
 				<div class="col-sm-4 col-md-3">
-					<a href="{{url_for('run_tests')}}">Run Tests</a>
+					<br>
+					<a class="btn btn-runtest btn-block" href="{{url_for('run_tests')}}">Run Tests</a>
 				</div>
 			</div>
 		</div>

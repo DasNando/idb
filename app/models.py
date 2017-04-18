@@ -1,4 +1,4 @@
-import db
+from .db import db
 
 # pylint: disable = bad-whitespace
 # pylint: disable = invalid-name
@@ -173,5 +173,8 @@ class Review(db1.Model):
         self.source = source
         assert len(source) > 0
 
+
+def build_all():
+        db1.create_all()
 # db1.create_all()
 # Session = sessionmaker(autoflush=False)

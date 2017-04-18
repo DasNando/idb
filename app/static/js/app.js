@@ -6,20 +6,19 @@ app.controller('BookController', function($scope, $http){
 	$scope.reverse = false;
 	$scope.searchBooks = '';
 
-	var myUrl = 'https://cs373-idb.appspot.com/api/books/params&genre=Fiction';
+	var myUrl = 'https://cs373-idb.appspot.com/api/books/all/';
 
 	$scope.booklist = [];
 
-	// DID NESTOR'S SUGGESTION WORK???
 	$http.get(myUrl).success(function(data) {
 		var myjson = data/*JSON.parse(data)*/;
 		$scope.booklist = myjson;
 	});
 
 	$scope.searchFilter = function (obj) {
-        var re = new RegExp($scope.searchBooks, 'i');
-        return !$scope.searchBooks || re.test(obj.title) || re.test(obj.author) || re.test(obj.year) || re.test(obj.publisher) || re.test(obj.rating) || re.test(obj.genre);
-    };
+		var re = new RegExp($scope.searchBooks, 'i');
+		return !$scope.searchBooks || re.test(obj.title) || re.test(obj.author) || re.test(obj.year) || re.test(obj.publisher) || re.test(obj.rating) || re.test(obj.genre);
+	};
 
 	$scope.sort = function(keyname){
 		if ($scope.sortKey != keyname) {
@@ -30,54 +29,27 @@ app.controller('BookController', function($scope, $http){
 	}
 });
 
-app.controller('AuthorController', function($scope) {
+app.controller('AuthorController', function($scope, $http) {
 	$scope.sortKey = 'name';
 	$scope.reverse = false;
 	$scope.searchAuthors = '';
 
-	$scope.authorlist = [{
-		pic: "https://cs373-idb.appspot.com/static/img/authors/authors-static.jpg",
-		name: "Sir Writes-alot",
-		about: "Literally the greatest.",
-		dob: 1969,
-		dod: 2020,
-		works: "69 MILLION",
-	}, {
-		pic: "https://cs373-idb.appspot.com/static/img/authors/authors-static.jpg",
-		name: "Sir Writes-alot",
-		about: "Literally the greatest.",
-		dob: 1969,
-		dod: 2020,
-		works: "68 MILLION",
-	}, {
-		pic: "https://cs373-idb.appspot.com/static/img/authors/authors-static.jpg",
-		name: "Sir Writes-alot",
-		about: "Literally the greatest.",
-		dob: 1969,
-		dod: 2020,
-		works: "67 MILLION",
-	}, {
-		pic: "https://cs373-idb.appspot.com/static/img/authors/authors-static.jpg",
-		name: "Sir Writes-alot",
-		about: "Literally the greatest.",
-		dob: 1969,
-		dod: 2020,
-		works: "65 MILLION",
-	}, {
-		pic: "https://cs373-idb.appspot.com/static/img/authors/authors-static.jpg",
-		name: "Sir Writes-alot",
-		about: "Literally the greatest.",
-		dob: 1969,
-		dod: 2020,
-		works: "66 MILLION",
-	}, {
-		pic: "https://cs373-idb.appspot.com/static/img/authors/authors-static.jpg",
-		name: "Sir Writes-alot",
-		about: "Literally the greatest.",
-		dob: 1969,
-		dod: 2020,
-		works: "70 MILLION",
-	}];
+	var myUrl = 'https://cs373-idb.appspot.com/api/authors/all/';
+
+	$scope.authorlist = [];
+
+	$http.get(myUrl).success(function(data) {
+		var myjson = data/*JSON.parse(data)*/;
+		$scope.authorlist = myjson;
+		angular.forEach($scope.authorlist, function (author) {
+			author.num_works = parseInt(author.num_works);
+		});
+	});
+
+	$scope.searchFilter = function (obj) {
+		var re = new RegExp($scope.searchAuthors, 'i');
+		return !$scope.searchAuthors || re.test(obj.name) || re.test(obj.birth_date) || re.test(obj.death_date) || re.test(obj.num_works);
+	};
 
 	$scope.sort = function(keyname){
 		if ($scope.sortKey != keyname) {
@@ -85,78 +57,27 @@ app.controller('AuthorController', function($scope) {
 			$scope.reverse = true;
 		};
 		$scope.reverse = !$scope.reverse;
-	}
+	};
 });
 
-app.controller('PublisherController', function($scope) {
+app.controller('PublisherController', function($scope, $http) {
 	$scope.sortKey = 'name';
 	$scope.reverse = false;
 	$scope.searchPublishers = '';
 
-	$scope.publisherlist = [{
-		pic: "1",
-		name: "1",
-		about: "1",
-		headquarters: "1",
-		country: "1",
-		founded: "1"
-	}, {
-		pic: "2",
-		name: "2",
-		about: "2",
-		headquarters: "2",
-		country: "2",
-		founded: "2"
-	}, {
-		pic: "3",
-		name: "3",
-		about: "3",
-		headquarters: "3",
-		country: "3",
-		founded: "3"
-	}, {
-		pic: "1",
-		name: "1",
-		about: "1",
-		headquarters: "1",
-		country: "1",
-		founded: "1"
-	}, {
-		pic: "2",
-		name: "2",
-		about: "2",
-		headquarters: "2",
-		country: "2",
-		founded: "2"
-	}, {
-		pic: "3",
-		name: "3",
-		about: "3",
-		headquarters: "3",
-		country: "3",
-		founded: "3"
-	}, {
-		pic: "1",
-		name: "1",
-		about: "1",
-		headquarters: "1",
-		country: "1",
-		founded: "1"
-	}, {
-		pic: "2",
-		name: "2",
-		about: "2",
-		headquarters: "2",
-		country: "2",
-		founded: "2"
-	}, {
-		pic: "3",
-		name: "3",
-		about: "3",
-		headquarters: "3",
-		country: "3",
-		founded: "3"
-	}];
+	var myUrl = 'https://cs373-idb.appspot.com/api/publishers/all/';
+
+	$scope.publisherlist = [];
+
+	$http.get(myUrl).success(function(data) {
+		var myjson = data/*JSON.parse(data)*/;
+		$scope.publisherlist = myjson;
+	});
+
+	$scope.searchFilter = function (obj) {
+		var re = new RegExp($scope.searchPublishers, 'i');
+		return !$scope.searchPublishers || re.test(obj.name) || re.test(obj.country) || re.test(obj.headquarters) || re.test(obj.founding_date);
+	};
 
 	$scope.sort = function(keyname){
 		if ($scope.sortKey != keyname) {

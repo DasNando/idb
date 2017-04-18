@@ -33,35 +33,35 @@ class Visit(db1.Model):
         self.user_ip = user_ip
 
 
-# @app.route('/db_test')
-# def index():
-#     db1.create_all()
-#     #setup_db.init_db()
-#     user_ip = request.remote_addr
-#
-#     # Keep only the first two octets of the IP address.
-#     if is_ipv6(user_ip):
-#         user_ip = ':'.join(user_ip.split(':')[:2])
-#     else:
-#         user_ip = '.'.join(user_ip.split('.')[:2])
-#
-#     visit = Visit(
-#         user_ip=user_ip,
-#         timestamp=datetime.datetime.utcnow()
-#     )
-#
-#     db1.session.add(visit)
-#     db1.session.commit()
-#
-#     visits = Visit.query.order_by(sqlalchemy.desc(Visit.timestamp)).limit(10)
-#
-#     results = [
-#         'Time: {} Addr: {}'.format(x.timestamp, x.user_ip)
-#         for x in visits]
-#
-#     output = 'Last 10 visits:\n{}'.format('\n'.join(results))
-#
-#     return output, 200, {'Content-Type': 'text/plain; charset=utf-8'}
+@app.route('/db_test')
+def index():
+    db1.create_all()
+    setup_db.init_db()
+    user_ip = request.remote_addr
+
+    # Keep only the first two octets of the IP address.
+    if is_ipv6(user_ip):
+        user_ip = ':'.join(user_ip.split(':')[:2])
+    else:
+        user_ip = '.'.join(user_ip.split('.')[:2])
+
+    visit = Visit(
+        user_ip=user_ip,
+        timestamp=datetime.datetime.utcnow()
+    )
+
+    db1.session.add(visit)
+    db1.session.commit()
+
+    visits = Visit.query.order_by(sqlalchemy.desc(Visit.timestamp)).limit(10)
+
+    results = [
+        'Time: {} Addr: {}'.format(x.timestamp, x.user_ip)
+        for x in visits]
+
+    output = 'Last 10 visits:\n{}'.format('\n'.join(results))
+
+    return output, 200, {'Content-Type': 'text/plain; charset=utf-8'}
 
 
 @app.route('/')
@@ -317,4 +317,5 @@ def get5(params):
 
 
 if __name__ == '__main__':
+    models.build_all()
     app.run(host='127.0.0.1', port=8080, debug=True)
