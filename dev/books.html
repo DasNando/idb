@@ -14,18 +14,18 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
 		
 		<!-- Our Angular Scripts -->
-		<!-- <script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script> -->
-		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
+		<!-- <script type="text/javascript" src="app.js"></script> -->
 
 		<!-- Angular Plugin(s) -->
-		<!-- <script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script> -->
-		<script type="text/javascript" src="dirPagination.js"></script>
+		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
+		<!-- <script type="text/javascript" src="dirPagination.js"></script> -->
 
 		<!-- Web CSS Stylesheet -->
-		<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}"> -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
 		
 		<!-- Local CSS Stylesheet -->
-		<link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css">
+		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
 		
 	</head>
 	<body ng-controller="BookController">
@@ -98,21 +98,29 @@
 			</div>
 		</div>
 		<br>
+		<div id="paginatecontainer">
+			<dir-pagination-controls
+				max-size="7"
+				direction-links="true"
+				boundary-links="true"
+				on-page-change="pageChangeHandler(newPageNumber)">
+			</dir-pagination-controls> 
+		</div>
 		<div class="container">
 			<div class="row">
 				<div dir-paginate="book in booklist|orderBy:sortKey:reverse|filter:searchFilter|itemsPerPage:12">
 					<div class="col-sm-6 col-md-4">
 						<div class="card">
 							<div class="card-block">
-								<!--{% raw %}-->
+								{% raw %}
 								<img id="bookcoverimg" class="card-img-top img-responsive" src="{{book.pic}}" alt="book cover" position="center">
-								<!--{% endraw %}-->
-								<pre><h4 class="card-title"><u>Title:</u><!--{% raw %}--> {{book.title}} <!--{% endraw %}--></h4>
-								<p class="card-text"><u>Author:</u> <!--{% raw %}-->{{book.author}}<!--{% endraw %}--></p>
-								<p class="card-text"><u>Published:</u><!--{% raw %}--> {{book.year}}<!--{% endraw %}--></p>
-								<p class="card-text"><u>Rating:</u> <!--{% raw %}-->{{book.rating}}<!--{% endraw %}--></p>
-								<p class="card-text"><u>Publisher:</u><!--{% raw %}--> {{book.publisher}}<!--{% endraw %}--></p>
-								<p class="card-text"><u>Genre:</u> <!--{% raw %}-->{{book.genre}}<!--{% endraw %}--></p>
+								{% endraw %}
+								<pre><h4 class="card-title"><u>Title:</u>{% raw %} {{book.title}} {% endraw %}</h4>
+								<p class="card-text"><u>Author:</u> {% raw %}{{book.author}}{% endraw %}</p>
+								<p class="card-text"><u>Published:</u>{% raw %} {{book.year}}{% endraw %}</p>
+								<p class="card-text"><u>Rating:</u> {% raw %}{{book.rating}}{% endraw %}</p>
+								<p class="card-text"><u>Publisher:</u>{% raw %} {{book.publisher}}{% endraw %}</p>
+								<p class="card-text"><u>Genre:</u> {% raw %}{{book.genre}}{% endraw %}</p>
 							</pre></div>
 						</div>
 					</div>

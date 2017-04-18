@@ -35,6 +35,12 @@ pre {
 	margin-right: 10px;
 }
 
+.card-title,
+.card-text {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 .carousel-inner img{
 	margin: auto;
 }
@@ -48,6 +54,11 @@ pre {
 	width: 100%;
 	background-color: #fff5e5;
 	border: black;
+}
+
+.btn-primary:active{
+	background-color: #008000;
+	border-color: #008000;
 }
 
 /*tags*/
@@ -79,6 +90,13 @@ pre {
 	/*min-width: 200px;*/
 	height: 300px;
 	/*min-height: 300px;*/
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+}
+
+#authorimg {
+	height: 300px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 20px;
@@ -232,4 +250,51 @@ pre {
 .pagination > .active > a:hover {
 	background-color: #009900;
 	border-color: lightgray;
+}
+
+/*run test button*/
+.btn-runtest { 
+  color: #F2F2F2; 
+  background-color: #006400; 
+  border-color: #009900; 
+} 
+ 
+.btn-runtest:hover, 
+.btn-runtest:focus, 
+.btn-runtest:active, 
+.btn-runtest.active, 
+.open .dropdown-toggle.btn-runtest { 
+  color: #F2F2F2; 
+  background-color: #0F990F; 
+  border-color: #009900; 
+} 
+ 
+.btn-runtest:active, 
+.btn-runtest.active, 
+.open .dropdown-toggle.btn-runtest { 
+  background-image: none; 
+} 
+ 
+.btn-runtest.disabled, 
+.btn-runtest[disabled], 
+fieldset[disabled] .btn-runtest, 
+.btn-runtest.disabled:hover, 
+.btn-runtest[disabled]:hover, 
+fieldset[disabled] .btn-runtest:hover, 
+.btn-runtest.disabled:focus, 
+.btn-runtest[disabled]:focus, 
+fieldset[disabled] .btn-runtest:focus, 
+.btn-runtest.disabled:active, 
+.btn-runtest[disabled]:active, 
+fieldset[disabled] .btn-runtest:active, 
+.btn-runtest.disabled.active, 
+.btn-runtest[disabled].active, 
+fieldset[disabled] .btn-runtest.active { 
+  background-color: #006400; 
+  border-color: #009900; 
+} 
+ 
+.btn-runtest .badge { 
+  color: #006400; 
+  background-color: #F2F2F2; 
 }

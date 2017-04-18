@@ -15,9 +15,11 @@
 		
 		<!-- Our Angular Scripts -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
+		<!-- <script type="text/javascript" src="app.js"></script> -->
 
 		<!-- Angular Plugin(s) -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
+		<!-- <script type="text/javascript" src="dirPagination.js"></script> -->
 
 		<!-- Web CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
@@ -27,7 +29,8 @@
 		
 	</head>
 	<body ng-controller="ReviewController">
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse"></nav>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -92,9 +95,17 @@
 			</div>
 		</div>
 		<br>
+		<div id="paginatecontainer">
+			<dir-pagination-controls
+				max-size="7"
+				direction-links="true"
+				boundary-links="true"
+				on-page-change="pageChangeHandler(newPageNumber)">
+			</dir-pagination-controls> 
+		</div>
 		<div class="container">
 			<div class="row">
-				<div dir-paginate="review in reviewlist|orderBy:sortKey:reverse|filter:searchReviews|itemsPerPage:6">
+				<div dir-paginate="review in reviewlist|orderBy:sortKey:reverse|filter:searchReviews|itemsPerPage:12">
 					<div class="col-sm-6 col-md-4">
 						<div class="card">
 							<div class="card-block">
