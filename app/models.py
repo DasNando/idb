@@ -18,7 +18,7 @@ Publisher
 Reviews
 """
 
-db1 = db.db
+db1 = db
 
 
 class Book(db1.Model):
