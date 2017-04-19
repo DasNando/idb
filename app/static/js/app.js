@@ -97,10 +97,10 @@ app.controller('ReviewController', function($scope, $http) {
 
 	$scope.reviewlist = [];
 
-	$http.get(myUrl).success(function(data)) {
+	$http.get(myUrl).success(function(data){
 		var myjson = data;
 		$scope.reviewlist = myjson;
-	}
+	});
 
 	$scope.searchFilter = function (obj) {
 		var re = new RegExp($scope.searchReviews, 'i');

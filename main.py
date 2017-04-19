@@ -325,10 +325,10 @@ def get6():
 
     reviews = models.Review.query.all()
     for r in reviews:
-        r_dict_list.append({"reviewer": r.reviewer, "rating": r.rating, "content": r.content, "source": b.source,
+        r_dict_list.append({"reviewer": r.reviewer, "rating": r.rating, "content": r.content, "source": r.source,
                             "book": r.book})
-    return jsonify(a_dict_list)
+    return jsonify(r_dict_list)
 
 if __name__ == '__main__':
-    # models.build_all()
+    models.build_all()
     app.run(host='127.0.0.1', port=8080, debug=True)
