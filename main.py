@@ -318,6 +318,16 @@ def get5(params):
              "about": b.about})
     return jsonify(p_dict_list)
 
+# get all reviews
+@app.route('/api/reviews/all')
+def get6():
+    r_dict_list = []
+
+    reviews = models.Review.query.all()
+    for r in reviews:
+        r_dict_list.append({"reviewer": r.reviewer, "rating": r.rating, "content": r.content, "source": b.source,
+                            "book": r.book})
+    return jsonify(a_dict_list)
 
 if __name__ == '__main__':
     # models.build_all()

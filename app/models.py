@@ -153,6 +153,7 @@ class Review(db1.Model):
     rating = db1.Column(db1.String(80))
     content = db1.Column(db1.Text)
     source = db1.Column(db1.String(80), primary_key=True)
+    book = db1.Column(db1.String(80))
 
     # book_name = db1.Column(db1.String(80), db1.ForeignKey("book.title"))
     # book = db1.relationship('Book', uselist=False, backref='review', lazy='dynamic')
@@ -160,7 +161,7 @@ class Review(db1.Model):
     author_name = db1.Column(db1.String(80), db1.ForeignKey("author.name"))
     author = db1.relationship('Author', uselist=False, backref='review')
 
-    def __init__(self, reviewer, rating, content, source):
+    def __init__(self, reviewer, rating, content, source, book):
         """All string members are asserted to be len > 0, rating is asserted to be >= 0"""
 
         self.reviewer = reviewer
@@ -174,6 +175,9 @@ class Review(db1.Model):
 
         self.source = source
         assert len(source) > 0
+
+        self.book = book
+        assert len(book) > 0
 
 
 def build_all():

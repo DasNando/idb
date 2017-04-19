@@ -198,9 +198,13 @@ def init_db():
             source = item['source']
         except:
             source = 'unknown source'
+        try:
+        	book = item['title']
+        except:
+        	book = 'unknown'
 
         reviews = reviews + 1
-        review = Review(name, rating, content, source)
+        review = Review(name, rating, content, source, book)
         db.session.add(review)
 
     db.session.commit()
