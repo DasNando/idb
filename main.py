@@ -185,7 +185,8 @@ def get_book0():
     book = models.Book.query.all()
     for b in book:
         b_dict_list.append(
-            {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+            {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic,
+             "rating": b.rating, "author": b.author, "publisher": b.pub})
     # print book.title models.Book.query.limit(lim).all()
     return jsonify(b_dict_list)
 
@@ -199,7 +200,8 @@ def get_book2(book_name):
     book = models.Book.query.filter(models.Book.title.ilike(book_name)).all()
     for b in book:
         b_dict_list.append(
-            {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+            {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic,
+             "rating": b.rating, "author": b.author, "publisher": b.pub})
     # print book.title models.Book.query.limit(lim).all()
     return jsonify(b_dict_list)
 
@@ -219,7 +221,8 @@ def get_book3(params):
             p = p.filter(getattr(models.Book, col).ilike(fil))
     for b in p:
         b_dict_list.append(
-            {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
+            {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic,
+             "rating": b.rating, "author": b.author, "publisher": b.pub})
     return jsonify(b_dict_list)
 
 
