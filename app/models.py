@@ -34,7 +34,7 @@ class Book(db1.Model):
     pic = db1.Column(db1.String(120))
     author_name = db1.Column(db1.String(120))
     publisher_name = db1.Column(db1.String(120))
-    rating = db1.Column(db1.String(10))
+    rating = db1.Column(db1.String(120))
 
     # author_name = db1.Column(db1.String(80), db1.ForeignKey("author.name"))
     # author = db1.relationship('Author', uselist=False, backref='book')
