@@ -319,7 +319,7 @@ def get5(params):
     return jsonify(p_dict_list)
 
 # get all reviews
-@app.route('/api/reviews/all')
+@app.route('/api/reviews/all/')
 def get6():
     r_dict_list = []
 
