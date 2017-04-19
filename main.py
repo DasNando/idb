@@ -186,7 +186,7 @@ def get_book0():
     for b in book:
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic,
-             "rating": b.rating, "author": b.author, "publisher": b.pub})
+             "author": b.author_name, "publisher": b.publisher_name, "rating": b.rating})
     # print book.title models.Book.query.limit(lim).all()
     return jsonify(b_dict_list)
 
@@ -201,7 +201,7 @@ def get_book2(book_name):
     for b in book:
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic,
-             "rating": b.rating, "author": b.author, "publisher": b.pub})
+             "author": b.author_name, "publisher": b.publisher_name, "rating": b.rating})
     # print book.title models.Book.query.limit(lim).all()
     return jsonify(b_dict_list)
 
@@ -222,7 +222,7 @@ def get_book3(params):
     for b in p:
         b_dict_list.append(
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic,
-             "rating": b.rating, "author": b.author, "publisher": b.pub})
+             "author": b.author_name, "publisher": b.publisher_name, "rating": b.rating})
     return jsonify(b_dict_list)
 
 
