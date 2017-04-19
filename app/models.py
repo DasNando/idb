@@ -32,13 +32,15 @@ class Book(db1.Model):
     isbn = db1.Column(db1.String(80))
     prices = db1.Column(db1.String(80))
     pic = db1.Column(db1.String(120))
+    author_name = db1.Column(db1.String(120))
+    publisher_name = db1.Column(db1.String(120))
     rating = db1.Column(db1.String(10))
 
-    author_name = db1.Column(db1.String(80), db1.ForeignKey("author.name"))
-    author = db1.relationship('Author', uselist=False, backref='book')
-
-    publisher_name = db1.Column(db1.String(80), db1.ForeignKey("publisher.name"))
-    publisher = db1.relationship('Publisher', uselist=False, backref='book')
+    # author_name = db1.Column(db1.String(80), db1.ForeignKey("author.name"))
+    # author = db1.relationship('Author', uselist=False, backref='book')
+    #
+    # publisher_name = db1.Column(db1.String(80), db1.ForeignKey("publisher.name"))
+    # publisher = db1.relationship('Publisher', uselist=False, backref='book')
 
     #reviewer_name = db1.Column(db1.String(80), db1.ForeignKey("review.source"))
     #reviews = db1.relationship('Review', backref='book')
