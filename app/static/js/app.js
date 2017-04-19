@@ -88,75 +88,24 @@ app.controller('PublisherController', function($scope, $http) {
 	}
 });
 
-app.controller('ReviewController', function($scope) {
-	$scope.sortKey = 'name';
+app.controller('ReviewController', function($scope, $http) {
+	$scope.sortKey = 'reviewer';
 	$scope.reverse = false;
 	$scope.searchReviews = '';
 
-	$scope.reviewlist = [{
-		pic: "1",
-		reviewer: "1",
-		rating: "1",
-		content: "1",
-		source: "1",
-		book: "1"
-	}, {
-		pic: "2",
-		reviewer: "2",
-		rating: "2",
-		content: "2",
-		source: "2",
-		book: "2"
-	}, {
-		pic: "3",
-		reviewer: "3",
-		rating: "3",
-		content: "3",
-		source: "3",
-		book: "3"
-	}, {
-		pic: "1",
-		reviewer: "1",
-		rating: "1",
-		content: "1",
-		source: "1",
-		book: "1"
-	}, {
-		pic: "2",
-		reviewer: "2",
-		rating: "2",
-		content: "2",
-		source: "2",
-		book: "2"
-	}, {
-		pic: "3",
-		reviewer: "3",
-		rating: "3",
-		content: "3",
-		source: "3",
-		book: "3"
-	}, {
-		pic: "1",
-		reviewer: "1",
-		rating: "1",
-		content: "1",
-		source: "1",
-		book: "1"
-	}, {
-		pic: "2",
-		reviewer: "2",
-		rating: "2",
-		content: "2",
-		source: "2",
-		book: "2"
-	}, {
-		pic: "3",
-		reviewer: "3",
-		rating: "3",
-		content: "3",
-		source: "3",
-		book: "3"
-	}];
+	var myUrl = 'https://cs373-idb.appspot.com/api/reviews/all/';
+
+	$scope.reviewlist = [];
+
+	$http.get(myUrl).success(function(data)) {
+		var myjson = data;
+		$scope.reviewlist = myjson;
+	}
+
+	$scope.searchFilter = function (obj) {
+		var re = new RegExp($scope.searchReviews, 'i');
+		return !$scope.searchReviews || re.test(obj.reviewer) || re.test(obj.content) || re.test(obj.book);
+	};
 
 	$scope.sort = function(keyname){
 		if ($scope.sortKey != keyname) {
