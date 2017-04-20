@@ -36,7 +36,7 @@ class Visit(db1.Model):
 @app.route('/db_test')
 def index():
     db1.create_all()
-    setup_db.init_db()
+    # setup_db.init_db()
     user_ip = request.remote_addr
 
     # Keep only the first two octets of the IP address.
@@ -80,22 +80,13 @@ def authors():
     return render_template('authors.html')
 
 
+@app.route('/book?title=<string:book_title>')
+def book_info(book_title):
+    return render_template('book.html')
+
+
 @app.route('/books')
 def books():
-    # books = db1.query(models.Book).filter_by(genre="Fiction").all()
-    # b_dict_list = []
-    # i = 0
-    # for b in books:
-    #     print "loop"
-    #     b_dict_list.append({"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
-    #     print b_dict_list[i]
-    #     print len(b_dict_list)
-    #     i += 1
-    #     if i >= 30:
-    #         break
-    # books = b_dict_list
-    # print type(books)
-    # print books
     return render_template('books.html')  # , book_pics=iter(books), item=None)
 
 
@@ -368,5 +359,5 @@ def get6():
 
 
 if __name__ == '__main__':
-    models.build_all()
+    # models.build_all()
     app.run(host='127.0.0.1', port=8080, debug=True)
