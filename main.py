@@ -218,7 +218,7 @@ def book_info(book_title):
 
 
 @app.route('/book/title=<string:book_title>')
-def book_info(book_title):
+def book_info2(book_title):
     return render_template('book.html')
 
 
