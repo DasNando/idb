@@ -36,7 +36,7 @@ class Visit(db1.Model):
 @app.route('/db_test')
 def index():
     db1.create_all()
-    setup_db.init_db()
+    # setup_db.init_db()
     user_ip = request.remote_addr
 
     # Keep only the first two octets of the IP address.
@@ -82,20 +82,6 @@ def authors():
 
 @app.route('/books')
 def books():
-    # books = db1.query(models.Book).filter_by(genre="Fiction").all()
-    # b_dict_list = []
-    # i = 0
-    # for b in books:
-    #     print "loop"
-    #     b_dict_list.append({"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic})
-    #     print b_dict_list[i]
-    #     print len(b_dict_list)
-    #     i += 1
-    #     if i >= 30:
-    #         break
-    # books = b_dict_list
-    # print type(books)
-    # print books
     return render_template('books.html')  # , book_pics=iter(books), item=None)
 
 
@@ -196,7 +182,7 @@ def get_book0():
 def get_book2(book_name):
     b_dict_list = []
 
-    book_name = "%" + book_name + "%"
+    book_name = book_name
     book = models.Book.query.filter(models.Book.title.ilike(book_name)).all()
     for b in book:
         b_dict_list.append(
@@ -216,7 +202,7 @@ def get_book3(params):
 
     for item in commands:
         col, fil = item.split('=')
-        fil = "%" + fil + "%"
+        fil = fil
         if col in models.Book.__table__.columns.keys():
             p = p.filter(getattr(models.Book, col).ilike(fil))
     for b in p:
@@ -224,6 +210,26 @@ def get_book3(params):
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic,
              "author": b.author_name, "publisher": b.publisher_name, "rating": b.rating})
     return jsonify(b_dict_list)
+
+
+@app.route('/book/title=<string:book_title>')
+def book_info2(book_title):
+    return render_template('book.html')
+
+
+@app.route('/review/title=<string:book_title>')
+def review_info2(book_title):
+    return render_template('review.html')
+
+
+@app.route('/author/name=<string:author_name>')
+def author_info2(author_name):
+    return render_template('author.html')
+
+
+@app.route('/publisher/name=<string:pub_name>')
+def publisher_info2(pub_name):
+    return render_template('publisher.html')
 
 
 # get all authors
@@ -242,7 +248,7 @@ def get_auth0():
 @app.route('/api/authors/name=<string:author_name>')
 def get1(author_name):
     a_dict_list = []
-    author_name = "%" + author_name + "%"
+    author_name = author_name
 
     author = models.Author.query.filter(models.Author.name.ilike(author_name)).all()
     # book = models.Book.query.filter_by(title=book_name).all()
@@ -318,6 +324,7 @@ def get5(params):
              "about": b.about})
     return jsonify(p_dict_list)
 
+
 # get all reviews
 @app.route('/api/reviews/all/')
 def get6():
@@ -325,10 +332,46 @@ def get6():
 
     reviews = models.Review.query.all()
     for r in reviews:
+        # book_name = r.book
         r_dict_list.append({"reviewer": r.reviewer, "rating": r.rating, "content": r.content, "source": r.source,
                             "book": r.book})
     return jsonify(r_dict_list)
 
+
+# get one Review
+@app.route('/api/reviews/book=<string:book_name>')
+def get8review_name(book_name):
+    r_dict_list = []
+    book_name = "%" + book_name + "%"
+
+    review = models.Review.query.filter(models.Review.book.ilike(book_name)).all()
+    # book = models.Book.query.filter_by(title=book_name).all()
+    for r in review:
+        r_dict_list.append({"reviewer": r.reviewer, "rating": r.rating, "content": r.content, "source": r.source,
+                            "book": r.book})
+    return jsonify(r_dict_list)
+
+
+# get nok with arbitrary filters
+@app.route('/api/reviews/params&<string:params>')
+def get9rev(params):
+    commands = params.split('&')
+    r_dict_list = []
+    r = models.Review.query
+    # print type(p)
+
+    for item in commands:
+        col, fil = item.split('=')
+        fil = "%" + fil + "%"
+        if col in models.Review.__table__.columns.keys():
+            r = r.filter(getattr(models.Review, col).ilike(fil))
+    for b in r:
+        r_dict_list.append(
+            {"reviewer": b.reviewer, "rating": b.rating, "content": b.content, "source": b.source,
+              "book": b.book})
+    return jsonify(r_dict_list)
+
+
 if __name__ == '__main__':
-    models.build_all()
+    # models.build_all()
     app.run(host='127.0.0.1', port=8080, debug=True)

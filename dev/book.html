@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="sweReaders" lang="en">
 	<head>
-		<title>SWE-Readers</title>
+		<title>Books - SWE-Readers</title>
 		<meta charset="utf-8">
 
 		<!-- pulling Bootstrap from CDN -->
@@ -26,6 +26,7 @@
 		
 		<!-- Local CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css">
+	
 	</head>
 	<body ng-controller="BookEntryController">
 		<nav class="navbar navbar-inverse"></nav>
@@ -35,7 +36,7 @@
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 						<span class="glyphicon glyphicon-book white"></span>
 					</button>
-					<a class="navbar-brand" href="../app/templates/home.html">SWE-Readers</a>
+					<a class="navbar-brand" href="{{ url_for('home') }}">SWE-Readers</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
@@ -45,7 +46,7 @@
 						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
 						<li><a href="{{ url_for('about') }}">About</a></li>
 					</ul>
-					<form class="navbar-form navbar-right" action="../app/templates/search.html">
+					<form class="navbar-form navbar-right" action="{{ url_for('search') }}">
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="Search">
 							<div class="input-group-btn">
@@ -58,6 +59,26 @@
 				</div>
 			</div>
 		</nav>
+		<br>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-4 col-md-offset-2">
+					<img id="entryimg" class="card-img-top img-responsive" src="{{book[0].pic}}" alt="book cover" position="center">
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<h1 id="entryTitle">{{book[0].title}}</h1>
+					<div id="entryText">
+						<p><u>Author:</u> <a ng-href="http://cs373-idb.appspot.com/author/name={{book[0].author}}">{{book[0].author}}</a></p>
+						<p><u>Publisher:</u> <a ng-href="http://cs373-idb.appspot.com/publisher/name={{book[0].publisher}}">{{book[0].publisher}}</a></p>
+						<p><u>Published:</u> {{book[0].year}}</p>
+						<p><u>ISBN:</u> {{book[0].isbn}}</p>
+						<p><u>Rating:</u> {{book[0].rating}}</p>
+						<p><u>Genre:</u> {{book[0].genre}}</p>
+						<a ng-href="#">Reviews</a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 	<footer>
 		<h6><small>A UTCS Student Project. CS373 Software Engineering, Project Group 15.</small></h6>

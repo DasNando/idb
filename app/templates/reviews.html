@@ -15,17 +15,17 @@
 		
 		<!-- Our Angular Scripts -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
-		<!-- <script type="text/javascript" src="app.js"></script> -->
+		<script type="text/javascript" src="app.js"></script>
 
 		<!-- Angular Plugin(s) -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
-		<!-- <script type="text/javascript" src="dirPagination.js"></script> -->
+		<script type="text/javascript" src="dirPagination.js"></script>
 
 		<!-- Web CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
 		
 		<!-- Local CSS Stylesheet -->
-		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
+		<link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css">
 		
 	</head>
 	<body ng-controller="ReviewController">
@@ -109,9 +109,6 @@
 					<div class="col-sm-6 col-md-4">
 						<div class="card">
 							<div class="card-block">
-								{% raw %}
-								<img class="card-img-top img-responsive" src="{{review.pic}}" alt="pic of review" position="center">
-								{% endraw %}
 								<pre><h4 class="card-title"><u>Reviewer:</u>{% raw %} {{review.reviewer}} {% endraw %}</h4>
 								<p class="card-text"><u>Rating:</u> {% raw %} {{review.rating}} {% endraw %}</p>
 								<p class="card-text"><u>Book:</u> {% raw %} {{review.book}} {% endraw %}</p>

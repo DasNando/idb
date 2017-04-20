@@ -8,6 +8,7 @@ app = Flask(__name__)
 # postgresql://scott:tiger@localhost/mydatabase
 # app.config.from_json(os.getcwd() + "/config.json")
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['SQLALCHEMY_DATABASE_URI']
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+psycopg2://postgres:swe-readers@/postgres?host=/cloudsql/cs373-idb:us-central1:idb"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 CORS(app)

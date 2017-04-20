@@ -1,3 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>About - SWE-Readers</title>
+		<meta charset="utf-8">
+
+		<!-- pulling Bootstrap from CDN -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<!-- Web CSS Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
+		
+		<!-- Local CSS Stylesheet -->
+		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
+	
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse"></nav>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+						<span class="glyphicon glyphicon-book white"></span>
+					</button>
+					<a class="navbar-brand" href="{{ url_for('home') }}">SWE-Readers</a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li><a href="{{ url_for('books') }}">Books</a></li>
+						<li><a href="{{ url_for('authors') }}">Authors</a></li>
+						<li><a href="{{ url_for('publishers') }}">Publishers</a></li>
+						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
+						<li class="active"><a href="{{ url_for('about') }}">About</a></li>
+					</ul>
+					<form class="navbar-form navbar-right" action="{{ url_for('search') }}">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search">
+							<div class="input-group-btn">
+								<button class="btn btn-default" type="submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<h1>About us!</h1>
+			<h4>Meet the team behind SWE-Readers:</h4>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<div class="card">
+						<div class="card-block">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/about/nando.jpg') }}" alt="Card image cap">
+							<h4 class="card-title">Fernando Mendoza</h4>
+							<p class="card-text">
+								Bio: I'm a senior CS student at the Univerity 
+								of Texas at Austin. I play and record my own 
+								music.
+							</p>
+							<p class="card-text">
+								Responsibilites: Backend, Webmaster
+							</p>
+							<p class="card-text">Commits: 90</p>
+							<p class="card-text">Issues: 7</p>
+							<p id ="cardbottom" class="card-text">Unit Tests:6</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="card">
+						<div class="card-block">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/about/Dylan.jpg') }}" alt="Card image cap">
+							<h4 class="card-title">Dylan Droll</h4>
+							<p class="card-text">
+								Bio: I'm a junior CS student at the University 
+								of Texas. My hobbies include but are not 
+								limited to: Video games, writing, watching 
+								movies, and cooking. One day I want to own a 
+								corgi ranch and write stories.
+							</p>
+							<p class="card-text">
+								Responsibilites: GUI, Web Design
+							</p>
+							<p class="card-text">Commits: 64</p>
+							<p class="card-text">Issues: 10</p>
+							<p id ="cardbottom" class="card-text">Unit Tests:0</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="card">
+						<div class="card-block">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/about/icon-laura.jpg') }}" alt="Card image cap">
+							<h4 class="card-title">Laura Catano</h4>
+							<p class="card-text">
+								Bio: I'm a third year CS student. I play 
+								Overwatch and like designing 3D computer 
+								graphics
+							</p>
+							<p class="card-text">
+								Responsibilites: Maintains about page, Data Scraping/Parsing.
+							</p>
+							<p class="card-text">Commits: 25</p>
+							<p class="card-text">Issues: 4</p>
+							<p id ="cardbottom" class="card-text">Unit Tests:0</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<div class="card">
+						<div class="card-block">
+							<img class="card-img-top img-responsive" src="{{ url_for('static', filename='img/about/Conner.jpg') }}" alt="Card image cap">
+							<h4 class="card-title">Conner Newman</h4>
+							<p class="card-text">
+								Bio: I'm a second year CS student. My favorite 
+								programming languages are Python, Java, and C++.
+								 I like reading, watching TV, and playing 
+								video games.
+							</p>
+							<p class="card-text">
+								Title: Project Manager and Senior Database Administrator
+								Responsibilites: API scraping, SQLAlchemy database populating
+							</p>
+							<p class="card-text">Commits: 37</p>
+							<p class="card-text">Issues: 11</p>
+							<p id ="cardbottom" class="card-text">Unit Tests:4</p>
+						</div>
+					</div>
+				</div>
+			</div> 		
+		</div> 	
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h2>Stats</h2>
+					<p>Total Commits: 225</p>
+					<p>Total Issues: 30</p>
+					<p>Total Unit Tests: 10</p>
+					<p>Apiary URL: <a href="http://docs.swereaders1.apiary.io">http://docs.swereaders1.apiary.io</a></p>
+					<p>Github Issue Tracker: <a href="https://github.com/DasNando/idb/issues">https://github.com/DasNando/idb/issues</a></p>
+					<p>Github Repo: <a href="https://github.com/DasNando/idb">https://github.com/DasNando/idb</a></p>
+				</div>
+				<div class="col-sm-8 col-md-3">
+					<h2>Data Sources</h2>
+					<p><a href="https://openlibrary.org/developers/api">OpenLibrary</a></p>
+					<p><a href="http://www.goodreads.com/api">Goodreads</a></p>
+					<p><a href="https://developers.google.com/books/docs/v1/using">Google Books</a></p>
+				</div>
+				<div class="col-sm-4 col-md-3">
+					<br>
+					<a class="btn btn-runtest btn-block" href="{{url_for('run_tests')}}">Run Tests</a>
+				</div>
+			</div>
+		</div>
+		<br>
 	<div id="techreport" class="container">
 			<h3>CS373 Project 4 - IDB2</h3>
 			<h2>Technical Report</h2>
@@ -26,53 +188,15 @@
 					information we have collected. Our API will allow users to filter the database by 
 					search terms such as book name, author name, publishing date, 
 					etc. It will also allow you to pull all information on a given 
-					specific book, or get a long list of all books, authors, publishers or reviews. This API
-					was created and hosted on Apiary, and can be accessed by anyone by the usual means of making RESTful 
-					API GET requests.
+					specific book. 
 				</p>
-
-				<h5>swe-readers.me/books/params&{parameters} [GET]</h5>
-				<p>
-				  Add stuff about calls here
-				</p>
-				<h5>swe-readers.me/books/title={book_name} [GET]</h5>
-				<h5>swe-readers.me/book [GET]</h5>
-
-				<h5>swe-readers.me/authors?id={author_id} [GET]</h5>
-
-				<h5>swe-readers.me/publishers/searchterm={terms} [GET]</h5>
-				<h5>swe-readers.me/publisher?id={publisher_id}  [GET]</h5>
-
-				<h5>swe-readers.me/reviews/searchterm={terms}  [GET]</h5>
-				<h5>swe-readers.me/review?id={review_id}  [GET]</h5>
-
-
-
 				<h4>Frontend</h4>
-				<p> Our site's front-end is made with HTML and Bootstrap. 
-					In Phase 1, it was simply a splash page (with a carousel and tables 
+				<p> Our site's front-end is made with HTML and Bootstrap. Right 
+					now, it's simply a splash page (with a carousel and tables 
 					of books), pages (containing grids corresponding to each of 
-					our four models), and a currently non-functioning search bar. Instead of the splash
-					image page, at this stage we opted for the comparitavely less slick home page, featuring a random 
-					sampling of books in the carousel as well as columns for high rated and recent books. We felt that the
-					IMDB/ old school archive look matched our topic a little better.
-					
-				</p>
-				    In Phase 2 we used Angular/Javascript to improve the look and 
-					navigability of our site. We added pagination to our site in this phase, 
-					allowing users to browse pages containing members of each model. We also added 
-					filtering and sorting, so that users would be able to filter or sort models by 
-					their specific attribute. As an example, by this time we could now sort books by Year, 
-					filter books by a specific author, and flip through the results in pages of about 10 entries 
-					each without leaving the /books path. Each entry of the grid was represented by a card with fields 
-					for the models attributes filled in from our database.
-
-				</p>
-				    As of Phase 3, we have implemented search, which allows users to search all attributes of all models 
-				    all at once. We have also implemented the models' details pages, which can be reached by clicking through an
-				    entry on the model browsing pages implemented in Phase 2. These detail pages contain more specific information about their individual instance of a book, author, publisher, or review and are separate from all of the other model instances, while retaining the same HTML template. During this phase we also went back and added the model to model links to our site, which we meant to implement in Phase 2, but were unable to due to unforseen issues with our database.
-				<p> 
-	
+					our four models), and a currently non-functioning search bar.
+					We plan to use Angular/Javascript to improve the look and 
+					navigability of our site in later phases. 
 				</p>
 				<h4>Backend</h4>
 				<p>
@@ -239,7 +363,7 @@ for i in pubs:
 				<p>
 					Flask is a microframework for Python, using the Jinja2 and Werkzeug WSGI 
 					libraries. It allows us to map out routes from HTML templates to URL addresses 
-					within our site, useful for implementing our sites navigation. Additionally, Flask provides support for API querying, and the Flask-SQLAlchemy extension, which was invaluable for us in allowing us to create and set up our models within the database.
+					within our site.
 				</p>
 				<h4>PostgreSQL</h4>
 				<p>
@@ -262,16 +386,7 @@ for i in pubs:
 				<h4>HTML</h4>
 				<p>
 					HTML is a markup language for semantically specifying the structure and content of web pages.
-					 We used it to create static templates for each of our models pages ad well as for our individual review pages. Its also the basis for our splash and about pages.
-				</p>
-				<h4>PlanItPoker</h4>
-				<p>
-					A Scrum tool by CodeFirst for laying out user stories and voting on estimates for each story as a group. It allows the the group to vote together on story points and in the process agree on the complexites of the task of implementation, so each member of the group can be on the same page. We used it to plan out and estimate the tasks for Phase 3.
-
-				</p>
-				<h4>D3.js</h4>
-				<p>
-					D3 is a JavaScript library for manipulating documents' data and provides visualisation tools for creating graphics based on the data, with support for various popular JavaScript graphics libraries. It allows efficient manipulation of the Document Object Model. We used it to create a visualisation of our assigned group's data.
+					 We use it to create static templates for each of our pages.
 				</p>
 				<h4>Github</h4>
 				<p>
@@ -334,4 +449,10 @@ for i in pubs:
 					made to the website, filterable by severity of the request
 					(ie. No Error, Warning, Notice, etc.)
 				</p>
-	</div>
+		</div>
+		<br>
+	</body>
+	<footer>
+		<h6><small>A UTCS Student Project. CS373 Software Engineering, Project Group 15.</small></h6>
+	</footer>
+</html>

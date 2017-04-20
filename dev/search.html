@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html ng-app="sweReaders" lang="en">
+<html lang="en">
 	<head>
-		<title>SWE-Readers</title>
+		<title>Search Results - SWE-Readers</title>
 		<meta charset="utf-8">
 
 		<!-- pulling Bootstrap from CDN -->
@@ -10,24 +10,14 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-		<!-- Angular CDN -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
-		
-		<!-- Our Angular Scripts -->
-		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
-		<script type="text/javascript" src="app.js"></script>
-
-		<!-- Angular Plugin(s) -->
-		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
-		<script type="text/javascript" src="dirPagination.js"></script>
-
 		<!-- Web CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
 		
 		<!-- Local CSS Stylesheet -->
-		<link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css">
+		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
+		
 	</head>
-	<body ng-controller="BookEntryController">
+	<body>
 		<nav class="navbar navbar-inverse"></nav>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
@@ -35,17 +25,17 @@
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 						<span class="glyphicon glyphicon-book white"></span>
 					</button>
-					<a class="navbar-brand" href="../app/templates/home.html">SWE-Readers</a>
+					<a class="navbar-brand" href="{{ url_for('home') }}">SWE-Readers</a>
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="{{ url_for('books') }}">Books</a></li>
+						<li><a href="{{ url_for('books') }}">Books</a></li>
 						<li><a href="{{ url_for('authors') }}">Authors</a></li>
 						<li><a href="{{ url_for('publishers') }}">Publishers</a></li>
 						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
 						<li><a href="{{ url_for('about') }}">About</a></li>
 					</ul>
-					<form class="navbar-form navbar-right" action="../app/templates/search.html">
+					<form class="navbar-form navbar-right" action="{{ url_for('search') }}">
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="Search">
 							<div class="input-group-btn">
@@ -58,6 +48,18 @@
 				</div>
 			</div>
 		</nav>
+		<div class="container">
+			<h1>Oops, something went wrong...</h1>
+			<h4>
+				Just kidding, searching hasn't been implemented yet, what were you expecting?
+			</h4>
+			<h4>
+				Lets just pretend that your query you typed in actually returned some fantastic results and you found exactly what you were searching for.
+			</h4>
+			<h5>
+				While I have your attention, allow me to share a funny video with you. Just <a href="https://youtu.be/8MExK3btN6Y">click here</a>!
+			</h5>
+		</div>
 	</body>
 	<footer>
 		<h6><small>A UTCS Student Project. CS373 Software Engineering, Project Group 15.</small></h6>

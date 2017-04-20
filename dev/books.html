@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="sweReaders" lang="en">
 	<head>
-		<title>Reviews - SWE-Readers</title>
+		<title>Books - SWE-Readers</title>
 		<meta charset="utf-8">
 
 		<!-- pulling Bootstrap from CDN -->
@@ -28,7 +28,7 @@
 		<link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css">
 		
 	</head>
-	<body ng-controller="ReviewController">
+	<body ng-controller="BookController">
 		<nav class="navbar navbar-inverse"></nav>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
@@ -40,10 +40,10 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li><a href="{{ url_for('books') }}">Books</a></li>
+						<li class="active"><a href="{{ url_for('books') }}">Books</a></li>
 						<li><a href="{{ url_for('authors') }}">Authors</a></li>
 						<li><a href="{{ url_for('publishers') }}">Publishers</a></li>
-						<li class="active"><a href="{{ url_for('reviews') }}">Reviews</a></li>
+						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
 						<li><a href="{{ url_for('about') }}">About</a></li>
 					</ul>
 					<form class="navbar-form navbar-right" action="{{ url_for('search') }}">
@@ -60,9 +60,9 @@
 			</div>
 		</nav>
 		<div class="container">
-			<h1>Browsing Reviews</h1>
+			<h1>Browsing Books</h1>
 			<h4>
-				This page contains a complete list of all the reviews in our entire database.
+				This page contains a complete list of all the books in our entire database.
 			</h4>
 		</div>
 		<div class="container">
@@ -71,9 +71,9 @@
 					<div>
 						<form>
 							<div class="input-group">
-								<input type="text" ng-model="searchReviews" class="form-control" placeholder="Filter Reviews">
+								<input type="text" ng-model="searchBooks" class="form-control" placeholder="Filter Books">
 								<div class="input-group-btn">
-									<button class="btn btn-default" type="submit">
+									<button class="btn btn-default">
 										<i class="glyphicon glyphicon-search"></i>
 									</button>
 								</div>
@@ -86,9 +86,12 @@
 						<button id="sortbtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort by
 						<span class="caret"></span></button>
 						<ul class="dropdown-menu">
-							<li><a href="" ng-click="sort('reviewer')">Reviewer</a></li>
+							<li><a href="" ng-click="sort('title')">Title</a></li>
+							<li><a href="" ng-click="sort('author')">Author</a></li>
+							<li><a href="" ng-click="sort('year')">Date Published</a></li>
 							<li><a href="" ng-click="sort('rating')">Rating</a></li>
-							<li><a href="" ng-click="sort('book')">Book</a></li>
+							<li><a href="" ng-click="sort('publisher')">Publisher</a></li>
+							<li><a href="" ng-click="sort('genre')">Genre</a></li>
 						</ul>
 					</div>
 				</div>
@@ -105,13 +108,19 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div dir-paginate="review in reviewlist|orderBy:sortKey:reverse|filter:searchFilter|itemsPerPage:12">
+				<div dir-paginate="book in booklist|orderBy:sortKey:reverse|filter:searchFilter|itemsPerPage:12">
 					<div class="col-sm-6 col-md-4">
 						<div class="card">
 							<div class="card-block">
-								<pre><h4 class="card-title"><u>Reviewer:</u>{% raw %} {{review.reviewer}} {% endraw %}</h4>
-								<p class="card-text"><u>Rating:</u> {% raw %} {{review.rating}} {% endraw %}</p>
-								<p class="card-text"><u>Book:</u> {% raw %} {{review.book}} {% endraw %}</p>
+								<!-- {% raw %} -->
+								<a ng-href="http://cs373-idb.appspot.com/api/books/title={{book.title}}"><img id="bookcoverimg" class="card-img-top img-responsive" src="{{book.pic}}" alt="book cover" position="center"></a>
+								<!-- {% endraw %} -->
+								<pre><h4 class="card-title"><u>Title:</u><!-- {% raw %} --> <a ng-href="http://cs373-idb.appspot.com/book/title={{book.title}}">{{book.title}}</a> <!-- {% endraw %} --></h4>
+								<p class="card-text"><u>Author:</u> <!-- {% raw %} --><a ng-href="http://cs373-idb.appspot.com/api/authors/name={{book.author}}">{{book.author}}</a><!-- {% endraw %} --></p>
+								<p class="card-text"><u>Publisher:</u><!-- {% raw %} --> <a ng-href="http://cs373-idb.appspot.com/api/publishers/name={{book.publisher}}">{{book.publisher}}</a><!-- {% endraw %} --></p>
+								<p class="card-text"><u>Published:</u><!-- {% raw %} --> {{book.year}}<!-- {% endraw %} --></p>
+								<p class="card-text"><u>Rating:</u> <!-- {% raw %} -->{{book.rating}}<!-- {% endraw %} --></p>
+								<p class="card-text"><u>Genre:</u> <!-- {% raw %} -->{{book.genre}}<!-- {% endraw %} --></p>
 							</pre></div>
 						</div>
 					</div>
