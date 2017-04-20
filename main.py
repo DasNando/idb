@@ -202,7 +202,7 @@ def get_book3(params):
 
     for item in commands:
         col, fil = item.split('=')
-        fil = "%" + fil + "%"
+        fil = fil
         if col in models.Book.__table__.columns.keys():
             p = p.filter(getattr(models.Book, col).ilike(fil))
     for b in p:
