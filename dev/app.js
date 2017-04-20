@@ -117,13 +117,17 @@ app.controller('ReviewController', function($scope, $http) {
 });
 
 app.controller('BookEntryController', function($scope, $http, $location){
-	$scope.potato = $location.absUrl().substring($location.absUrl().indexOf("=")+1);
+	$scope.bookTitle = $location.absUrl().substring($location.absUrl().indexOf("=")+1);
 	
-	var myUrl = 'https://cs373-idb.appspot.com/api/books/title='+$scope.potato;
+	var myUrl = 'https://cs373-idb.appspot.com/api/books/title='+$scope.bookTitle;
 
 	$http.get(myUrl).success(function(data) {
 		var myjson = data;
 		$scope.book = myjson;
-		console.log("What is the in potato? "+$scope.potato);
+		console.log("What is the in bookTitle? "+$scope.bookTitle);
 	});
+});
+
+app.config(function($interpolateProvider) {
+	$interpolateProvider.startSymbol('$$').endSymbol('$$');
 });
