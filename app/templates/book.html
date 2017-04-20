@@ -63,6 +63,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-md-4 col-md-offset-2">
+					{% raw %}
 					<img id="entryimg" class="card-img-top img-responsive" src="{{book[0].pic}}" alt="book cover" position="center">
 				</div>
 				<div class="col-sm-6 col-md-4">
@@ -73,7 +74,7 @@
 						<p><u>Published:</u> {{book[0].year}}</p>
 						<p><u>ISBN:</u> {{book[0].isbn}}</p>
 						<p><u>Rating:</u> {{book[0].rating}}</p>
-						<p><u>Genre:</u> {{book[0].genre}}</p>
+						<p><u>Genre:</u> {{book[0].genre}}</p> {% endraw %}
 						<a ng-href="#">Reviews</a>
 					</div>
 				</div>

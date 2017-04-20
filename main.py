@@ -182,7 +182,7 @@ def get_book0():
 def get_book2(book_name):
     b_dict_list = []
 
-    book_name = book_name
+    book_name = "%" + book_name + "%"
     book = models.Book.query.filter(models.Book.title.ilike(book_name)).all()
     for b in book:
         b_dict_list.append(
@@ -202,7 +202,7 @@ def get_book3(params):
 
     for item in commands:
         col, fil = item.split('=')
-        fil = fil
+        fil = "%" + fil + "%"
         if col in models.Book.__table__.columns.keys():
             p = p.filter(getattr(models.Book, col).ilike(fil))
     for b in p:
@@ -248,7 +248,7 @@ def get_auth0():
 @app.route('/api/authors/name=<string:author_name>')
 def get1(author_name):
     a_dict_list = []
-    author_name = author_name
+    author_name = "&" + author_name + "%"
 
     author = models.Author.query.filter(models.Author.name.ilike(author_name)).all()
     # book = models.Book.query.filter_by(title=book_name).all()
