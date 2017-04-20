@@ -1,4 +1,4 @@
-<div id="techreport" class="container">
+	<div id="techreport" class="container">
 			<h3>CS373 Project 4 - IDB2</h3>
 			<h2>Technical Report</h2>
 			<h3>Introduction</h3>
@@ -26,15 +26,53 @@
 					information we have collected. Our API will allow users to filter the database by 
 					search terms such as book name, author name, publishing date, 
 					etc. It will also allow you to pull all information on a given 
-					specific book. 
+					specific book, or get a long list of all books, authors, publishers or reviews. This API
+					was created and hosted on Apiary, and can be accessed by anyone by the usual means of making RESTful 
+					API GET requests.
 				</p>
+
+				<h5>swe-readers.me/books/params&{parameters} [GET]</h5>
+				<p>
+				  Add stuff about calls here
+				</p>
+				<h5>swe-readers.me/books/title={book_name} [GET]</h5>
+				<h5>swe-readers.me/book [GET]</h5>
+
+				<h5>swe-readers.me/authors?id={author_id} [GET]</h5>
+
+				<h5>swe-readers.me/publishers/searchterm={terms} [GET]</h5>
+				<h5>swe-readers.me/publisher?id={publisher_id}  [GET]</h5>
+
+				<h5>swe-readers.me/reviews/searchterm={terms}  [GET]</h5>
+				<h5>swe-readers.me/review?id={review_id}  [GET]</h5>
+
+
+
 				<h4>Frontend</h4>
-				<p> Our site's front-end is made with HTML and Bootstrap. Right 
-					now, it's simply a splash page (with a carousel and tables 
+				<p> Our site's front-end is made with HTML and Bootstrap. 
+					In Phase 1, it was simply a splash page (with a carousel and tables 
 					of books), pages (containing grids corresponding to each of 
-					our four models), and a currently non-functioning search bar.
-					We plan to use Angular/Javascript to improve the look and 
-					navigability of our site in later phases. 
+					our four models), and a currently non-functioning search bar. Instead of the splash
+					image page, at this stage we opted for the comparitavely less slick home page, featuring a random 
+					sampling of books in the carousel as well as columns for high rated and recent books. We felt that the
+					IMDB/ old school archive look matched our topic a little better.
+					
+				</p>
+				    In Phase 2 we used Angular/Javascript to improve the look and 
+					navigability of our site. We added pagination to our site in this phase, 
+					allowing users to browse pages containing members of each model. We also added 
+					filtering and sorting, so that users would be able to filter or sort models by 
+					their specific attribute. As an example, by this time we could now sort books by Year, 
+					filter books by a specific author, and flip through the results in pages of about 10 entries 
+					each without leaving the /books path. Each entry of the grid was represented by a card with fields 
+					for the models attributes filled in from our database.
+
+				</p>
+				    As of Phase 3, we have implemented search, which allows users to search all attributes of all models 
+				    all at once. We have also implemented the models' details pages, which can be reached by clicking through an
+				    entry on the model browsing pages implemented in Phase 2. These detail pages contain more specific information about their individual instance of a book, author, publisher, or review and are separate from all of the other model instances, while retaining the same HTML template. During this phase we also went back and added the model to model links to our site, which we meant to implement in Phase 2, but were unable to due to unforseen issues with our database.
+				<p> 
+	
 				</p>
 				<h4>Backend</h4>
 				<p>
@@ -62,6 +100,45 @@
 					our carousel according to changes in popularity, or simply 
 					to randomize the images posted.
 				</p>
+				<h4>Database</h4>
+				<h5>Attributes</h5>
+				<p>
+					For this part of the project, we needed to implement the database that was set up for phase 1. Previously, we had just had a skeleton for a database, but without anything filling it. In actually implementing the database and populating it with the data scraped from our API sources, we discovered a number of challenges. Some of the attributes from our models turned out to be difficult or otherwise problematic to implement. For the version of the database implemented in this version of the project, we decided to change the following attributes:
+
+				</p>
+				<p>Book:</p>
+				<p>
+					-The attribute 'year' was changed from a column Integers to a  column of Strings
+					-The attribute 'edition' was removed entirely
+					-The attribute 'prices' was changed from a column of Floats to a column of Strings
+					-A new attribute called 'pic' was added, storing a string representing the url of an image for the book
+				</p>
+                <p>Author:</p>
+				<p>
+					-The attribute 'alive' was removed entirely
+					-The attribute 'works' was removed entirely
+					-The attribute 'genre' was removed entirely
+					-A new attribute called 'pic' was added, which stores a string representing the url of an image for the author
+					-A new attribute called 'about' was added, of type 'Text', which stores a short bio paragraph for the author
+					-A new attribute called 'num_works' was added, storing as a string the number of published works by that author
+				</p>
+				   <p>Publisher:</p>
+				<p>
+					-The attribute 'founders' was removed entirely
+					-A new attribute called 'about' was added, of type 'Text', which stores a short bio paragraph for the publisher
+				</p>
+				   <p>Review:</p>
+				<p>
+					-The attribute 'rating' was changed from a column of Floats to a column of Strings
+				</p>
+				<h5>Changes</h5>
+				<p>
+					These changes were implemented as we began to write and test our scripts for API scraping and database populating. On of the significant changes to notice is that, whereas our database had been previously set up to store a mixture of String and Number data types, it now stores only text representations of data. This approach yields a number of advantages over storing raw number types in a database. First, it allows differentiation between existent and non-existent data values. For instance, one of the problems that we ran into in attempting to populate the database with information on our books was that, while the Google Books API returned a JSON payload containing pricing information on most of the books, for some of the books in our search this data was mysteriously absent. Further investigation showed that this was due to the fact that, while some books were listed as “For Sale”, others were not, and thus lacked a “retailPrice” attribute in their JSON representation. If we still wanted to store this ‘prices’ attribute as a float type, this would pose a problem. We could store it as a price of ‘0’, but that would be confusing and not particularly helpful or descriptive to the end user looking at out data. On the other hand, storing this data as strings allows us to handle this potential problem. Our code is now able to check whether a given book has an associated price. If a book does have a price, then the book entry is simply created using the string representation of that price, but if the book does not have an associated price, then a book entry is created where the ‘prices’ attribute stores the string 'This title is not for sale.' This implementation allows us to store the prices of books but also to provide useful information to the end user in a convenient manner without additional work. On the back end, the pricing information can be generated once and stored in statically in the database. On the front end, the web page needs only to load the string value stored in the ‘prices’ field and display it, and no additional dynamic work is required on page load. 
+					Additionally, there were a number of fields which were removed and replaced with other information. This was done if and when we discovered that the APIs which we used to source our data did not contain the data that we had originally hoped to use.
+				</p>
+
+
+
 				<h4>Data Sources</h4>
 				<p>
 					To collect our data we used the GoogleBooks, GoodReads, and Wikipedia APIs. 
@@ -70,6 +147,41 @@
 					free to use. To scrape this data we begin with a list of keyswords to request from the APIs.
 					 These keywords can be ISBNs, IDs internal to the API, or names of publishers. 
 					 We store the responses in a .json array.
+				</p>
+
+				<p>
+					Our data were scraped programmatically, using a number of python scripts. To scrape our data, we started first with a script which used the Google Books API to get information on a number of books. To do this, our script simply had the following logic:
+				</p>
+
+				<pre id="techreportpre"><code><!--... -->
+subjects = ['technology', 'sports', 'literature', 'poetry', 'romance', 'mystery', 'science+fiction']
+for i in subjects:
+	url = "https://www.googleapis.com/books/v1/volumes?q=subject:"+ str(i) + "&maxResults=40&langRestrict=en&key=AIzaSyBIbqz2Qb-Afi-v1iXP3QRdM8wQmQMdFG4"
+				</code></pre>
+
+				<p>
+					This loop, thus, took a list of seven different book subjects, and for each subject, got a list of 40 different books. Having stored these 280 data points in a JSON file, we could use this information to scrape information about these books’ authors and publishers. To generate the information on authors and publishers, our code iterated over the JSON file for the books, grabbed the Author and Publisher attributes from each entry, and compiled a list of author names and a list of publisher names. From these lists, we scraped the Goodreads API as such:
+				</p>
+
+				<pre id="techreportpre"><code>
+author_names = ['Christina Dodd', 'Simone Murray',  'Dante Alighieri',  
+
+for author in author_names:
+	url1 = 'https://www.goodreads.com/api/author_url/' + urllib.parse.quote(author, safe='') + '?key=YCBYRWAFTg2cfUnmW8IWTg'
+			    </code></pre>
+			    <p>
+					to generate a JSON formatted description of our authors, and:
+				</p>
+
+				<pre id="techreportpre"><code>
+pubs = ["Harper Collins", "Simon & Schuster", "Random House", …
+
+for i in pubs:
+	url = "https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=revisions&titles=" + urllib.parse.quote(i, safe='') + "&redirects=1&rvprop=content&rvparse=1" 
+				</code></pre>
+				<p>
+					to generate a JSON formatted description of our publishers.
+					After this is completed, our scripts have generated three seperate JSON files, one each for the models Books, Authors, and Publishers. This implementation also conveniently means that we will automatically have information on authors and publishers that are related to the book data that we source (i.e. this setup gets information on a book x and then automatically also generates information for x’s author and publisher.
 				</p>
 				<p>
 					We used the Google Books API as the source for data about 
@@ -80,6 +192,9 @@
 					not in a .json format as is necessary to be able to very easily and painlessly read data into the 
 					database are parsed, have their salient data extracted, and are then converted 
 					into a .json format.
+				</p>
+				<p>
+					Having scraped these data, we need a script to add them to the database. This was accomplished using a single script (setup_db.py). This script starts by first loading all of the JSON files for the models. Then, for each model, the script iterates over the JSON data for that model’s file, generating one instance of the relative model per JSON entry. This script takes special care to make sure that for every element it attempts to retrieve from the JSON, a valid dictionary entry exists for that key. This is important because it is entirely possible for some models that the API call could have returned a JSON payload which was only partially complete. For instance, if the script is unable to determine a genre for a given book, it assigns the string 'error fetching genre' to that model’s instance for the ‘genre’ attribute. Having successfully created a Model instance, the script then queries the database to guarantee that the database does not already contain a conflicting entry (i.e. no two entries can contain the same primary key, so the script cannot add two books with the same title), and if not, adds the model instance to the database.
 				</p>
 			<h4>Models</h4>
 				<p>The models each have a number of sub-attributes as follows:</p>
@@ -124,7 +239,7 @@
 				<p>
 					Flask is a microframework for Python, using the Jinja2 and Werkzeug WSGI 
 					libraries. It allows us to map out routes from HTML templates to URL addresses 
-					within our site.
+					within our site, useful for implementing our sites navigation. Additionally, Flask provides support for API querying, and the Flask-SQLAlchemy extension, which was invaluable for us in allowing us to create and set up our models within the database.
 				</p>
 				<h4>PostgreSQL</h4>
 				<p>
@@ -147,7 +262,16 @@
 				<h4>HTML</h4>
 				<p>
 					HTML is a markup language for semantically specifying the structure and content of web pages.
-					 We use it to create static templates for each of our pages.
+					 We used it to create static templates for each of our models pages ad well as for our individual review pages. Its also the basis for our splash and about pages.
+				</p>
+				<h4>PlanItPoker</h4>
+				<p>
+					A Scrum tool by CodeFirst for laying out user stories and voting on estimates for each story as a group. It allows the the group to vote together on story points and in the process agree on the complexites of the task of implementation, so each member of the group can be on the same page. We used it to plan out and estimate the tasks for Phase 3.
+
+				</p>
+				<h4>D3.js</h4>
+				<p>
+					D3 is a JavaScript library for manipulating documents' data and provides visualisation tools for creating graphics based on the data, with support for various popular JavaScript graphics libraries. It allows efficient manipulation of the Document Object Model. We used it to create a visualisation of our assigned group's data.
 				</p>
 				<h4>Github</h4>
 				<p>
@@ -210,4 +334,4 @@
 					made to the website, filterable by severity of the request
 					(ie. No Error, Warning, Notice, etc.)
 				</p>
-		</div>
+	</div>
