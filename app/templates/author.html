@@ -63,6 +63,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
+					{% raw %}
 					<img id="entryimg" class="card-img-top img-responsive" src="{{author[0].pic}}" alt="book cover" position="center">
 				</div>
 				<div class="col-sm-12">
@@ -71,7 +72,7 @@
 						<p><u>Date of Birth:</u> {{author[0].birth_date}}</a></p>
 						<p><u>Date of Death:</u> {{author[0].death_date}}</a></p>
 						<p><u>Number Of Works:</u> {{author[0].num_works}}</p>
-						<p><u>About:</u> {{author[0].about}}</p>
+						<p><u>About:</u> {{author[0].about}}</p> {% endraw %}
 					</div>
 				</div>
 			</div>

@@ -63,12 +63,13 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
+					{% raw %}
 					<h1 id="entryTitle">{{publisher[0].name}}</h1>
 					<div id="entryText">
 						<p><u>Country:</u> {{publisher[0].country}}</a></p>
 						<p><u>Location of Headquarters:</u> {{publisher[0].headquarters}}</a></p>
 						<p><u>Date of Founding:</u> {{publisher[0].founding_date}}</p>
-						<p><u>About:</u> {{publisher[0].about}}</p>
+						<p><u>About:</u> {{publisher[0].about}}</p> {% endraw %}
 					</div>
 				</div>
 			</div>
