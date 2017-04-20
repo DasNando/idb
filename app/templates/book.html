@@ -64,13 +64,14 @@
 					<div class="col-sm-6 col-md-4">
 						<div class="card">
 							<div class="card-block">
+								{% raw %}
 								<a ng-href="http://cs373-idb.appspot.com/api/books/title={{book[0].title}}"><img id="bookcoverimg" class="card-img-top img-responsive" src="{{book[0].pic}}" alt="book cover" position="center"></a>
 								<pre><h4 class="card-title"><u>Title:</u> <a ng-href="http://cs373-idb.appspot.com/api/books/title={{book[0].title}}">{{book[0].title}}</a> </h4>
 								<p class="card-text"><u>Author:</u> <a ng-href="http://cs373-idb.appspot.com/api/authors/name={{book[0].author}}">{{book[0].author}}</a></p>
 								<p class="card-text"><u>Published:</u> {{book[0].year}}</p>
 								<p class="card-text"><u>Rating:</u> {{book[0].rating}}</p>
 								<p class="card-text"><u>Publisher:</u> <a ng-href="http://cs373-idb.appspot.com/api/publishers/name={{book[0].publisher}}">{{book[0].publisher}}</a></p>
-								<p class="card-text"><u>Genre:</u> {{book[0].genre}}</p>
+								<p class="card-text"><u>Genre:</u> {{book[0].genre}}</p> {% endraw %}
 							</pre></div>
 						</div>
 					</div>
