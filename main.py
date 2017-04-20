@@ -212,11 +212,6 @@ def get_book3(params):
     return jsonify(b_dict_list)
 
 
-@app.route('/book?title=<string:book_title>')
-def book_info(book_title):
-    return render_template('book.html')
-
-
 @app.route('/book/title=<string:book_title>')
 def book_info2(book_title):
     return render_template('book.html')
