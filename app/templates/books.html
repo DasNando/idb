@@ -112,13 +112,15 @@
 					<div class="col-sm-6 col-md-4">
 						<div class="card">
 							<div class="card-block">
-								<a ng-href="http://cs373-idb.appspot.com/api/books/title={{ '{{book.title}}' }}"><img id="bookcoverimg" class="card-img-top img-responsive" src="{{ '{{book.pic}}' }}" alt="book cover" position="center"></a>
-								<pre><h4 class="card-title"><u>Title:</u><a ng-href="{{ url_for('book_info2', book_title={{ '{{book.title}}' }}) }}">{{ '{{book.title}}' }}</a></h4>
-								<p class="card-text"><u>Author:</u><a ng-href="http://cs373-idb.appspot.com/api/authors/name={{ '{{book.author}}' }}">{{ '{{book.author}}' }}</a></p>
-								<p class="card-text"><u>Publisher:</u><a ng-href="http://cs373-idb.appspot.com/api/publishers/name={{ '{{book.publisher}}' }}">{{ '{{book.publisher}}' }}</a></p>
-								<p class="card-text"><u>Published:</u>{{ '{{book.year}}' }}</p>
-								<p class="card-text"><u>Rating:</u>{{ '{{book.rating}}' }}</p>
-								<p class="card-text"><u>Genre:</u>{{ '{{book.genre}}' }}</p>
+								{% raw %}
+								<a ng-href="http://cs373-idb.appspot.com/api/books/title={{book.title}}"><img id="bookcoverimg" class="card-img-top img-responsive" src="{{book.pic}}" alt="book cover" position="center"></a>
+								{% endraw %}
+								<pre><h4 class="card-title"><u>Title:</u>{% raw %}<a ng-href="{{ url_for('book_info2', book_title={{book.title}}) }}">{% endraw %}{% raw %}{{book.title}}{% endraw %}</a></h4>
+								<p class="card-text"><u>Author:</u><a ng-href="http://cs373-idb.appspot.com/api/authors/name={{book.author}}">{% raw %}{{book.author}}{% endraw %}</a></p>
+								<p class="card-text"><u>Publisher:</u><a ng-href="http://cs373-idb.appspot.com/api/publishers/name={{book.publisher}}">{% raw %}{{book.publisher}}{% endraw %}</a></p>
+								<p class="card-text"><u>Published:</u>{% raw %}{{book.year}}{% endraw %}</p>
+								<p class="card-text"><u>Rating:</u>{% raw %}{{book.rating}}{% endraw %}</p>
+								<p class="card-text"><u>Genre:</u>{% raw %}{{book.genre}}{% endraw %}</p>
 							</pre></div>
 						</div>
 					</div>
