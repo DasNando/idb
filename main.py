@@ -318,6 +318,7 @@ def get5(params):
              "about": b.about})
     return jsonify(p_dict_list)
 
+
 # get all reviews
 @app.route('/api/reviews/all/')
 def get6():
@@ -325,9 +326,46 @@ def get6():
 
     reviews = models.Review.query.all()
     for r in reviews:
+        book_name = r.book
         r_dict_list.append({"reviewer": r.reviewer, "rating": r.rating, "content": r.content, "source": r.source,
-                            "book": r.book})
+                            "book": book_name})
     return jsonify(r_dict_list)
+
+
+# # get one Review
+# @app.route('/api/reviews/book=<string:book>')
+# def get7review_name(book):
+#     r_dict_list = []
+#     publisher_name = "%" + publisher_name + "%"
+#
+#     publisher = models.Publisher.query.filter(models.Publisher.name.ilike(publisher_name)).all()
+#     # book = models.Book.query.filter_by(title=book_name).all()
+#     for b in publisher:
+#         p_dict_list.append(
+#             {"name": b.name, "founding_date": b.founded, "headquarters": b.headquarters, "country": b.country,
+#              "about": b.about})
+#     return jsonify(p_dict_list)
+#
+#
+# # get nok with arbitrary filters
+# @app.route('/api/reviews/params&<string:params>')
+# def get7(params):
+#     commands = params.split('&')
+#     p_dict_list = []
+#     p = models.Publisher.query
+#     # print type(p)
+#
+#     for item in commands:
+#         col, fil = item.split('=')
+#         fil = "%" + fil + "%"
+#         if col in models.Publisher.__table__.columns.keys():
+#             p = p.filter(getattr(models.Publisher, col).ilike(fil))
+#     for b in p:
+#         p_dict_list.append(
+#             {"name": b.name, "founding_date": b.founded, "headquarters": b.headquarters, "country": b.country,
+#              "about": b.about})
+#     return jsonify(p_dict_list)
+
 
 if __name__ == '__main__':
     models.build_all()
