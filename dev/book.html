@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="sweReaders" lang="en">
 	<head>
-		<title>SWE-Readers</title>
+		<title>Books - SWE-Readers</title>
 		<meta charset="utf-8">
 
 		<!-- pulling Bootstrap from CDN -->
@@ -15,17 +15,17 @@
 		
 		<!-- Our Angular Scripts -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
-		<!-- <script type="text/javascript" src="app.js"></script> -->
+		<script type="text/javascript" src="app.js"></script>
 
 		<!-- Angular Plugin(s) -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
-		<!-- <script type="text/javascript" src="dirPagination.js"></script> -->
+		<script type="text/javascript" src="dirPagination.js"></script>
 
 		<!-- Web CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
 		
 		<!-- Local CSS Stylesheet -->
-		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
+		<link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css">
 	
 	</head>
 	<body ng-controller="BookEntryController">
@@ -59,17 +59,23 @@
 				</div>
 			</div>
 		</nav>
+		<br>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4">
-					<a ng-href="http://cs373-idb.appspot.com/api/books/title=$$book[0].title$$"><img id="bookcoverimg" class="card-img-top img-responsive" src="$$book[0].pic$$" alt="book cover" position="center"></a>
-					<pre><h4 class="card-title"><u>Title:</u> <a ng-href="http://cs373-idb.appspot.com/api/books/title=$$book[0].title$$">$$book[0].title$$</a> </h4>
-					<p class="card-text"><u>Author:</u> <a ng-href="http://cs373-idb.appspot.com/api/authors/name=$$book[0].author$$">$$book[0].author$$</a></p>
-					<p class="card-text"><u>Published:</u> $$book[0].year$$</p>
-					<p class="card-text"><u>Rating:</u> $$book[0].rating$$</p>
-					<p class="card-text"><u>Publisher:</u> <a ng-href="http://cs373-idb.appspot.com/api/publishers/name=$$book[0].publisher$$">$$book[0].publisher$$</a></p>
-					<p class="card-text"><u>Genre:</u> $$book[0].genre$$</p>
-					</pre>
+				<div class="col-sm-6 col-md-4 col-md-offset-2">
+					<img id="entryimg" class="card-img-top img-responsive" src="{{book[0].pic}}" alt="book cover" position="center">
+				</div>
+				<div class="col-sm-6 col-md-4">
+					<h1 id="entryTitle">{{book[0].title}}</h1>
+					<div id="entryText">
+						<p><u>Author:</u> <a ng-href="http://cs373-idb.appspot.com/author/name={{book[0].author}}">{{book[0].author}}</a></p>
+						<p><u>Publisher:</u> <a ng-href="http://cs373-idb.appspot.com/publisher/name={{book[0].publisher}}">{{book[0].publisher}}</a></p>
+						<p><u>Published:</u> {{book[0].year}}</p>
+						<p><u>ISBN:</u> {{book[0].isbn}}</p>
+						<p><u>Rating:</u> {{book[0].rating}}</p>
+						<p><u>Genre:</u> {{book[0].genre}}</p>
+						<a ng-href="#">Reviews</a>
+					</div>
 				</div>
 			</div>
 		</div>

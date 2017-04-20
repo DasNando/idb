@@ -128,6 +128,45 @@ app.controller('BookEntryController', function($scope, $http, $location){
 	});
 });
 
-app.config(function($interpolateProvider) {
-	$interpolateProvider.startSymbol('$$').endSymbol('$$');
+app.controller('AuthorEntryController', function($scope, $http, $location){
+	$scope.authorName = $location.absUrl().substring($location.absUrl().indexOf("=")+1);
+	
+	$scope.sortKey = 'title';
+
+	var myUrl = 'https://cs373-idb.appspot.com/api/authors/name='+$scope.authorName;
+	var myUrlBooks = "http://cs373-idb.appspot.com/api/books/params&author_name="+$scope.authorName;
+
+	$http.get(myUrl).success(function(data) {
+		var myjson = data;
+		$scope.author = myjson;
+		console.log("What is the in authorName? "+$scope.authorName);
+	});
+
+	$http.get(myUrlBooks).success(function(data) {
+		var myjson2 = data;
+		$scope.booklist = myjson2;
+	});
 });
+
+app.controller('PublisherEntryController', function($scope, $http, $location){
+	$scope.publisherName = $location.absUrl().substring($location.absUrl().indexOf("=")+1);
+	
+	$scope.sortKey = 'title';
+	
+	var myUrl = 'https://cs373-idb.appspot.com/api/publishers/name='+$scope.publisherName;
+	var myUrlBooks = "http://cs373-idb.appspot.com/api/books/params&publisher_name="+$scope.publisherName;
+
+	$http.get(myUrl).success(function(data) {
+		var myjson = data;
+		$scope.publisher = myjson;
+		console.log("What is the in publisherName? "+$scope.publisherName);
+	});
+
+	$http.get(myUrlBooks).success(function(data) {
+		var myjson2 = data;
+		$scope.booklist = myjson2;
+	});
+});
+// app.config(function($interpolateProvider) {
+// 	$interpolateProvider.startSymbol('$$').endSymbol('$$');
+// });
