@@ -80,11 +80,6 @@ def authors():
     return render_template('authors.html')
 
 
-@app.route('/book?title=<string:book_title>')
-def book_info(book_title):
-    return render_template('book.html')
-
-
 @app.route('/books')
 def books():
     return render_template('books.html')  # , book_pics=iter(books), item=None)
@@ -215,6 +210,16 @@ def get_book3(params):
             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic,
              "author": b.author_name, "publisher": b.publisher_name, "rating": b.rating})
     return jsonify(b_dict_list)
+
+
+@app.route('/book?title=<string:book_title>')
+def book_info(book_title):
+    return render_template('book.html')
+
+
+@app.route('/book/title=<string:book_title>')
+def book_info(book_title):
+    return render_template('book.html')
 
 
 # get all authors
