@@ -115,3 +115,15 @@ app.controller('ReviewController', function($scope, $http) {
 		$scope.reverse = !$scope.reverse;
 	}
 });
+
+app.controller('BookEntryController', function($scope, $http, $location){
+
+	var myUrl = 'https://cs373-idb.appspot.com/api/books/title=awen';
+	$scope.potato = $location.search();
+	$http.get(myUrl).success(function(data) {
+		var myjson = data/*JSON.parse(data)*/;
+		$scope.book = myjson;
+		$scope.potato = $location.search();
+		console.log("What is the in potato? "+$scope.potato+" "+$scope.potato.title);
+	});
+});
