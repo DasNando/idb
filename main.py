@@ -251,7 +251,7 @@ def get1(author_name):
     author_name = "&" + author_name + "%"
 
     author = models.Author.query.filter(models.Author.name.ilike(author_name)).all()
-    # book = models.Book.query.filter_by(title=book_name).all()
+    # book = models.Book.query.filter(models.Book.title.ilike(book_name)).all()
     for b in author:
         a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
                             "about": b.about, "num_works": b.num_works})
@@ -270,7 +270,7 @@ def get2(params):
         col, fil = item.split('=')
         fil = "%" + fil + "%"
         if col in models.Author.__table__.columns.keys():
-            p = p.filter(getattr(models.Author, col).like(fil))
+            p = p.filter(getattr(models.Author, col).ilike(fil))
     for b in p:
         a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
                             "about": b.about, "num_works": b.num_works})
