@@ -244,17 +244,31 @@ def get_auth0():
     return jsonify(a_dict_list)
 
 
-# get one Author
-@app.route('/api/authors/name=<string:author_name>')
-def get1(author_name):
-    a_dict_list = []
-    author_name = "&" + author_name + "%"
+# @app.route('/api/books/title=<string:book_name>')
+# def get_book2(book_name):
+#     b_dict_list = []
+#
+#     book_name = "%" + book_name + "%"
+#     book = models.Book.query.filter(models.Book.title.ilike(book_name)).all()
+#     for b in book:
+#         b_dict_list.append(
+#             {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic,
+#              "author": b.author_name, "publisher": b.publisher_name, "rating": b.rating})
+#     # print book.title models.Book.query.limit(lim).all()
+#     return jsonify(b_dict_list)
 
-    author = models.Author.query.filter(models.Author.name.ilike(author_name)).all()
+# get one Author
+@app.route('/api/authors/name=<string:auth>')
+def get1(auth):
+    a_dict_list = []
+    auth = "&" + auth + "%"
+    print('Auth is ' + auth)
+    author = models.Author.query.filter(models.Author.name.ilike(auth)).all()
     # book = models.Book.query.filter(models.Book.title.ilike(book_name)).all()
     for b in author:
         a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
                             "about": b.about, "num_works": b.num_works})
+    print('author length? %d', len(author))
     return jsonify(a_dict_list)
 
 
