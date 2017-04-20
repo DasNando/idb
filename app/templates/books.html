@@ -115,7 +115,7 @@
 								<!--NEW SECTION ARE WE GOOD NOW? {% raw %} -->
 								<a ng-href="http://cs373-idb.appspot.com/api/books/title={{book.title}}"><img id="bookcoverimg" class="card-img-top img-responsive" src="{{book.pic}}" alt="book cover" position="center"></a>
 								<!-- {% endraw %} -->
-								<pre><h4 class="card-title"><u>Title:</u><!-- {% raw %} --><a ng-href="{{url_for('book_info2', book_title={{book.title}}) }}">{{book.title}}</a> <!-- {% endraw %} --></h4>
+								<pre><h4 class="card-title"><u>Title:</u><a ng-href="{{ url_for('book_info2', {% raw %}book_title={{book.title}}{% raw %}) }}"><!--{% raw %}-->{{book.title}}</a> <!-- {% endraw %} --></h4>
 								<p class="card-text"><u>Author:</u> <!-- {% raw %} --><a ng-href="http://cs373-idb.appspot.com/api/authors/name={{book.author}}">{{book.author}}</a><!-- {% endraw %} --></p>
 								<p class="card-text"><u>Publisher:</u><!-- {% raw %} --> <a ng-href="http://cs373-idb.appspot.com/api/publishers/name={{book.publisher}}">{{book.publisher}}</a><!-- {% endraw %} --></p>
 								<p class="card-text"><u>Published:</u><!-- {% raw %} --> {{book.year}}<!-- {% endraw %} --></p>
