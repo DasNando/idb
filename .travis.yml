@@ -8,6 +8,8 @@ before_install:
 # If the SDK is not already cached, download it and unpack it
 - tar -xzf credentials.tar.gz
 - mkdir -p lib
+env:
+- SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://postgres:swe-readers@/postgres?host=/cloudsql/cs373-idb:us-central1:idb
 install:
 # Install the Python dependencies
 - pip install -r requirements.txt
