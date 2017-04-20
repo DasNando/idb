@@ -332,9 +332,9 @@ def get6():
 
     reviews = models.Review.query.all()
     for r in reviews:
-        book_name = r.book
+        # book_name = r.book
         r_dict_list.append({"reviewer": r.reviewer, "rating": r.rating, "content": r.content, "source": r.source,
-                            "book": book_name})
+                            "book": r.book})
     return jsonify(r_dict_list)
 
 
@@ -346,10 +346,9 @@ def get8review_name(book_name):
 
     review = models.Review.query.filter(models.Review.book.ilike(book_name)).all()
     # book = models.Book.query.filter_by(title=book_name).all()
-    for b in review:
-        r_dict_list.append(
-            {"name": b.name, "founding_date": b.founded, "headquarters": b.headquarters, "country": b.country,
-             "about": b.about})
+    for r in review:
+        r_dict_list.append({"reviewer": r.reviewer, "rating": r.rating, "content": r.content, "source": r.source,
+                            "book": r.book})
     return jsonify(r_dict_list)
 
 
@@ -368,8 +367,8 @@ def get9rev(params):
             r = r.filter(getattr(models.Review, col).ilike(fil))
     for b in r:
         r_dict_list.append(
-            {"name": b.name, "founding_date": b.founded, "headquarters": b.headquarters, "country": b.country,
-             "about": b.about})
+            {"reviewer": b.reviewer, "rating": b.rating, "content": b.content, "source": b.source,
+              "book": b.book})
     return jsonify(r_dict_list)
 
 
