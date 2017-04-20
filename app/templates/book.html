@@ -15,18 +15,18 @@
 		
 		<!-- Our Angular Scripts -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/app.js') }}"></script>
-		<!-- <script type="text/javascript" src="app.js"></script> -->
+		<!--<script type="text/javascript" src="app.js"></script> -->
 
 		<!-- Angular Plugin(s) -->
 		<script type="text/javascript" src="{{url_for('static', filename='js/dirPagination.js') }}"></script>
-		<!-- <script type="text/javascript" src="dirPagination.js"></script> -->
+		<!--<script type="text/javascript" src="dirPagination.js"></script>-->
 
 		<!-- Web CSS Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
-		
+
 		<!-- Local CSS Stylesheet -->
-		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
-	
+		<!--<link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css">-->
+
 	</head>
 	<body ng-controller="BookEntryController">
 		<nav class="navbar navbar-inverse"></nav>
@@ -61,16 +61,19 @@
 		</nav>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4">
-					<a ng-href="http://cs373-idb.appspot.com/api/books/title=$$book[0].title$$"><img id="bookcoverimg" class="card-img-top img-responsive" src="$$book[0].pic$$" alt="book cover" position="center"></a>
-					<pre><h4 class="card-title"><u>Title:</u> <a ng-href="http://cs373-idb.appspot.com/api/books/title=$$book[0].title$$">$$book[0].title$$</a> </h4>
-					<p class="card-text"><u>Author:</u> <a ng-href="http://cs373-idb.appspot.com/api/authors/name=$$book[0].author$$">$$book[0].author$$</a></p>
-					<p class="card-text"><u>Published:</u> $$book[0].year$$</p>
-					<p class="card-text"><u>Rating:</u> $$book[0].rating$$</p>
-					<p class="card-text"><u>Publisher:</u> <a ng-href="http://cs373-idb.appspot.com/api/publishers/name=$$book[0].publisher$$">$$book[0].publisher$$</a></p>
-					<p class="card-text"><u>Genre:</u> $$book[0].genre$$</p>
-					</pre>
-				</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="card">
+							<div class="card-block">
+								<a ng-href="http://cs373-idb.appspot.com/api/books/title={{book[0].title}}"><img id="bookcoverimg" class="card-img-top img-responsive" src="{{book[0].pic}}" alt="book cover" position="center"></a>
+								<pre><h4 class="card-title"><u>Title:</u> <a ng-href="http://cs373-idb.appspot.com/api/books/title={{book[0].title}}">{{book[0].title}}</a> </h4>
+								<p class="card-text"><u>Author:</u> <a ng-href="http://cs373-idb.appspot.com/api/authors/name={{book[0].author}}">{{book[0].author}}</a></p>
+								<p class="card-text"><u>Published:</u> {{book[0].year}}</p>
+								<p class="card-text"><u>Rating:</u> {{book[0].rating}}</p>
+								<p class="card-text"><u>Publisher:</u> <a ng-href="http://cs373-idb.appspot.com/api/publishers/name={{book[0].publisher}}">{{book[0].publisher}}</a></p>
+								<p class="card-text"><u>Genre:</u> {{book[0].genre}}</p>
+							</pre></div>
+						</div>
+					</div>
 			</div>
 		</div>
 	</body>

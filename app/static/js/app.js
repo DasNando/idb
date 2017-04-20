@@ -127,7 +127,3 @@ app.controller('BookEntryController', function($scope, $http, $location){
 		console.log("What is the in bookTitle? "+$scope.bookTitle);
 	});
 });
-
-app.config(function($interpolateProvider) {
-	$interpolateProvider.startSymbol('$$').endSymbol('$$');
-});
