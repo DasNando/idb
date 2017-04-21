@@ -14,7 +14,7 @@ install:
 # Install the Python dependencies
 - pip install -r requirements.txt
 script:
-- python -m app
+- python app/tests.py
 - coverage run    --app/tests.py >  tests.tmp 2>&1
 - coverage report -m                      >> tests.tmp
 # [START travis_deploy]
