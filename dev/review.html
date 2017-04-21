@@ -60,8 +60,10 @@
 			</div>
 		</nav>
 		<div class="container">
+			<!-- {% raw %} -->
 			<h3 id="entryTitle">Reviews for {{reviews[0].book}} by {{book[0].author}}:</h3>
 			<a ng-href="http://cs373-idb.appspot.com/book/title={{reviews[0].book}}"><img id="entryimg" class="img-responsive" src="{{book[0].pic}}" alt="book cover" position="center"></a>
+			<!-- {% endraw %} -->
 		</div>
 		<div id="paginatecontainer">
 			<dir-pagination-controls
