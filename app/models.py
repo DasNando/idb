@@ -1,4 +1,4 @@
-from app.db import db
+from db import db
 
 # pylint: disable = bad-whitespace
 # pylint: disable = invalid-name
