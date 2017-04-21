@@ -1,6 +1,6 @@
 from unittest import main, TestCase
-from app.db import app, db
-from app.models import Book, Publisher, Author, Review
+from db import app, db
+from models import Book, Publisher, Author, Review
 
 
 class TestModels(TestCase):
