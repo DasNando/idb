@@ -109,12 +109,14 @@
 				<div dir-paginate="publisher in publisherlist|orderBy:sortKey:reverse|filter:searchFilter|itemsPerPage:12">
 					<div class="col-sm-6 col-md-4">
 						<div class="card">
+							<!-- {% raw %} -->
 							<div class="card-block">
 								<pre><h4 class="card-title"><u>Name:</u> <a ng-href="http://cs373-idb.appspot.com/publisher/name={{publisher.name}}">{{publisher.name}}</a></h4>
 								<p class="card-text"><u>Country:</u> {{publisher.country}}</p>
 								<p class="card-text"><u>HQ:</u> {{publisher.headquarters}}</p>
 								<p class="card-text"><u>Founded on:</u> {{publisher.founding_date}}</p>
 							</pre></div>
+							<!-- {% endraw %} -->
 						</div>
 					</div>
 				</div>
