@@ -67,8 +67,8 @@
 							<p class="card-text">
 								Responsibilites: Backend, Webmaster
 							</p>
-							<p class="card-text">Commits: 90</p>
-							<p class="card-text">Issues: 7</p>
+							<p class="card-text">Commits: 160</p>
+							<p class="card-text">Issues: 13</p>
 							<p id ="cardbottom" class="card-text">Unit Tests:6</p>
 						</div>
 					</div>
@@ -88,8 +88,8 @@
 							<p class="card-text">
 								Responsibilites: GUI, Web Design
 							</p>
-							<p class="card-text">Commits: 64</p>
-							<p class="card-text">Issues: 10</p>
+							<p class="card-text">Commits: 142</p>
+							<p class="card-text">Issues: 15</p>
 							<p id ="cardbottom" class="card-text">Unit Tests:0</p>
 						</div>
 					</div>
@@ -107,8 +107,8 @@
 							<p class="card-text">
 								Responsibilites: Maintains about page, Data Scraping/Parsing.
 							</p>
-							<p class="card-text">Commits: 25</p>
-							<p class="card-text">Issues: 4</p>
+							<p class="card-text">Commits: 33</p>
+							<p class="card-text">Issues: 6</p>
 							<p id ="cardbottom" class="card-text">Unit Tests:0</p>
 						</div>
 					</div>
@@ -128,8 +128,8 @@
 								Title: Project Manager and Senior Database Administrator
 								Responsibilites: API scraping, SQLAlchemy database populating
 							</p>
-							<p class="card-text">Commits: 37</p>
-							<p class="card-text">Issues: 11</p>
+							<p class="card-text">Commits: 53</p>
+							<p class="card-text">Issues: 14</p>
 							<p id ="cardbottom" class="card-text">Unit Tests:4</p>
 						</div>
 					</div>
@@ -146,6 +146,7 @@
 					<p>Apiary URL: <a href="http://docs.swereaders1.apiary.io">http://docs.swereaders1.apiary.io</a></p>
 					<p>Github Issue Tracker: <a href="https://github.com/DasNando/idb/issues">https://github.com/DasNando/idb/issues</a></p>
 					<p>Github Repo: <a href="https://github.com/DasNando/idb">https://github.com/DasNando/idb</a></p>
+					<p>Presentation Link: <a href="presentation.link">https://github.com/DasNando/idb</a></p>
 				</div>
 				<div class="col-sm-8 col-md-3">
 					<h2>Data Sources</h2>
@@ -155,12 +156,12 @@
 				</div>
 				<div class="col-sm-4 col-md-3">
 					<br>
-					<a class="btn btn-runtest btn-block" href="{{url_for('run_tests')}}">Run Tests</a>
+					<a class="btn btn-runtest btn-block" href="https://travis-ci.org/DasNando/idb">Run Tests</a>
 				</div>
 			</div>
 		</div>
 		<br>
-	<div id="techreport" class="container">
+		<div id="techreport" class="container">
 			<h3>CS373 Project 4 - IDB2</h3>
 			<h2>Technical Report</h2>
 			<h3>Introduction</h3>
@@ -171,7 +172,7 @@
 					book reviews to be built from data scraped from various 
 					available web APIs on this subject (Google Books, 
 					GoodReads, Wikipedia). Our goal is simply to provide an alternative to 
-					services like GoodReads, and to make the world's extensive collection of literature even more accessible.
+					services like GoodReads and Google Books and to make the world's extensive collection of literature even more accessible.
 				</p>
 				<p>
 					We aim to provide the means by which users may browse books, authors, publishers, and reviews
@@ -188,15 +189,142 @@
 					information we have collected. Our API will allow users to filter the database by 
 					search terms such as book name, author name, publishing date, 
 					etc. It will also allow you to pull all information on a given 
-					specific book. 
+					specific book, or get a long list of all books, authors, publishers or reviews. This API
+					was created and hosted on Apiary, and can be accessed by anyone by the usual means of making RESTful 
+					API GET requests.
 				</p>
+
+				<p>
+					The data in our database are accessible via a number of user-friendly API calls. For each of our models, there is a set of API calls associated with that model. Firstly, there is one API call for each model which returns a JSON object containing all of the data from our database for that model. It would obviously become problematic to create and return such a list if the size of our database grew significantly larger, but currently our data set is small enough that it is able to return all of the data for any particular model without difficulty. These calls are accessed via the following URLs:
+				
+
+				<h5>swe-readers.me/books/params&{parameters} [GET]</h5>
+
+				<h5>swe-readers.me/books/title={book_name} [GET]</h5>
+				<h5>swe-readers.me/book [GET]</h5>
+
+				<h5>swe-readers.me/authors?id={author_id} [GET]</h5>
+
+				<h5>swe-readers.me/publishers/searchterm={terms} [GET]</h5>
+				<h5>swe-readers.me/publisher?id={publisher_id}  [GET]</h5>
+
+				<h5>swe-readers.me/reviews/searchterm={terms}  [GET]</h5>
+				<h5>swe-readers.me/review?id={review_id}  [GET]</h5>
+
+				<p>
+					The /api/books/all/ URL, for instance, returns a JSON list of dictionaries, where each dictionary in the list represents one book. This dictionary then contains key-value pairs for each of the book model's attributes. Thus the final payload takes the form of:
+				</p>
+
+				<pre id="techreportpre"><code><!--... -->
+					[
+						{
+						    "author": "Maya Angelou", 
+						    "genre": "Biography & Autobiography", 
+						    "isbn": "030747772X", 
+						    "pic": "http://books.google.com/books/content?id=Z2q_1A0nlvIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api", 
+						    "prices": "This title is not for sale.", 
+						    "publisher": "Random House", 
+						    "rating": "4.0", 
+						    "title": "I Know Why the Caged Bird Sings", 
+						    "year": "2010-07-21"
+						  },
+						  ...
+					  ]
+				</code></pre>
+
+				<p>
+					On the back end, these data are collated and served by the main.py script (with a little help from Flask). For instance, the back end code got the /api/books/all/ API call looks like this:
+
+				</p>
+
+				<pre id="techreportpre"><code><!--... -->
+						# get all books
+						@app.route('/api/books/all/')
+						def get_book0():
+						    b_dict_list = []
+
+						    book = models.Book.query.all()
+						    for b in book:
+						        b_dict_list.append(
+						            {"title": b.title, "genre": b.genre, "year": b.year, "isbn": b.isbn, "prices": b.prices, "pic": b.pic,
+						             "author": b.author_name, "publisher": b.publisher_name, "rating": b.rating})
+						    # print book.title models.Book.query.limit(lim).all()
+	                        return jsonify(b_dict_list)
+	
+				</code></pre>
+
+				<p>
+					First, Flask handles the routing of the URL to the proper function. This means that every time a user tries to load swe-readers.me/api/books/all/, Flask causes the get_book0 function to be invoked. The function then creates an empty list, and, for every 'book' entry in the database, creates and appends to this list a dictionary containing that book's title, genre, date published, ISBN, price, cover picture, author, publisher, and average rating. Having iterated over all of the books in the database, the function then returns a JSON representation of the list it has created.
+				</p>
+
+				<p>
+					If, instead of getting a rather verbose and messy list of all of the data in our database for a particular model, a user wants to get a subset of the data, our website also supports API calls to do this. The "/api/books/title=<string:book_name>" works similarly to the "/api/books/all" call, but only returns data for books whose titles match the given string. On the back end, this is accomplished by a database query which only returns those books with book_name in their title. In the code, this is done with:
+				</p>
+
+				<pre id="techreportpre"><code><!--... -->
+						models.Book.query.filter(models.Book.title.ilike(book_name)).all()
+
+				</code></pre>
+
+				<p>
+					It is also possible, via the "/api/books/params&<string:params>" call, to perform a query for all books matching an arbitrary set of parameters. This function parses the parameter string passed into it and attempts to match arguments to columns in the Book table. It then searches the database for entries matching the provided parameters. So, a call to the URL "http://swe-readers.me/api/books/params&author_name=an" will return a list containing every book with an author whose name contains the string "an" (e.g. Anne Lamott, Jennifer Ackerman, Maya Angelou, etc.). This can be further refined with a call like: "http://swe-readers.me/api/books/params&author_name=an&title=cag", which can be used to obtain only those books with authors whose names include "an" and whose titles include "cag". In our database, this returns only:
+				</p>
+
+
+				<pre id="techreportpre"><code><!--... -->
+							[
+							  {
+							    "author": "Maya Angelou", 
+							    "genre": "Biography & Autobiography", 
+							    "isbn": "030747772X", 
+							    "pic": "http://books.google.com/books/content?id=Z2q_1A0nlvIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api", 
+							    "prices": "This title is not for sale.", 
+							    "publisher": "Random House", 
+							    "rating": "4.0", 
+							    "title": "I Know Why the Caged Bird Sings", 
+							    "year": "2010-07-21"
+							  }
+							]
+
+				</code></pre>
+
+				<p>
+					which is a list containing only one entry, that for Maya Angelou's "I Know Why the Caged Bird Sings".
+                    In addition to author name and title, book searches can be done by genre, ISBN, price, publisher, rating, and date published. These parameters can all be searched either individually or in combination with one another.
+                    In this way, our API enables the querying of any model by any of that model's attributes. These URLs can then be queried via an HTTP GET in order to retrieve data from our database in JSON form.
+				</p>
+
+
+
 				<h4>Frontend</h4>
-				<p> Our site's front-end is made with HTML and Bootstrap. Right 
-					now, it's simply a splash page (with a carousel and tables 
+				<p> Our site's front-end is made with HTML and Bootstrap. 
+					In Phase 1, it was simply a splash page (with a carousel and tables 
 					of books), pages (containing grids corresponding to each of 
-					our four models), and a currently non-functioning search bar.
-					We plan to use Angular/Javascript to improve the look and 
-					navigability of our site in later phases. 
+					our four models), and a currently non-functioning search bar. Instead of the splash
+					image page, at this stage we opted for the comparatively less slick home page, featuring a random 
+					sampling of books in the carousel as well as columns for high rated and recent books. We felt that the
+					IMDB/ old school archive look matched our topic a little better.
+					
+				</p>
+				    In Phase 2 we used Angular/Javascript to improve the look and 
+					navigability of our site. We added pagination to our site in this phase, 
+					allowing users to browse pages containing members of each model. We also added 
+					filtering and sorting, so that users would be able to filter or sort models by 
+					their specific attribute. As an example, by this time we could now sort books by Year, 
+					filter books by a specific author, and flip through the results in pages of about 10 entries 
+					each without leaving the /books path. Each entry of the grid was represented by a card with fields 
+					for the models attributes filled in from our database.
+
+				</p>	  
+				<p> 
+	                As of Phase 3, we have implemented search, which allows users to search all attributes of all models 
+				    all at once. We have also implemented the models' details pages, which can be reached by clicking through an
+				    entry on the model browsing pages implemented in Phase 2. These detail pages contain more specific information about their individual instance of a book, author, publisher, or review and are separate from all of the other model instances, while retaining the same HTML template. During this phase we also went back and added the model to model links to our site, which we meant to implement in Phase 2, but were unable to due to unforseen issues with our database. 
+				</p>
+				<p> 
+					As for how our frontend displays data at the current moment, as per project specs, our website is divided into several sub-pages, one for each model. Each model has its own page where the database entries for that model are displayed in a grid format. Our site employs Bootstrap in order to dynamically create this grid format. This grid is paginated and each page is limited to 24 entries. This pagination is implemented using a script called 'dirPagination.js', which allows us to create dynamically filled grid elements. This script has the same functionally as the Angular repeat function (ng-repeat) with the added benefit of functional pagination and of dynamically creating pages based on the number of elements per page and the total number of elements in the grid. The two use the same filters and ordering statements, allowing for seamless traversal of the pages of the grid.
+
+                    Our app.js script then queries our API to get the JSON for each model (using the /api/<model_name>/all/ URL), and creates a list of books from this data. This list is then used by the dir-paginate.js script to dynamically insert the data into the HTML.
 				</p>
 				<h4>Backend</h4>
 				<p>
@@ -208,13 +336,27 @@
 					stylesheets and images, and apply them properly to the 
 					html pages. As the project develops, we'd like to reduce 
 					the number of page templates and increase the amount of media 
-					that we maintain. Currently, the Flask framework is not 
-					serving any static images, as they are being pulled from 
+					that we maintain. As of Phase 1, the Flask framework did not 
+					serve any static images, as they were being pulled from 
 					the web. Eventually, we would like to add some images such 
 					as a logo or a static carousel.
+
 				</p>
+					During Phases 2 and 3 we needed to create routes for more specific model
+					 details pages which displayed all the surface attributes of a model plus more
+					  verbose data we are unable to display in the browsing page cards. Doing 
+					  this required us to build more HTML templates and serve the data through JavaScript. 
+					  This led to some problems that we will discuss later. During these Phases we also tinkered 
+					  with some different ways of organizing our models, but ended up keeping the older, more 
+					  simpler organization.
+				<p>
+
+
+				</p>
+
 				<h4>Media Embedding Services</h4>
-				<p> As of now, we have not used any media embedding services, 
+				<p> 
+					As of now, we have not used any media embedding services, 
 					but we plan on eventually embedding verbose links to reviews 
 					via GoodReads. This means including some small portion of a 
 					larger review or set of reviews and attaching them to each 
@@ -268,7 +410,7 @@
 					To collect our data we used the GoogleBooks, GoodReads, and Wikipedia APIs. 
 					Some of these APIs return xml responses, some return json responses and some have strict
 					limits on how many requests can be made and how their data can be used but they are all
-					free to use. To scrape this data we begin with a list of keyswords to request from the APIs.
+					free to use. To scrape this data we begin with a list of keywords to request from the APIs.
 					 These keywords can be ISBNs, IDs internal to the API, or names of publishers. 
 					 We store the responses in a .json array.
 				</p>
@@ -305,7 +447,7 @@ for i in pubs:
 				</code></pre>
 				<p>
 					to generate a JSON formatted description of our publishers.
-					After this is completed, our scripts have generated three seperate JSON files, one each for the models Books, Authors, and Publishers. This implementation also conveniently means that we will automatically have information on authors and publishers that are related to the book data that we source (i.e. this setup gets information on a book x and then automatically also generates information for x’s author and publisher.
+					After this is completed, our scripts have generated three separate JSON files, one each for the models Books, Authors, and Publishers. This implementation also conveniently means that we will automatically have information on authors and publishers that are related to the book data that we source (i.e. this setup gets information on a book x and then automatically also generates information for x’s author and publisher.
 				</p>
 				<p>
 					We used the Google Books API as the source for data about 
@@ -363,7 +505,7 @@ for i in pubs:
 				<p>
 					Flask is a microframework for Python, using the Jinja2 and Werkzeug WSGI 
 					libraries. It allows us to map out routes from HTML templates to URL addresses 
-					within our site.
+					within our site, useful for implementing our sites navigation. Additionally, Flask provides support for API querying, and the Flask-SQLAlchemy extension, which was invaluable for us in allowing us to create and set up our models within the database.
 				</p>
 				<h4>PostgreSQL</h4>
 				<p>
@@ -386,7 +528,16 @@ for i in pubs:
 				<h4>HTML</h4>
 				<p>
 					HTML is a markup language for semantically specifying the structure and content of web pages.
-					 We use it to create static templates for each of our pages.
+					 We used it to create static templates for each of our models pages ad well as for our individual review pages. Its also the basis for our splash and about pages.
+				</p>
+				<h4>PlanItPoker</h4>
+				<p>
+					A Scrum tool by CodeFirst for laying out user stories and voting on estimates for each story as a group. It allows the the group to vote together on story points and in the process agree on the complexities of the task of implementation, so each member of the group can be on the same page. We used it to plan out and estimate the tasks for Phase 3.
+
+				</p>
+				<h4>D3.js</h4>
+				<p>
+					D3 is a JavaScript library for manipulating documents' data and provides visualization tools for creating graphics based on the data, with support for various popular JavaScript graphics libraries. It allows efficient manipulation of the Document Object Model. We used it to create a visualization of our assigned group's data.
 				</p>
 				<h4>Github</h4>
 				<p>
@@ -397,7 +548,8 @@ for i in pubs:
 				</p>
 				<h4>Google Cloud Platform</h4>
 				<p>
-					Google Cloud Platform is a cloud computing service created by Google on which we hosted our website.
+					Google Cloud Platform is a cloud computing service created by Google on which we hosted our website. Although it is a paid service, we 
+					were allowed free access for the purposes of this project. Google Cloud Platform's App Engine is the basis for our site, providing us with PostGreSQL database support and integrating our changes on Github into the website automatically. 
 				</p>
 				<h4>PyLint</h4>
 				<p>
@@ -411,11 +563,11 @@ for i in pubs:
 				</p>
 				<h4>Python</h4>
 				<p>
-					Python is an interpreted, high-level programming language. It supports imperative, procedural, object-oriented and functional programming styles. Python is the very core of our application, we use it to scrape date, build our models, and interface with the database.
+					Python is an interpreted, high-level programming language, created by Guido van Rossum. It uses very readable English-like syntax and supports imperative, procedural, object-oriented and functional programming styles. Python is the very core of our application, we use it to scrape date, build our models, and interface with the database.
 				</p>
 				<h4>yUML</h4>
 				<p>
-					yUML is an online tool for creating UML diagrams, by specifing models,
+					yUML is an online tool for creating UML diagrams, by specifying models,
 					 attributes and their relationships in a text file. This let our group 
 					 quickly make diagrams without needing to learn any new technologies in the process.
 				</p>
@@ -431,7 +583,7 @@ for i in pubs:
 				<p>
 					Apiary is an API integration cloud provided by Oracle, that provides a 
 					framework and tools for building and sharing APIs. We used it to setup our SWEreaders
-					 API
+					 API.
 				</p>
 				<h4>Travis CI</h4>
 				<p>
@@ -443,13 +595,34 @@ for i in pubs:
 					Google's servers and sync with Github in order to streamline 
 					updates to the website. As of now, our App Engine only hosts 
 					a single machine which, using the Flask Python web framework, 
-					serves the html templates of the website and applies static 
+					serves the HTML templates of the website and applies static 
 					files such as CSS files and images. Our website's error logs 
 					are also maintained by Google, and include logs of all requests 
 					made to the website, filterable by severity of the request
 					(ie. No Error, Warning, Notice, etc.)
 				</p>
-		</div>
+				<p>
+					Normally setting up an application on GCP would require paying for the service but, we were luckily able 
+					to bypass this and set up for free for the purposes of the class. 
+				</p>
+			<h3>Pitfalls and Learning Opportunities</h3>
+			<p>
+				Throughout SWE-Readers' development process we ran into a lot of problems with our site and database. In our backend, we had issues correctly setting up many to many relationships which were never fully resolved due to time constraints. We set up our association tables but were never able to add our data to them. In our hosting, we later ran into issues querying our database appropriately while trying to serve it on the SWE-readers site, which led to us not being able to implement this feature during Phase 2. We were able to resolve this issue in the final phase, which, as it turned out, was due to GCP not supporting external outgoing connections to our PostgreSQL database which was hosted separately from Google Cloud. In the end we ended up having to recreate our site and database to obtain the appropriate permissions. GCP's Postgres support is still in beta, which was both a blessing and a curse for us, since it led to unexpected problems but was still better than no support at all. In data scraping we ran into issues with parsing, leading to occasionally poorly formatted text in author biographies and publisher data, issues which could honestly have been easily resolved with more time to work on them. We also had minor issues with incomplete and non specific data such as not all publishers having the locations of their headquarters listed on Wikipedia, which isn't really our fault and many of our book entries being of the non specific genre 'Fiction' which is not very helpful to a theoretical user who would like to find books by genre and some data returned for a small handful books occasionally lacking an ISBN. Some of these issues could have been corrected by cross referencing our scraped data with another API, such as OpenLibrary, but that would have taken up too much time we did not have.
+			</p>
+			<h3>PlanIt Poker</h3>
+			<p>
+				Create Visualization, Estimated: 3 hours, Actual: Not done yet <br> 
+				Create Self Critique, Estimated: 1 hour, Actual: Not done yet <br>
+				Create Other Group Critique, Estimated: 1 hour, Actual: Not done yet <br> 
+				Create Presentation, Estimated: 3 hours, Actual: Not done yet <br>
+				Update About Page, Estimated: 20 minutes, Actual: 25 minutes <br> 
+				Update Technical Report, Estimated: 6 hours, Actual: 4 hours <br>
+				Scrape more reviews, Estimated: 10 minutes, Actual: 1 hour <br>
+				Implement model specific details pages, Estimated: 3 hours, Actual: 2 hours <br>
+				Implement search function, Estimated: 3 hours, Actual: 4 hours <br>
+				Fix problems with database, Estimated: 1 hour, Actual: 9 hours
+		   </p>
+	</div>
 		<br>
 	</body>
 	<footer>
