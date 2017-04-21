@@ -36,7 +36,7 @@ class Visit(db1.Model):
 @app.route('/db_test')
 def index():
     db1.create_all()
-    # setup_db.init_db()
+    setup_db.init_db()
     user_ip = request.remote_addr
 
     # Keep only the first two octets of the IP address.
@@ -260,16 +260,16 @@ def get_auth0():
 # get one Author
 @app.route('/api/authors/name=<string:auth>')
 def get1(auth):
-    a_dict_list = []
-    auth = "&" + auth + "%"
-    print('Auth is ' + auth)
-    author = models.Author.query.filter(models.Author.name.ilike(auth)).all()
-    # book = models.Book.query.filter(models.Book.title.ilike(book_name)).all()
-    for b in author:
-        a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
-                            "about": b.about, "num_works": b.num_works})
-    print('author length? %d', len(author))
-    return jsonify(a_dict_list)
+    # a_dict_list = []
+    # auth = "&" + auth + "%"
+    # print('Auth is ' + auth)
+    # author = models.Author.query.filter(models.Author.name.ilike(auth)).all()
+    # # book = models.Book.query.filter(models.Book.title.ilike(book_name)).all()
+    # for b in author:
+    #     a_dict_list.append({"name": b.name, "birth_date": b.birth_date, "death_date": b.death_date, "pic": b.pic,
+    #                         "about": b.about, "num_works": b.num_works})
+    # print('author length? %d', len(author))
+    return get2("name=" + auth)
 
 
 # get author with arbitrary filters
