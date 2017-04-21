@@ -150,7 +150,6 @@ app.controller('AuthorEntryController', function($scope, $http, $location){
 
 app.controller('PublisherEntryController', function($scope, $http, $location){
 	$scope.publisherName = $location.absUrl().substring($location.absUrl().indexOf("=")+1);
-	
 	$scope.sortKey = 'title';
 	
 	var myUrl = 'https://cs373-idb.appspot.com/api/publishers/name='+$scope.publisherName;
@@ -158,8 +157,18 @@ app.controller('PublisherEntryController', function($scope, $http, $location){
 
 	$http.get(myUrl).success(function(data) {
 		var myjson = data;
-		$scope.publisher = myjson;
-		console.log("What is the in publisherName? "+$scope.publisherName);
+		if (myjson.length) {
+			$scope.publisher = myjson;
+		} else{
+			$scope.publisher = [{
+				name: ""+$scope.publisherName,
+				country: "N/A",
+				headquarters: "N/A",
+				founding_date: "N/A",
+				about: "N/A"
+			}];
+			console.log("help me jesus");
+		};
 	});
 
 	$http.get(myUrlBooks).success(function(data) {
@@ -167,6 +176,52 @@ app.controller('PublisherEntryController', function($scope, $http, $location){
 		$scope.booklist = myjson2;
 	});
 });
-// app.config(function($interpolateProvider) {
-// 	$interpolateProvider.startSymbol('$$').endSymbol('$$');
-// });
+
+app.controller('ReviewEntryController', function($scope, $http, $location){
+	$scope.bookName = $location.absUrl().substring($location.absUrl().indexOf("=")+1);
+
+	$scope.sortKey = 'reviewer';
+
+	var myUrl = 'https://cs373-idb.appspot.com/api/reviews/book='+$scope.bookName;
+	var myBookUrl = 'https://cs373-idb.appspot.com/api/books/title='+$scope.bookName;
+
+	$http.get(myUrl).success(function(data) {
+		var myjson = data;
+		$scope.reviews = myjson;
+		console.log("What is the in bookName? "+$scope.bookName);
+	});
+
+	$http.get(myBookUrl).success(function(data) {
+		var myjson2 = data;
+		$scope.book = myjson2;
+	});
+});
+
+app.controller('SearchController', function($scope, $http, $location){
+	$scope.searchQuery = $location.absUrl().substring($location.absUrl().indexOf("=")+1);
+
+	var bookSearch = "https://cs373-idb.appspot.com/api/books/title="+$scope.searchQuery;
+	var authorSearch = "https://cs373-idb.appspot.com/api/authors/name="+$scope.searchQuery;
+	var publisherSearch = "https://cs373-idb.appspot.com/api/publishers/name="+$scope.searchQuery;
+	var reviewSearch = "https://cs373-idb.appspot.com/api/reviews/book="+$scope.searchQuery;
+
+	$http.get(bookSearch).success(function(data) {
+		var myjson = data;
+		$scope.booklist = myjson;
+	});
+
+	$http.get(authorSearch).success(function(data) {
+		var myjson2 = data;
+		$scope.authorlist = myjson2;
+	});
+
+	$http.get(publisherSearch).success(function(data) {
+		var myjson3 = data;
+		$scope.publisherlist = myjson3;
+	});
+
+	$http.get(reviewSearch).success(function(data) {
+		var myjson = data;
+		$scope.reviewlist = myjson;
+	});
+});

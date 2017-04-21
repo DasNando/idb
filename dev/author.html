@@ -25,7 +25,7 @@
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swe-readers-stylesheet.css') }}">
 		
 		<!-- Local CSS Stylesheet -->
-		<link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css">
+		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
 	
 	</head>
 	<body ng-controller="AuthorEntryController">
@@ -46,9 +46,9 @@
 						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
 						<li><a href="{{ url_for('about') }}">About</a></li>
 					</ul>
-					<form class="navbar-form navbar-right" action="{{ url_for('search') }}">
+					<form class="navbar-form navbar-right" action="https://cs373-idb.appspot.com/search">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search">
+							<input type="text" class="form-control" placeholder="Search" name="query" id="query">
 							<div class="input-group-btn">
 								<button class="btn btn-default" type="submit">
 									<i class="glyphicon glyphicon-search"></i>
@@ -61,6 +61,7 @@
 		</nav>
 		<br>
 		<div class="container">
+			<!-- {% raw %} -->
 			<div class="row">
 				<div class="col-sm-12">
 					<img id="entryimg" class="card-img-top img-responsive" src="{{author[0].pic}}" alt="book cover" position="center">
@@ -80,6 +81,7 @@
 		<div class="container">
 			<h3 id="entryTitle">Books by {{author[0].name}}:</h3>
 		</div>
+		<!-- {% endraw %} -->
 		<div id="paginatecontainer">
 			<dir-pagination-controls
 				max-size="7"
@@ -99,7 +101,7 @@
 								<!-- {% endraw %} -->
 								<h4 class="card-title"><u>Title:</u><!-- {% raw %} --> <a ng-href="http://cs373-idb.appspot.com/book/title={{book.title}}">{{book.title}}</a> <!-- {% endraw %} --></h4>
 								<!-- <p class="card-text"><u>Author:</u> {% raw %}<a ng-href="http://cs373-idb.appspot.com/author/name={{book.author}}">{{book.author}}</a>{% endraw %}</p> -->
-								<p class="card-text"><u>Publisher:</u><!-- {% raw %} --> <a ng-href="http://cs373-idb.appspot.com/api/publishers/name={{book.publisher}}">{{book.publisher}}</a><!-- {% endraw %} --></p>
+								<p class="card-text"><u>Publisher:</u><!-- {% raw %} --> <a ng-href="http://cs373-idb.appspot.com/publishers/name={{book.publisher}}">{{book.publisher}}</a><!-- {% endraw %} --></p>
 								<p class="card-text"><u>Published:</u><!-- {% raw %} --> {{book.year}}<!-- {% endraw %} --></p>
 								<p class="card-text"><u>Rating:</u> <!-- {% raw %} -->{{book.rating}}<!-- {% endraw %} --></p>
 								<p class="card-text"><u>Genre:</u> <!-- {% raw %} -->{{book.genre}}<!-- {% endraw %} --></p>

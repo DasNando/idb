@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="sweReaders" lang="en">
 	<head>
-		<title>Search Results - SWE-Readers</title>
+		<title>Reviews - SWE-Readers</title>
 		<meta charset="utf-8">
 
 		<!-- pulling Bootstrap from CDN -->
@@ -28,7 +28,7 @@
 		<!-- <link rel="stylesheet" type="text/css" href="swe-readers-stylesheet.css"> -->
 		
 	</head>
-	<body ng-controller="SearchController">
+	<body ng-controller="ReviewEntryController">
 		<nav class="navbar navbar-inverse"></nav>
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
@@ -43,7 +43,7 @@
 						<li><a href="{{ url_for('books') }}">Books</a></li>
 						<li><a href="{{ url_for('authors') }}">Authors</a></li>
 						<li><a href="{{ url_for('publishers') }}">Publishers</a></li>
-						<li><a href="{{ url_for('reviews') }}">Reviews</a></li>
+						<li class="active"><a href="{{ url_for('reviews') }}">Reviews</a></li>
 						<li><a href="{{ url_for('about') }}">About</a></li>
 					</ul>
 					<form class="navbar-form navbar-right" action="https://cs373-idb.appspot.com/search">
@@ -59,40 +59,40 @@
 				</div>
 			</div>
 		</nav>
-		<!-- {% raw %} -->
 		<div class="container">
-			<h1 id="centered">Search results for <b>{{searchQuery}}</b></h1>
+			<h3 id="entryTitle">Reviews for {{reviews[0].book}} by {{book[0].author}}:</h3>
+			<a ng-href="http://cs373-idb.appspot.com/book/title={{reviews[0].book}}"><img id="entryimg" class="img-responsive" src="{{book[0].pic}}" alt="book cover" position="center"></a>
+		</div>
+		<div id="paginatecontainer">
+			<dir-pagination-controls
+				max-size="7"
+				direction-links="true"
+				boundary-links="true"
+				on-page-change="pageChangeHandler(newPageNumber)">
+			</dir-pagination-controls> 
 		</div>
 		<div class="container">
-			<h2 id="entryTitle"><u>Books</u></h2>
-			<div id="entryText">
-				<div ng-repeat="book in booklist|orderBy:sortKey:reverse">
-					<a ng-href="http://cs373-idb.appspot.com/book/title={{book.title}}">{{book.title}}</a>
+			<div class="row">
+				<div dir-paginate="review in reviews|orderBy:sortKey|itemsPerPage:12">
+					<div class="col-sm-12">
+						<div id="entryText">
+							<p><u>Reviewer:</u><!-- {% raw %} --> {{review.reviewer}} <!-- {% endraw %} --></p>
+							<p><u>Rating:</u><!-- {% raw %} --> {{review.rating}}<!-- {% endraw %} --></p>
+							<p><u>Review:</u> <!-- {% raw %} -->{{review.content}}<!-- {% endraw %} --></p>
+							<p><!-- {% raw %} --><a ng-href="{{review.source}}">Continue reading here</a><!-- {% endraw %} --></p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<br>
-			<h2 id="entryTitle"><u>Authors</u></h2>
-			<div id="entryText">
-				<div ng-repeat="author in authorlist|orderBy:sortKey:reverse">
-					<a ng-href="http://cs373-idb.appspot.com/author/name={{author.name}}">{{author.name}}</a>
-				</div>
-			</div>
-			<br>
-			<h2 id="entryTitle"><u>Publishers</u></h2>
-			<div id="entryText">
-				<div ng-repeat="publisher in publisherlist|orderBy:sortKey:reverse">
-					<a ng-href="http://cs373-idb.appspot.com/publisher/name={{publisher.name}}">{{publisher.name}}</a>
-				</div>
-			</div>
-			<br>
-			<h2 id="entryTitle"><u>Reviews</u></h2>
-			<div id="entryText">
-				<div ng-repeat="review in reviewlist|orderBy:sortKey:reverse">
-					<a ng-href="http://cs373-idb.appspot.com/review/title={{review.book}}">{{review.reviewer}}<p></a>
-				</div>
+			<div id="paginatecontainer">
+				<dir-pagination-controls
+					max-size="7"
+					direction-links="true"
+					boundary-links="true"
+					on-page-change="pageChangeHandler(newPageNumber)">
+				</dir-pagination-controls> 
 			</div>
 		</div>
-		<!-- {% endraw %} -->
 	</body>
 	<footer>
 		<h6><small>A UTCS Student Project. CS373 Software Engineering, Project Group 15.</small></h6>
