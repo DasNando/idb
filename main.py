@@ -387,5 +387,5 @@ def get9rev(params):
 
 
 if __name__ == '__main__':
-    # models.build_all()
+    models.build_all()
     app.run(host='127.0.0.1', port=8080, debug=True)
