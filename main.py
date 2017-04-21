@@ -1,3 +1,4 @@
+import subprocess
 from flask import render_template, jsonify, request
 import logging
 import requests
@@ -103,26 +104,10 @@ def search():
 # my token: wpV_1One91F2XNwmI6ukIg
 @app.route('/run_tests')
 def run_tests():
-    headers = {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Travis-API-Version': '3',
-        'Authorization': 'token wpV_1One91F2XNwmI6ukIg',
-    }
-
-    data = '{"request": {"branch": "master"}}'
-    requests.post('https://api.travis-ci.org/repo/DasNando%2Fidb/requests', headers=headers, data=data)
-
-    return "<a href=\"https://travis-ci.org/DasNando/idb\">See Results</a>"
-    # tests_output = subprocess.check_output(['make', 'test'])
-    # print tests_output
-    # # print res.text
-    # # dict_from_server = res.json()
-    # return 'testoutput: ' + tests_output
-
-    # return "server response: " + res.text + "dict_from_server: " + str(dict_from_server)
-
-    # return render_template('search.html')
+    proc = subprocess.Popen('../make test', stdout=subprocess.PIPE)
+    # print res.text
+    # dict_from_server = res.json()
+    return 'testoutput: ' + proc.stdout
 
 
 @app.errorhandler(500)
