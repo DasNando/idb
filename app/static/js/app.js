@@ -198,7 +198,7 @@ app.controller('ReviewEntryController', function($scope, $http, $location){
 });
 
 app.controller('SearchController', function($scope, $http, $location){
-	$scope.searchQuery = $location.absUrl().substring($location.absUrl().indexOf("=")+1);
+	$scope.searchQuery = ($location.absUrl().substring($location.absUrl().indexOf("=")+1)).replace(/\+/g, " ");
 
 	var bookSearch = "https://cs373-idb.appspot.com/api/books/title="+$scope.searchQuery;
 	var authorSearch = "https://cs373-idb.appspot.com/api/authors/name="+$scope.searchQuery;
