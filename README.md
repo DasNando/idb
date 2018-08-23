@@ -1,5 +1,1 @@
-## BUT WILL IT BLENDDDDD????
-
-# I SAID, WILL IT BLEEEEEENNNNDDD????
-
-### IT BLENDED!!! Let's try to re-push and see if anything changes
+# A project meant to mimic IDB, but for books
